@@ -2,13 +2,28 @@
 
 :root {
   color-scheme: light dark;
-  --color-accent: light-dark(rebeccapurple, rgb(0, 200, 0));
-  --color-text: light-dark(black, white);
-  --color-background: light-dark(rgb(232, 226, 219), black);
-  --disabled-color: light-dark(rgb(212, 212, 212), rgb(103, 103, 103));
 
-  --heading-1-size: 1.5rem;
-  --heading-2-size: 1.3rem;
+  --color-light-background: rgb(255, 242, 227);
+  --color-light-text: white;
+  --color-light-accent: rebeccapurple;
+  --color-dark-background: black;
+  --color-dark-text: black;
+  --color-dark-accent: green;
+
+  --color-accent: light-dark(
+    var(--color-light-accent),
+    var(--color-dark-accent)
+  );
+  --color-text: light-dark(var(----color-dark-text), var(--color-light-text));
+  --color-background: light-dark(
+    var(--color-light-background),
+    var(--color-dark-background)
+  );
+  --color-disabled: color(from var(--color-accent) srgb r g b / 0.6);
+  --color-overlay: color(from var(var(--color-text)) srgb r g b / 0.3);
+
+  --heading-1-size: 3rem;
+  --heading-2-size: 1.9rem;
   --heading-3-size: 1.2rem;
   --heading-4-size: 1.1rem;
   --body-size: clamp(1rem, 0.625rem + 1.25vw, 1.188rem);
@@ -21,6 +36,7 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 1.7;
   font-size: var(--body-size);
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
@@ -61,11 +77,26 @@ button {
   min-height: 44px;
   border-radius: var(--border-radius-interactive);
   border: 2px solid var(--color-accent);
+  background-color: color(from var(--color-accent) srgb r g b / 0.05);
+  color: var(--color-accent);
+  font-size: var(--body-size);
+  font-weight: 550;
+  cursor: pointer;
+
+  &[type="submit"] {
+    background-color: color(from var(--color-accent) srgb r g b / 0.7);
+    color: var(--color-background);
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+  }
 
   &[disabled] {
     background-color: transparent;
-    color: var(--disabled-color);
-    border: 2px solid var(--disabled-color);
+    color: var(--color-disabled);
+    border: 2px solid var(--color-disabled);
   }
 }
 
@@ -87,6 +118,10 @@ h1 {
 h2:not(:first-of-type) {
   font-size: var(--heading-2-size);
   margin-block-start: 6rem;
+
+  &::marker {
+    content: "1";
+  }
 }
 
 ul,
@@ -106,7 +141,8 @@ form {
 
   fieldset {
     border-radius: var(--border-radius-interactive);
-    padding: 2rem;
+    padding-inline: 2rem;
+    background-color: color(from var(--color-overlay) srgb r g b / 0.4);
     display: flex;
     flex-direction: column;
 
@@ -114,19 +150,15 @@ form {
       font-size: var(--heading-2-size);
     }
 
-    input {
-      margin-block: 0.5rem 2rem;
-    }
-
     &[disabled] {
-      color: var(--disabled-color);
+      color: var(--color-disabled);
     }
   }
 
   footer {
     display: flex;
     gap: 1rem;
-    margin-block-start: 2rem;
+    margin-block: 2rem;
   }
 }
 
@@ -134,24 +166,37 @@ input {
   accent-color: var(--color-accent);
   box-sizing: border-box;
   padding: 10px;
-  min-height: 44px;
   font-size: 1rem;
+
+  &:not([type="checkbox"], [type="radio"]) {
+    min-height: 44px;
+    display: block;
+  }
 
   &[type="tel"] {
     max-width: calc(8ch + 44px); /* Lengden på et mobilnummer + litt space */
   }
 
   &[type="password"] {
-    max-width: 30ch;
+    max-width: calc(30ch + 44px);
   }
 
   &[type="email"] {
-    max-width: 50ch;
+    max-width: calc(50ch + 44px);
   }
 }
 
 label {
   font-size: var(--heading-3-size);
+  min-height: 44px;
+  padding-block: 0.2rem;
+  margin-block: 0.4rem;
+  box-sizing: border-box;
+  vertical-align: center;
+
+  &:has(input:is([type="checkbox"], [type="radio"])) {
+    cursor: pointer;
+  }
 }
 
 code {
@@ -161,6 +206,7 @@ code {
   border: 2px solid color(from var(--color-accent) srgb r g b / 0.15);
   padding: 0.1rem 0.2rem;
   border-radius: var(--border-radius-decoration);
+  font-size: smaller;
 }
 
 .visuelt-skjult {
