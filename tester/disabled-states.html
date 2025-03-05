@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nb-no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="disabled-states.css" rel="stylesheet" />
+    <title>Ole Jørgens tester</title>
+  </head>
+  <body>
+    <header>
+      <p class="name"><a href="/index.html" aria-label="home">Ole Jørgen</a></p>
+    </header>
+    <main>
+      <h1>Disabled states</h1>
+      <h2>Knapper</h2>
+      <ol class="button-group">
+        <li>
+          <p>Uten noen disabled attributter:</p>
+          <button>Test</button>
+        </li>
+        <li>
+          <p>Med <code>aria-disabled="true"</code>:</p>
+          <button aria-disabled="true">Test</button>
+        </li>
+        <li>
+          <p>
+            Med <code>aria-disabled="true"</code> og <code>tabindex="-1"</code>:
+          </p>
+          <button aria-disabled="true" tabindex="-1">Test</button>
+        </li>
+        <li>
+          <p>Med <code>disabled</code></p>
+          <button disabled>Test</button>
+        </li>
+      </ol>
+
+      <h2>Skjemaelementer</h2>
+      <label for="toggle-disabled" lang="en"
+        ><input
+          type="checkbox"
+          role="switch"
+          aria-checked="false"
+          id="toggle-disabled"
+          onchange="toggleDisabledState()"
+        />Disable form</label
+      >
+      <form>
+        <fieldset>
+          <legend>Kontodetaljer</legend>
+          <label for="email"
+            >Epost (<code>type="email"</code> +
+            <code>autocomplete="email"</code>)
+            <input type="email" id="email" autocomplete="email" required />
+          </label>
+
+          <label for="mobilnummer"
+            >Telefonnummer (<code>type="number"</code>) +
+            <code>autocomplete="tel"</code>)
+            <input type="tel" id="mobilnummer" autocomplete="tel" required />
+          </label>
+
+          <label for="new-password"
+            >Passord (<code>type="password"</code> +
+            <code>autocomplete="new-password"</code>)</label
+          >
+          <input
+            type="password"
+            id="new-password"
+            autocomplete="new-password"
+            required
+          />
+
+          <label for="profilbilde"
+            >Profilbilde (<code>type="file"</code>)</label
+          >
+          <input type="file" id="profilbilde" />
+
+          <fieldset id="Kontotype">
+            <legend>Kontotype</legend>
+
+            <label><input type="radio" name="kontotype" />Utvikler</label>
+
+            <label><input type="radio" name="kontotype" />Designer</label>
+
+            <label><input type="radio" name="kontotype" />Forretning</label>
+
+            <label for="jobb-annet"
+              ><input
+                type="radio"
+                id="jobb-annet"
+                name="kontotype"
+              />Annet</label
+            >
+
+            <label for="jobb-annet-svar"
+              >Hva jobber du med?
+              <input type="text" id="jobb-annet-svar" disabled
+            /></label>
+          </fieldset>
+
+          <footer>
+            <button type="reset">Tilbakestill skjema</button>
+            <button type="submit">Lag konto</button>
+          </footer>
+        </fieldset>
+      </form>
+
+      <form>
+        <fieldset>
+          <legend>Kortfelter</legend>
+          <label for="checkbox"><code>type="checkbox"</code></label>
+          <input type="checkbox" id="checkbox" />
+
+          <label for="color"><code>type="color"</code></label>
+          <input type="color" id="color" />
+
+          <label for="date"><code>type="date"</code></label>
+          <input type="date" id="date" />
+
+          <label for="datetime"><code>type="datetime"</code></label>
+          <input type="datetime" id="datetime" />
+
+          <label for="datetime-local"><code>type="datetime-local"</code></label>
+          <input type="datetime-local" id="datetime-local" />
+
+          <label for="email"><code>type="email"</code></label>
+          <input type="email" id="email" />
+
+          <label for="file"><code>type="file"</code></label>
+          <input type="file" id="file" />
+
+          <label for="month"><code>type="month"</code></label>
+          <input type="month" id="month" />
+
+          <label for="number"><code>type="number"</code></label>
+          <input type="number" id="number" />
+
+          <label for="new-password"
+            ><code>type="password"</code> med
+            <code>autocomplete="new-password"</code></label
+          >
+          <input
+            type="password"
+            id="new-password"
+            autocomplete="new-password"
+          />
+
+          <label for="current-password"
+            ><code>type="password"</code> med
+            <code>autocomplete="current-password"</code></label
+          >
+          <input
+            type="password"
+            id="current-password"
+            autocomplete="current-password"
+          />
+
+          <label for="radio"><code>type="radio"</code></label>
+          <input type="radio" id="radio" />
+
+          <label for="range"><code>type="range"</code></label>
+          <input type="range" id="range" />
+
+          <label for="search"><code>type="search"</code></label>
+          <input type="search" id="search" />
+
+          <label for="tel"><code>type="tel"</code></label>
+          <input type="tel" id="tel" />
+
+          <label for="text"><code>type="text"</code></label>
+          <input type="text" id="text" />
+
+          <label for="time"><code>type="time"</code></label>
+          <input type="time" id="time" />
+
+          <label for="url"><code>type="url"</code></label>
+          <input type="url" id="url" />
+
+          <label for="week"><code>type="week"</code></label>
+          <input type="week" id="week" />
+
+          <footer>
+            <button type="reset">Tilbakestill skjema</button>
+            <button type="submit">Lag konto</button>
+          </footer>
+        </fieldset>
+      </form>
+    </main>
+    <script src="disabled-states.js"></script>
+  </body>
+</html>
