@@ -3,12 +3,12 @@
 :root {
   color-scheme: light dark;
 
-  --color-light-background: rgb(255, 242, 227);
+  --color-light-background: cornsilk;
   --color-light-text: white;
   --color-light-accent: rebeccapurple;
-  --color-dark-background: black;
+  --color-dark-background: midnightblue;
   --color-dark-text: black;
-  --color-dark-accent: green;
+  --color-dark-accent: ghostwhite;
 
   --color-accent: light-dark(
     var(--color-light-accent),
