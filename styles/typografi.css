@@ -1,0 +1,43 @@
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-headings);
+}
+
+h1 {
+  font-size: var(--heading-1-size);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: var(--heading-2-size);
+
+  &:not(:first-of-type) {
+    margin-block-start: 6rem;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration-style: solid;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 8px;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+code {
+  font-family: var(--font-mono);
+  padding: 0.1rem;
+  font-size: smaller;
+  font-weight: 500;
+}
+
+caption {
+  font-size: smaller;
+  text-align: start;
+  margin-block-start: 1rem;
+  caption-side: bottom;
+}
