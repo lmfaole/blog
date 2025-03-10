@@ -1,91 +1,77 @@
 form {
   margin-block: 2rem;
-
-  fieldset {
-    border-radius: var(--border-radius-interactive);
-    padding-inline: 2rem;
-    border: 1px solid hsl(from currentColor h s l / 0.2);
-    background-color: hsl(
-      from var(--color-background) h calc(s - 30) calc(l - 10) / 0.1
-    );
-    display: flex;
-    flex-direction: column;
-
-    legend {
-      font-size: var(--body-size);
-    }
-
-    &[disabled] {
-      color: var(--color-disabled);
-    }
-  }
+  container-type: inline-size;
 
   footer {
-    display: flex;
+    display: grid;
     gap: 1rem;
     margin-block: 2rem;
+
+    @container (min-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
-label,
+fieldset {
+  padding-inline: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+  border: 1px solid hsl(from currentColor h s l / 0.2);
+  background-color: var(--color-background-overlay);
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  label:first-of-type {
+    margin-block-start: 0;
+  }
+
+  &[disabled] {
+    color: var(--color-disabled);
+  }
+}
+
 legend {
-  font-weight: 500;
+  font-size: var(--heading-3-size);
+  padding-inline: 0;
+  font-family: var(--font-family-headings);
+  margin-block: 1rem;
 }
 
 label {
-  font-size: var(--body-size);
-  min-height: 44px;
-  padding-block: 0.2rem;
-  margin-block: 0.4rem;
-  box-sizing: border-box;
-  vertical-align: center;
-  font-weight: 400;
-
-  &:has(input:is([type="checkbox"], [type="radio"])) {
-    cursor: pointer;
-  }
-}
-
-button {
-  border-radius: 3px;
-  padding: 0.5rem 1rem;
-  min-width: 44px;
-  min-height: 44px;
-  border: 2px solid var(--color-accent);
-  background-color: hsl(from var(--color-accent) h s l / 0.1);
-  color: var(--color-accent);
-  font: var(--font-bold) var(--body-size);
-
-  &:not([disabled]) {
-    cursor: pointer;
-  }
-
-  &[type="submit"] {
-    background-color: hsl(from var(--color-accent) h s l / 0.8);
-    color: var(--color-background);
-  }
-
-  &:hover {
-    transition: all 0.2s;
-    background-color: var(--color-accent);
-    color: var(--color-background);
-  }
+  margin-block-start: 1rem;
 }
 
 input {
   accent-color: var(--color-accent);
   box-sizing: border-box;
-  padding: 0.4rem;
-  font-size: 1rem;
+  font-size: var(--font-body-size);
   background-color: hsl(
     from var(--color-background) h calc(s - 30) calc(l - 10) / 0.3
   );
   border: 1px solid hsl(from currentColor h s l / 0.5);
-  margin-block-start: 0.4rem;
+  width: 100%;
 
   &:not([type="checkbox"], [type="radio"]) {
     min-height: 44px;
-    display: block;
+    margin-block-end: 1rem;
+  }
+
+  &[type="radio"],
+  &[type="checkbox"],
+  &[type="file"] {
+    cursor: pointer;
+  }
+
+  &[type="radio"],
+  &[type="checkbox"] {
+    width: auto;
+    margin-inline-end: 0.5ch;
+  }
+
+  &[type="tel"],
+  &[type="number"] {
+    font-family: var(--font-mono);
+    font-variant: tabular-nums;
   }
 
   &[type="tel"] {
@@ -93,16 +79,29 @@ input {
   }
 
   &[type="password"] {
-    max-width: calc(30ch + 44px);
+    max-width: calc(20ch + 44px);
   }
 
   &[type="email"] {
-    max-width: calc(50ch + 44px);
+    max-width: calc(20ch + 44px);
   }
 
   &[type="file"] {
     border: 0;
     background-color: initial;
+
+    &::-webkit-file-upload-button {
+      border-radius: 3px;
+      padding: 0.5rem 1rem;
+      min-width: 44px;
+      min-height: 44px;
+      border: 2px solid var(--color-accent);
+      background-color: transparent;
+      font: var(--font-bold) var(--body-size);
+      cursor: pointer;
+      display: block;
+      margin-block-end: 1rem;
+    }
   }
 }
 

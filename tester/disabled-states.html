@@ -25,37 +25,28 @@
           aria-checked="false"
           id="toggle-disabled"
           onchange="toggleDisabledState()"
+          disabled
         />Disable form (ikke implementert enda)</label
       >
       <form>
         <fieldset>
           <legend>Kontodetaljer</legend>
-          <label for="email"
-            >Epost (<code>type="email"</code> +
-            <code>autocomplete="email"</code>)
-            <input type="email" id="email" autocomplete="email" required />
-          </label>
+          <label for="email">Epost </label>
+          <input type="email" id="email" autocomplete="email" required />
 
-          <label for="mobilnummer"
-            >Telefonnummer (<code>type="number"</code>) +
-            <code>autocomplete="tel"</code>)
-            <input type="tel" id="mobilnummer" autocomplete="tel" required />
-          </label>
+          <label for="mobilnummer">Telefonnummer </label>
+          <input type="tel" id="mobilnummer" autocomplete="tel" required />
 
-          <label for="new-password"
-            >Passord (<code>type="password"</code> +
-            <code>autocomplete="new-password"</code>)
-            <input
-              type="password"
-              id="new-password"
-              autocomplete="new-password"
-              required
-          /></label>
+          <label for="new-password">Passord</label>
+          <input
+            type="password"
+            id="new-password"
+            autocomplete="new-password"
+            required
+          />
 
-          <label for="profilbilde"
-            >Profilbilde (<code>type="file"</code>)
-            <input type="file" id="profilbilde"
-          /></label>
+          <label for="profilbilde">Profilbilde</label>
+          <input type="file" id="profilbilde" />
 
           <fieldset id="Kontotype">
             <legend>Kontotype</legend>
@@ -66,35 +57,11 @@
 
             <label><input type="radio" name="kontotype" />Forretning</label>
 
-            <label for="jobb-annet"
-              ><input
-                type="radio"
-                id="jobb-annet"
-                name="kontotype"
-              />Annet</label
-            >
+            <label><input type="radio" name="kontotype" />Annet</label>
 
-            <label for="jobb-annet-svar"
-              >Hva jobber du med?
-              <input type="text" id="jobb-annet-svar" disabled
-            /></label>
+            <label for="jobb-annet-svar">Hva jobber du med? </label>
+            <input type="text" id="jobb-annet-svar" disabled />
           </fieldset>
-
-          <footer>
-            <button type="reset">Tilbakestill skjema</button>
-            <button type="submit">Lag konto</button>
-          </footer>
-        </fieldset>
-      </form>
-
-      <form>
-        <fieldset>
-          <legend>Kortfelter</legend>
-
-          <label
-            >Type
-            <input type="text" autocomplete="cc-type" />
-          </label>
 
           <footer>
             <button type="reset">Tilbakestill skjema</button>

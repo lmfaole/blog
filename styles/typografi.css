@@ -11,10 +11,7 @@ h1 {
 
 h2 {
   font-size: var(--heading-2-size);
-
-  &:not(:first-of-type) {
-    margin-block-start: 6rem;
-  }
+  margin-block-start: 6rem;
 }
 
 a {
