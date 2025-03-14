@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="nb-no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../main.css" rel="stylesheet" />
+    <title>Sitater fra Deque University | Ole Jørgen Bakken</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <p class="name"><a href="/index.html" aria-label="home">Ole Jørgen</a></p>
+    </header>
+    <main>
+      <hgroup>
+        <h1>Sitater fra Deque University</h1>
+        <div role="tablist" aria-label="Sample Tabs">
+          <button
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
+          >
+            Sitater
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+          >
+            Definisjoner
+          </button>
+        </div>
+      </hgroup>
+
+      <div lang="en">
+        <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+          <h2>
+            Accessibility Fundamentals - Disabilities, Guidelines, and Laws
+          </h2>
+          <blockquote>
+            <h3>The goal is to use accessibility to drive innovation.</h3>
+            <p>
+              There are real challenges to solve in accessibility. Let those
+              challenges drive innovation. Let them be the inspiration that
+              lifts the design to the next level. Don't be satisfied with "good
+              enough" or compliant. Think creatively. Think inclusively. Always
+              design with accessibility in mind.
+            </p>
+          </blockquote>
+
+          <blockquote>
+            <h3>Accessibility matters a lot to people with disabilities</h3>
+            <p>
+              Compliance does not equate to a great user experience; your
+              creativity and commitment to accessibility will be the deciding
+              factor in how we raise the bar for what customers expect when
+              using our products and services. Inaccessible web sites are not
+              just inconvenient for people with disabilities, they are blocking.
+            </p>
+
+            <p>
+              You have the power to make your product better by making it usable
+              by all people and giving everyone equal access to information.
+              Failing to make a web site accessible has real consequences for
+              real people. Inaccessible web sites take away freedoms that people
+              with disabilities would otherwise enjoy, reducing quality of life,
+              and making day-to-day tasks difficult or impossible. Let's do our
+              part to design a more inclusive and more welcoming experience for
+              all our customers.
+            </p>
+          </blockquote>
+          <h2>Designing an Accessible User Experience</h2>
+          <blockquote>
+            <h3>
+              Can you create a design that complies fully with the accessibility
+              guidelines, but which is not fully accessible?
+            </h3>
+            <p>
+              The answer is yes, that can happen, though the risk of having a
+              terribly inaccessible web site is quite low if it meets the
+              guidelines. Still, it's worth pointing out that the guidelines
+              don't cover every last aspect of accessibility. In fact, the
+              guidelines were written to be objectively testable, which means
+              that all of the subjective aspects of accessibility were purposely
+              excluded from the guidelines.
+            </p>
+            <p>
+              The category of disability most neglected in current guidelines is
+              cognitive disabilities, because many of the measurements of
+              cognitive disability access include some degree of subjective
+              judgment.
+            </p>
+            <h4>Usability vs accessibility</h4>
+            <p>
+              Many of the subjective criteria spill over into areas that many
+              would consider the realm of usability, rather than pure
+              accessibility, but the truth is there is a lot of overlap between
+              accessibility and usability. What if a website is technically
+              "accessible" (according to the guidelines) but is highly unusable?
+              Could you really say that such a web site is accessible? It might
+              meet a limited definition of accessibility, but it would fail to
+              meet the implied intent of web accessibility, which is that people
+              with disabilities can use the web site.
+            </p>
+          </blockquote>
+        </div>
+        <div
+          id="panel-2"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="tab-2"
+          hidden
+        >
+          <dl>
+            <dt>Inclusive design</dt>
+            <dd>
+              A design methodology that seeks to enable and to accommodate the
+              full range of human diversity, including a wide spectrum of
+              abilities and disabilities. The main goal is to create a unified
+              approach to design that enables multiple methods to access the
+              same functionality.
+            </dd>
+            <dt>Web accessibility</dt>
+            <dd>
+              The qualities that make a web experience available to the widest
+              possible group of users. Web accessibility refers to the end
+              result of an inclusive design process.
+            </dd>
+            <dd>
+              To add a bit more detail to the definition of web accessibility,
+              the
+              <a href="https://www.w3.org/TR/WCAG21/"
+                >Web Content Accessibility Guidelines (WCAG) 2.1</a
+              >
+              opens in a new window list four main principles of web
+              accessibility:
+              <ol>
+                <li>
+                  Perceivable - Information and user interface components must
+                  be presentable to users in ways they can perceive.
+                </li>
+                <li>
+                  Operable - User interface components and navigation must be
+                  operable.
+                </li>
+                <li>
+                  Understandable - Information and the operation of user
+                  interface must be understandable.
+                </li>
+                <li>
+                  Robust - Content must be robust enough that it can be
+                  interpreted reliably by a wide variety of user agents,
+                  including assistive technologies.
+                </li>
+              </ol>
+            </dd>
+            <dt>Usability</dt>
+            <dd>
+              The qualities that make a web experience intuitive and easy to
+              use. A usable web design aligns with the purpose for which the web
+              site was created.
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </main>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // Only handle one particular tablist; if you have multiple tab
+        // lists (might even be nested), you have to apply this code for each one
+        const tabList = document.querySelector('[role="tablist"]');
+        const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
+
+        // Add a click event handler to each tab
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", changeTabs);
+        });
+
+        // Enable arrow navigation between tabs in the tab list
+        let tabFocus = 0;
+
+        tabList.addEventListener("keydown", (e) => {
+          // Move right
+          if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+            tabs[tabFocus].setAttribute("tabindex", -1);
+            if (e.key === "ArrowRight") {
+              tabFocus++;
+              // If we're at the end, go to the start
+              if (tabFocus >= tabs.length) {
+                tabFocus = 0;
+              }
+              // Move left
+            } else if (e.key === "ArrowLeft") {
+              tabFocus--;
+              // If we're at the start, move to the end
+              if (tabFocus < 0) {
+                tabFocus = tabs.length - 1;
+              }
+            }
+
+            tabs[tabFocus].setAttribute("tabindex", 0);
+            tabs[tabFocus].focus();
+          }
+        });
+      });
+
+      function changeTabs(e) {
+        const targetTab = e.target;
+        const tabList = targetTab.parentNode;
+        const tabGroup = tabList.parentNode;
+
+        console.log(
+          tabGroup.querySelector(`#${targetTab.getAttribute("aria-controls")}`)
+        );
+
+        // Remove all current selected tabs
+        tabList
+          .querySelectorAll(':scope > [aria-selected="true"]')
+          .forEach((t) => t.setAttribute("aria-selected", false));
+
+        // Set this tab as selected
+        targetTab.setAttribute("aria-selected", true);
+
+        // Hide all tab panels
+        tabGroup
+          .querySelectorAll(':scope > [role="tabpanel"]')
+          .forEach((p) => p.setAttribute("hidden", true));
+
+        // Show the selected panel
+        tabGroup
+          .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
+          .removeAttribute("hidden");
+      }
+    </script>
+  </body>
+</html>

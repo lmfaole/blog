@@ -1,7 +1,14 @@
+p,
+li {
+  max-width: 66ch;
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-bold);
 }
 
 h1 {
@@ -14,14 +21,31 @@ h2 {
   margin-block-start: 6rem;
 }
 
+h3 {
+  margin-block: 3rem 0;
+}
+
+h4 {
+  margin-block: 2rem 0;
+  font-weight: var(--font-weight-regular);
+}
+
+p {
+  margin: 0;
+
+  &:not(:last-of-type) {
+    margin-block: 0.5rem 3rem;
+  }
+}
+
 a {
   color: currentColor;
   text-decoration-style: solid;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--color-border);
   text-underline-offset: 8px;
 
   &:hover {
-    color: var(--color-accent);
+    text-decoration-thickness: 4px;
   }
 }
 
@@ -37,4 +61,8 @@ caption {
   text-align: start;
   margin-block-start: 1rem;
   caption-side: bottom;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
 }

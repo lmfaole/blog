@@ -56,20 +56,16 @@ input {
     margin-block-end: 1rem;
   }
 
-  &[type="radio"],
-  &[type="checkbox"],
-  &[type="file"] {
+  &:is([type="radio"], [type="checkbox"], [type="file"]) {
     cursor: pointer;
   }
 
-  &[type="radio"],
-  &[type="checkbox"] {
+  &:is([type="radio"], [type="checkbox"]) {
     width: auto;
     margin-inline-end: 0.5ch;
   }
 
-  &[type="tel"],
-  &[type="number"] {
+  &:is([type="tel"], [type="number"]) {
     font-family: var(--font-mono);
     font-variant: tabular-nums;
   }
@@ -91,14 +87,6 @@ input {
     background-color: initial;
 
     &::-webkit-file-upload-button {
-      border-radius: 3px;
-      padding: 0.5rem 1rem;
-      min-width: 44px;
-      min-height: 44px;
-      border: 2px solid var(--color-accent);
-      background-color: transparent;
-      font: var(--font-bold) var(--body-size);
-      cursor: pointer;
       display: block;
       margin-block-end: 1rem;
     }

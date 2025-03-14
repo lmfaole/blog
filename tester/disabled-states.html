@@ -51,21 +51,37 @@
           <fieldset id="Kontotype">
             <legend>Kontotype</legend>
 
-            <label><input type="radio" name="kontotype" />Utvikler</label>
+            <label
+              ><input
+                type="radio"
+                name="kontotype"
+                value="eee"
+              />Utvikler</label
+            >
 
-            <label><input type="radio" name="kontotype" />Designer</label>
+            <label
+              ><input type="radio" name="kontotype" value="23" />Designer</label
+            >
 
-            <label><input type="radio" name="kontotype" />Forretning</label>
+            <label
+              ><input
+                type="radio"
+                name="kontotype"
+                value="4"
+              />Forretning</label
+            >
 
-            <label><input type="radio" name="kontotype" />Annet</label>
+            <label
+              ><input type="radio" name="kontotype" value="annet" />Annet</label
+            >
 
             <label for="jobb-annet-svar">Hva jobber du med? </label>
             <input type="text" id="jobb-annet-svar" disabled />
           </fieldset>
 
           <footer>
-            <button type="reset">Tilbakestill skjema</button>
             <button type="submit">Lag konto</button>
+            <button type="reset">Tilbakestill skjema</button>
           </footer>
         </fieldset>
       </form>
@@ -130,5 +146,17 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      const otherFields = document.querySelectorAll("fieldset>*[disabled]");
+
+      otherFields.forEach((field) => {
+        field.parentNode.querySelectorAll('input[value="annet"]');
+        field.parentNode.addEventListener("change", (event) => {
+          if (event.target.value === "annet") {
+            console.log(field.hasAttribute("disabled"));
+          }
+        });
+      });
+    </script>
   </body>
 </html>
