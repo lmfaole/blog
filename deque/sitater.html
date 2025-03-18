@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../main.css" rel="stylesheet" />
+    <link href="./deque.css" rel="stylesheet" />
     <title>Sitater fra Deque University | Ole Jørgen Bakken</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
@@ -12,34 +12,15 @@
       <p class="name"><a href="/index.html" aria-label="home">Ole Jørgen</a></p>
     </header>
     <main>
-      <hgroup>
-        <h1>Sitater fra Deque University</h1>
-        <div role="tablist" aria-label="Sample Tabs">
-          <button
-            type="button"
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-1"
-            id="tab-1"
-            tabindex="0"
-          >
-            Sitater
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-2"
-            id="tab-2"
-            tabindex="-1"
-          >
-            Definisjoner
-          </button>
-        </div>
-      </hgroup>
+      <article>
+        <hgroup>
+          <h1>Sitater fra Deque University</h1>
+          <nav lang="no">
+            <a href="index.html">Tilbake til notatene</a>
+          </nav>
+        </hgroup>
 
-      <div lang="en">
-        <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+        <div lang="en" class="page-scroll">
           <h2>
             Accessibility Fundamentals - Disabilities, Guidelines, and Laws
           </h2>
@@ -110,133 +91,7 @@
             </p>
           </blockquote>
         </div>
-        <div
-          id="panel-2"
-          role="tabpanel"
-          tabindex="0"
-          aria-labelledby="tab-2"
-          hidden
-        >
-          <dl>
-            <dt>Inclusive design</dt>
-            <dd>
-              A design methodology that seeks to enable and to accommodate the
-              full range of human diversity, including a wide spectrum of
-              abilities and disabilities. The main goal is to create a unified
-              approach to design that enables multiple methods to access the
-              same functionality.
-            </dd>
-            <dt>Web accessibility</dt>
-            <dd>
-              The qualities that make a web experience available to the widest
-              possible group of users. Web accessibility refers to the end
-              result of an inclusive design process.
-            </dd>
-            <dd>
-              To add a bit more detail to the definition of web accessibility,
-              the
-              <a href="https://www.w3.org/TR/WCAG21/"
-                >Web Content Accessibility Guidelines (WCAG) 2.1</a
-              >
-              opens in a new window list four main principles of web
-              accessibility:
-              <ol>
-                <li>
-                  Perceivable - Information and user interface components must
-                  be presentable to users in ways they can perceive.
-                </li>
-                <li>
-                  Operable - User interface components and navigation must be
-                  operable.
-                </li>
-                <li>
-                  Understandable - Information and the operation of user
-                  interface must be understandable.
-                </li>
-                <li>
-                  Robust - Content must be robust enough that it can be
-                  interpreted reliably by a wide variety of user agents,
-                  including assistive technologies.
-                </li>
-              </ol>
-            </dd>
-            <dt>Usability</dt>
-            <dd>
-              The qualities that make a web experience intuitive and easy to
-              use. A usable web design aligns with the purpose for which the web
-              site was created.
-            </dd>
-          </dl>
-        </div>
-      </div>
+      </article>
     </main>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        // Only handle one particular tablist; if you have multiple tab
-        // lists (might even be nested), you have to apply this code for each one
-        const tabList = document.querySelector('[role="tablist"]');
-        const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
-
-        // Add a click event handler to each tab
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", changeTabs);
-        });
-
-        // Enable arrow navigation between tabs in the tab list
-        let tabFocus = 0;
-
-        tabList.addEventListener("keydown", (e) => {
-          // Move right
-          if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-            tabs[tabFocus].setAttribute("tabindex", -1);
-            if (e.key === "ArrowRight") {
-              tabFocus++;
-              // If we're at the end, go to the start
-              if (tabFocus >= tabs.length) {
-                tabFocus = 0;
-              }
-              // Move left
-            } else if (e.key === "ArrowLeft") {
-              tabFocus--;
-              // If we're at the start, move to the end
-              if (tabFocus < 0) {
-                tabFocus = tabs.length - 1;
-              }
-            }
-
-            tabs[tabFocus].setAttribute("tabindex", 0);
-            tabs[tabFocus].focus();
-          }
-        });
-      });
-
-      function changeTabs(e) {
-        const targetTab = e.target;
-        const tabList = targetTab.parentNode;
-        const tabGroup = tabList.parentNode;
-
-        console.log(
-          tabGroup.querySelector(`#${targetTab.getAttribute("aria-controls")}`)
-        );
-
-        // Remove all current selected tabs
-        tabList
-          .querySelectorAll(':scope > [aria-selected="true"]')
-          .forEach((t) => t.setAttribute("aria-selected", false));
-
-        // Set this tab as selected
-        targetTab.setAttribute("aria-selected", true);
-
-        // Hide all tab panels
-        tabGroup
-          .querySelectorAll(':scope > [role="tabpanel"]')
-          .forEach((p) => p.setAttribute("hidden", true));
-
-        // Show the selected panel
-        tabGroup
-          .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
-          .removeAttribute("hidden");
-      }
-    </script>
   </body>
 </html>

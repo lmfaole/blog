@@ -16,6 +16,7 @@
     var(--color-dark-accent)
   );
   --color-text: light-dark(var(--color-light-text), var(--color-dark-text));
+  --color-text-disabled: hsl(from var(--color-text) h s l / 0.4);
   --color-background: light-dark(
     var(--color-light-background),
     var(--color-dark-background)
@@ -41,6 +42,7 @@
   --font-sans: "Inter", sans-serif;
   --font-serif: "Wittgenstein", serif;
   --font-mono: "Ubuntu Sans Mono", monospace;
+  --font-icons: "Material Symbols Outlined";
 
   --font-family-headings: var(--font-serif);
   --font-family-body: var(--font-sans);

@@ -1,19 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Ubuntu+Sans+Mono:wght@500&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=cancel,check_circle,subdirectory_arrow_right,arrow_back&display=block");
 @import url("styles/variables.css");
 @import url("styles/typografi.css");
 @import url("styles/skjemaelementer.css");
 @import url("styles/table.css");
 @import url("styles/structure.css");
+@import url("styles/support-classes.css");
 
-.visuelt-skjult {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
+html,
+body {
+  background-color: var(--color-background);
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.9;
+  font-size: var(--body-size);
+  font-family: var(--font-family-body);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  container-type: inline-size;
+  padding-block-end: 4rem;
+
+  > header {
+    padding-block: 2rem;
+    margin-block-end: 2rem;
+  }
+}
+
+main,
+header,
+footer {
+  max-width: 1200px;
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
+
+article {
+  hgroup {
+    margin-block-end: 4rem;
+
+    nav {
+      margin-block-start: 2rem;
+    }
+  }
+}
+
+*:focus {
+  outline: 4px solid var(--color-text);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-interactive);
 }

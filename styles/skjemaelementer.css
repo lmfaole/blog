@@ -1,6 +1,11 @@
 form {
   margin-block: 2rem;
   container-type: inline-size;
+  padding-inline: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+  border: 1px solid hsl(from currentColor h s l / 0.2);
+  background-color: var(--color-background-overlay);
+  display: flex;
+  flex-direction: column;
 
   footer {
     display: grid;
@@ -23,10 +28,6 @@ fieldset {
 
   label:first-of-type {
     margin-block-start: 0;
-  }
-
-  &[disabled] {
-    color: var(--color-disabled);
   }
 }
 
@@ -56,10 +57,6 @@ input {
     margin-block-end: 1rem;
   }
 
-  &:is([type="radio"], [type="checkbox"], [type="file"]) {
-    cursor: pointer;
-  }
-
   &:is([type="radio"], [type="checkbox"]) {
     width: auto;
     margin-inline-end: 0.5ch;
@@ -81,21 +78,9 @@ input {
   &[type="email"] {
     max-width: calc(20ch + 44px);
   }
-
-  &[type="file"] {
-    border: 0;
-    background-color: initial;
-
-    &::-webkit-file-upload-button {
-      display: block;
-      margin-block-end: 1rem;
-    }
-  }
 }
 
-[disabled],
-[disabled]:hover {
+[disabled] {
   background-color: transparent;
-  color: hsl(from var(--color-text) h s l / 0.4);
-  border: 2px dashed hsl(from var(--color-text) h s l / 0.4);
+  border: 1px dashed hsl(from var(--color-text) h s l / 0.4);
 }
