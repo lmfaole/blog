@@ -8,13 +8,16 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
 
-  <body class="noto-sans-body">
+  <body>
     <header>
-      <p class="name"><a href="/index.html" aria-label="home">Ole Jørgen</a></p>
+      <p><a href="/index.html" aria-label="home" class="name">Ole Jørgen</a></p>
     </header>
     <main>
       <article>
         <hgroup>
+          <nav lang="no">
+            <a href="../index.html">Alle tester</a>
+          </nav>
           <h1>OKLCH vs HSL</h1>
         </hgroup>
 
@@ -42,19 +45,25 @@
         <figure class="sammenligning">
           <div class="red hsl"></div>
           <div class="red oklch"></div>
-          <figcaption>Sterkeste rødfargen som kan vises.</figcaption>
+          <figcaption>
+            Sterkeste rødfargen som kan vises i HSL og OKLCH.
+          </figcaption>
         </figure>
 
         <figure class="sammenligning">
           <div class="blue hsl"></div>
           <div class="blue oklch"></div>
-          <figcaption>Sterkeste blåfargen som kan vises.</figcaption>
+          <figcaption>
+            Sterkeste blåfargen som kan vises i HSL og OKLCH.
+          </figcaption>
         </figure>
 
         <figure class="sammenligning">
           <div class="green hsl"></div>
           <div class="green oklch"></div>
-          <figcaption>Sterkeste grønnfargen som kan vises.</figcaption>
+          <figcaption>
+            Sterkeste grønnfargen som kan vises i HSL og OKLCH.
+          </figcaption>
         </figure>
 
         <h2>Overganger</h2>
@@ -62,10 +71,11 @@
 
         <figure class="sammenligning vertikalt">
           <div class="gradient hsl"></div>
-          <div class="gradient oklab"></div>
           <div class="gradient oklch"></div>
+          <div class="gradient oklab"></div>
           <figcaption>
-            Overgang fra blå til rød. Hentet fra MDN-artikkelen
+            Overgang fra blå til rød i HSL, OKLAB og OKLCH. Hentet fra
+            MDN-artikkelen
             <cite lang="en"
               ><a
                 href="https://developer.mozilla.org/en-US/blog/css-color-module-level-4/"

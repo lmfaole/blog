@@ -1,0 +1,60 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-block: 2rem;
+  container-type: inline-size;
+}
+
+legend {
+  padding-inline: 0;
+  margin-block: 1rem;
+}
+
+label {
+  margin-block-start: 1rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding-inline: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+  margin-block: 1rem;
+  border: 1px solid currentcolor;
+
+  label:first-of-type {
+    margin-block-start: 0;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid hsl(from currentcolor h s l / 50%);
+
+  &:not([type="checkbox"], [type="radio"]) {
+    min-height: 44px;
+    margin-block-end: 1rem;
+  }
+
+  &:is([type="radio"], [type="checkbox"]) {
+    width: auto;
+    margin-inline-end: 0.5ch;
+  }
+
+  &:is([type="tel"], [type="number"]) {
+    font-family: var(--font-mono);
+    font-variant: tabular-nums;
+  }
+
+  &[type="tel"] {
+    max-width: calc(8ch + 44px); /* Lengden på et mobilnummer + litt space */
+  }
+
+  &[type="password"] {
+    max-width: calc(20ch + 44px);
+  }
+
+  &[type="email"] {
+    max-width: calc(20ch + 44px);
+  }
+}

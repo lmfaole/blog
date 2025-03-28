@@ -1,39 +1,37 @@
 @import url("/main.css");
 
-@view-transition {
-  navigation: auto;
-}
+.example {
+  &::after {
+    content: "";
+  }
 
-@keyframes move-out {
-  from {
-    transform: translateY(0);
+  &.good {
+    &::before {
+      content: "check_circle" / "Godt eksempel";
+    }
   }
-  to {
-    transform: translateY(100px);
-  }
-}
 
-@keyframes move-in {
-  from {
-    transform: translateY(100px);
-  }
-  to {
-    transform: translateY(0);
+  &.bad {
+    &::before {
+      content: "cancel" / "Dårlig eksempel";
+    }
   }
 }
 
-.page-scroll {
-  view-transition-name: page-scroll;
+.principles-of-universal-design {
+  h2 {
+    counter-increment: principles;
+    counter-reset: rules;
 
-  @media prefers-redused-motion {
-    view-transition-name: unset;
+    &::before {
+      content: counter(principles) ". ";
+    }
   }
-}
 
-::view-transition-old(content) {
-  animation: 0.4s ease-in both move-out;
-}
-
-::view-transition-new(content) {
-  animation: 0.4s ease-in both move-in;
+  li {
+    counter-increment: rules;
+    &::marker {
+      content: counter(principles) "." counter(rules) " ";
+    }
+  }
 }
