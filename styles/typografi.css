@@ -102,7 +102,7 @@ figcaption {
 blockquote {
   display: grid;
   max-width: var(--site-content-width);
-  padding: 3ex 2cqw;
+  padding: 3ex 4cqw;
   margin: 0;
   margin-block: 3ex;
   font-style: italic;
@@ -125,5 +125,9 @@ blockquote {
 
   &::after {
     transform: scaleX(-1);
+  }
+
+  @container (max-width: 65ch) {
+    margin-inline: var(--site-bleed);
   }
 }

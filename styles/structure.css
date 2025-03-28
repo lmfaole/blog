@@ -25,7 +25,7 @@ footer {
 }
 
 article {
-  max-width: var(--site-content-width);
+  max-width: calc(var(--site-content-width) + 12ch);
   container-type: inline-size;
 }
 
@@ -112,6 +112,7 @@ dl {
     margin-block: 5ex 1ex;
     counter-reset: definitions;
     counter-increment: terms;
+    font: var(--text-heading-3);
 
     &::before {
       content: counter(terms) " ";
