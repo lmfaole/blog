@@ -1,10 +1,11 @@
 body {
   font: var(--text-body);
+  color: var(--color-text);
 }
 
 p,
 li {
-  max-width: 66ch;
+  max-width: var(--site-content-width);
 }
 
 h1,
@@ -68,6 +69,12 @@ a {
   }
 }
 
+mark {
+  background-color: light-dark(var(--yellow), var(--blue));
+  color: inherit;
+  padding-inline: 0.1em;
+}
+
 ul {
   padding-inline-start: 1rem;
 }
@@ -94,18 +101,13 @@ figcaption {
 
 blockquote {
   display: grid;
-  max-width: 66ch;
+  max-width: var(--site-content-width);
   padding: 3ex 2cqw;
   margin: 0;
-  margin-block: 10ex;
+  margin-block: 3ex;
   font-style: italic;
-  background-color: color-mix(
-    in oklch,
-    var(--color) 5%,
-    var(--color-background)
-  );
-  border-block: 1px solid
-    color-mix(in oklch, var(--color) 90%, var(--color-background));
+  background-color: var(--color-surface);
+  border-block: 1px solid color-mix(in oklch, var(--color) 50%, currentcolor);
 
   *:first-child {
     margin-block-start: 0;
