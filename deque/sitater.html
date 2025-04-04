@@ -20,23 +20,21 @@
           <h1>Sitater fra Deque University</h1>
         </hgroup>
 
-        <div lang="en" class="page-scroll">
-          <h2>
-            Accessibility Fundamentals - Disabilities, Guidelines, and Laws
-          </h2>
+        <div lang="en">
+          <h2>Goals</h2>
           <blockquote>
-            <h3>The goal is to use accessibility to drive innovation.</h3>
             <p>
-              There are real challenges to solve in accessibility. Let those
-              challenges drive innovation. Let them be the inspiration that
-              lifts the design to the next level. Don't be satisfied with "good
-              enough" or compliant. Think creatively. Think inclusively. Always
-              design with accessibility in mind.
+              The goal is to use accessibility to drive innovation. There are
+              real challenges to solve in accessibility. Let those challenges
+              drive innovation. Let them be the inspiration that lifts the
+              design to the next level. Don't be satisfied with "good enough" or
+              compliant. Think creatively. Think inclusively. Always design with
+              accessibility in mind.
             </p>
           </blockquote>
 
+          <h3>Accessibility matters a lot to people with disabilities</h3>
           <blockquote>
-            <h3>Accessibility matters a lot to people with disabilities</h3>
             <p>
               Compliance does not equate to a great user experience; your
               creativity and commitment to accessibility will be the deciding
@@ -56,7 +54,93 @@
               all our customers.
             </p>
           </blockquote>
-          <h2>Designing an Accessible User Experience</h2>
+
+          <h2>Avoid Exclusive Design Patterns</h2>
+          <blockquote>
+            <p>
+              Accessibility problems are the result of biased design decisions.
+              Exclusion is the result of design patterns that fail to take into
+              account the full spectrum of people who will use the design. Often
+              these biased design patterns are accidental. Designers don't
+              realize that their design patterns assume certain user
+              characteristics. It is common to assume, for example that everyone
+              can see and can use a mouse. Web designs created for sighted mouse
+              users will cause problems for blind keyboard users.
+            </p>
+            <p>
+              It would be a big mistake to say, "well, blind keyboard users have
+              trouble with the design because of their disability." The
+              disability is actually not the problem. The design is the problem.
+              The design itself causes a disabling situation that could be
+              avoided with a better design. It is 100% possible to create an
+              accessible design that works for blind keyboard users. It is up to
+              the designer to do so.
+            </p>
+          </blockquote>
+
+          <h2>Designing for edge cases</h2>
+          <blockquote>
+            <p>
+              If you always design for the "typical" or "statistical normal"
+              user, you're missing the chance to invent solutions that reach
+              even more people. Before we go too far, let's talk about the
+              actual meaning of the word "normal." Normal, when used as a
+              technical term in mathematics, refers to statistical probability.
+              It describes the likelihood that a member of a given population
+              will have characteristics that match the mathematical average of
+              the population as a whole. It is represented visually by a
+              graphical curve, often called a "bell curve".
+            </p>
+            <img src="./assets/bell-curve.png" alt="" />
+            <p>
+              If you target your design at the users who fall in the middle of
+              the normal curve (in statistical terms, we would say plus or minus
+              one standard deviation from the mean, or average), you would meet
+              the needs of 68% of the users. That's a substantial majority. You
+              might think that's good enough. For the majority of your users it
+              is in fact good enough. But it's not good enough for 32% of your
+              users.
+            </p>
+            <p>
+              What if you took a different approach, and instead identified two
+              target users: one at two standard deviations left of the mean, and
+              one at two standard deviations right of the mean? If you did that,
+              you would meet the needs of two very different kinds of people,
+              and your design would have to take into account the middle ground
+              between them.
+              <em
+                >You'd end up satisfying the needs of 95% to 99.7% of the
+                users.</em
+              >
+            </p>
+          </blockquote>
+
+          <h2>Automation</h2>
+          <blockquote>
+            <p>
+              [...] There's a lot more you can do beyond these two things, but
+              you don't need a person with a disability to tell you you're
+              missing
+              <code>alt</code> text on an image or a <code>label</code> for a
+              form element, for example. Automated tools can already do that.
+              Take advantage of the person's time to gain more meaningful
+              feedback.
+            </p>
+          </blockquote>
+          <h2>Usability vs accessibility</h2>
+          <blockquote>
+            <p>
+              If a web site is difficult to use, it's not always obvious to
+              people with disabilities whether the problems are due to
+              accessibility compliance errors or broader usability problems. If
+              they can't figure out how to use your web site, they may assume
+              your site is inaccessible, even if it is technically compliant but
+              just hard to use with a disability. Design a good, usable
+              experience so that people don't have a reason to question the
+              site's accessibility.
+            </p>
+          </blockquote>
+
           <blockquote>
             <h3>
               Can you create a design that complies fully with the accessibility
@@ -77,7 +161,6 @@
               cognitive disability access include some degree of subjective
               judgment.
             </p>
-            <h4>Usability vs accessibility</h4>
             <p>
               Many of the subjective criteria spill over into areas that many
               would consider the realm of usability, rather than pure
@@ -88,6 +171,63 @@
               meet a limited definition of accessibility, but it would fail to
               meet the implied intent of web accessibility, which is that people
               with disabilities can use the web site.
+            </p>
+          </blockquote>
+          <h2>One size fits most</h2>
+          <blockquote>
+            <p>
+              There are strong arguments for not creating separate designs just
+              for the sake of accessibility:
+            </p>
+            <ul>
+              <li>
+                <strong>Separate designs are rarely necessary.</strong> You can
+                build in all of the accessibility you need in a single design
+                for almost all kinds of disabilities (severe cognitive
+                disabilities are the main exception).
+              </li>
+              <li>
+                <strong>Users may not activate the accessible version</strong>
+                even if you create the "perfect" accessible version. It is much
+                easier for a person to simply use the web site than to try to
+                figure out custom accessibility options or how to activate them.
+              </li>
+              <li>
+                <strong>Stigma.</strong> There is a long history of people with
+                disabilities being relegated to "the back door," both in a
+                literal sense and in a metaphorical sense. Users with
+                disabilities would rather use the main version of the website,
+                partly out of the fear that they may be missing something by not
+                going to the main version.
+              </li>
+              <li>
+                <strong
+                  >Maintaining one version of a web design is hard
+                  enough.</strong
+                >
+                Trying to maintain two versions, or multiple versions for
+                several kinds of disabilities, is probably too much to ask of
+                your web team.
+              </li>
+              <li>
+                <strong>You can't tell who has a disability.</strong> [...] The
+                only option is to provide those features for all users, whether
+                they need them or not. On the flip side, you cannot assume that
+                someone has a disability if they access the accessibility
+                features.
+              </li>
+            </ul>
+          </blockquote>
+
+          <h2>Landmarks</h2>
+          <blockquote>
+            <p>
+              In most cases, you want only one header, one search, one main, and
+              one footer. You can have multiple navigation regions, but it's
+              often best to limit it just to the main navigation. If you do
+              designate multiple navigation regions, give them unique names
+              using aria-label (e.g.
+              <code>&lt;nav aria-label="Product categories"&gt;</code>
             </p>
           </blockquote>
         </div>

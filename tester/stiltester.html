@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/main.css" rel="stylesheet" />
+    <title>Disabled states | Ole Jørgen Bakken</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <p><a href="/index.html" aria-label="home" class="name">Ole Jørgen</a></p>
+    </header>
+    <main>
+      <article>
+        <hgroup>
+          <nav lang="no">
+            <a href="index.html">Alle tester</a>
+          </nav>
+          <h1>Disabled states for skjemaelementer</h1>
+          <p>Noen eksempler på skjemaelementer og disabled states.</p>
+        </hgroup>
+
+        <form>
+          <legend>Kontodetaljer</legend>
+          <label for="email">Epost </label>
+          <input type="email" id="email" autocomplete="email" disabled />
+
+          <label for="mobilnummer">Telefonnummer </label>
+          <input type="tel" id="mobilnummer" autocomplete="tel" disabled />
+
+          <label for="new-password">Passord</label>
+          <input
+            type="password"
+            id="new-password"
+            autocomplete="new-password"
+            disabled
+          />
+
+          <label for="profilbilde">Profilbilde</label>
+          <input type="file" id="profilbilde" disabled />
+
+          <fieldset id="Kontotype" disabled>
+            <legend>Kontotype</legend>
+
+            <label
+              ><input
+                type="radio"
+                name="kontotype"
+                value="eee"
+              />Utvikler</label
+            >
+
+            <label
+              ><input type="radio" name="kontotype" value="23" />Designer</label
+            >
+
+            <label
+              ><input
+                type="radio"
+                name="kontotype"
+                value="4"
+              />Forretning</label
+            >
+
+            <label
+              ><input type="radio" name="kontotype" value="annet" />Annet</label
+            >
+
+            <label for="jobb-annet-svar">Hva jobber du med? </label>
+            <input type="text" id="jobb-annet-svar" disabled />
+          </fieldset>
+
+          <footer>
+            <button type="submit" disabled>Lag konto</button>
+            <button type="reset" disabled>Tilbakestill skjema</button>
+          </footer>
+        </form>
+
+        <details>
+          <summary>Eksempler med knapper og disabled attributter.</summary>
+          <table>
+            <caption>
+              Disabled og aria-disabled kombinert med tabindex.
+            </caption>
+            <tbody lang="en">
+              <tr>
+                <td></td>
+                <th scope="col" colspan="2">disabled</th>
+                <th scope="col" colspan="2">aria-disabled</th>
+              </tr>
+              <tr>
+                <td></td>
+                <th scope="col">false</th>
+                <th scope="col">true</th>
+                <th scope="col">false</th>
+                <th scope="col">true</th>
+              </tr>
+              <tr>
+                <th scope="row">Auto-tabindex</th>
+                <td><button>Test</button></td>
+                <td><button disabled>Test</button></td>
+                <td><button aria-disabled="false">Test</button></td>
+                <td><button aria-disabled="true">Test</button></td>
+              </tr>
+              <tr>
+                <th scope="row"><code>tabindex="0"</code></th>
+                <td><button tabindex="0">Test</button></td>
+                <td><button disabled tabindex="0">Test</button></td>
+                <td>
+                  <button aria-disabled="false" tabindex="0">Test</button>
+                </td>
+                <td><button aria-disabled="true" tabindex="0">Test</button></td>
+              </tr>
+              <tr>
+                <th scope="row"><code>tabindex="-1"</code></th>
+                <td><button tabindex="-1">Test</button></td>
+                <td><button disabled tabindex="-1">Test</button></td>
+                <td>
+                  <button aria-disabled="false" tabindex="-1">Test</button>
+                </td>
+                <td>
+                  <button aria-disabled="true" tabindex="-1">Test</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+
+        <pre>
+             S
+             A
+            LUT
+             M
+            O N
+            D  E
+            DONT
+           E SUIS
+           LA LAN
+          G U E  É
+         L O Q U E N
+        TE      QUESA
+       B  O  U  C  H  E
+      O        P A R I S
+     T I R E   ET   TIRERA
+    T O U             JOURS
+   AUX                  A  L
+ LEM                      ANDS   - Apollinaire
+</pre
+        >
+      </article>
+    </main>
+  </body>
+</html>

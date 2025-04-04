@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,0..1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,format_quote,note_stack,subdirectory_arrow_right,unfold_less,unfold_more,wysiwyg&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,flare,format_quote,note_stack,subdirectory_arrow_right,unfold_less,unfold_more,wysiwyg&display=block");
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
 @import url("styles/forms.css");
@@ -34,19 +34,9 @@
   );
   --blue: light-dark(oklch(87.72% 0.0652 257.82), oklch(28.38% 0.1436 259.77));
 
-  --site-max-width: 1200px;
-  --site-padding-inline: 2rem;
-  --site-content-width: 66ch;
-
-  /* Hentet fra https://frontendmasters.com/blog/full-bleed-layout-with-modern-css/ */
-  --site-bleed: min(
-    -1 * var(--site-padding-inline),
-    var(--site-max-width) / 2 - 50cqw
-  );
-
   --border-radius: 1cqh;
 
-  --font-text: "Rethink Sans", sans-serif;
+  --font-text: "Sono", sans-serif;
   --font-icons: "Material Symbols Outlined";
 
   --font-weight-regular: 400;

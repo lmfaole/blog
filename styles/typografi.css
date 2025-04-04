@@ -1,11 +1,6 @@
-body {
-  font: var(--text-body);
-  color: var(--color-text);
-}
-
 p,
 li {
-  max-width: var(--site-content-width);
+  max-width: 66ch;
 }
 
 h1,
@@ -13,6 +8,7 @@ h2,
 h3,
 h4 {
   margin: 0;
+  max-width: 40ch;
 }
 
 h1 {
@@ -21,7 +17,7 @@ h1 {
 }
 
 h2 {
-  margin-block-start: 6ex;
+  margin-block: 6ex 1ex;
   font: var(--text-heading-2);
 
   &:has(a) {
@@ -42,12 +38,25 @@ p {
   }
 }
 
+img {
+  margin-block: 1ex 3ex;
+
+  + caption,
+  + figcaption {
+    margin-block-start: -2ex;
+  }
+}
+
+a,
+abbr {
+  text-underline-offset: 0.4ex;
+  text-decoration-thickness: 0.2ex;
+  text-decoration-color: var(--color-border);
+}
+
 a {
   color: currentcolor;
-  text-decoration-thickness: 0.2ex;
   text-decoration-style: solid;
-  text-decoration-color: var(--color-border);
-  text-underline-offset: 0.4ex;
 
   &:hover {
     text-decoration-thickness: 0.3ex;
@@ -75,71 +84,20 @@ mark {
   padding-inline: 0.1rem;
 }
 
-ul {
-  padding-inline-start: 1rem;
+ul,
+ol {
+  li {
+    margin-block-end: 1.4ex;
+  }
 }
 
-li {
-  margin-block-end: 2ex;
+pre,
+code {
+  font: var(--text-code);
+  font-variation-settings: "MONO" 1;
+  background-color: var(--green);
 }
 
 code {
   padding: 0.1rem;
-  font: var(--text-code);
-}
-
-caption,
-figcaption {
-  grid-column: 1 / -1;
-  padding-inline: var(--site-padding-inline);
-  margin-block-start: 1rem;
-  margin-inline: auto;
-  font-size: smaller;
-  text-align: start;
-  caption-side: bottom;
-}
-
-blockquote {
-  display: grid;
-  grid-template-areas: "quote-start" "content" "quote-end";
-  gap: 2rem;
-  max-width: var(--site-content-width);
-  padding: 4ch var(--site-padding-inline);
-  margin-inline: var(--site-bleed);
-  margin-block: 3ex;
-  font-style: italic;
-  background-color: var(--color-surface);
-  border-block: 1px solid color-mix(in oklch, var(--color) 50%, currentcolor);
-
-  *:first-child {
-    margin-block-start: 0;
-  }
-
-  &::before,
-  &::after {
-    font: var(--text-icon);
-    content: "format_quote";
-    font-size: x-large;
-  }
-
-  &::before {
-    grid-column: quote-start;
-    margin-block-start: -1ch;
-  }
-
-  &::after {
-    grid-column: quote-end;
-    transform: scaleX(-1);
-    align-self: end;
-    margin-block-end: -1ch;
-  }
-
-  > * {
-    grid-column: content;
-  }
-
-  @container (min-width: 65ch) {
-    margin-inline: 0;
-    grid-template-areas: "quote-start content quote-end";
-  }
 }
