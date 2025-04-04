@@ -37,7 +37,7 @@
   li {
     counter-increment: rules;
     &::marker {
-      content: counter(principles) "." counter(rules) " ";
+      content: counter(principles) "" counter(rules, lower-latin) ". ";
     }
   }
 

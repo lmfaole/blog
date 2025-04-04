@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +47,14 @@
           tjenester.
         </p>
 
-        <div lang="en">
+        <button popovertarget="principles">Se prinsippene</button>
+        <dialog popover id="principles" lang="en">
+          <header lang="no">
+            <h1>Prinsipper for universell design</h1>
+            <button popovertarget="principles" popovertargetaction="hide">
+              Lukk
+            </button>
+          </header>
           <h2 class="principle">Equitable Use</h2>
           <p class="goal">
             The design is useful and marketable to people with diverse
@@ -65,37 +72,6 @@
             </li>
             <li>Make the design appealing to all users.</li>
           </ol>
-
-          <details>
-            <summary>Examples of equitable use</summary>
-            <blockquote class="example good">
-              <p>
-                A web site uses semantic markup in all the appropriate places
-                (headings, landmarks, table structure, form labels, etc.) and
-                creates a single design that works well for users who are
-                sighted as well as for users who are blind.
-              </p>
-            </blockquote>
-
-            <blockquote class="example bad">
-              <p>
-                A web site with a separate version for people with disabilities.
-                Even if the intention is to make that second version more
-                accessible than the main version, it's a bad idea.
-              </p>
-            </blockquote>
-
-            <blockquote class="example bad">
-              <p>
-                A web site for booking hotel rooms is inaccessible to screen
-                reader users, but prominently places information about a phone
-                number that people who are blind can call to book a room by
-                phone. The phone experience is technically accessible, but it is
-                not an equivalent experience to an accessible web site, and
-                operators are not available after certain hours.
-              </p>
-            </blockquote>
-          </details>
 
           <h2 class="principle">Flexibility in Use</h2>
           <p class="goal">
@@ -132,32 +108,74 @@
             user, regardless of ambient conditions or the user's sensory
             abilities.
           </p>
-          <p>
-            Information about the product or environment's design should be
-            communicated effectively and should be perceivable to everyone. A
-            person's sensory abilities should not hinder him or her from
-            receiving information. Information should be presented in different
-            formats to increase effective communication to individuals with
-            diverse abilities.
-          </p>
           <ol>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
+            <li>
+              Use different modes (pictorial, verbal, tactile) for redundant
+              presentation of essential information.
+            </li>
+            <li>Maximize "legibility" of essential information.</li>
+            <li>
+              Differentiate elements in ways that can be described (i.e. make it
+              easy to give instructions or directions).
+            </li>
+            <li>
+              Provide compatibility with a variety of techniques or devices used
+              by people with sensory limitations.
+            </li>
           </ol>
 
-          <h2 class="principle">Tittel</h2>
-          <p class="goal">MÅL</p>
+          <h2 class="principle">Tolerance for Error</h2>
+          <p class="goal">
+            The design minimizes hazards and the adverse consequences of
+            accidental or unintended actions.
+          </p>
           <ol>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
-            <li>listeelemtn</li>
+            <li>
+              Arrange elements to minimize hazards and errors: most used
+              elements, most accessible; hazardous elements eliminated,
+              isolated, or shielded.
+            </li>
+            <li>Provide warnings of hazards and errors.</li>
+            <li>Provide fail safe features.</li>
+            <li>
+              Discourage unconscious action in tasks that require vigilance.
+            </li>
           </ol>
-        </div>
+
+          <h2 class="principle">Low Physical Effort</h2>
+          <p class="goal">
+            The design can be used efficiently and comfortably and with a
+            minimum of fatigue.
+          </p>
+          <ol>
+            <li>Allow user to maintain a neutral body position.</li>
+            <li>Use reasonable operating forces.</li>
+            <li>Minimize repetitive actions.</li>
+            <li>Minimize sustained physical effort.</li>
+          </ol>
+
+          <h2 class="principle">Size and Space for Approach and Use</h2>
+          <p class="goal">
+            Appropriate size and space is provided for approach, reach,
+            manipulation, and use, regardless of user's body size, posture, or
+            mobility.
+          </p>
+          <ol>
+            <li>
+              Provide a clear line of sight to important elements for any seated
+              or standing user.
+            </li>
+            <li>
+              Make reach to all components comfortable for any seated or
+              standing user.
+            </li>
+            <li>Accommodate variations in hand and grip size.</li>
+            <li>
+              Provide adequate space for the use of assistive devices or
+              personal assistance.
+            </li>
+          </ol>
+        </dialog>
       </article>
     </main>
   </body>

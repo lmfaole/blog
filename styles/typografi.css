@@ -16,12 +16,12 @@ h4 {
 }
 
 h1 {
-  margin-block-end: 1rem;
+  margin-block-end: 1ex;
   font: var(--text-heading-1);
 }
 
 h2 {
-  margin-block-start: 6rem;
+  margin-block-start: 6ex;
   font: var(--text-heading-2);
 
   &:has(a) {
@@ -30,15 +30,15 @@ h2 {
 }
 
 h3 {
-  margin-block: 3rem 0;
+  margin-block: 4ex 0;
   font: var(--text-heading-3);
 }
 
 p {
   margin: 0;
 
-  &:not(:last-of-type) {
-    margin-block: 0.5rem 3rem;
+  &:not(:last-child) {
+    margin-block: 1ex 3ex;
   }
 }
 
@@ -63,7 +63,7 @@ a {
     &:where([href*="index"], [href*="../"]) {
       &::before {
         content: "arrow_back" / "";
-        font-family: var(--font-icons);
+        font: var(--text-icon);
       }
     }
   }
@@ -72,7 +72,7 @@ a {
 mark {
   background-color: light-dark(var(--yellow), var(--blue));
   color: inherit;
-  padding-inline: 0.1em;
+  padding-inline: 0.1rem;
 }
 
 ul {
@@ -80,7 +80,7 @@ ul {
 }
 
 li {
-  margin-block-end: 1.5rem;
+  margin-block-end: 2ex;
 }
 
 code {
@@ -101,9 +101,11 @@ figcaption {
 
 blockquote {
   display: grid;
+  grid-template-areas: "quote-start" "content" "quote-end";
+  gap: 2rem;
   max-width: var(--site-content-width);
-  padding: 3ex 4cqw;
-  margin: 0;
+  padding: 4ch var(--site-padding-inline);
+  margin-inline: var(--site-bleed);
   margin-block: 3ex;
   font-style: italic;
   background-color: var(--color-surface);
@@ -115,19 +117,29 @@ blockquote {
 
   &::before,
   &::after {
-    position: relative;
-    display: inline-block;
-    font-family: var(--font-icons);
-    font-size: x-large;
-    font-style: normal;
+    font: var(--text-icon);
     content: "format_quote";
+    font-size: x-large;
+  }
+
+  &::before {
+    grid-column: quote-start;
+    margin-block-start: -1ch;
   }
 
   &::after {
+    grid-column: quote-end;
     transform: scaleX(-1);
+    align-self: end;
+    margin-block-end: -1ch;
   }
 
-  @container (max-width: 65ch) {
-    margin-inline: var(--site-bleed);
+  > * {
+    grid-column: content;
+  }
+
+  @container (min-width: 65ch) {
+    margin-inline: 0;
+    grid-template-areas: "quote-start content quote-end";
   }
 }

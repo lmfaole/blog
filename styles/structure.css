@@ -44,40 +44,54 @@ hgroup {
 }
 
 details {
-  padding: 1rem;
-  border: 1px solid var(--color);
-  border-radius: 4px;
+  border-block: 1px solid var(--color);
+  margin-block: 2rem;
+  background-color: var(--color-surface);
+  padding: 1ch 2ch;
 
   > summary {
-    padding: 1rem;
-    margin: -1rem;
     cursor: pointer;
+    font-size: x-large;
+
+    &::marker {
+      font: var(--text-icon);
+      content: "unfold_more";
+      font-size: large;
+    }
   }
 
-  &[open] summary {
-    margin: -1rem -1rem 2rem;
-    font-weight: var(--font-weight-bold);
+  &[open] {
+    summary {
+      font-weight: var(--font-weight-bold);
+
+      &::marker {
+        content: "unfold_less";
+      }
+    }
+  }
+
+  & > *:nth-child(2) {
+    margin-block-start: 2ch;
+  }
+
+  & > *:last-child {
+    margin-block-end: 6ch;
   }
 }
 
 button {
+  display: flex;
+  gap: 0.6ch;
+  align-items: center;
   min-width: 44px;
   min-height: 44px;
   padding: 0.3ex 2ex;
   font: var(--text-body);
   font-family: var(--font-sans-serif);
-  cursor: pointer;
-  background-color: transparent;
+  background-color: color-mix(in oklch, var(--color) 40%, transparent);
   border: 2px solid var(--color);
-  border-radius: var(--border-radius);
-
-  &[type="submit"] {
-    background-color: color-mix(
-      in oklch,
-      var(--color) 20%,
-      var(--color-background)
-    );
-  }
+  border-radius: 5px;
+  cursor: pointer;
 
   &[type="reset"] {
     max-width: max-content;
@@ -85,12 +99,22 @@ button {
     border: unset;
   }
 
+  &[popovertarget] {
+    &::before {
+      font: var(--text-icon);
+      content: "wysiwyg";
+    }
+  }
+
+  &[popovertargetaction="hide"] {
+    &::before {
+      content: "close";
+      font: var(--text-icon);
+    }
+  }
+
   &:not([disabled]):hover {
-    background-color: color-mix(
-      in oklch,
-      var(--color) 40%,
-      var(--color-background)
-    );
+    background-color: var(--color);
   }
 
   &[disabled] {
@@ -203,5 +227,55 @@ th {
   &[scope="row"] {
     border-block-start: 1px solid var(--color);
     border-inline-end: 1px solid var(--color);
+  }
+}
+
+dialog {
+  --padding: 2ch;
+
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  max-width: 88ch;
+  padding: var(--padding);
+  border: 12px solid var(--color-surface);
+
+  &::backdrop {
+    backdrop-filter: var(--blur-100);
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    gap: 4rem;
+    padding: var(--padding);
+    margin: calc(-1 * var(--padding));
+    background: var(--color-surface);
+    position: sticky;
+    top: calc(-1 * var(--padding));
+
+    h1 {
+      font: var(--text-heading-3);
+      margin: 0;
+    }
+
+    + * {
+      margin-block-start: calc(var(--padding) + 2ex);
+    }
+  }
+
+  > :last-child {
+    margin-block-end: 6ex;
+  }
+
+  @media (min-width: 88ch) {
+    max-height: 80vh;
+
+    header {
+      h1 {
+        font: var(--text-heading-2);
+      }
+    }
   }
 }

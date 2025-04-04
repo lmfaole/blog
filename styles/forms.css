@@ -3,6 +3,16 @@ form {
   flex-direction: column;
   margin-block: 2rem;
   container-type: inline-size;
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3ch;
+    width: 100%;
+    padding: 0;
+    margin-block: 3ex;
+  }
 }
 
 legend {

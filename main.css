@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,0..1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,format_quote,note_stack,subdirectory_arrow_right&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,format_quote,note_stack,subdirectory_arrow_right,unfold_less,unfold_more,wysiwyg&display=block");
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
 @import url("styles/forms.css");
@@ -24,6 +24,8 @@
     var(--color-background)
   );
 
+  --blur-100: blur(100px);
+
   --green: light-dark(oklch(94.11% 0.0326 152.47), oklch(29.71% 0.1075 152.47));
   --red: light-dark(oklch(94.83% 0.0326 24.47), oklch(29.71% 0.1075 24.47));
   --yellow: light-dark(
@@ -41,9 +43,12 @@
     -1 * var(--site-padding-inline),
     var(--site-max-width) / 2 - 50cqw
   );
+
   --border-radius: 1cqh;
+
   --font-text: "Rethink Sans", sans-serif;
   --font-icons: "Material Symbols Outlined";
+
   --font-weight-regular: 400;
   --font-weight-bold: 500;
   --font-weight-black: 800;
@@ -59,15 +64,16 @@
     clamp(1.4rem, 1.1887rem + 0.9014vw, 2rem) / var(--line-height-small)
     var(--font-text);
   --text-heading-3: var(--font-weight-bold)
-    clamp(1.3rem, 1.1592rem + 0.6009vw, 1.4rem) / var(--line-height-normal)
+    clamp(1.3rem, 1.1592rem + 0.6009vw, 1.4rem) / var(--line-height-small)
     var(--font-text);
   --text-body: clamp(1rem, 0.625rem + 1.25vw, 1.188rem) /
     var(--line-height-normal) var(--font-text);
   --text-small: 0.9rem / var(--line-height-none) var(--font-text);
   --text-code: inherit 1rem / var(--line-height-small) var(--font-text);
+  --text-icon: 1rem / var(--line-height-normal) var(--font-icons);
 }
 
-*:focus {
+*:focus-visible {
   outline: 4px solid currentcolor;
   outline-offset: 2px;
   border-radius: var(--border-radius);
