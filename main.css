@@ -8,8 +8,8 @@
   color-scheme: light dark;
 
   --color: light-dark(
-    oklch(70% 0.1628 186.88deg),
-    oklch(65.89% 0.1605 181.24deg)
+    oklch(90% 0.1328 50.88deg),
+    oklch(40.89% 0.1005 211.24deg)
   );
 
   --color-text: light-dark(black, white);

@@ -95,7 +95,17 @@ pre,
 code {
   font: var(--text-code);
   font-variation-settings: "MONO" 1;
-  background-color: var(--green);
+  background-color: color-mix(
+    in oklch,
+    var(--green) 50%,
+    var(--color-background)
+  );
+}
+
+pre {
+  border: 1px solid var(--green);
+  padding: 1ch;
+  overflow-x: auto;
 }
 
 code {

@@ -218,6 +218,8 @@ table {
   width: 100%;
   text-align: start;
   border-collapse: collapse;
+  table-layout: fixed;
+  overflow-wrap: break-word;
 
   caption {
     margin-block-start: 1rem;
@@ -227,37 +229,27 @@ table {
   td,
   th {
     padding: 1rem;
-    background-color: color-mix(
-      in oklch,
-      var(--color) 5%,
-      var(--color-background)
-    );
     border: 1px solid var(--color);
 
     &:empty {
-      background: transparent;
-      border: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        color-mix(in oklch, currentcolor 5%, transparent),
+        color-mix(in oklch, currentcolor 5%, transparent) 2px,
+        transparent 2px,
+        transparent 10px
+      );
     }
   }
 
   th {
-    font-weight: bold;
+    font-weight: inherit;
     text-align: start;
     background-color: color-mix(
       in oklch,
-      var(--color) 10%,
+      var(--color) 15%,
       var(--color-background)
     );
-
-    &[scope="col"] {
-      border-block-end: 1px solid var(--color);
-      border-inline-start: 1px solid var(--color);
-    }
-
-    &[scope="row"] {
-      border-block-start: 1px solid var(--color);
-      border-inline-end: 1px solid var(--color);
-    }
   }
 }
 
