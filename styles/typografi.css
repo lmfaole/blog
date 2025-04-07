@@ -30,6 +30,12 @@ h3 {
   font: var(--text-heading-3);
 }
 
+h2,
+h3,
+h4 {
+  font-variation-settings: "wdth" 62.5, "wght" 700;
+}
+
 p {
   margin: 0;
 
@@ -78,6 +84,15 @@ a {
   }
 }
 
+abbr {
+  cursor: help;
+}
+
+b,
+strong {
+  font-variation-settings: "wght" 575;
+}
+
 mark {
   background-color: light-dark(var(--yellow), var(--blue));
   color: inherit;
@@ -94,7 +109,6 @@ ol {
 pre,
 code {
   font: var(--text-code);
-  font-variation-settings: "MONO" 1;
   background-color: color-mix(
     in oklch,
     var(--green) 50%,
@@ -110,4 +124,6 @@ pre {
 
 code {
   padding: 0.1rem;
+  font-weight: inherit;
+  font-size: inherit;
 }

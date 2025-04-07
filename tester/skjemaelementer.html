@@ -21,61 +21,218 @@
           <p>Noen eksempler på skjemaelementer og disabled states.</p>
         </hgroup>
 
-        <form>
-          <legend>Kontodetaljer</legend>
-          <label for="email">Epost </label>
-          <input type="email" id="email" autocomplete="email" disabled />
+        <!--
+        Hentet fra:
+        https://docs.google.com/document/d/1GeZx-44jRQ8fiTF9EI1uxdUZi0eThn1KzvJF3GOliZs/edit?pli=1&tab=t.0 
+        -->
+        <datalist id="digimon">
+          <option value="Koromon">Koromon</option>
+          <option value="Agumon">Agumon</option>
+          <option value="Betamon">Betamon</option>
+          <option value="Greymon">Greymon</option>
+          <option value="Tyrannomon">Tyrannomon</option>
+          <option value="Devimon">Devimon</option>
+          <option value="Meramon">Meramon</option>
+          <option value="Airdramon">Airdramon</option>
+          <option value="Seadramon">Seadramon</option>
+          <option value="Numemon">Numemon</option>
+          <option value="Metal Greymon (Virus)">Metal Greymon (Virus)</option>
+          <option value="Mamemon">Mamemon</option>
+          <option value="Monzaemon">Monzaemon</option>
+        </datalist>
 
-          <label for="mobilnummer">Telefonnummer </label>
-          <input type="tel" id="mobilnummer" autocomplete="tel" disabled />
+        <table>
+          <caption>
+            Ulike input-felter og deres typer
+          </caption>
+          <tr>
+            <th>Type</th>
+            <th>Eksempel</th>
+          </tr>
+          <tr>
+            <td>Checkbox (fieldset)</td>
+            <td>
+              <fieldset id="kommunikasjonsmetoder">
+                <legend>Kommunikasjonsmetoder</legend>
 
-          <label for="new-password">Passord</label>
-          <input
-            type="password"
-            id="new-password"
-            autocomplete="new-password"
-            disabled
-          />
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kommunikasjonsmetoder"
+                    value="instagram"
+                  />Instagram</label
+                >
 
-          <label for="profilbilde">Profilbilde</label>
-          <input type="file" id="profilbilde" disabled />
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kommunikasjonsmetoder"
+                    value="Twitter"
+                  />Twitter</label
+                >
 
-          <fieldset id="Kontotype" disabled>
-            <legend>Kontotype</legend>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="kommunikasjonsmetoder"
+                    value="TikTok"
+                  />TikTok</label
+                >
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>
+              <label for="color">Farge</label>
+              <input type="color" id="color" />
+            </td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td>
+              <label for="date">Date</label>
+              <input type="date" id="date" min="1997-01-01" max="2025-12-31" />
+            </td>
+          </tr>
+          <tr>
+            <td>Datetime</td>
+            <td>
+              <label for="datetime">Datetime</label>
+              <input type="datetime" id="datetime" />
+            </td>
+          </tr>
+          <tr>
+            <td>Datetime local</td>
+            <td>
+              <label for="datetime-local">Datetime local</label>
+              <input type="datetime-local" id="datetime-local" />
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <label for="email">Epost</label>
+              <input type="email" id="email" autocomplete="email" />
+            </td>
+          </tr>
+          <tr>
+            <td>File</td>
+            <td>
+              <label for="profilbilde">Fil</label>
+              <input type="file" id="profilbilde" accept=".jpg, .docx" />
+            </td>
+          </tr>
+          <tr>
+            <td>Month</td>
+            <td>
+              <label for="month">Month</label>
+              <input type="month" id="month" />
+            </td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td>
+              <label for="number">Number</label>
+              <input type="number" id="number" step="10" min="0" max="1000" />
+            </td>
+          </tr>
+          <tr>
+            <td>Radio (fieldset)</td>
+            <td>
+              <fieldset id="Kontotype">
+                <legend>Kontotype</legend>
 
-            <label
-              ><input
-                type="radio"
-                name="kontotype"
-                value="eee"
-              />Utvikler</label
-            >
+                <label
+                  ><input
+                    type="radio"
+                    name="kontotype"
+                    value="eee"
+                  />Utvikler</label
+                >
 
-            <label
-              ><input type="radio" name="kontotype" value="23" />Designer</label
-            >
+                <label
+                  ><input
+                    type="radio"
+                    name="kontotype"
+                    value="23"
+                  />Designer</label
+                >
 
-            <label
-              ><input
-                type="radio"
-                name="kontotype"
-                value="4"
-              />Forretning</label
-            >
+                <label
+                  ><input
+                    type="radio"
+                    name="kontotype"
+                    value="4"
+                  />Forretning</label
+                >
 
-            <label
-              ><input type="radio" name="kontotype" value="annet" />Annet</label
-            >
+                <label
+                  ><input
+                    type="radio"
+                    name="kontotype"
+                    value="annet"
+                  />Annet</label
+                >
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td>
+              <label for="range">Range</label>
+              <input type="range" id="range" step="10" min="-100" max="100" />
+            </td>
+          </tr>
+          <tr>
+            <td>Search</td>
+            <td>
+              <input
+                type="search"
+                id="search"
+                list="digimon"
+                placeholder="Søk etter digimon"
+                aria-label="Søk etter digimon"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td>
+              <label for="text">Text</label>
+              <input type="text" id="text" />
+            </td>
+          </tr>
+          <tr>
+            <td>Tel</td>
+            <td>
+              <label for="mobilnummer">Telefonnummer</label>
+              <input type="tel" id="mobilnummer" autocomplete="tel" />
+            </td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>
+              <label for="time">Time</label>
+              <input type="time" id="time" />
+            </td>
+          </tr>
 
-            <label for="jobb-annet-svar">Hva jobber du med? </label>
-            <input type="text" id="jobb-annet-svar" disabled />
-          </fieldset>
-
-          <footer>
-            <button type="submit" disabled>Lag konto</button>
-            <button type="reset" disabled>Tilbakestill skjema</button>
-          </footer>
-        </form>
+          <tr>
+            <td>URL</td>
+            <td>
+              <label for="url">URL</label>
+              <input type="url" id="url" />
+            </td>
+          </tr>
+          <tr>
+            <td>Week</td>
+            <td>
+              <label for="week">Week</label>
+              <input type="week" id="week" />
+            </td>
+          </tr>
+        </table>
 
         <details>
           <summary>Eksempler med knapper og disabled attributter.</summary>
@@ -104,7 +261,7 @@
                 <td><button aria-disabled="true">Test</button></td>
               </tr>
               <tr>
-                <th scope="row"><code>tabindex="0"</code></th>
+                <th scope="row">tabindex="0"</th>
                 <td><button tabindex="0">Test</button></td>
                 <td><button disabled tabindex="0">Test</button></td>
                 <td>
@@ -113,7 +270,7 @@
                 <td><button aria-disabled="true" tabindex="0">Test</button></td>
               </tr>
               <tr>
-                <th scope="row"><code>tabindex="-1"</code></th>
+                <th scope="row">tabindex="-1"</th>
                 <td><button tabindex="-1">Test</button></td>
                 <td><button disabled tabindex="-1">Test</button></td>
                 <td>

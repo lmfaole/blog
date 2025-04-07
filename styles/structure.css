@@ -34,12 +34,12 @@ article {
     grid-template-columns: min-content 1fr;
     column-gap: 2ch;
     grid-template-areas: "icon content";
+    align-items: center;
 
     &::before {
       content: "flare" / "Info: ";
       font: var(--text-icon);
       grid-column: icon;
-      font-size: xx-large;
       align-self: center;
     }
 
@@ -78,7 +78,7 @@ details {
 
     &::marker {
       font: var(--text-icon);
-      content: "unfold_more";
+      content: "unfold_more" / "";
     }
   }
 
@@ -87,7 +87,7 @@ details {
       font-weight: var(--font-weight-bold);
 
       &::marker {
-        content: "unfold_less";
+        content: "unfold_less" / "";
       }
     }
   }
@@ -123,14 +123,14 @@ button {
 
   &[popovertarget] {
     &::before {
+      content: "wysiwyg" / "";
       font: var(--text-icon);
-      content: "wysiwyg";
     }
   }
 
   &[popovertargetaction="hide"] {
     &::before {
-      content: "close";
+      content: "close" / "";
       font: var(--text-icon);
     }
   }
@@ -158,7 +158,7 @@ dl {
     margin-block: 5ex 1ex;
     counter-reset: definitions;
     counter-increment: terms;
-    font: var(--text-heading-3);
+    font-weight: 500;
 
     &::before {
       content: counter(terms) " ";
@@ -178,6 +178,7 @@ dl {
     &::before {
       display: block;
       font: var(--font-small);
+      font-weight: 500;
       content: counter(terms) "." counter(definitions);
     }
   }
@@ -220,6 +221,7 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   overflow-wrap: break-word;
+  font-size: 1rem;
 
   caption {
     margin-block-start: 1rem;
@@ -230,7 +232,9 @@ table {
   th {
     padding: 1rem;
     border: 1px solid var(--color);
+  }
 
+  td {
     &:empty {
       background: repeating-linear-gradient(
         -45deg,
@@ -243,7 +247,7 @@ table {
   }
 
   th {
-    font-weight: inherit;
+    font-variation-settings: "wght" 600;
     text-align: start;
     background-color: color-mix(
       in oklch,
@@ -261,22 +265,27 @@ dialog {
   width: 100vw;
   max-width: 88ch;
   padding: var(--padding);
-  border: 12px solid var(--color-surface);
+  border: 2px solid var(--color);
+  border-radius: 0;
+  background: var(--color-background);
+  overflow-y: scroll;
 
   &::backdrop {
-    backdrop-filter: var(--blur-100);
+    backdrop-filter: var(--overlay-filter);
+    background: var(--overlay-background);
   }
 
   header {
     display: grid;
     grid-template-columns: 1fr min-content;
-    align-items: center;
-    gap: 4rem;
+    align-items: start;
+    gap: 2rem;
     padding: var(--padding);
     margin: calc(-1 * var(--padding));
-    background: var(--color-surface);
     position: sticky;
     top: calc(-1 * var(--padding));
+    background: var(--color-background);
+    border-block-end: 2px solid var(--color);
 
     h1 {
       font: var(--text-heading-3);
@@ -319,7 +328,6 @@ blockquote {
   &::before {
     font: var(--text-icon);
     content: "format_quote";
-    font-size: x-large;
     grid-column: quote;
   }
 
