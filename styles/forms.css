@@ -47,6 +47,8 @@ input {
   font: var(--text-body);
   border: var(--border);
   border-radius: 2px;
+  max-width: 100%;
+  min-width: 44px;
 
   &:invalid {
     content: "x" / "Feil: ";
@@ -71,27 +73,20 @@ input {
   }
 
   &[type="tel"] {
-    max-width: calc(8ch + 44px); /* Lengden på et mobilnummer + litt space */
+    width: calc(8ch + 44px); /* Lengden på et mobilnummer + litt space */
   }
 
   &[type="password"] {
-    max-width: calc(20ch + 44px);
+    width: calc(20ch + 44px);
   }
 
   &[type="email"] {
-    max-width: calc(20ch + 44px);
+    width: calc(20ch + 44px);
   }
 
   &[type="range"] {
     width: 100%;
     position: relative;
-
-    &::after {
-      display: block;
-      position: absolute;
-      inset-block-end: -1ex;
-      content: "Minst " attr(min) ". Max " attr(max);
-    }
   }
 
   &[type="file"] {
@@ -108,4 +103,6 @@ input {
 select {
   min-height: 44px;
   padding-inline: 1ch;
+  max-width: 100%;
+  min-width: 44px;
 }
