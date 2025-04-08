@@ -1,0 +1,75 @@
+select#custom-select {
+  &,
+  &::picker(select) {
+    appearance: base-select;
+  }
+
+  width: 100%;
+  border-radius: 4px;
+  background: var(--color-background);
+
+  &::picker-icon {
+    font: var(--text-icon);
+    content: "star" / "";
+  }
+
+  option {
+    display: grid;
+    align-items: center;
+    gap: 0 1ch;
+    grid-template-columns: 24px 1fr 40px;
+    grid-template-areas:
+      "check number image"
+      "check name image";
+    padding-block: 2ex;
+    position: relative;
+    background: color-mix(
+      in hsl,
+      attr(data-color type(<color>), currentColor) 5%,
+      transparent
+    );
+
+    &:hover {
+      cursor: pointer;
+      background: color-mix(
+        in hsl,
+        attr(data-color type(<color>), currentColor) 10%,
+        transparent
+      );
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-block-end: 1px solid currentColor;
+    }
+
+    &::checkmark {
+      font: var(--text-icon);
+      content: "star" / "";
+      grid-area: check;
+    }
+
+    img {
+      grid-area: image;
+      margin: 0;
+    }
+
+    .number,
+    .name {
+      line-height: 1;
+    }
+
+    .number {
+      grid-area: number;
+    }
+
+    .name {
+      grid-area: name;
+      font-weight: bold;
+    }
+  }
+}
