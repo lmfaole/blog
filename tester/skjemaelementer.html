@@ -26,212 +26,686 @@
         https://docs.google.com/document/d/1GeZx-44jRQ8fiTF9EI1uxdUZi0eThn1KzvJF3GOliZs/edit?pli=1&tab=t.0 
         -->
         <datalist id="digimon">
-          <option value="Koromon">Koromon</option>
-          <option value="Agumon">Agumon</option>
-          <option value="Betamon">Betamon</option>
-          <option value="Greymon">Greymon</option>
-          <option value="Tyrannomon">Tyrannomon</option>
-          <option value="Devimon">Devimon</option>
-          <option value="Meramon">Meramon</option>
-          <option value="Airdramon">Airdramon</option>
-          <option value="Seadramon">Seadramon</option>
-          <option value="Numemon">Numemon</option>
-          <option value="Metal Greymon (Virus)">Metal Greymon (Virus)</option>
-          <option value="Mamemon">Mamemon</option>
-          <option value="Monzaemon">Monzaemon</option>
+          <option value="Koromon"></option>
+          <option value="Agumon"></option>
+          <option value="Betamon"></option>
+          <option value="Greymon"></option>
+          <option value="Tyrannomon"></option>
+          <option value="Devimon"></option>
+          <option value="Meramon"></option>
+          <option value="Airdramon"></option>
+          <option value="Seadramon"></option>
+          <option value="Numemon"></option>
+          <option value="Metal Greymon (Virus)"></option>
+          <option value="Mamemon"></option>
+          <option value="Monzaemon"></option>
+        </datalist>
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
+        <datalist id="points">
+          <option value="-50"></option>
+          <option value="0"></option>
+          <option value="50"></option>
+          <option value="90"></option>
+        </datalist>
+
+        <datalist id="times">
+          <option value="09:00"></option>
+          <option value="09:30"></option>
+          <option value="11:05"></option>
+        </datalist>
+
+        <datalist id="colors">
+          <option value="#F0A003"></option>
+          <option value="#FF0000"></option>
+          <option value="#00FF2A"></option>
+          <option value="#DC3CFF"></option>
         </datalist>
 
         <table>
           <caption>
             Ulike input-felter og deres typer
           </caption>
-          <tr>
-            <th>Type</th>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Eksempel</th>
+              <th>Ekstra attributter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Checkbox (fieldset)</td>
+              <td>
+                <fieldset id="kommunikasjonsmetoder">
+                  <legend>Kommunikasjonsmetoder</legend>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="kommunikasjonsmetoder"
+                      value="instagram"
+                    />Instagram</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="kommunikasjonsmetoder"
+                      value="Twitter"
+                    />Twitter</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="kommunikasjonsmetoder"
+                      value="TikTok"
+                    />TikTok</label
+                  >
+                </fieldset>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Color</td>
+              <td>
+                <label for="color">Farge</label>
+                <input type="color" id="color" list="colors" />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
+                      >list for å angi anbefalte farger</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>
+                <label for="date">Date</label>
+                <input
+                  type="date"
+                  id="date"
+                  min="1997-01-01"
+                  max="2025-12-31"
+                />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"
+                      >min-attributten</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"
+                      >max-attributten</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Datetime local</td>
+              <td>
+                <label for="datetime-local">Datetime local</label>
+                <input type="datetime-local" id="datetime-local" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>
+                <label for="email">Epost</label>
+                <input type="email" id="email" autocomplete="email" />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
+                      >autocomplete med epost</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>File</td>
+              <td>
+                <label for="profilbilde">Fil</label>
+                <input type="file" id="profilbilde" accept=".jpg, .docx" />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept"
+                      >accept for å avgrense filtyper</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Month</td>
+              <td>
+                <label for="month">Month</label>
+                <input type="month" id="month" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Number</td>
+              <td>
+                <label for="number">Number</label>
+                <input type="number" id="number" step="10" min="0" max="1000" />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"
+                      >min-attributten</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"
+                      >max-attributten</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"
+                      >step for å angi intervaller</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Radio (fieldset)</td>
+              <td>
+                <fieldset id="Kontotype">
+                  <legend>Kontotype</legend>
+
+                  <label
+                    ><input
+                      type="radio"
+                      name="kontotype"
+                      value="eee"
+                    />Utvikler</label
+                  >
+
+                  <label
+                    ><input
+                      type="radio"
+                      name="kontotype"
+                      value="23"
+                    />Designer</label
+                  >
+
+                  <label
+                    ><input
+                      type="radio"
+                      name="kontotype"
+                      value="4"
+                    />Forretning</label
+                  >
+
+                  <label
+                    ><input
+                      type="radio"
+                      name="kontotype"
+                      value="annet"
+                    />Annet</label
+                  >
+                </fieldset>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Range</td>
+              <td>
+                <label for="range">Range</label>
+                <input
+                  type="range"
+                  id="range"
+                  step="10"
+                  min="-100"
+                  max="100"
+                  list="points"
+                />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"
+                      >min-attributten</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"
+                      >max-attributten</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"
+                      >step for å angi intervaller</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
+                      >list for å angi ticks</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Search</td>
+              <td>
+                <label for="search">Søk etter digimon</label>
+                <input type="search" id="search" list="digimon" />
+              </td>
+              <td>
+                <ul>
+                  <li><a href="">list for å gi søkeforslag</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Text</td>
+              <td>
+                <label for="text">Text</label>
+                <input type="text" id="text" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Tel</td>
+              <td>
+                <label for="mobilnummer">Telefonnummer</label>
+                <input type="tel" id="mobilnummer" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Time</td>
+              <td>
+                <label for="time">Time</label>
+                <input type="time" id="time" list="times" />
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
+                      >list for å angi tider</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>URL</td>
+              <td>
+                <label for="url">URL</label>
+                <input type="url" id="url" />
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Week</td>
+              <td>
+                <label for="week">Week</label>
+                <input type="week" id="week" />
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption>
+            Select-elementet
+          </caption>
+          <thead>
+            <th>Attributter</th>
             <th>Eksempel</th>
-          </tr>
-          <tr>
-            <td>Checkbox (fieldset)</td>
-            <td>
-              <fieldset id="kommunikasjonsmetoder">
-                <legend>Kommunikasjonsmetoder</legend>
-
-                <label
-                  ><input
-                    type="checkbox"
-                    name="kommunikasjonsmetoder"
-                    value="instagram"
-                  />Instagram</label
-                >
-
-                <label
-                  ><input
-                    type="checkbox"
-                    name="kommunikasjonsmetoder"
-                    value="Twitter"
-                  />Twitter</label
-                >
-
-                <label
-                  ><input
-                    type="checkbox"
-                    name="kommunikasjonsmetoder"
-                    value="TikTok"
-                  />TikTok</label
-                >
-              </fieldset>
-            </td>
-          </tr>
-          <tr>
-            <td>Color</td>
-            <td>
-              <label for="color">Farge</label>
-              <input type="color" id="color" />
-            </td>
-          </tr>
-          <tr>
-            <td>Date</td>
-            <td>
-              <label for="date">Date</label>
-              <input type="date" id="date" min="1997-01-01" max="2025-12-31" />
-            </td>
-          </tr>
-          <tr>
-            <td>Datetime</td>
-            <td>
-              <label for="datetime">Datetime</label>
-              <input type="datetime" id="datetime" />
-            </td>
-          </tr>
-          <tr>
-            <td>Datetime local</td>
-            <td>
-              <label for="datetime-local">Datetime local</label>
-              <input type="datetime-local" id="datetime-local" />
-            </td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td>
-              <label for="email">Epost</label>
-              <input type="email" id="email" autocomplete="email" />
-            </td>
-          </tr>
-          <tr>
-            <td>File</td>
-            <td>
-              <label for="profilbilde">Fil</label>
-              <input type="file" id="profilbilde" accept=".jpg, .docx" />
-            </td>
-          </tr>
-          <tr>
-            <td>Month</td>
-            <td>
-              <label for="month">Month</label>
-              <input type="month" id="month" />
-            </td>
-          </tr>
-          <tr>
-            <td>Number</td>
-            <td>
-              <label for="number">Number</label>
-              <input type="number" id="number" step="10" min="0" max="1000" />
-            </td>
-          </tr>
-          <tr>
-            <td>Radio (fieldset)</td>
-            <td>
-              <fieldset id="Kontotype">
-                <legend>Kontotype</legend>
-
-                <label
-                  ><input
-                    type="radio"
-                    name="kontotype"
-                    value="eee"
-                  />Utvikler</label
-                >
-
-                <label
-                  ><input
-                    type="radio"
-                    name="kontotype"
-                    value="23"
-                  />Designer</label
-                >
-
-                <label
-                  ><input
-                    type="radio"
-                    name="kontotype"
-                    value="4"
-                  />Forretning</label
-                >
-
-                <label
-                  ><input
-                    type="radio"
-                    name="kontotype"
-                    value="annet"
-                  />Annet</label
-                >
-              </fieldset>
-            </td>
-          </tr>
-          <tr>
-            <td>Range</td>
-            <td>
-              <label for="range">Range</label>
-              <input type="range" id="range" step="10" min="-100" max="100" />
-            </td>
-          </tr>
-          <tr>
-            <td>Search</td>
-            <td>
-              <input
-                type="search"
-                id="search"
-                list="digimon"
-                placeholder="Søk etter digimon"
-                aria-label="Søk etter digimon"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>Text</td>
-            <td>
-              <label for="text">Text</label>
-              <input type="text" id="text" />
-            </td>
-          </tr>
-          <tr>
-            <td>Tel</td>
-            <td>
-              <label for="mobilnummer">Telefonnummer</label>
-              <input type="tel" id="mobilnummer" autocomplete="tel" />
-            </td>
-          </tr>
-          <tr>
-            <td>Time</td>
-            <td>
-              <label for="time">Time</label>
-              <input type="time" id="time" />
-            </td>
-          </tr>
-
-          <tr>
-            <td>URL</td>
-            <td>
-              <label for="url">URL</label>
-              <input type="url" id="url" />
-            </td>
-          </tr>
-          <tr>
-            <td>Week</td>
-            <td>
-              <label for="week">Week</label>
-              <input type="week" id="week" />
-            </td>
-          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vanilla</td>
+              <td>
+                <label for="digimon-select">Velg digimon</label>
+                <select id="digimon-select">
+                  <option disabled selected>Velg en digimon</option>
+                  <option value="Koromon">Koromon</option>
+                  <option value="Agumon">Agumon</option>
+                  <option value="Betamon">Betamon</option>
+                  <option value="Greymon">Greymon</option>
+                  <option value="Tyrannomon">Tyrannomon</option>
+                  <option value="Devimon">Devimon</option>
+                  <option value="Meramon">Meramon</option>
+                  <option value="Airdramon">Airdramon</option>
+                  <option value="Seadramon">Seadramon</option>
+                  <option value="Numemon">Numemon</option>
+                  <option value="Metal Greymon (Virus)">
+                    Metal Greymon (Virus)
+                  </option>
+                  <option value="Mamemon">Mamemon</option>
+                  <option value="Monzaemon">Monzaemon</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Gruppert liste</p>
+                <p>
+                  Hentet fra
+                  <cite
+                    ><a href="https://serebii.net/pokedex-sv/"
+                      >Serebii.net</a
+                    ></cite
+                  >
+                </p>
+              </td>
+              <td>
+                <label for="pokemon-select">Velg pokemon</label>
+                <select id="pokemon-select">
+                  <option disabled selected>Velg pokemon</option>
+                  <optgroup label="Kanto (Gen 1)">
+                    <option value="/pokedex-sv/bulbasaur/">
+                      001 Bulbasaur
+                    </option>
+                    <option value="/pokedex-sv/ivysaur/">002 Ivysaur</option>
+                    <option value="/pokedex-sv/venusaur/">003 Venusaur</option>
+                    <option value="/pokedex-sv/charmander/">
+                      004 Charmander
+                    </option>
+                    <option value="/pokedex-sv/charmeleon/">
+                      005 Charmeleon
+                    </option>
+                    <option value="/pokedex-sv/charizard/">
+                      006 Charizard
+                    </option>
+                    <option value="/pokedex-sv/squirtle/">007 Squirtle</option>
+                    <option value="/pokedex-sv/wartortle/">
+                      008 Wartortle
+                    </option>
+                    <option value="/pokedex-sv/blastoise/">
+                      009 Blastoise
+                    </option>
+                    <option value="/pokedex-sv/ekans/">023 Ekans</option>
+                    <option value="/pokedex-sv/arbok/">024 Arbok</option>
+                    <option value="/pokedex-sv/pikachu/">025 Pikachu</option>
+                    <option value="/pokedex-sv/raichu/">026 Raichu</option>
+                    <option value="/pokedex-sv/sandshrew/">
+                      027 Sandshrew
+                    </option>
+                    <option value="/pokedex-sv/sandslash/">
+                      028 Sandslash
+                    </option>
+                    <option value="/pokedex-sv/clefairy/">035 Clefairy</option>
+                    <option value="/pokedex-sv/clefable/">036 Clefable</option>
+                    <option value="/pokedex-sv/vulpix/">037 Vulpix</option>
+                    <option value="/pokedex-sv/ninetales/">
+                      038 Ninetales
+                    </option>
+                    <option value="/pokedex-sv/jigglypuff/">
+                      039 Jigglypuff
+                    </option>
+                    <option value="/pokedex-sv/wigglytuff/">
+                      040 Wigglytuff
+                    </option>
+                    <option value="/pokedex-sv/oddish/">043 Oddish</option>
+                    <option value="/pokedex-sv/gloom/">044 Gloom</option>
+                    <option value="/pokedex-sv/vileplume/">
+                      045 Vileplume
+                    </option>
+                    <option value="/pokedex-sv/venonat/">048 Venonat</option>
+                    <option value="/pokedex-sv/venomoth/">049 Venomoth</option>
+                    <option value="/pokedex-sv/diglett/">050 Diglett</option>
+                    <option value="/pokedex-sv/dugtrio/">051 Dugtrio</option>
+                    <option value="/pokedex-sv/meowth/">052 Meowth</option>
+                    <option value="/pokedex-sv/persian/">053 Persian</option>
+                    <option value="/pokedex-sv/psyduck/">054 Psyduck</option>
+                    <option value="/pokedex-sv/golduck/">055 Golduck</option>
+                    <option value="/pokedex-sv/mankey/">056 Mankey</option>
+                    <option value="/pokedex-sv/primeape/">057 Primeape</option>
+                    <option value="/pokedex-sv/growlithe/">
+                      058 Growlithe
+                    </option>
+                    <option value="/pokedex-sv/arcanine/">059 Arcanine</option>
+                    <option value="/pokedex-sv/poliwag/">060 Poliwag</option>
+                    <option value="/pokedex-sv/poliwhirl/">
+                      061 Poliwhirl
+                    </option>
+                    <option value="/pokedex-sv/poliwrath/">
+                      062 Poliwrath
+                    </option>
+                    <option value="/pokedex-sv/bellsprout/">
+                      069 Bellsprout
+                    </option>
+                    <option value="/pokedex-sv/weepinbell/">
+                      070 Weepinbell
+                    </option>
+                    <option value="/pokedex-sv/victreebel/">
+                      071 Victreebel
+                    </option>
+                    <option value="/pokedex-sv/tentacool/">
+                      072 Tentacool
+                    </option>
+                    <option value="/pokedex-sv/tentacruel/">
+                      073 Tentacruel
+                    </option>
+                    <option value="/pokedex-sv/geodude/">074 Geodude</option>
+                    <option value="/pokedex-sv/graveler/">075 Graveler</option>
+                    <option value="/pokedex-sv/golem/">076 Golem</option>
+                    <option value="/pokedex-sv/slowpoke/">079 Slowpoke</option>
+                    <option value="/pokedex-sv/slowbro/">080 Slowbro</option>
+                    <option value="/pokedex-sv/magnemite/">
+                      081 Magnemite
+                    </option>
+                    <option value="/pokedex-sv/magneton/">082 Magneton</option>
+                    <option value="/pokedex-sv/doduo/">084 Doduo</option>
+                    <option value="/pokedex-sv/dodrio/">085 Dodrio</option>
+                    <option value="/pokedex-sv/seel/">086 Seel</option>
+                    <option value="/pokedex-sv/dewgong/">087 Dewgong</option>
+                    <option value="/pokedex-sv/grimer/">088 Grimer</option>
+                    <option value="/pokedex-sv/muk/">089 Muk</option>
+                    <option value="/pokedex-sv/shellder/">090 Shellder</option>
+                    <option value="/pokedex-sv/cloyster/">091 Cloyster</option>
+                    <option value="/pokedex-sv/gastly/">092 Gastly</option>
+                    <option value="/pokedex-sv/haunter/">093 Haunter</option>
+                    <option value="/pokedex-sv/gengar/">094 Gengar</option>
+                    <option value="/pokedex-sv/drowzee/">096 Drowzee</option>
+                    <option value="/pokedex-sv/hypno/">097 Hypno</option>
+                    <option value="/pokedex-sv/voltorb/">100 Voltorb</option>
+                    <option value="/pokedex-sv/electrode/">
+                      101 Electrode
+                    </option>
+                    <option value="/pokedex-sv/exeggcute/">
+                      102 Exeggcute
+                    </option>
+                    <option value="/pokedex-sv/exeggutor/">
+                      103 Exeggutor
+                    </option>
+                    <option value="/pokedex-sv/hitmonlee/">
+                      106 Hitmonlee
+                    </option>
+                    <option value="/pokedex-sv/hitmonchan/">
+                      107 Hitmonchan
+                    </option>
+                    <option value="/pokedex-sv/koffing/">109 Koffing</option>
+                    <option value="/pokedex-sv/weezing/">110 Weezing</option>
+                    <option value="/pokedex-sv/rhyhorn/">111 Rhyhorn</option>
+                    <option value="/pokedex-sv/rhydon/">112 Rhydon</option>
+                    <option value="/pokedex-sv/chansey/">113 Chansey</option>
+                    <option value="/pokedex-sv/horsea/">116 Horsea</option>
+                    <option value="/pokedex-sv/seadra/">117 Seadra</option>
+                    <option value="/pokedex-sv/scyther/">123 Scyther</option>
+                    <option value="/pokedex-sv/electabuzz/">
+                      125 Electabuzz
+                    </option>
+                    <option value="/pokedex-sv/magmar/">126 Magmar</option>
+                    <option value="/pokedex-sv/tauros/">128 Tauros</option>
+                    <option value="/pokedex-sv/magikarp/">129 Magikarp</option>
+                    <option value="/pokedex-sv/gyarados/">130 Gyarados</option>
+                    <option value="/pokedex-sv/lapras/">131 Lapras</option>
+                    <option value="/pokedex-sv/ditto/">132 Ditto</option>
+                    <option value="/pokedex-sv/eevee/">133 Eevee</option>
+                    <option value="/pokedex-sv/vaporeon/">134 Vaporeon</option>
+                    <option value="/pokedex-sv/jolteon/">135 Jolteon</option>
+                    <option value="/pokedex-sv/flareon/">136 Flareon</option>
+                    <option value="/pokedex-sv/porygon/">137 Porygon</option>
+                    <option value="/pokedex-sv/snorlax/">143 Snorlax</option>
+                    <option value="/pokedex-sv/articuno/">144 Articuno</option>
+                    <option value="/pokedex-sv/zapdos/">145 Zapdos</option>
+                    <option value="/pokedex-sv/moltres/">146 Moltres</option>
+                    <option value="/pokedex-sv/dratini/">147 Dratini</option>
+                    <option value="/pokedex-sv/dragonair/">
+                      148 Dragonair
+                    </option>
+                    <option value="/pokedex-sv/dragonite/">
+                      149 Dragonite
+                    </option>
+                    <option value="/pokedex-sv/mewtwo/">150 Mewtwo</option>
+                    <option value="/pokedex-sv/mew/">151 Mew</option>
+                  </optgroup>
+                  <optgroup label="Jhoto (Gen 2)">
+                    <option value="/pokedex-sv/chikorita/">
+                      152 Chikorita
+                    </option>
+                    <option value="/pokedex-sv/bayleef/">153 Bayleef</option>
+                    <option value="/pokedex-sv/meganium/">154 Meganium</option>
+                    <option value="/pokedex-sv/cyndaquil/">
+                      155 Cyndaquil
+                    </option>
+                    <option value="/pokedex-sv/quilava/">156 Quilava</option>
+                    <option value="/pokedex-sv/typhlosion/">
+                      157 Typhlosion
+                    </option>
+                    <option value="/pokedex-sv/totodile/">158 Totodile</option>
+                    <option value="/pokedex-sv/croconaw/">159 Croconaw</option>
+                    <option value="/pokedex-sv/feraligatr/">
+                      160 Feraligatr
+                    </option>
+                    <option value="/pokedex-sv/sentret/">161 Sentret</option>
+                    <option value="/pokedex-sv/furret/">162 Furret</option>
+                    <option value="/pokedex-sv/hoothoot/">163 Hoothoot</option>
+                    <option value="/pokedex-sv/noctowl/">164 Noctowl</option>
+                    <option value="/pokedex-sv/spinarak/">167 Spinarak</option>
+                    <option value="/pokedex-sv/ariados/">168 Ariados</option>
+                    <option value="/pokedex-sv/chinchou/">170 Chinchou</option>
+                    <option value="/pokedex-sv/lanturn/">171 Lanturn</option>
+                    <option value="/pokedex-sv/pichu/">172 Pichu</option>
+                    <option value="/pokedex-sv/cleffa/">173 Cleffa</option>
+                    <option value="/pokedex-sv/igglybuff/">
+                      174 Igglybuff
+                    </option>
+                    <option value="/pokedex-sv/mareep/">179 Mareep</option>
+                    <option value="/pokedex-sv/flaaffy/">180 Flaaffy</option>
+                    <option value="/pokedex-sv/ampharos/">181 Ampharos</option>
+                    <option value="/pokedex-sv/bellossom/">
+                      182 Bellossom
+                    </option>
+                    <option value="/pokedex-sv/marill/">183 Marill</option>
+                    <option value="/pokedex-sv/azumarill/">
+                      184 Azumarill
+                    </option>
+                    <option value="/pokedex-sv/sudowoodo/">
+                      185 Sudowoodo
+                    </option>
+                    <option value="/pokedex-sv/politoed/">186 Politoed</option>
+                    <option value="/pokedex-sv/hoppip/">187 Hoppip</option>
+                    <option value="/pokedex-sv/skiploom/">188 Skiploom</option>
+                    <option value="/pokedex-sv/jumpluff/">189 Jumpluff</option>
+                    <option value="/pokedex-sv/aipom/">190 Aipom</option>
+                    <option value="/pokedex-sv/sunkern/">191 Sunkern</option>
+                    <option value="/pokedex-sv/sunflora/">192 Sunflora</option>
+                    <option value="/pokedex-sv/yanma/">193 Yanma</option>
+                    <option value="/pokedex-sv/wooper/">194 Wooper</option>
+                    <option value="/pokedex-sv/quagsire/">195 Quagsire</option>
+                    <option value="/pokedex-sv/espeon/">196 Espeon</option>
+                    <option value="/pokedex-sv/umbreon/">197 Umbreon</option>
+                    <option value="/pokedex-sv/murkrow/">198 Murkrow</option>
+                    <option value="/pokedex-sv/slowking/">199 Slowking</option>
+                    <option value="/pokedex-sv/misdreavus/">
+                      200 Misdreavus
+                    </option>
+                    <option value="/pokedex-sv/girafarig/">
+                      203 Girafarig
+                    </option>
+                    <option value="/pokedex-sv/pineco/">204 Pineco</option>
+                    <option value="/pokedex-sv/forretress/">
+                      205 Forretress
+                    </option>
+                    <option value="/pokedex-sv/dunsparce/">
+                      206 Dunsparce
+                    </option>
+                    <option value="/pokedex-sv/gligar/">207 Gligar</option>
+                    <option value="/pokedex-sv/snubbull/">209 Snubbull</option>
+                    <option value="/pokedex-sv/granbull/">210 Granbull</option>
+                    <option value="/pokedex-sv/qwilfish/">211 Qwilfish</option>
+                    <option value="/pokedex-sv/scizor/">212 Scizor</option>
+                    <option value="/pokedex-sv/heracross/">
+                      214 Heracross
+                    </option>
+                    <option value="/pokedex-sv/sneasel/">215 Sneasel</option>
+                    <option value="/pokedex-sv/teddiursa/">
+                      216 Teddiursa
+                    </option>
+                    <option value="/pokedex-sv/ursaring/">217 Ursaring</option>
+                    <option value="/pokedex-sv/slugma/">218 Slugma</option>
+                    <option value="/pokedex-sv/magcargo/">219 Magcargo</option>
+                    <option value="/pokedex-sv/swinub/">220 Swinub</option>
+                    <option value="/pokedex-sv/piloswine/">
+                      221 Piloswine
+                    </option>
+                    <option value="/pokedex-sv/delibird/">225 Delibird</option>
+                    <option value="/pokedex-sv/skarmory/">227 Skarmory</option>
+                    <option value="/pokedex-sv/houndour/">228 Houndour</option>
+                    <option value="/pokedex-sv/houndoom/">229 Houndoom</option>
+                    <option value="/pokedex-sv/kingdra/">230 Kingdra</option>
+                    <option value="/pokedex-sv/phanpy/">231 Phanpy</option>
+                    <option value="/pokedex-sv/donphan/">232 Donphan</option>
+                    <option value="/pokedex-sv/porygon2/">233 Porygon2</option>
+                    <option value="/pokedex-sv/stantler/">234 Stantler</option>
+                    <option value="/pokedex-sv/smeargle/">235 Smeargle</option>
+                    <option value="/pokedex-sv/tyrogue/">236 Tyrogue</option>
+                    <option value="/pokedex-sv/hitmontop/">
+                      237 Hitmontop
+                    </option>
+                    <option value="/pokedex-sv/elekid/">239 Elekid</option>
+                    <option value="/pokedex-sv/magby/">240 Magby</option>
+                    <option value="/pokedex-sv/blissey/">242 Blissey</option>
+                    <option value="/pokedex-sv/raikou/">243 Raikou</option>
+                    <option value="/pokedex-sv/entei/">244 Entei</option>
+                    <option value="/pokedex-sv/suicune/">245 Suicune</option>
+                    <option value="/pokedex-sv/larvitar/">246 Larvitar</option>
+                    <option value="/pokedex-sv/pupitar/">247 Pupitar</option>
+                    <option value="/pokedex-sv/tyranitar/">
+                      248 Tyranitar
+                    </option>
+                    <option value="/pokedex-sv/lugia/">249 Lugia</option>
+                    <option value="/pokedex-sv/ho-oh/">250 Ho-Oh</option>
+                  </optgroup>
+                </select>
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         <details>

@@ -222,6 +222,7 @@ table {
   table-layout: fixed;
   overflow-wrap: break-word;
   font-size: 1rem;
+  margin-block: 2ex 5ex;
 
   caption {
     margin-block-start: 1rem;

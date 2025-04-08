@@ -22,6 +22,11 @@ legend {
 
 label {
   display: block;
+
+  + p:not(:last-child) {
+    margin-block: 0 1ex;
+    color: color-mix(in oklab, currentcolor 80%, transparent);
+  }
 }
 
 fieldset {
@@ -37,10 +42,18 @@ fieldset {
 }
 
 input {
+  --border: 1px solid color-mix(in oklab, currentcolor 30%, transparent);
+
   font: var(--text-body);
+  border: var(--border);
+  border-radius: 2px;
 
   &:invalid {
     content: "x" / "Feil: ";
+  }
+
+  &::after {
+    font: var(--text-small);
   }
 
   &:not([type="checkbox"], [type="radio"]) {
@@ -48,9 +61,13 @@ input {
     margin-block-end: 1rem;
   }
 
-  &:is([type="tel"], [type="number"]) {
+  &[type="tel"],
+  &[type="number"] {
     font: var(--text-code);
-    font-variant: tabular-nums;
+  }
+
+  &[type="number"] {
+    width: 24ch;
   }
 
   &[type="tel"] {
@@ -73,23 +90,22 @@ input {
       display: block;
       position: absolute;
       inset-block-end: -1ex;
-      font: var(--text-small);
       content: "Minst " attr(min) ". Max " attr(max);
     }
   }
 
   &[type="file"] {
+    --border: 0;
+
     &::after {
       display: block;
       content: "Aksepterer følgende filer: " attr(accept);
       margin-block-start: 1ex;
     }
   }
+}
 
-  &[type="date"] {
-    &::after {
-      display: block;
-      content: "Velg datoer fra " attr(min) " til " attr(max);
-    }
-  }
+select {
+  min-height: 44px;
+  padding-inline: 1ch;
 }

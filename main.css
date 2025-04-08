@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5..100,100..900&family=Ubuntu+Sans+Mono:wght@465&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono&family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,flare,format_quote,note_stack,subdirectory_arrow_right,unfold_less,unfold_more,wysiwyg&display=block");
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
@@ -38,7 +38,7 @@
   --border-radius-m: 4px;
 
   --font-text: "Noto Sans", sans-serif;
-  --font-mono: "Ubuntu Sans Mono", monospace;
+  --font-mono: "Atkinson Hyperlegible Mono", sans-serif;
   --font-icons: "Material Symbols Outlined";
 
   --font-weight-regular: 400;
