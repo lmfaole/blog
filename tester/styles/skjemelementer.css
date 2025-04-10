@@ -1,12 +1,45 @@
+main {
+  max-width: 160ch;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3ex 2ch;
+
+  div {
+    padding: 2ch;
+    background: var(--color-surface);
+    border: 1px solid currentColor;
+    grid-column: span 12;
+
+    @container (min-width: 60ch) {
+      grid-column: span 6;
+    }
+
+    @container (min-width: 90ch) {
+      grid-column: span 4;
+    }
+
+    @container (min-width: 120ch) {
+      grid-column: span 3;
+    }
+
+    h3 {
+      margin-block-start: 0;
+    }
+  }
+}
+
 select#custom-select {
+  width: 100%;
+  border-radius: 4px;
+  background: var(--color-background);
+
   &,
   &::picker(select) {
     appearance: base-select;
   }
-
-  width: 100%;
-  border-radius: 4px;
-  background: var(--color-background);
 
   &::picker-icon {
     font: var(--text-icon);

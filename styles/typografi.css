@@ -26,7 +26,7 @@ h2 {
 }
 
 h3 {
-  margin-block: 4ex 0;
+  margin-block: 4ex 1ex;
   font: var(--text-heading-3);
 }
 
@@ -41,6 +41,10 @@ p {
 
   &:not(:last-child) {
     margin-block: 1ex 3ex;
+  }
+
+  + ul {
+    margin-block-start: -2ex;
   }
 }
 
@@ -102,7 +106,7 @@ mark {
 ul,
 ol {
   li {
-    margin-block-end: 1.4ex;
+    margin-block-end: 1ex;
   }
 }
 

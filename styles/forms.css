@@ -21,8 +21,6 @@ legend {
 }
 
 label {
-  display: block;
-
   + p:not(:last-child) {
     margin-block: 0 1ex;
     color: color-mix(in oklab, currentcolor 80%, transparent);
@@ -100,9 +98,64 @@ input {
   }
 }
 
+button {
+  display: flex;
+  gap: 0.6ch;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.3ex 2ex;
+  font: var(--text-body);
+  font-family: var(--font-sans-serif);
+  background-color: color-mix(in oklch, var(--color) 40%, transparent);
+  border: 2px solid var(--color);
+  border-radius: 5px;
+  cursor: pointer;
+
+  &[type="reset"] {
+    max-width: max-content;
+    background-color: unset;
+    border: unset;
+  }
+
+  &[popovertarget] {
+    &::before {
+      content: "flip_to_front" / "";
+      font: var(--text-icon);
+    }
+  }
+
+  &[popovertargetaction="hide"] {
+    &::before {
+      content: "flip_to_back" / "";
+      font: var(--text-icon);
+    }
+  }
+
+  &:not([disabled]):hover {
+    background-color: var(--color);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
 select {
   min-height: 44px;
   padding-inline: 1ch;
   max-width: 100%;
   min-width: 44px;
+}
+
+meter,
+progress {
+  display: block;
+  width: 100%;
+  margin-block-end: 2ex;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
 }

@@ -101,49 +101,6 @@ details {
   }
 }
 
-button {
-  display: flex;
-  gap: 0.6ch;
-  align-items: center;
-  min-width: 44px;
-  min-height: 44px;
-  padding: 0.3ex 2ex;
-  font: var(--text-body);
-  font-family: var(--font-sans-serif);
-  background-color: color-mix(in oklch, var(--color) 40%, transparent);
-  border: 2px solid var(--color);
-  border-radius: 5px;
-  cursor: pointer;
-
-  &[type="reset"] {
-    max-width: max-content;
-    background-color: unset;
-    border: unset;
-  }
-
-  &[popovertarget] {
-    &::before {
-      content: "wysiwyg" / "";
-      font: var(--text-icon);
-    }
-  }
-
-  &[popovertargetaction="hide"] {
-    &::before {
-      content: "close" / "";
-      font: var(--text-icon);
-    }
-  }
-
-  &:not([disabled]):hover {
-    background-color: var(--color);
-  }
-
-  &[disabled] {
-    cursor: not-allowed;
-  }
-}
-
 dl {
   margin: 5ex 0;
   counter-reset: terms;
@@ -258,11 +215,13 @@ table {
   }
 }
 
-dialog {
+dialog,
+[popover] {
   --padding: 2ch;
 
   box-sizing: border-box;
-  height: 100vh;
+  height: fit-content;
+  max-height: 100vh;
   width: 100vw;
   max-width: 88ch;
   padding: var(--padding);
