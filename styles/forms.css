@@ -46,6 +46,7 @@ input {
   border: var(--border);
   border-radius: 2px;
   max-width: 100%;
+  accent-color: var(--color-action);
 
   &:invalid {
     content: "x" / "Feil: ";
