@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./deque.css" rel="stylesheet" />
+    <title>Skjermlesere | Deque University | Ole Jørgen Bakken</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  </head>
+  <body>
+    <header class="global-header">
+      <p>
+        <a href="/index.html" aria-label="tilbake til forsiden" class="name"
+          >Ole Jørgen</a
+        >
+      </p>
+
+      <nav>
+        <ul>
+          <li><a href="/notater">Notatblokk</a></li>
+          <li><a href="/tester">Tester</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <hgroup>
+          <nav lang="no">
+            <a href="/notater">Tilbake til notatene</a>
+          </nav>
+          <h1>Skjermlesere</h1>
+        </hgroup>
+        <details lang="en">
+          <summary>Screen reader usage</summary>
+          <table>
+            <caption>
+              Which of the following is your primary desktop/laptop screen
+              reader?
+            </caption>
+            <tbody>
+              <tr>
+                <th scope="col">Response</th>
+                <th scope="col"># of respondents</th>
+                <th scope="col">% of respondents</th>
+              </tr>
+              <tr>
+                <th scope="row">JAWS</th>
+                <td>619</td>
+                <td>40.5%</td>
+              </tr>
+              <tr>
+                <th scope="row">NVDA</th>
+                <td>577</td>
+                <td>37.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">VoiceOver</th>
+                <td>148</td>
+                <td>9.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">Dolphin SuperNova</th>
+                <td>57</td>
+                <td>3.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">ZoomText/Fusion</th>
+                <td>41</td>
+                <td>2.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">Orca</th>
+                <td>36</td>
+                <td>2.4%</td>
+              </tr>
+              <tr>
+                <th scope="row">Narrator</th>
+                <td>10</td>
+                <td>0.7%</td>
+              </tr>
+              <tr>
+                <th scope="row">Other</th>
+                <td>41</td>
+                <td>2.7%</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+        <h2>JAWS</h2>
+        <p>
+          <abbr title="Job Access With Speech" lang="en">JAWS</abbr> (Job Access
+          With Speech) er, i følge
+          <a
+            href="https://webaim.org/projects/screenreadersurvey10/"
+            hreflang="en"
+            >WebAIM undersøkelsen
+            <span lang="en">Screen Reader User Survey</span></a
+          >, den mest brukte skjermleseren i 2025 (40.5% av folk som svarte).
+          Den lages av
+          <a
+            lang="en"
+            href="https://support.freedomscientific.com/JAWSHQ/JAWSHeadquarters01"
+            hreflang="en"
+            >Freedom Scientific</a
+          >
+          og finnes kun på Windows.
+        </p>
+
+        <h2>Hva leser en skjermleser opp?</h2>
+        <p>
+          En skjermleser vil typisk (med mindre en bruker har endret atferden
+          selv) lese opp <strong>navn</strong>, <strong>beskrivelse</strong>,
+          <strong>rolle</strong> og <strong>verdi</strong> til et element. Dette
+          er teknologien som brukes i
+          <a
+            href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
+            hreflang="en"
+            >WCAG suksesskriterie 4.1.2: Name, Role, Value</a
+          >. UUtilsynet har en
+          <a
+            href="https://www.uutilsynet.no/wcag-standarden/412-navn-rolle-verdi-niva/121"
+            >norsk oversettelse av suksesskriterie 4.1.2</a
+          >
+          .
+        </p>
+
+        <p>
+          I tillegg vil skjermleseren lese opp oppdateringer som skjer på siden
+          med såkalte <mark lang="en">"live-regions"</mark>.
+        </p>
+
+        <h2>Landemerker</h2>
+        <aside>
+          <p>
+            Mye av denne delen er generell for skjermlesere, men JAWS brukes som
+            eksempel.
+          </p>
+        </aside>
+        <p>
+          Noen skjermlesere leser automatisk opp en del landemerker ved
+          sideinnlasting. JAWS vil for eksempel uttale
+          <cite>"page has 4 regions, 12 headings, and 78 links"</cite>.
+        </p>
+        <p>
+          Dersom brukeren ønsker en liste med spesifikke elementer for å
+          navigere gjennom siden kan de bruke <kbd>Insert</kbd> + <kbd>F3</kbd>.
+          Da vil det komme opp en liste som ligner på denne fra Wikipedia i
+          2017:
+        </p>
+        <img
+          lang="no"
+          src="./assets/jaws-menu.png"
+          alt="Skjermbilde av JAWS med en liste med virituelle HTML-elementer hentet fra Wikipedia i 2017"
+        />
+        <p>Her er det følgende elementer:</p>
+        <ul lang="en">
+          <li>Anchors (links)</li>
+          <li>Block quotes</li>
+          <li>Buttons</li>
+          <li>Checkboxes</li>
+          <li>
+            Controls (selectable ARIA widget controls, e.g. tabs in a tablist)
+          </li>
+          <li>Divisions</li>
+          <li>Edit boxes (text inputs)</li>
+          <li>Form fields</li>
+          <li>Frames</li>
+          <li>Graphics</li>
+          <li>Headings</li>
+          <li>Links</li>
+          <li>List items</li>
+          <li>Lists</li>
+          <li>Objects</li>
+          <li>Paragraphs</li>
+          <li>Placemarkers</li>
+          <li>Radio buttons</li>
+          <li>Tables</li>
+        </ul>
+
+        <p>
+          En viktig ting som mangler fra denne lista er
+          <mark>landemerker</mark>, eller <mark lang="en">regions</mark>, som
+          JAWS kaller dem. En bruker kan navigere med landemerker på en side ved
+          å bruke <kbd>R</kbd>, eller hente en liste med landemerker ved på
+          bruke <kbd>Insert</kbd> + <kbd>CTRL</kbd> + <kbd>R</kbd>. Det er
+          vanlig, og forventet, av andre skjermleser-verktøy å kunne hente opp
+          landemerker.
+        </p>
+
+        <p>
+          Standardinnstillingene til skjermlesere er uansett å lese opp den
+          semantiske meningen ved innholdet brukeren "er på", så dette er
+          viktige semantiske byggeklosser for enhver nettside.
+        </p>
+
+        <p>
+          Som regel ønsker du kun en header, èn footer, og èn main. Selv om du
+          kan ha flere landemerker kan det fort bli mye å navigere seg gjennom
+          for brukerne. Dersom du allikevel ønsker flere navigasjonselementer
+          hjelper det å gi dem aria-label med gode navn.
+        </p>
+
+        <h2>Huskeliste for skjemaelementer, bilder, lenker og lister</h2>
+        <ul
+          aria-label="Huskeliste for skjemaelementer, bilder, lenker og lister"
+        >
+          <li>
+            <strong
+              >Skjemaelementer må ha gode <span lang="en">labels</span></strong
+            >.
+          </li>
+          <li>
+            <strong
+              >Bilder må ha alternativ tekst satt med alt-egenskapen, som
+              forklarer hensikten med bildet</strong
+            >. Dette bør ikke være en utlisting av egenskaper ved bildet, eller
+            alt som er på bildet. Det skal være meningen bildet skal gi til
+            brukeren.
+          </li>
+          <li>
+            <strong>Bruk så mange lenker du må</strong>. Det er aldri feil å
+            lenke ut til andre sider, selv om det vil ta lengre tid å navigere
+            gjennom lenkene på en side.
+          </li>
+          <ul aria-label="Huskeliste for lenker">
+            <li>
+              <strong>Lenker må ha gode navn</strong>. Navnet kan komme fra
+              teksten i lenken, satt med aria-label, eller fra alt-teksten til
+              bildet i lenken.
+            </li>
+            <li>
+              <strong
+                >Lenker burde fortelle hensikten med å gå inn på siden du lenker
+                til</strong
+              >.
+            </li>
+            <li>
+              <strong
+                >Lenker som tar en bruker ut av konteksten den er i bør fortelle
+                dette på en god måte</strong
+              >. Det er veldig enkelt å gjøre forskjell på lenker som inkluderer
+              <code>https://</code> for eksempel.
+            </li>
+          </ul>
+          <li>
+            <strong>Lister bør være kodet semantisk som lister</strong>. Det bør
+            være riktig
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists"
+              >type liste</a
+            >, og på samme måte som med lenker bør det være så mange lister som
+            gir mening.
+          </li>
+        </ul>
+
+        <h2>Døvblinde</h2>
+
+        <p>
+          Det er teknologisk enkelt å gjøre innhold tilgjengelig for døvblinde
+          på internett, og ved å inkludere døvblinde som en brukergruppe du
+          designer for vil du kunne gjøre nettsiden enklere for alle. Mange av
+          metodene for å designe for døvblinde er også gode
+          <span lang="en">usability</span> teknikker, som brukes av mange flere:
+        </p>
+
+        <ul aria-label="Teknikker for å designe for døvblinde">
+          <li>
+            <strong>Tenk tekst først</strong>. Alt multimedie-innhold er
+            ubrukelig for døvblinde, så tenk at alt som fortelles gjennom video
+            og lyd må være tilgjengelig gjennom tekst også.
+          </li>
+          <li><strong>Minimalisme hjelper med navigering</strong>.</li>
+          <li><strong>Semantikk hjelper med navigering</strong>.</li>
+          <li>
+            <strong>Tidsavgrensninger ødelegger alt</strong>. Det vil ta lengre
+            tid å lese med en leselist, derfor hjelper det veldig å kunne
+            forlenge tidsavgrenset innhold eller stoppe dem totalt. Dette er
+            også nevnt i
+            <a
+              href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html"
+              hreflang="en"
+              lang="en"
+              >WCAG suksesskriterie 2.2.1: Timing adjustable</a
+            >.
+          </li>
+          <li>
+            <strong>Forenkle språk så mye du kan</strong>. Mange brukere vil
+            søke opp ord på siden, og det hjelper derfor å bruke ord alle kan,
+            og forstår.
+          </li>
+          <li>
+            <strong>Bruk alle teknikker som gjelder skjermlesere også</strong>.
+          </li>
+        </ul>
+
+        <h3>Leselist</h3>
+        <blockquote>
+          <p>
+            En leselist består av en rekke celler med seks til åtte punkter i.
+            En celle utgjør en bokstav eller et tegn, og leselister har fra 20
+            til 80 celler plassert inntil hverandre. Leselisten konverterer data
+            fra en skjermleser installert på en PC, Mac, smarttelefon, eller
+            lesebrett.
+          </p>
+          <cite
+            >Hentet fra
+            <a
+              href="https://www.blindeforbundet.no/hjelpemidler-og-produkter/leselister"
+              >Blindeforbundets side om leselister</a
+            ></cite
+          >
+        </blockquote>
+        <img
+          src="assets/braille-device.png"
+          alt="Leselist satt opp ved en PC"
+        />
+        <p>
+          For døvblinde er det viktig at alt innhold på en side eksisterer i
+          tekstformat. Her kommer det tydelig fram hvor viktig for eksempel
+          alt-tekster på bilder er, gode
+          <span lang="en">live-regions</span> og transkripsjoner til videoer.
+        </p>
+
+        <h3>Transkripsjoner</h3>
+        <p>
+          Transkripsjoner er den eneste måten døvblinde får innhold fra videoer
+          på. En enkel måte å vise transkripsjoner på er ved å skjule dem i en
+          dialog som brukeren kan hente opp ved å klikke på en knapp, du kan ha
+          det på en egen side, eller legge teksten sammen med videoen.
+        </p>
+        <p>
+          Det er ingen god måte å assosiere transkripsjoner med videoer på
+          tidsmessig.
+        </p>
+
+        <h2>Prinsipper for design for tilgjengelighet</h2>
+        <ol>
+          <li>Gjør det enkelt å gjøre ting riktig</li>
+          <li>
+            Forenkle UI-et, navigasjonen, prosesser, oppgaver og innhold der du
+            kan
+          </li>
+          <li>
+            Gi alternativer til innhold der du kan (videoer, lydinnhold,
+            transkripsjoner, osv.)
+          </li>
+          <li>Gjør det mulig å forlenge tidsavgrensninger</li>
+          <li>Fokuser på brukerens toppoppgave(r)</li>
+          <ol>
+            <li>
+              Reduser viktigheten ved alt som ikke er viktig for brukeren her og
+              nå (reklame, videoer, oppdateringer, osv.)
+            </li>
+            <li>Presenter kun én oppgave om gangen</li>
+            <li>Gjør det gøy å utføre oppgaven brukeren kommer for å gjøre</li>
+            <li>Bruk visuelle effekter for å guide brukeren</li>
+          </ol>
+          <li>Gi tilbakemeldinger fortløpende i prosessen</li>
+        </ol>
+      </article>
+    </main>
+  </body>
+</html>

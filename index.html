@@ -3,48 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ole Jørgen Bakken</title>
-    <link rel="stylesheet" href="/main.css" type="text/css" />
+    <title>Forside | Ole Jørgen Bakken</title>
+    <link rel="stylesheet" href="/main.css" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
 
-  <body class="noto-sans-body">
-    <header>
-      <p><a href="/index.html" aria-label="home" class="name">Ole Jørgen</a></p>
+  <body>
+    <header class="global-header">
+      <p>
+        <a href="/index.html" aria-label="tilbake til forsiden" class="name"
+          >Ole Jørgen</a
+        >
+      </p>
+
+      <nav>
+        <ul>
+          <li><a href="/notater">Notatblokk</a></li>
+          <li><a href="/tester">Tester</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <h1 class="visuelt-skjult">Ole Jørgen Bakken</h1>
-
       <hgroup>
+        <h1 class="visuelt-skjult">Forside</h1>
+
         <p class="lead">
-          Frontend-utvikler hos <a href="https://fremtind.no">Fremtind</a>, som
-          prøver å ha fokus på <span class="bold">universell utforming</span>,
-          <span class="bold">CSS</span> og
-          <span class="bold">web-standarder</span>.
+          Frontend-utvikler hos
+          <a href="https://fremtind.no">Fremtind Forsikring</a>, som prøver å ha
+          fokus på universell utforming, CSS og web-standarder.
         </p>
       </hgroup>
 
-      <h2><a href="tester/">Tester</a></h2>
       <p>
-        På denne siden tester jeg ting jeg rett og slett syns virker kule. Som
-        regel er det relatert til CSS og tilgjengelighet.
+        Denne nettsiden er en slags <a href="/notater/">notatblokk</a> og
+        <a href="/tester">testarena</a> for ting jeg syns virker interessant.
+        Som en forkjemper for mer CSS og mindre JavaScript er den lagd
+        forsøksvis uten teknologi utover HTML og CSS. Vi får se hvor lenge det
+        kan vare 🙂‍↕️.
       </p>
-
-      <h2>
-        <a href="deque/">Notater fra <span lang="en">Deque University</span></a>
-      </h2>
       <p>
-        Jeg driver med en sertifisering i tilgjengelighet på
-        <a href="https://dequeuniversity.com" lang="en" hreflang="en"
-          >Deque University</a
-        >, og bruker den anledningen til å ta notater på de tingene jeg syns er
-        interessant.
+        Jeg poster ikke så mye på internett ellers, men jeg kan nås på følgende
+        sosiale medier:
       </p>
-    </main>
-    <footer>
-      <h2>Andre steder på internett</h2>
       <nav>
-        <ul>
+        <ul lang="en" aria-label="Lenker til sosiale medier">
+          <li>
+            <a href="https://bsky.app/profile/lmfaole.no">Bluesky</a>
+          </li>
           <li>
             <a href="https://tech.lgbt/@lmfaole" rel="me">Mastodon</a>
           </li>
@@ -56,6 +61,6 @@
           </li>
         </ul>
       </nav>
-    </footer>
+    </main>
   </body>
 </html>

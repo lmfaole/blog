@@ -7,11 +7,6 @@ body {
   container-type: inline-size;
   min-height: 100svh;
   box-sizing: border-box;
-
-  > header {
-    padding-block: 2rem;
-    margin-block-end: 2rem;
-  }
 }
 
 main,
@@ -54,14 +49,22 @@ div {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 hgroup {
   margin-block-end: 3rem;
 
-  &:has(a:where([href*="index"], [href*="../"])) {
-    h1 {
-      margin-block-start: 1ex;
+  h1 {
+    margin-block-start: 1ex;
+  }
+
+  a:not(.name) {
+    &:where([href$="index.html"], [href^="/"]) {
+      &::before {
+        content: "arrow_back" / "";
+        font: var(--text-icon);
+      }
     }
   }
 }
@@ -112,7 +115,6 @@ dl {
 
   dt {
     margin-block: 5ex 1ex;
-    counter-reset: definitions;
     counter-increment: terms;
     font-variation-settings: "wdth" 90, "wght" 700;
 
@@ -129,14 +131,6 @@ dl {
 
   dd {
     margin-block-start: 2ex;
-    counter-increment: definitions;
-
-    &::before {
-      display: block;
-      font: var(--font-small);
-      font-variation-settings: "wdth" 90, "wght" 700;
-      content: counter(terms) "." counter(definitions);
-    }
   }
 
   @container (min-width: 66ch) {

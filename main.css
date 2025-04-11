@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono&family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,flare,flip_to_back,flip_to_front,format_quote,note_stack,star,subdirectory_arrow_right,unfold_less,unfold_more,wysiwyg&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,flare,flip_to_back,flip_to_front,format_quote,note_stack,star,subdirectory_arrow_right,surfing,unfold_less,unfold_more,wysiwyg&display=block");
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
 @import url("styles/forms.css");
@@ -7,11 +7,17 @@
 :root {
   color-scheme: light dark;
 
+  --green: oklch(0.75 0.1597 147.47);
+  --red: oklch(0.62 0.2097 27);
+  --yellow: oklch(0.91 0.2097 104.29);
+  --blue: oklch(0.65 0.2097 250.41);
+
   --color-text: light-dark(
     oklch(2.11% 0.209 200.27deg),
     oklch(97.11% 0.009 63.27deg)
   );
   --color-text-muted: color-mix(in oklch, currentcolor 80%, transparent);
+  --color-text-highlight: lch(from currentcolor l 40 h);
   --color-text-inverted: light-dark(
     oklch(97.11% 0.009 63.27deg),
     oklch(2.11% 0.209 200.27deg)
@@ -33,11 +39,6 @@
 
   --overlay-background: lch(from var(--color-background) l c h / 0.5);
   --overlay-filter: blur(30px);
-
-  --green: oklch(0.79 0.2097 161.47);
-  --red: oklch(0.62 0.2097 27);
-  --yellow: oklch(0.91 0.2097 104.29);
-  --blue: oklch(0.65 0.2097 250.41);
 
   --border-radius-m: 4px;
 
@@ -96,4 +97,35 @@
   border: 0;
   clip: rect(0, 0, 0, 0);
   clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.global-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1ex 3ch;
+  position: relative;
+  z-index: 2;
+  padding-block: 2ex;
+  margin-block-end: 8ex;
+
+  /* https://frontendmasters.com/blog/full-bleed-layout-with-modern-css/ */
+  border-image: conic-gradient(var(--color-background) 0 0) fill 0 /0/0 100vw;
+
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4ch;
+  }
+
+  @container (min-width: 40ch) {
+    grid-template-columns: 1fr auto;
+  }
 }
