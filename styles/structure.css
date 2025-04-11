@@ -12,8 +12,7 @@ body {
 }
 
 main,
-header,
-footer {
+header {
   padding-inline: 2ch;
   margin-inline: auto;
   max-width: 90ch;
@@ -41,6 +40,17 @@ article {
 
     > * {
       grid-column: content;
+    }
+  }
+
+  > footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1ex;
+
+    p {
+      font: var(--text-small);
+      color: var(--color-text-muted);
     }
   }
 }

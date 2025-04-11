@@ -1,35 +1,5 @@
 main {
-  max-width: 160ch;
-}
-
-ul.cards {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 3ex 2ch;
-
-  > li {
-    padding: 2ch;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    grid-column: span 12;
-    border-radius: 4px;
-
-    @container (min-width: 60ch) {
-      grid-column: span 6;
-    }
-
-    @container (min-width: 90ch) {
-      grid-column: span 4;
-    }
-
-    @container (min-width: 120ch) {
-      grid-column: span 3;
-    }
-
-    h3 {
-      margin-block-start: 0;
-    }
-  }
+  max-width: 120ch;
 }
 
 select#custom-select {
