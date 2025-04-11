@@ -3,6 +3,7 @@
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
 @import url("styles/forms.css");
+@import url("styles/card.css");
 
 :root {
   color-scheme: light dark;
@@ -56,7 +57,7 @@
   --font-size-xxl: clamp(2rem, 1.4681rem + 2.2695vw, 3rem);
   --font-size-xl: clamp(1.7rem, 1.1681rem + 2.2695vw, 2.7rem);
   --font-size-l: clamp(1.3rem, 1.034rem + 1.1348vw, 1.8rem);
-  --font-size-m: 1.1rem;
+  --font-size-m: 1.15rem;
   --font-size-s: 0.9rem;
 
   /* font-stretch font-variant font-size font-family */
@@ -74,6 +75,8 @@
     var(--line-height-normal) var(--font-mono);
   --text-icon: var(--font-weight-bold) var(--font-size-m) /
     var(--line-height-normal) var(--font-icons);
+
+  --text-length: 60ch;
 }
 
 *:focus-visible {

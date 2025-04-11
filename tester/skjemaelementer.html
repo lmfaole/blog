@@ -26,10 +26,7 @@
     <main>
       <article>
         <hgroup>
-          <nav lang="no">
-            <a href="/tester">Alle tester</a>
-          </nav>
-          <h1>Skjemaelementer</h1>
+          <h1>Mulighetsrommet med helt vanlige skjemaelementer</h1>
           <p>Noen eksempler på skjemaelementer, og deres attributter.</p>
         </hgroup>
 
@@ -74,9 +71,9 @@
           <option value="#DC3CFF"></option>
         </datalist>
 
-        <h2>Typer input-felt</h2>
-        <div class="grid">
-          <div>
+        <h2>Input-felter</h2>
+        <ul class="cards" aria-label="Input-felter">
+          <li>
             <h3>Checkbox i et <span lang="en">fieldset</span></h3>
             <fieldset id="kommunikasjonsmetoder">
               <legend>Kommunikasjonsmetoder</legend>
@@ -102,9 +99,9 @@
                 />TikTok</label
               >
             </fieldset>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Color</h3>
             <label for="color">Velg farge</label>
             <input type="color" id="color" list="colors" />
@@ -118,9 +115,9 @@
                 >
               </li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Date</h3>
 
             <label for="date">Velg dato</label>
@@ -141,15 +138,15 @@
                 >
               </li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Datetime local</h3>
             <label for="datetime-local">Datetime local</label>
             <input type="datetime-local" id="datetime-local" />
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Email</h3>
             <label for="email">Epost</label>
             <input type="email" id="email" autocomplete="email" />
@@ -163,9 +160,9 @@
                 >
               </li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">File</h3>
 
             <label for="profilbilde">Fil</label>
@@ -180,15 +177,15 @@
                 >
               </li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Month</h3>
             <label for="month">Month</label>
             <input type="month" id="month" />
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Number</h3>
             <label for="number">Number</label>
             <input type="number" id="number" step="10" min="0" max="1000" />
@@ -204,9 +201,9 @@
                 >
               </li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Radio i <span lang="en">fieldset</span></h3>
             <fieldset id="Kontotype">
               <legend>Kontotype</legend>
@@ -243,9 +240,9 @@
                 />Annet</label
               >
             </fieldset>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Range</h3>
             <label for="range">Range</label>
             <input
@@ -263,9 +260,9 @@
               <li>step for å angi intervaller</li>
               <li>list for å angi ticks</li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Search</h3>
 
             <label for="search">Søk etter digimon</label>
@@ -275,9 +272,9 @@
             <ul>
               <li>list for å gi søkeforslag</li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Text</h3>
             <label for="text">Text</label>
             <input type="text" id="text" list="digimon" />
@@ -286,16 +283,16 @@
             <ul aria-label="ekstra attributter på tekstfeltet">
               <li>list for å gi forslag fortløpende</li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Tel</h3>
 
             <label for="mobilnummer">Telefonnummer</label>
             <input type="tel" id="mobilnummer" />
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Time</h3>
             <label for="time">Time</label>
             <input type="time" id="time" list="times" />
@@ -304,24 +301,24 @@
             <ul aria-label="ekstra attributter på tidsinput-feltet">
               <li>list for å angi tider</li>
             </ul>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">URL</h3>
             <label for="url">URL</label>
             <input type="url" id="url" />
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Week</h3>
             <label for="week">Week</label>
             <input type="week" id="week" />
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2 lang="en">Textarea</h2>
-        <div class="grid">
-          <div>
+        <ul class="cards" aria-label="Tekstfelt">
+          <li>
             <h3>Standard</h3>
             <label for="text-area">Skriv inn tekst</label>
             <textarea
@@ -341,12 +338,12 @@
                 .
               </small>
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2>Select-attributter</h2>
-        <div class="grid">
-          <div>
+        <ul class="cards" aria-label="Attributter i Select elementet">
+          <li>
             <h3>Uten noen ekstra attributter</h3>
             <label for="digimon-select">Velg digimon</label>
             <select id="digimon-select">
@@ -367,9 +364,9 @@
               <option value="Mamemon">Mamemon</option>
               <option value="Monzaemon">Monzaemon</option>
             </select>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Gruppert liste</h3>
 
             <label for="pokemon-select">Velg pokemon</label>
@@ -661,9 +658,9 @@
                 >
               </small>
             </p>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3 lang="en">Multiple select</h3>
             <label for="multiple-select">Velg dine favorittpokemon</label>
             <select id="multiple-select" multiple size="25">
@@ -948,9 +945,9 @@
                 gjøre den høyere enn default.
               </small>
             </p>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Select med egen stil</h3>
             <label for="custom-select">Velg én pokemon</label>
             <select id="custom-select">
@@ -1000,12 +997,12 @@
                 <span class="name">Charizard</span>
               </option>
             </select>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2>Mengde</h2>
-        <div class="grid">
-          <div>
+        <ul class="cards" aria-label="Mengde-elementer">
+          <li>
             <h3>Meter uten optimal verdi</h3>
             <label for="fuel-default">Drivstoff</label>
             <meter id="fuel-default" min="0" max="100" value="50">
@@ -1018,9 +1015,9 @@
                 høy verdien den viser er.
               </small>
             </p>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Meter med optimal verdi</h3>
 
             <label for="fuel-medium">Drivestoff (medium verdi)</label>
@@ -1061,34 +1058,34 @@
             >
               på 10/100
             </meter>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2>Fremdrift</h2>
-        <div class="grid">
-          <div>
+        <ul class="cards" aria-label="Fremdriftselementer">
+          <li>
             <h3>Fremdrift med en sluttverdi</h3>
             <label for="progress-bar-uploading">Laster opp dokument</label>
             <progress id="progress-bar-uploading" value="70" max="100">
               70 %
             </progress>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Fremdrift uten en sluttverdi</h3>
             <label for="progress-bar-loading">Laster inn side</label>
             <progress id="progress-bar-loading">Laster inn side</progress>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <h2>Knapper</h2>
-        <div class="grid">
-          <div>
+        <ul class="cards" aria-label="Knapper">
+          <li>
             <h3>Standard</h3>
             <button>Knapp</button>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <h3>Popovertarget</h3>
             <button popovertarget="popover-test">Knapp</button>
             <div popover id="popover-test">
@@ -1107,8 +1104,8 @@
                 alt="Meme av en katt med bildetekst no thoughts, brain scrambled egg"
               />
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </article>
     </main>
   </body>

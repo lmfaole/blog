@@ -1,3 +1,5 @@
+@import url("./lists.css");
+
 body {
   background-color: var(--color-background);
   font: var(--text-body);
@@ -100,60 +102,6 @@ details {
 
   & > *:last-child {
     margin-block-end: 6ch;
-  }
-}
-
-dl {
-  margin: 5ex 0;
-  counter-reset: terms;
-
-  dd,
-  dt {
-    padding: 0;
-    margin: 0;
-  }
-
-  dt {
-    margin-block: 5ex 1ex;
-    counter-increment: terms;
-    font-variation-settings: "wdth" 90, "wght" 700;
-
-    &::before {
-      content: counter(terms) " ";
-    }
-
-    &:not(:first-of-type) {
-      padding-block-start: 2.5ex;
-      margin-block-start: 2.5ex;
-      border-block-start: 1px solid currentcolor;
-    }
-  }
-
-  dd {
-    margin-block-start: 2ex;
-  }
-
-  @container (min-width: 66ch) {
-    display: grid;
-    grid-template-columns: minmax(min-content, max-content) 1fr;
-    gap: 3rem;
-    align-items: start;
-
-    dt {
-      grid-column: 1 / 2;
-      margin-block: 0;
-
-      &:not(:first-of-type) {
-        padding-block: 0;
-        margin-block: 0;
-        border-block-start: 0;
-      }
-    }
-
-    dd {
-      grid-column: 2 / 3;
-      margin-block: 0;
-    }
   }
 }
 
@@ -290,5 +238,9 @@ blockquote {
   > ul,
   > ol {
     margin-inline-start: 0;
+  }
+
+  cite::before {
+    content: "– ";
   }
 }

@@ -25,9 +25,6 @@
     <main>
       <article>
         <hgroup>
-          <nav lang="no">
-            <a href="/notater">Tilbake til notatene</a>
-          </nav>
           <h1>Skjermlesere</h1>
         </hgroup>
         <details lang="en">
@@ -221,27 +218,28 @@
             <strong>Bruk så mange lenker du må</strong>. Det er aldri feil å
             lenke ut til andre sider, selv om det vil ta lengre tid å navigere
             gjennom lenkene på en side.
+
+            <ul aria-label="Huskeliste for lenker">
+              <li>
+                <strong>Lenker må ha gode navn</strong>. Navnet kan komme fra
+                teksten i lenken, satt med aria-label, eller fra alt-teksten til
+                bildet i lenken.
+              </li>
+              <li>
+                <strong
+                  >Lenker burde fortelle hensikten med å gå inn på siden du
+                  lenker til</strong
+                >.
+              </li>
+              <li>
+                <strong
+                  >Lenker som tar en bruker ut av konteksten den er i bør
+                  fortelle dette på en god måte</strong
+                >. Det er veldig enkelt å gjøre forskjell på lenker som
+                inkluderer <code>https://</code> for eksempel.
+              </li>
+            </ul>
           </li>
-          <ul aria-label="Huskeliste for lenker">
-            <li>
-              <strong>Lenker må ha gode navn</strong>. Navnet kan komme fra
-              teksten i lenken, satt med aria-label, eller fra alt-teksten til
-              bildet i lenken.
-            </li>
-            <li>
-              <strong
-                >Lenker burde fortelle hensikten med å gå inn på siden du lenker
-                til</strong
-              >.
-            </li>
-            <li>
-              <strong
-                >Lenker som tar en bruker ut av konteksten den er i bør fortelle
-                dette på en god måte</strong
-              >. Det er veldig enkelt å gjøre forskjell på lenker som inkluderer
-              <code>https://</code> for eksempel.
-            </li>
-          </ul>
           <li>
             <strong>Lister bør være kodet semantisk som lister</strong>. Det bør
             være riktig
@@ -345,16 +343,21 @@
             transkripsjoner, osv.)
           </li>
           <li>Gjør det mulig å forlenge tidsavgrensninger</li>
-          <li>Fokuser på brukerens toppoppgave(r)</li>
-          <ol>
-            <li>
-              Reduser viktigheten ved alt som ikke er viktig for brukeren her og
-              nå (reklame, videoer, oppdateringer, osv.)
-            </li>
-            <li>Presenter kun én oppgave om gangen</li>
-            <li>Gjør det gøy å utføre oppgaven brukeren kommer for å gjøre</li>
-            <li>Bruk visuelle effekter for å guide brukeren</li>
-          </ol>
+          <li>
+            Fokuser på brukerens toppoppgave(r)
+            <ol>
+              <li>
+                Reduser viktigheten ved alt som ikke er viktig for brukeren her
+                og nå (reklame, videoer, oppdateringer, osv.)
+              </li>
+              <li>Presenter kun én oppgave om gangen</li>
+              <li>
+                Gjør det gøy å utføre oppgaven brukeren kommer for å gjøre
+              </li>
+              <li>Bruk visuelle effekter for å guide brukeren</li>
+            </ol>
+          </li>
+
           <li>Gi tilbakemeldinger fortløpende i prosessen</li>
         </ol>
       </article>
