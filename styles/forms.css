@@ -46,7 +46,6 @@ input {
   border: var(--border);
   border-radius: 2px;
   max-width: 100%;
-  min-width: 44px;
 
   &:invalid {
     content: "x" / "Feil: ";
@@ -107,15 +106,16 @@ button {
   padding: 0.3ex 2ex;
   font: var(--text-body);
   font-family: var(--font-sans-serif);
-  background-color: color-mix(in oklch, var(--color) 40%, transparent);
-  border: 2px solid var(--color);
+  background-color: var(--color-action);
   border-radius: 5px;
   cursor: pointer;
+  color: var(--color-text-inverted);
+  border: 1px solid var(--color-border);
+  font-variation-settings: "wght" 500;
 
   &[type="reset"] {
     max-width: max-content;
     background-color: unset;
-    border: unset;
   }
 
   &[popovertarget] {
@@ -133,11 +133,13 @@ button {
   }
 
   &:not([disabled]):hover {
-    background-color: var(--color);
+    background-color: lch(from var(--color-action) l calc(c + 20) h);
   }
 
   &[disabled] {
     cursor: not-allowed;
+    color: var(--color-text);
+    background-color: transparent;
   }
 }
 

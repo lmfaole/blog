@@ -9,8 +9,6 @@ figure {
   --oklch-green: oklch(87.64% 0.2976 142.4953deg);
   --color: transparent;
 
-  border: 1px solid var(--color);
-
   &.sammenligning {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

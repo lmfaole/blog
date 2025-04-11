@@ -9,16 +9,19 @@ h3,
 h4 {
   margin: 0;
   max-width: 40ch;
+  color: lch(from currentcolor l 40 h);
 }
 
 h1 {
   margin-block-end: 1ex;
   font: var(--text-heading-1);
+  font-variation-settings: "wght" 800;
 }
 
 h2 {
   margin-block: 6ex 1ex;
   font: var(--text-heading-2);
+  font-variation-settings: "wdth" 90.5, "wght" 700;
 
   &:has(a) {
     margin-block-end: 1rem;
@@ -28,12 +31,7 @@ h2 {
 h3 {
   margin-block: 4ex 1ex;
   font: var(--text-heading-3);
-}
-
-h2,
-h3,
-h4 {
-  font-variation-settings: "wdth" 62.5, "wght" 700;
+  font-variation-settings: "wdth" 80.5, "wght" 650;
 }
 
 p {
@@ -46,6 +44,10 @@ p {
   + ul {
     margin-block-start: -2ex;
   }
+}
+
+small {
+  color: var(--color-text-muted);
 }
 
 img {
@@ -61,7 +63,7 @@ a,
 abbr {
   text-underline-offset: 0.4ex;
   text-decoration-thickness: 0.2ex;
-  text-decoration-color: var(--color-border);
+  text-decoration-color: currentColor;
 }
 
 a {
@@ -69,7 +71,7 @@ a {
   text-decoration-style: solid;
 
   &:hover {
-    text-decoration-thickness: 0.3ex;
+    text-decoration-thickness: 0.4ex;
   }
 
   &[hreflang="en"] {
@@ -98,9 +100,13 @@ strong {
 }
 
 mark {
-  background-color: light-dark(var(--yellow), var(--blue));
+  background-color: lch(from var(--color-surface) l 100 h);
   color: inherit;
   padding-inline: 0.1rem;
+}
+
+q {
+  font-style: italic;
 }
 
 ul,

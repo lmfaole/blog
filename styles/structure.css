@@ -7,7 +7,6 @@ body {
   container-type: inline-size;
   min-height: 100svh;
   box-sizing: border-box;
-  font-variation-settings: "MONO" 0;
 
   > header {
     padding-block: 2rem;
@@ -26,7 +25,7 @@ footer {
 article {
   container-type: inline-size;
 
-  aside {
+  > aside {
     margin-block: 6ex;
     border-block: 1px solid currentcolor;
     padding-block: 4ex;
@@ -68,7 +67,7 @@ hgroup {
 }
 
 details {
-  border-block: 1px solid var(--color);
+  border: 1px solid var(--color-border);
   margin-block: 2rem;
   background-color: var(--color-surface);
   padding: 1ch 2ch;
@@ -115,7 +114,7 @@ dl {
     margin-block: 5ex 1ex;
     counter-reset: definitions;
     counter-increment: terms;
-    font-weight: 500;
+    font-variation-settings: "wdth" 90, "wght" 700;
 
     &::before {
       content: counter(terms) " ";
@@ -135,7 +134,7 @@ dl {
     &::before {
       display: block;
       font: var(--font-small);
-      font-weight: 500;
+      font-variation-settings: "wdth" 90, "wght" 700;
       content: counter(terms) "." counter(definitions);
     }
   }
@@ -165,10 +164,11 @@ dl {
 }
 
 figure {
-  margin: 1ex 0 3ex 0;
+  margin: 1ex 0 6ex 0;
 
   figcaption {
     font: var(--text-small);
+    margin-block-start: 2ex;
   }
 }
 
@@ -189,29 +189,27 @@ table {
   td,
   th {
     padding: 1rem;
-    border: 1px solid var(--color);
+    border: 1px solid currentColor;
   }
 
-  td {
+  tbody td {
     &:empty {
+      border: 1px solid currentColor;
       background: repeating-linear-gradient(
         -45deg,
-        color-mix(in oklch, currentcolor 5%, transparent),
-        color-mix(in oklch, currentcolor 5%, transparent) 2px,
+        var(--color-border),
+        var(--color-border) 2px,
         transparent 2px,
         transparent 10px
       );
     }
   }
 
+  thead td,
   th {
     font-variation-settings: "wght" 600;
     text-align: start;
-    background-color: color-mix(
-      in oklch,
-      var(--color) 15%,
-      var(--color-background)
-    );
+    background-color: lch(from var(--color-background) l 100 h / 0.04);
   }
 }
 
@@ -225,10 +223,10 @@ dialog,
   width: 100vw;
   max-width: 88ch;
   padding: var(--padding);
-  border: 2px solid var(--color);
+  border: 2px solid var(--color-border);
   border-radius: 0;
-  background: var(--color-background);
   overflow-y: scroll;
+  background-color: var(--color-surface);
 
   &::backdrop {
     backdrop-filter: var(--overlay-filter);
@@ -238,17 +236,18 @@ dialog,
   header {
     display: grid;
     grid-template-columns: 1fr min-content;
-    align-items: start;
+    align-items: center;
     gap: 2rem;
     padding: var(--padding);
     margin: calc(-1 * var(--padding));
     position: sticky;
     top: calc(-1 * var(--padding));
-    background: var(--color-background);
-    border-block-end: 2px solid var(--color);
+    border-block-end: 2px solid var(--color-border);
+    background-color: var(--color-surface);
 
     h1 {
       font: var(--text-heading-3);
+      font-variation-settings: "wdth" 85, "wght" 700;
       margin: 0;
     }
 
@@ -263,12 +262,6 @@ dialog,
 
   @media (min-width: 88ch) {
     max-height: 80vh;
-
-    header {
-      h1 {
-        font: var(--text-heading-2);
-      }
-    }
   }
 }
 
