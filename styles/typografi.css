@@ -84,12 +84,13 @@ a {
   men jeg liker tanken på å kunne fremheve norsk en eller annen gang */
   &[hreflang="en"] {
     &::after {
+      line-height: 1.4; /* Gjør at høyden på ikonet settes relativt til tekst-størrelsen bedre. */
       display: inline-block;
       background-color: currentColor;
       content: " " / " (side på engelsk)";
       mask: url(/assets/aksel-icons/Interface/Language.svg) no-repeat 50% 50%;
       mask-size: cover;
-      width: 24px;
+      height: 1lh;
       margin-inline-start: 4px;
       aspect-ratio: 1;
       vertical-align: text-bottom;
@@ -98,13 +99,14 @@ a {
 
   &[hreflang="no"] {
     &::after {
+      line-height: 1.4;
       display: inline-block;
       background-color: currentColor;
       content: " " / " (side på norsk)";
       mask: url(/assets/aksel-icons/Transportation/FlagCross.svg) no-repeat 50%
         50%;
       mask-size: cover;
-      width: 24px;
+      height: 1lh;
       margin-inline-start: 4px;
       aspect-ratio: 1;
       vertical-align: text-bottom;
@@ -114,13 +116,14 @@ a {
   &[href*="https://"]
   {
     &::after {
+      line-height: 1.4;
       display: inline-block;
       background-color: currentColor;
       content: " " / " (ekstern side)";
       mask: url(/assets/aksel-icons/Interface/ExternalLink.svg) no-repeat 50%
         50%;
       mask-size: cover;
-      width: 24px;
+      height: 1lh;
       margin-inline-start: 4px;
       aspect-ratio: 1;
       vertical-align: text-bottom;
