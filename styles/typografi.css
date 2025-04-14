@@ -11,12 +11,12 @@ h4 {
 h1 {
   margin-block-end: 1ex;
   font: var(--text-heading-1);
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wdth" 100, "wght" 800;
 }
 
 h2 {
   font: var(--text-heading-2);
-  font-variation-settings: "wdth" 90.5, "wght" 700;
+  font-variation-settings: "wdth" 90, "wght" 640;
 
   &:not(:first-child) {
     margin-block: 6ex 1ex;
@@ -30,7 +30,7 @@ h2 {
 h3 {
   margin-block: 4ex 1ex;
   font: var(--text-heading-3);
-  font-variation-settings: "wdth" 80.5, "wght" 650;
+  font-variation-settings: "wdth" 80, "wght" 500;
 }
 
 p {
@@ -80,19 +80,50 @@ a {
     text-decoration-thickness: 0.4ex;
   }
 
-  /* Denne vil ikke fungere så lenge den under er der også, jeg er litt usikker på hvilken som gir mest verdi */
+  /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 
+  men jeg liker tanken på å kunne fremheve norsk en eller annen gang */
   &[hreflang="en"] {
     &::after {
-      content: " (side på engelsk)";
+      display: inline-block;
+      background-color: currentColor;
+      content: " " / " (side på engelsk)";
+      mask: url(/assets/aksel-icons/Interface/Language.svg) no-repeat 50% 50%;
+      mask-size: cover;
+      width: 24px;
+      margin-inline-start: 4px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
+    }
+  }
+
+  &[hreflang="no"] {
+    &::after {
+      display: inline-block;
+      background-color: currentColor;
+      content: " " / " (side på norsk)";
+      mask: url(/assets/aksel-icons/Transportation/FlagCross.svg) no-repeat 50%
+        50%;
+      mask-size: cover;
+      width: 24px;
+      margin-inline-start: 4px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
     }
   }
 
   &[href*="https://"]
   {
     &::after {
-      font: var(--text-icon);
-      content: " surfing" / " (ekstern side)";
-      margin-inline-start: -0.7ch;
+      display: inline-block;
+      background-color: currentColor;
+      content: " " / " (ekstern side)";
+      mask: url(/assets/aksel-icons/Interface/ExternalLink.svg) no-repeat 50%
+        50%;
+      mask-size: cover;
+      width: 24px;
+      margin-inline-start: 4px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
     }
   }
 }

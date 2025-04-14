@@ -1,3 +1,4 @@
+.global-header,
 main {
   max-width: 120ch;
 }
@@ -10,11 +11,6 @@ select#custom-select {
   &,
   &::picker(select) {
     appearance: base-select;
-  }
-
-  &::picker-icon {
-    font: var(--text-icon);
-    content: "star" / "";
   }
 
   option {
@@ -52,8 +48,12 @@ select#custom-select {
     }
 
     &::checkmark {
-      font: var(--text-icon);
-      content: "star" / "";
+      background-color: currentColor;
+      content: " " / "";
+      mask: url(/assets/aksel-icons/Nature/StarFill.svg) no-repeat 50% 50%;
+      mask-size: cover;
+      width: 24px;
+      aspect-ratio: 1;
       grid-area: check;
     }
 

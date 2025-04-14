@@ -22,9 +22,9 @@ article {
   container-type: inline-size;
 
   > aside {
-    margin-block: 6ex;
-    border-block: 1px solid currentcolor;
-    padding-block: 4ex;
+    margin-block: 3ex;
+    border-block: 1px solid var(--color-border);
+    padding-block: 2ex;
     display: grid;
     grid-template-columns: min-content 1fr;
     column-gap: 2ch;
@@ -32,10 +32,15 @@ article {
     align-items: center;
 
     &::before {
-      content: "flare" / "Info: ";
-      font: var(--text-icon);
-      grid-column: icon;
-      align-self: center;
+      display: inline-block;
+      background-color: currentColor;
+      content: " " / "";
+      mask: url(/assets/aksel-icons/Status/InformationSquare.svg) no-repeat 50%
+        50%;
+      mask-size: cover;
+      width: 24px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
     }
 
     > * {
@@ -74,8 +79,15 @@ hgroup {
   a:not(.name) {
     &:where([href$="index.html"], [href^="/"]) {
       &::before {
-        content: "arrow_back" / "";
-        font: var(--text-icon);
+        display: inline-block;
+        background-color: currentColor;
+        content: " " / "";
+        mask: url(/assets/aksel-icons/Arrows/ArrowLeft.svg) no-repeat 50% 50%;
+        mask-size: cover;
+        width: 24px;
+        margin-inline-start: 4px;
+        aspect-ratio: 1;
+        vertical-align: text-bottom;
       }
     }
   }
@@ -91,17 +103,31 @@ details {
     cursor: pointer;
 
     &::marker {
-      font: var(--text-icon);
-      content: "unfold_more" / "";
+      content: "";
+    }
+
+    &::before {
+      display: inline-block;
+      background-color: currentColor;
+      content: " " / "";
+      mask: url(/assets/aksel-icons/Arrows/ChevronUpDown.svg) no-repeat 50% 50%;
+      mask-size: cover;
+      width: 24px;
+      margin-inline-end: 4px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
     }
   }
 
   &[open] {
     summary {
-      font-weight: var(--font-weight-bold);
-
       &::marker {
-        content: "unfold_less" / "";
+        content: "";
+      }
+
+      &::before {
+        mask: url(/assets/aksel-icons/Arrows/ChevronDownUp.svg) no-repeat 50%
+          50%;
       }
     }
   }
@@ -231,8 +257,13 @@ blockquote {
   }
 
   &::before {
-    font: var(--text-icon);
-    content: "format_quote";
+    background-color: currentColor;
+    content: " " / "";
+    mask: url(/assets/aksel-icons/Interface/Chat.svg) no-repeat 50% 50%;
+    mask-size: cover;
+    width: 28px;
+    aspect-ratio: 1;
+    margin-block-start: 0.7ex;
     grid-column: quote;
   }
 

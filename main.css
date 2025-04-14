@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono&family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,book,cancel,check_circle,close,flare,flip_to_back,flip_to_front,format_quote,note_stack,star,subdirectory_arrow_right,surfing,unfold_less,unfold_more,wysiwyg&display=block");
 @import url("styles/typografi.css");
 @import url("styles/structure.css");
 @import url("styles/forms.css");
@@ -45,7 +44,6 @@
 
   --font-text: "Noto Sans", sans-serif;
   --font-mono: "Atkinson Hyperlegible Mono", sans-serif;
-  --font-icons: "Material Symbols Outlined";
 
   --font-weight-regular: 400;
   --font-weight-bold: 500;
@@ -73,8 +71,6 @@
     var(--line-height-small) var(--font-text);
   --text-code: var(--font-weight-regular) var(--font-size-m) /
     var(--line-height-normal) var(--font-mono);
-  --text-icon: var(--font-weight-bold) var(--font-size-m) /
-    var(--line-height-normal) var(--font-icons);
 
   --text-length: 60ch;
 }
