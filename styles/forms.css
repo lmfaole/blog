@@ -100,19 +100,19 @@ input {
 
 button {
   display: flex;
-  gap: 0.6ch;
+  gap: 0.3ch;
   align-items: center;
   min-width: 44px;
   min-height: 44px;
-  padding: 0.3ex 2ex;
+  padding: 0.3ex 2ch;
   font: var(--text-body);
   font-family: var(--font-sans-serif);
   background-color: var(--color-action);
   border-radius: 5px;
   cursor: pointer;
   color: var(--color-text-inverted);
-  border: 1px solid var(--color-border);
-  font-variation-settings: "wght" 500;
+  border: 0;
+  font-variation-settings: "wght" 450;
 
   &[type="reset"] {
     max-width: max-content;
@@ -120,16 +120,22 @@ button {
   }
 
   &[popovertarget] {
+    padding: 0.3ex 1.5ch 0.3ex 1ch;
+
     &::before {
-      content: "flip_to_front" / "";
-      font: var(--text-icon);
+      background-color: currentColor;
+      content: " " / "";
+      mask: url(/assets/aksel-icons/Interface/TabsAdd.svg) no-repeat 50% 50%;
+      mask-size: cover;
+      width: 24px;
+      aspect-ratio: 1;
+      vertical-align: text-bottom;
     }
   }
 
   &[popovertargetaction="hide"] {
     &::before {
-      content: "flip_to_back" / "";
-      font: var(--text-icon);
+      mask: url(/assets/aksel-icons/Interface/TabsRemove.svg) no-repeat 50% 50%;
     }
   }
 

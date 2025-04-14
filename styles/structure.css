@@ -197,7 +197,7 @@ dialog,
 
   box-sizing: border-box;
   height: fit-content;
-  max-height: 100vh;
+  max-height: 100svh;
   width: 100vw;
   max-width: 88ch;
   padding: var(--padding);
