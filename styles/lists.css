@@ -74,3 +74,8 @@ dl {
     margin-block-end: 2ex;
   }
 }
+
+li,
+dd {
+  text-wrap: pretty;
+}
