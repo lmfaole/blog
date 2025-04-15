@@ -21,9 +21,24 @@ ul {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 4px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "title"
+        "body"
+        "footer";
+      gap: 4ex;
 
-      h3 {
-        margin-block-start: 0;
+      > *:first-child {
+        margin: 0;
+      }
+
+      > *:nth-child(3) {
+        align-self: end;
+
+        * {
+          margin: 0;
+        }
       }
     }
   }
@@ -83,7 +98,9 @@ dd {
 li {
   color: var(--color-text-muted);
 
-  strong {
+  strong,
+  time {
+    font-variation-settings: "wght" 575;
     color: var(--color-text);
   }
 }
