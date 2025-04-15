@@ -4,7 +4,6 @@ h3,
 h4 {
   margin: 0;
   max-width: 40ch;
-  color: var(--color-text-highlight);
   text-wrap: balance;
 }
 
@@ -63,8 +62,8 @@ img {
 
 a,
 abbr {
-  text-underline-offset: 0.4ex;
-  text-decoration-thickness: 0.2ex;
+  text-underline-offset: 0.2ex;
+  text-decoration-thickness: 0.1ex;
   text-decoration-color: currentColor;
 }
 
@@ -73,11 +72,11 @@ a {
   text-decoration-style: solid;
 
   &:hover {
-    text-decoration-thickness: 0.3ex;
+    text-decoration-thickness: 0.2ex;
   }
 
   &:active {
-    text-decoration-thickness: 0.4ex;
+    text-decoration-thickness: 0.3ex;
   }
 
   /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 

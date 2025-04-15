@@ -1,0 +1,19 @@
+@import url("/main.css");
+
+ol {
+  a[data-workplace="fremtind"]::after {
+    mask: url(../assets/fremtind-logo.svg) no-repeat 50% 50%;
+    mask-size: cover;
+  }
+
+  a[data-workplace="nav"]::after {
+    mask: url(../assets/nav-logo.svg) no-repeat 50% 50%;
+    mask-size: cover;
+    margin-inline-start: 0.7ch;
+  }
+
+  a[data-workplace="vipps"]::after {
+    mask: url(../assets/vipps-logo.svg) no-repeat 50% 50%;
+    mask-size: cover;
+  }
+}

@@ -16,8 +16,11 @@
     oklch(2.11% 0.209 200.27deg),
     oklch(97.11% 0.009 63.27deg)
   );
-  --color-text-muted: color-mix(in oklch, currentcolor 80%, transparent);
-  --color-text-highlight: lch(from currentcolor l 40 h);
+  --color-text-muted: light-dark(
+    lch(from currentcolor 40 c h),
+    lch(from currentcolor 75 c h)
+  );
+  --color-text-highlight: lch(from currentcolor l 70 h);
   --color-text-inverted: light-dark(
     oklch(97.11% 0.009 63.27deg),
     oklch(2.11% 0.209 200.27deg)
