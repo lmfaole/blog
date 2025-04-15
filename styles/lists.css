@@ -79,3 +79,11 @@ li,
 dd {
   text-wrap: pretty;
 }
+
+li {
+  color: var(--color-text-muted);
+
+  strong {
+    color: var(--color-text);
+  }
+}
