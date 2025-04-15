@@ -59,6 +59,7 @@ input {
   &:not([type="checkbox"], [type="radio"]) {
     min-height: 44px;
     margin-block-end: 1rem;
+    display: block;
   }
 
   &[type="tel"],

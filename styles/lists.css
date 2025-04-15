@@ -17,7 +17,7 @@ ul {
     gap: 3ex 2ch;
 
     > li {
-      padding: 2ch;
+      padding: 2ex 2ch;
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 4px;
@@ -27,11 +27,16 @@ ul {
         "title"
         "body"
         "footer";
-      gap: 4ex;
+      gap: 3ex;
       color: currentColor;
 
       > *:first-child {
         margin: 0;
+      }
+
+      > *:nth-child(1) {
+        border-block-end: 1px solid var(--color-border);
+        padding-block-end: 1ex;
       }
 
       > *:nth-child(3) {
