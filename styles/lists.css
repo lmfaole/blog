@@ -69,4 +69,8 @@ dl {
   dt {
     font-variation-settings: "wdth" 100, "wght" 700;
   }
+
+  dd {
+    margin-block-end: 2ex;
+  }
 }
