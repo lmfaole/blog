@@ -1,0 +1,126 @@
+@import url("typografi.css");
+
+:root {
+  color-scheme: light dark;
+
+  --green: oklch(0.75 0.1597 147.47);
+  --red: oklch(0.62 0.2097 27);
+  --yellow: oklch(0.93 0.24 110.29);
+  --blue: oklch(0.5 0.8 250);
+
+  --color-bg: light-dark(
+    oklch(97.11% 0.0097 147.47),
+    oklch(10.89% 0.1597 147.47)
+  );
+  --color-text: lch(from currentcolor l c h / 1);
+  --color-text-muted: lch(from currentcolor l c h / 0.8);
+  --color-link: color-mix(in oklch, var(--green) 80%, currentcolor);
+  --color-border: lch(from currentcolor l c h / 0.08);
+
+  --color-bg-surface: lch(from var(--color-bg) calc(l + 2) calc(c + 4) h);
+  --color-bg-overlay: lch(from var(--color-bg) l c h / 0.5);
+  --filter-overlay: blur(30px);
+
+  --text-length: 55ch;
+  --padding-inline: 20ch;
+
+  --sans: sans-serif;
+  --mono: monospace;
+
+  --fw-thin: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  --lh-1: 1;
+  --lh-sm: 1.2;
+  --lh-md: 1.9;
+
+  --size-xxl: 2.4rem;
+  --size-xl: 1.8rem;
+  --size-lg: 1.5rem;
+  --size-md: 1.2rem;
+  --size-sm: 0.95rem;
+
+  --heading-1: var(--fw-semibold) var(--size-xxl) / var(--lh-sm) var(--sans);
+  --heading-2: var(--fw-semibold) var(--size-xl) / var(--lh-sm) var(--sans);
+  --heading-3: var(--fw-semibold) var(--size-lg) / var(--lh-sm) var(--sans);
+  --body: var(--fw-regular) var(--size-md) / var(--lh-md) var(--sans);
+  --code: var(--fw-regular) var(--size-md) / var(--lh-md) var(--mono);
+  --small: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--sans);
+
+  --border: 1px solid var(--color-border);
+  --border-outset: 2px outset currentcolor;
+}
+
+*:focus-visible {
+  outline: 4px solid currentColor;
+  outline-offset: 0.5ch;
+}
+
+.visuelt-skjult {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+body {
+  background-color: var(--color-bg);
+  min-height: 100svh;
+  font: var(--body);
+  color: var(--color-text);
+
+  > *:is(main, header, footer) {
+    max-width: calc(var(--text-length) + var(--padding-inline));
+    margin-inline: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+details {
+  --padding: 1ch;
+  border: var(--border);
+  padding: var(--padding);
+
+  summary {
+    cursor: pointer;
+    background-color: var(--color-bg-surface);
+    padding: var(--padding);
+    margin: calc(var(--padding) * -1);
+
+    + * {
+      margin-block-start: calc(var(--padding) * 2);
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+td,
+th {
+  border: var(--border);
+  padding: 0.5ex 1ch;
+}
+
+th {
+  background-color: var(--color-bg-surface);
+  text-align: start;
+}

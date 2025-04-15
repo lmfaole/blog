@@ -1,82 +1,76 @@
 h1,
 h2,
 h3,
-h4 {
-  margin: 0;
+h4,
+h5 {
   max-width: 40ch;
   text-wrap: balance;
+
+  + h2,
+  + h3,
+  + h4,
+  + h5 {
+    margin-block-start: 0;
+  }
 }
 
 h1 {
-  margin-block-end: 1ex;
-  font: var(--text-heading-1);
-  font-variation-settings: "wdth" 100, "wght" 800;
+  font: var(--heading-1);
+}
+
+h2,
+h3,
+h4,
+h5 {
+  max-width: 30ch;
 }
 
 h2 {
-  font: var(--text-heading-2);
-  font-variation-settings: "wdth" 90, "wght" 640;
-
-  &:not(:first-child) {
-    margin-block: 6ex 1ex;
-  }
-
-  &:has(a) {
-    margin-block-end: 1rem;
-  }
+  font: var(--heading-2);
+  margin-block-start: 8ex;
 }
 
 h3 {
-  margin-block: 4ex 1ex;
-  font: var(--text-heading-3);
-  font-variation-settings: "wdth" 80, "wght" 500;
+  font: var(--heading-3);
+  margin-block-start: 8ex;
 }
 
-p {
+p,
+li {
   max-width: var(--text-length);
-  margin: 0;
   text-wrap: pretty;
-  font: var(--text-body);
-
-  &:not(:last-child) {
-    margin-block: 1ex 4ex;
-  }
-
-  + ul {
-    margin-block-start: -2ex;
-  }
 }
 
-small {
+li {
   color: var(--color-text-muted);
 }
 
-img {
-  margin-block: 1ex 3ex;
+strong {
+  color: var(--color-text);
+}
 
-  + caption,
-  + figcaption {
-    margin-block-start: -2ex;
-  }
+aside p,
+p aside {
+  color: var(--color-text-muted);
+}
+
+p + p {
+  margin-block-start: 3ex;
 }
 
 a,
 abbr {
-  text-underline-offset: 0.2ex;
-  text-decoration-thickness: 0.1ex;
   text-decoration-color: currentColor;
 }
 
 a {
-  color: var(--color-text-highlight);
+  color: var(--color-link);
+  text-underline-offset: 0.3ex;
+  text-decoration-thickness: 0.1ex;
   text-decoration-style: solid;
 
   &:hover {
     text-decoration-thickness: 0.2ex;
-  }
-
-  &:active {
-    text-decoration-thickness: 0.3ex;
   }
 
   /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 
@@ -132,45 +126,31 @@ a {
 
 abbr {
   cursor: help;
-}
-
-b,
-strong {
-  font-variation-settings: "wght" 575;
-}
-
-mark {
-  padding-inline: 0.1rem;
-}
-
-q {
-  font-style: italic;
+  text-decoration-thickness: 0.2ex;
+  text-underline-offset: 0.3ex;
 }
 
 pre,
 code,
 kbd {
-  font: var(--text-code);
+  font: var(--code);
 }
 
 pre {
-  padding: 1ch;
   overflow-x: auto;
 }
 
 code {
-  padding: 0.1rem;
   font-weight: inherit;
   font-size: inherit;
   display: inline;
 }
 
 kbd {
-  background: light-dark(var(--color-text-inverted), var(--color-text));
-  border-radius: 3px;
-  border: 2px outset var(--color-border);
-  padding: 0 0.5ch;
-  color: light-dark(var(--color-text), var(--color-text-inverted));
+  background: var(--color-bg-surface);
+  border: var(--border-outset);
+  border-radius: 2px;
+  padding: 0.1ex 0.4ch;
 }
 
 ins,
@@ -179,9 +159,9 @@ del {
 }
 
 del {
-  background-color: lch(from var(--color-background) l 150 34 / 0.4);
+  background-color: lch(from var(--color-bg) l 150 34 / 0.4);
 }
 
 ins {
-  background-color: lch(from var(--color-background) l 190 125 / 0.4);
+  background-color: lch(from var(--color-bg) l 190 125 / 0.4);
 }

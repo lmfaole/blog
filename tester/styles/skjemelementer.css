@@ -1,7 +1,4 @@
-.global-header,
-main {
-  max-width: 120ch;
-}
+@import url("/styles/main.css");
 
 select#custom-select {
   width: 100%;

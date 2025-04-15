@@ -1,4 +1,4 @@
-@import url("/main.css");
+@import url("/styles/main.css");
 
 figure {
   --hsl-red: hsl(0deg 100% 50%);
@@ -8,6 +8,10 @@ figure {
   --oklch-blue: oklch(47.94% 0.313214 264.052deg);
   --oklch-green: oklch(87.64% 0.2976 142.4953deg);
   --color: transparent;
+
+  figcaption {
+    grid-column: 1 / -1;
+  }
 
   &.sammenligning {
     display: grid;
