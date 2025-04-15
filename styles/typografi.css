@@ -172,3 +172,16 @@ kbd {
   padding: 0 0.5ch;
   color: light-dark(var(--color-text), var(--color-text-inverted));
 }
+
+ins,
+del {
+  text-decoration: none;
+}
+
+del {
+  background-color: lch(from var(--color-background) l 150 34 / 0.4);
+}
+
+ins {
+  background-color: lch(from var(--color-background) l 190 125 / 0.4);
+}
