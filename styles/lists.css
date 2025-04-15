@@ -28,6 +28,7 @@ ul {
         "body"
         "footer";
       gap: 4ex;
+      color: currentColor;
 
       > *:first-child {
         margin: 0;
