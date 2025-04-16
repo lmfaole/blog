@@ -70,219 +70,133 @@
           <option value="#DC3CFF"></option>
         </datalist>
 
-        <h2>Input-felter</h2>
-        <blockquote lang="en">
-          The <code>input</code> HTML element is used to create interactive
-          controls for web-based forms in order to accept data from the user; a
-          wide variety of types of input data and control widgets are available,
-          depending on the device and user agent. The <code>input</code> element
-          is one of the most powerful and complex in all of HTML due to the
-          sheer number of combinations of input types and attributes.
-          <cite
-            ><a
-              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input"
-              >The HTML Input element
-            </a></cite
-          >
-        </blockquote>
-        <ul class="cards" aria-label="Input-felter">
-          <li>
+        <section class="cards">
+          <h2>Input-felter</h2>
+          <blockquote lang="en">
+            <p>
+              The <code>input</code> HTML element is used to create interactive
+              controls for web-based forms in order to accept data from the
+              user; a wide variety of types of input data and control widgets
+              are available, depending on the device and user agent. The
+              <code>input</code> element is one of the most powerful and complex
+              in all of HTML due to the sheer number of combinations of input
+              types and attributes.
+            </p>
+            <cite
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input"
+                >The HTML Input element
+              </a></cite
+            >
+          </blockquote>
+          <article>
             <h3>Checkbox i et <span lang="en">fieldset</span></h3>
             <fieldset id="kommunikasjonsmetoder">
               <legend>Kommunikasjonsmetoder</legend>
-              <label
-                ><input
-                  type="checkbox"
-                  name="kommunikasjonsmetoder"
-                  value="instagram"
-                />Instagram</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="kommunikasjonsmetoder"
-                  value="Twitter"
-                />Twitter</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="kommunikasjonsmetoder"
-                  value="TikTok"
-                />TikTok</label
-              >
-            </fieldset>
-          </li>
+              <input
+                type="checkbox"
+                name="kommunikasjonsmetoder"
+                value="instagram"
+                id="instagram"
+              />
+              <label for="instagram">Instagram</label><br />
 
-          <li>
+              <input
+                type="checkbox"
+                name="kommunikasjonsmetoder"
+                value="Twitter"
+                id="twitter"
+              />
+              <label for="twitter">Twitter</label><br />
+
+              <input
+                type="checkbox"
+                name="kommunikasjonsmetoder"
+                value="TikTok"
+                id="tiktok"
+              />
+              <label for="tiktok">TikTok</label>
+            </fieldset>
+          </article>
+
+          <article>
             <h3>Color</h3>
 
             <div>
               <label for="color">Velg farge</label>
               <input type="color" id="color" list="colors" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="Ekstra attributter for farge-input">
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"
-                    >list for å angi anbefalte farger</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Date</h3>
 
             <div>
               <label for="date">Velg dato</label>
               <input type="date" id="date" min="1997-01-01" max="2025-12-31" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="Ekstra attributter for datofelt">
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/min"
-                    >min-attributten</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/max"
-                    >max-attributten</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Datetime local</h3>
 
             <div>
               <label for="datetime-local">Datetime local</label>
               <input type="datetime-local" id="datetime-local" />
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Email</h3>
             <div>
               <label for="email">Epost</label>
               <input type="email" id="email" autocomplete="email" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="Ekstra attributter på epostfeltet">
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
-                    >autocomplete med epost</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">File</h3>
 
             <div>
               <label for="profilbilde">Fil</label>
               <input type="file" id="profilbilde" accept=".jpg, .docx" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="Ekstra attributter på filopplastningsfeltet">
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept"
-                    >accept for å avgrense filtyper</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Month</h3>
 
             <div>
               <label for="month">Month</label>
               <input type="month" id="month" />
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3 lang="en">Number</h3>
             <div>
               <label for="number">Number</label>
               <input type="number" id="number" step="10" min="0" max="1000" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="ekstra attributter på nummerfeltet">
-                <li>min</li>
-                <li>max</li>
-                <li>
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/step"
-                    >step for å angi intervaller</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3>Radio i <span lang="en">fieldset</span></h3>
-            <fieldset id="Kontotype">
-              <legend>Kontotype</legend>
+            <fieldset lang="en">
+              <legend>Choose your favorite monster</legend>
 
-              <label
-                ><input
-                  type="radio"
-                  name="kontotype"
-                  value="eee"
-                />Utvikler</label
-              >
+              <input type="radio" id="kraken" name="monster" value="K" />
+              <label for="kraken">Kraken</label><br />
 
-              <label
-                ><input
-                  type="radio"
-                  name="kontotype"
-                  value="23"
-                />Designer</label
-              >
+              <input type="radio" id="sasquatch" name="monster" value="S" />
+              <label for="sasquatch">Sasquatch</label><br />
 
-              <label
-                ><input
-                  type="radio"
-                  name="kontotype"
-                  value="4"
-                />Forretning</label
-              >
-
-              <label
-                ><input
-                  type="radio"
-                  name="kontotype"
-                  value="annet"
-                />Annet</label
-              >
+              <input type="radio" id="mothman" name="monster" value="M" />
+              <label for="mothman">Mothman</label>
             </fieldset>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Range</h3>
 
             <div>
@@ -296,109 +210,80 @@
                 list="points"
               />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="ekstra attributter på avgrensningsfeltet">
-                <li>min-attributten</li>
-                <li>max-attributten</li>
-                <li>step for å angi intervaller</li>
-                <li>list for å angi ticks</li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Search</h3>
 
             <div>
               <label for="search">Søk etter digimon</label>
               <input type="search" id="search" list="digimon" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul>
-                <li>list for å gi søkeforslag</li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Text</h3>
 
             <div>
               <label for="text">Text</label>
               <input type="text" id="text" list="digimon" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="ekstra attributter på tekstfeltet">
-                <li>list for å gi forslag fortløpende</li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">Tel</h3>
 
             <div>
               <label for="mobilnummer">Telefonnummer</label>
               <input type="tel" id="mobilnummer" />
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3 lang="en">Time</h3>
 
             <div>
               <label for="time">Time</label>
               <input type="time" id="time" list="times" />
             </div>
+          </article>
 
-            <div>
-              <p>Ekstra attributter:</p>
-              <ul aria-label="ekstra attributter på tidsinput-feltet">
-                <li>list for å angi tider</li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
+          <article>
             <h3 lang="en">URL</h3>
 
             <div>
               <label for="url">URL</label>
               <input type="url" id="url" />
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3 lang="en">Week</h3>
 
             <div>
               <label for="week">Week</label>
               <input type="week" id="week" />
             </div>
-          </li>
-        </ul>
+          </article>
+        </section>
 
-        <h2 lang="en">Textarea</h2>
-        <blockquote lang="en">
-          The <code>textarea</code> HTML element represents a multi-line
-          plain-text editing control, useful when you want to allow users to
-          enter a sizeable amount of free-form text, for example a comment on a
-          review or feedback form.
-          <cite
-            ><a
-              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"
-              >The Textarea element
-            </a></cite
-          >
-        </blockquote>
-        <ul class="cards" aria-label="Tekstfelt">
-          <li>
+        <section class="cards">
+          <h2 lang="en">Textarea</h2>
+          <blockquote lang="en">
+            <p>
+              The <code>textarea</code> HTML element represents a multi-line
+              plain-text editing control, useful when you want to allow users to
+              enter a sizeable amount of free-form text, for example a comment
+              on a review or feedback form.
+            </p>
+            <cite
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"
+                >The Textarea element
+              </a></cite
+            >
+          </blockquote>
+          <article>
             <h3>Standard</h3>
 
             <div>
@@ -421,12 +306,12 @@
                 .
               </small>
             </p>
-          </li>
-        </ul>
+          </article>
+        </section>
 
-        <h2>Select-attributter</h2>
-        <ul class="cards" aria-label="Attributter i Select elementet">
-          <li>
+        <section class="cards">
+          <h2>Select-attributter</h2>
+          <article>
             <h3>Uten noen ekstra attributter</h3>
 
             <div>
@@ -450,9 +335,9 @@
                 <option value="Monzaemon">Monzaemon</option>
               </select>
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Gruppert liste</h3>
 
             <div>
@@ -776,9 +661,9 @@
                 >
               </small>
             </p>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3 lang="en">Multiple select</h3>
 
             <div>
@@ -1096,9 +981,9 @@
                 gjøre den høyere enn default.
               </small>
             </p>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Select med egen stil</h3>
 
             <div>
@@ -1151,12 +1036,12 @@
                 </option>
               </select>
             </div>
-          </li>
-        </ul>
+          </article>
+        </section>
 
-        <h2>Mengde</h2>
-        <ul class="cards" aria-label="Mengde-elementer">
-          <li>
+        <section class="cards">
+          <h2>Mengde</h2>
+          <article>
             <h3>Meter uten optimal verdi</h3>
 
             <div>
@@ -1173,9 +1058,9 @@
                 høy verdien den viser er.
               </small>
             </p>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Meter med optimal verdi</h3>
 
             <div>
@@ -1224,12 +1109,12 @@
                 </meter>
               </div>
             </div>
-          </li>
-        </ul>
+          </article>
+        </section>
 
-        <h2>Fremdrift</h2>
-        <ul class="cards" aria-label="Fremdriftselementer">
-          <li>
+        <section class="cards">
+          <h2>Fremdrift</h2>
+          <article>
             <h3>Fremdrift med en sluttverdi</h3>
 
             <div>
@@ -1238,28 +1123,28 @@
                 70 %
               </progress>
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Fremdrift uten en sluttverdi</h3>
 
             <div>
               <label for="progress-bar-loading">Laster inn side</label>
               <progress id="progress-bar-loading">Laster inn side</progress>
             </div>
-          </li>
-        </ul>
+          </article>
+        </section>
 
-        <h2>Knapper</h2>
-        <ul class="cards" aria-label="Knapper">
-          <li>
+        <section class="cards">
+          <h2>Knapper</h2>
+          <article>
             <h3>Standard</h3>
             <div>
               <button>Knapp</button>
             </div>
-          </li>
+          </article>
 
-          <li>
+          <article>
             <h3>Popovertarget</h3>
 
             <div>
@@ -1282,8 +1167,8 @@
                 />
               </div>
             </div>
-          </li>
-        </ul>
+          </article>
+        </section>
       </article>
     </main>
   </body>

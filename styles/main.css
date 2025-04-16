@@ -9,20 +9,27 @@
   --blue: oklch(0.5 0.8 250);
 
   --color-bg: light-dark(
-    oklch(97.11% 0.0097 147.47),
-    oklch(10.89% 0.1597 147.47)
+    oklch(98.11% 0.0097 147.47),
+    oklch(6.89% 0.1597 147.47)
   );
   --color-text: lch(from currentcolor l c h / 1);
   --color-text-muted: lch(from currentcolor l c h / 0.8);
   --color-link: color-mix(in oklch, var(--green) 80%, currentcolor);
-  --color-border: lch(from currentcolor l c h / 0.08);
 
-  --color-bg-surface: lch(from var(--color-bg) calc(l + 2) calc(c + 4) h);
+  --color-border: light-dark(
+    lch(from var(--color-bg) calc(l - 9) c h),
+    lch(from var(--color-bg) calc(l + 10) c h)
+  );
+  --color-bg-surface: light-dark(
+    lch(from var(--color-bg) calc(l + 2) calc(c + 2) h),
+    lch(from var(--color-bg) calc(l + 2) calc(c + 2) h)
+  );
   --color-bg-overlay: lch(from var(--color-bg) l c h / 0.5);
   --filter-overlay: blur(30px);
 
   --text-length: 55ch;
   --padding-inline: 20ch;
+  --max-width: calc(var(--text-length) + var(--padding-inline));
 
   --sans: sans-serif;
   --mono: monospace;
@@ -57,37 +64,27 @@
   --border-outset: 2px outset currentcolor;
 }
 
-*:focus-visible {
-  outline: 4px solid currentColor;
-  outline-offset: 0.5ch;
-}
-
-.visuelt-skjult {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-}
-
 body {
   background-color: var(--color-bg);
   min-height: 100svh;
   font: var(--body);
   color: var(--color-text);
+  padding-block-end: 6ex;
 
   > *:is(main, header, footer) {
-    max-width: calc(var(--text-length) + var(--padding-inline));
+    max-width: var(--max-width);
     margin-inline: auto;
   }
 }
 
-img {
+*:focus-visible {
+  outline: 4px solid currentColor;
+  outline-offset: 0.5ch;
+}
+
+img,
+textarea,
+table {
   max-width: 100%;
 }
 
@@ -123,4 +120,31 @@ th {
 th {
   background-color: var(--color-bg-surface);
   text-align: start;
+}
+
+section.cards,
+ul.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0;
+
+  > *:not(article) {
+    grid-column: 1 / -1;
+  }
+
+  > article,
+  > li {
+    background-color: var(--color-bg-surface);
+    padding: 2ch 2ch 3ch 2ch;
+    outline: var(--border);
+
+    > *:first-child {
+      font: var(--body);
+      font-weight: var(--fw-extrabold);
+      margin-block-start: 0;
+      padding-block-end: 1ex;
+      border-block-end: var(--border);
+      max-width: 100%;
+    }
+  }
 }

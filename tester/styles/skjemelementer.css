@@ -1,5 +1,9 @@
 @import url("/styles/main.css");
 
+body {
+  --max-width: 120ch;
+}
+
 select#custom-select {
   width: 100%;
   border-radius: 4px;
