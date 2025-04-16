@@ -9,26 +9,31 @@
   --blue: oklch(0.5 0.8 250);
 
   --color-bg: light-dark(
-    oklch(98.11% 0.0097 147.47),
-    oklch(6.89% 0.1597 147.47)
+    lch(from var(--green) 96 3 h),
+    lch(from var(--green) 1 2 h)
+  );
+  --color-bg-surface: light-dark(
+    lch(from var(--color-bg) 100 c h),
+    lch(from var(--color-bg) 4 c h)
+  );
+  --color-border: light-dark(
+    lch(from var(--color-bg) 90 c h),
+    lch(from var(--color-bg) 14 c h)
   );
 
   --color-text: light-dark(
-    lch(from var(--color-bg) 5 c h),
+    lch(from var(--color-bg) 2 c h),
     lch(from var(--color-bg) 98 c h)
   );
   --color-text-muted: lch(from var(--color-text) l c h / 0.78);
-  --color-link: color-mix(in oklch, var(--green) 80%, currentcolor);
+  --color-link: lch(from var(--color-bg) 50 50 h);
 
-  --color-border: light-dark(
-    lch(from var(--color-bg) calc(l - 14) c h),
-    lch(from var(--color-bg) calc(l + 30) c h)
-  );
-  --color-bg-surface: light-dark(
-    lch(from var(--color-bg) calc(l + 2) calc(c + 2) h),
-    lch(from var(--color-bg) calc(l + 2) calc(c + 2) h)
-  );
-  --color-bg-overlay: lch(from var(--color-bg) l c h / 0.5);
+  --border: 1px solid var(--color-border);
+  --border-outset: 1px outset var(--color-border);
+
+  --outline: 1px solid var(--color-border);
+  --outline-dashed: 1px dashed var(--color-border);
+
   --filter-overlay: blur(30px);
 
   --text-length: 55ch;
@@ -63,14 +68,6 @@
   --body: var(--fw-regular) var(--size-md) / var(--lh-md) var(--sans);
   --code: var(--fw-regular) var(--size-md) / var(--lh-md) var(--mono);
   --small: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--sans);
-
-  --border: 1px solid var(--color-border);
-  --border-outset: 2px outset currentcolor;
-
-  --outline: 1px solid
-    color-mix(in oklch, currentcolor 20%, var(--color-border));
-  --outline-dashed: 1px dashed
-    color-mix(in oklch, currentcolor 20%, var(--color-border));
 }
 
 body {
@@ -138,8 +135,8 @@ section {
 section.cards,
 ul.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2px;
   padding: 0;
 
   > *:not(article) {
@@ -150,13 +147,10 @@ ul.cards {
   > article,
   > li {
     background-color: var(--color-bg-surface);
-    padding: 2ch 2ch 3ch 2ch;
-    outline: var(--outline);
+    padding: 2rem;
 
     > header {
-      padding-block-end: 1ex;
-      margin-block-end: 2ex;
-      border-block-end: var(--border);
+      margin-block-end: 2rem;
       max-width: 100%;
 
       *:first-child {
