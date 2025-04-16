@@ -50,14 +50,6 @@ li {
   text-wrap: pretty;
 }
 
-li {
-  color: var(--color-text-muted);
-}
-
-strong {
-  color: var(--color-text);
-}
-
 aside p,
 p aside {
   color: var(--color-text-muted);

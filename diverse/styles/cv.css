@@ -1,6 +1,21 @@
-@import url("/main.css");
+@import url("/styles/main.css");
 
 ol {
+  list-style: none;
+
+  li {
+    color: var(--color-text-muted);
+  }
+
+  time,
+  strong {
+    color: var(--color-text);
+    font-weight: var(--fw-bold);
+  }
+  li::marker {
+    display: none;
+  }
+
   a[data-workplace="fremtind"]::after {
     mask: url(../assets/fremtind-logo.svg) no-repeat 50% 50%;
     mask-size: cover;

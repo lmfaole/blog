@@ -12,8 +12,12 @@
     oklch(98.11% 0.0097 147.47),
     oklch(6.89% 0.1597 147.47)
   );
-  --color-text: lch(from currentcolor l c h);
-  --color-text-muted: lch(from currentcolor l c h / 0.8);
+
+  --color-text: light-dark(
+    lch(from var(--color-bg) 5 c h),
+    lch(from var(--color-bg) 98 c h)
+  );
+  --color-text-muted: lch(from var(--color-text) l c h / 0.78);
   --color-link: color-mix(in oklch, var(--green) 80%, currentcolor);
 
   --color-border: light-dark(
