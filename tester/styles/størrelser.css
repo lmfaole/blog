@@ -21,6 +21,7 @@ section.cards {
       content: "10" attr(data-unit);
     }
 
+    /* Absolutte verdier */
     &[data-unit="cm"] {
       height: 10cm;
     }
@@ -49,54 +50,57 @@ section.cards {
       height: 10px;
     }
 
+    /* Font verdier */
     &[data-unit="em"] {
       height: 10em;
-    }
-
-    &[data-unit="rem"] {
-      height: 10rem;
     }
 
     &[data-unit="ch"] {
       height: 10ch;
     }
 
-    &[data-unit="rch"] {
-      height: 10rch;
-    }
-
     &[data-unit="cap"] {
       height: 10cap;
-    }
-
-    &[data-unit="rcap"] {
-      height: 10rcap;
     }
 
     &[data-unit="ic"] {
       height: 10ic;
     }
 
-    &[data-unit="ric"] {
-      height: 10ric;
-    }
-
     &[data-unit="lh"] {
       height: 10lh;
-    }
-
-    &[data-unit="rlh"] {
-      height: 10rlh;
     }
 
     &[data-unit="ex"] {
       height: 10ex;
     }
 
+    /* Rot-font verdier */
+    &[data-unit="rem"] {
+      height: 10rem;
+    }
+
+    &[data-unit="rch"] {
+      height: 10rch;
+    }
+
+    &[data-unit="rcap"] {
+      height: 10rcap;
+    }
+
+    &[data-unit="ric"] {
+      height: 10ric;
+    }
+
+    &[data-unit="rlh"] {
+      height: 10rlh;
+    }
+
     &[data-unit="rex"] {
       height: 10ex;
     }
 
+    /* Prosent */
     &[data-unit="%"] {
       width: 10%;
     }
