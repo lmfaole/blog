@@ -12,13 +12,13 @@
     oklch(98.11% 0.0097 147.47),
     oklch(6.89% 0.1597 147.47)
   );
-  --color-text: lch(from currentcolor l c h / 1);
+  --color-text: lch(from currentcolor l c h);
   --color-text-muted: lch(from currentcolor l c h / 0.8);
   --color-link: color-mix(in oklch, var(--green) 80%, currentcolor);
 
   --color-border: light-dark(
-    lch(from var(--color-bg) calc(l - 9) c h),
-    lch(from var(--color-bg) calc(l + 10) c h)
+    lch(from var(--color-bg) calc(l - 14) c h),
+    lch(from var(--color-bg) calc(l + 30) c h)
   );
   --color-bg-surface: light-dark(
     lch(from var(--color-bg) calc(l + 2) calc(c + 2) h),
@@ -62,6 +62,11 @@
 
   --border: 1px solid var(--color-border);
   --border-outset: 2px outset currentcolor;
+
+  --outline: 1px solid
+    color-mix(in oklch, currentcolor 20%, var(--color-border));
+  --outline-dashed: 1px dashed
+    color-mix(in oklch, currentcolor 20%, var(--color-border));
 }
 
 body {
@@ -122,29 +127,50 @@ th {
   text-align: start;
 }
 
+section {
+  margin-block-end: 10ex;
+}
+
 section.cards,
 ul.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 0;
+  padding: 0;
 
   > *:not(article) {
     grid-column: 1 / -1;
+    flex-basis: 100%;
   }
 
   > article,
   > li {
     background-color: var(--color-bg-surface);
     padding: 2ch 2ch 3ch 2ch;
-    outline: var(--border);
+    outline: var(--outline);
 
-    > *:first-child {
-      font: var(--body);
-      font-weight: var(--fw-extrabold);
-      margin-block-start: 0;
+    > header {
       padding-block-end: 1ex;
+      margin-block-end: 2ex;
       border-block-end: var(--border);
       max-width: 100%;
+
+      *:first-child {
+        margin-block: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font: var(--body);
+        font-weight: var(--fw-semibold);
+      }
     }
+  }
+
+  > li {
+    list-style-type: none;
   }
 }

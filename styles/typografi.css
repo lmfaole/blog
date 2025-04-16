@@ -38,12 +38,10 @@ h5 {
 
 h2 {
   font: var(--heading-2);
-  margin-block-start: 8ex;
 }
 
 h3 {
   font: var(--heading-3);
-  margin-block-start: 8ex;
 }
 
 p,
@@ -67,6 +65,16 @@ p aside {
 
 p + p {
   margin-block-start: 3ex;
+}
+
+p {
+  + h2 {
+    margin-block-start: 7ex;
+  }
+
+  + h3 {
+    margin-block-start: 5ex;
+  }
 }
 
 a,
