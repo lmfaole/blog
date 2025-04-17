@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="./styles/skjemelementer.css" />
-    <title>Skjemaelementer | Ole Jørgen Bakken</title>
+    <title>Skjemaelementer og attributter | Ole Jørgen Bakken</title>
   </head>
   <body>
     <header class="global-header">
@@ -25,7 +25,7 @@
     <main>
       <article>
         <hgroup>
-          <h1>Mulighetsrommet med helt vanlige skjemaelementer</h1>
+          <h1>Skjemaelementer og attributter</h1>
           <p>Noen eksempler på skjemaelementer, og deres attributter.</p>
         </hgroup>
 
@@ -120,6 +120,32 @@
               />
               <label for="tiktok">TikTok</label>
             </fieldset>
+          </article>
+
+          <article>
+            <header>
+              <h3>Checkbox som switch</h3>
+            </header>
+
+            <div>
+              <input
+                type="checkbox"
+                name="kommunikasjonsmetoder"
+                value="instagram"
+                id="instagram"
+                switch
+              />
+              <label for="instagram">Instagram</label>
+            </div>
+
+            <footer>
+              <p role="note" class="support switch">
+                I dag er det kun Safari som støtter
+                <a href="https://webkit.org/blog/15054/an-html-switch-control/">
+                  switch-attributten på checkbox</a
+                >.
+              </p>
+            </footer>
           </article>
 
           <article>

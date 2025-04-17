@@ -38,10 +38,12 @@ h5 {
 
 h2 {
   font: var(--heading-2);
+  margin-block: 7ex 2ex;
 }
 
 h3 {
   font: var(--heading-3);
+  margin-block: 5ex 1ex;
 }
 
 p,
@@ -59,14 +61,13 @@ p + p {
   margin-block-start: 3ex;
 }
 
-p {
-  + h2 {
-    margin-block-start: 7ex;
-  }
+article ul {
+  margin-block-end: 4ex;
+}
 
-  + h3 {
-    margin-block-start: 5ex;
-  }
+article ul > li:not(:first-of-type),
+article ol > li:not(:first-of-type) {
+  margin-block-start: 2ex;
 }
 
 a,

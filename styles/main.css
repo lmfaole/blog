@@ -172,3 +172,15 @@ ul.cards {
     list-style-type: none;
   }
 }
+
+dt {
+  font-weight: var(--fw-bold);
+}
+
+dd {
+  margin-block-end: 3ex;
+
+  + dd {
+    margin-block-start: -3ex;
+  }
+}
