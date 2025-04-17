@@ -5,7 +5,12 @@
   h4,
   h5 {
     max-width: 40ch;
-    text-wrap: balance;
+
+    /* En bug i Safari gjør at tekst-wrap med en link med ::after ender opp 
+    med at innholdet i ::after bryter på neste linje uansett linjelengde */
+    &:not(:has(a)) {
+      text-wrap: balance;
+    }
 
     + * {
       margin-block-start: 0;
@@ -14,7 +19,7 @@
 
   h1 {
     font: var(--heading-1);
-    margin-block: 7ex 1ex;
+    margin-block: 1ex 1ex;
 
     &.visuelt-skjult {
       position: absolute;
