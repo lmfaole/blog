@@ -1,179 +1,196 @@
-h1,
-h2,
-h3,
-h4,
-h5 {
-  max-width: 40ch;
-  text-wrap: balance;
+@layer default {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    max-width: 40ch;
+    text-wrap: balance;
 
-  + * {
-    margin-block-start: 0;
-  }
-}
-
-h1 {
-  font: var(--heading-1);
-  margin-block: 7ex 1ex;
-
-  &.visuelt-skjult {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    clip-path: polygon(0 0, 0 0, 0 0);
-  }
-}
-
-h2,
-h3,
-h4,
-h5 {
-  max-width: 30ch;
-}
-
-h2 {
-  font: var(--heading-2);
-  margin-block: 7ex 2ex;
-}
-
-h3 {
-  font: var(--heading-3);
-  margin-block: 5ex 1ex;
-}
-
-p,
-li {
-  max-width: var(--text-length);
-  text-wrap: pretty;
-}
-
-aside p,
-p aside {
-  color: var(--color-text-muted);
-}
-
-p + p {
-  margin-block-start: 3ex;
-}
-
-article ul {
-  margin-block-end: 4ex;
-}
-
-article ul > li:not(:first-of-type),
-article ol > li:not(:first-of-type) {
-  margin-block-start: 2ex;
-}
-
-a,
-abbr {
-  text-decoration-color: currentColor;
-}
-
-a {
-  color: var(--color-link);
-  text-underline-offset: 0.3ex;
-  text-decoration-thickness: 0.1ex;
-  text-decoration-style: solid;
-
-  &:hover {
-    text-decoration-thickness: 0.2ex;
+    + * {
+      margin-block-start: 0;
+    }
   }
 
-  /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 
+  h1 {
+    font: var(--heading-1);
+    margin-block: 7ex 1ex;
+
+    &.visuelt-skjult {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      clip-path: polygon(0 0, 0 0, 0 0);
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    max-width: 30ch;
+    margin-block-start: 7ex;
+  }
+
+  h2 {
+    font: var(--heading-2);
+    margin-block-end: 2ex;
+  }
+
+  h3 {
+    font: var(--heading-3);
+    margin-block-end: 1ex;
+  }
+
+  p,
+  li {
+    max-width: var(--text-length);
+    text-wrap: pretty;
+  }
+
+  aside p,
+  p aside {
+    color: var(--color-text-muted);
+  }
+
+  p + p {
+    margin-block-start: 3ex;
+  }
+
+  li {
+    color: var(--color-text-muted);
+
+    time,
+    strong {
+      color: var(--color-text);
+    }
+  }
+
+  strong {
+    font-weight: var(--fw-medium);
+  }
+
+  ul,
+  ol {
+    margin-block-end: 4ex;
+
+    &:has(ul, ol) > li:not(:first-of-type) {
+      margin-block-start: 2ex;
+    }
+  }
+
+  a,
+  abbr {
+    text-decoration-color: currentColor;
+  }
+
+  a {
+    color: var(--color-link);
+    text-underline-offset: 0.3ex;
+    text-decoration-thickness: 0.1ex;
+    text-decoration-style: solid;
+    font-weight: var(--fw-medium);
+
+    &:hover {
+      text-decoration-thickness: 0.2ex;
+    }
+
+    /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 
   men jeg liker tanken på å kunne fremheve norsk en eller annen gang */
-  &[hreflang="en"] {
-    &::after {
-      line-height: 1.4; /* Gjør at høyden på ikonet settes relativt til tekst-størrelsen bedre. */
-      display: inline-block;
-      background-color: currentColor;
-      content: " " / " (side på engelsk)";
-      mask: url(/assets/aksel-icons/Interface/Language.svg) no-repeat 50% 50%;
-      mask-size: cover;
-      height: 1lh;
-      margin-inline-start: 4px;
-      aspect-ratio: 1;
-      vertical-align: text-bottom;
+    &[hreflang="en"] {
+      &::after {
+        line-height: 1.4; /* Gjør at høyden på ikonet settes relativt til tekst-størrelsen bedre. */
+        display: inline-block;
+        background-color: currentColor;
+        content: " " / " (side på engelsk)";
+        mask: url(/assets/aksel-icons/Interface/Language.svg) no-repeat 50% 50%;
+        mask-size: cover;
+        height: 1lh;
+        margin-inline-start: 4px;
+        aspect-ratio: 1;
+        vertical-align: text-bottom;
+      }
+    }
+
+    &[hreflang="no"] {
+      &::after {
+        line-height: 1.4;
+        display: inline-block;
+        background-color: currentColor;
+        content: " " / " (side på norsk)";
+        mask: url(/assets/aksel-icons/Transportation/FlagCross.svg) no-repeat
+          50% 50%;
+        mask-size: cover;
+        height: 1lh;
+        margin-inline-start: 4px;
+        aspect-ratio: 1;
+        vertical-align: text-bottom;
+      }
+    }
+
+    &[href*="https://"]
+    {
+      &::after {
+        line-height: 1.4;
+        display: inline-block;
+        background-color: currentColor;
+        content: " " / " (ekstern side)";
+        mask: url(/assets/aksel-icons/Interface/ExternalLink.svg) no-repeat 50%
+          50%;
+        mask-size: cover;
+        height: 1lh;
+        margin-inline-start: 4px;
+        aspect-ratio: 1;
+        vertical-align: text-bottom;
+      }
     }
   }
 
-  &[hreflang="no"] {
-    &::after {
-      line-height: 1.4;
-      display: inline-block;
-      background-color: currentColor;
-      content: " " / " (side på norsk)";
-      mask: url(/assets/aksel-icons/Transportation/FlagCross.svg) no-repeat 50%
-        50%;
-      mask-size: cover;
-      height: 1lh;
-      margin-inline-start: 4px;
-      aspect-ratio: 1;
-      vertical-align: text-bottom;
-    }
+  abbr {
+    cursor: help;
+    text-decoration-thickness: 0.2ex;
+    text-underline-offset: 0.3ex;
   }
 
-  &[href*="https://"]
-  {
-    &::after {
-      line-height: 1.4;
-      display: inline-block;
-      background-color: currentColor;
-      content: " " / " (ekstern side)";
-      mask: url(/assets/aksel-icons/Interface/ExternalLink.svg) no-repeat 50%
-        50%;
-      mask-size: cover;
-      height: 1lh;
-      margin-inline-start: 4px;
-      aspect-ratio: 1;
-      vertical-align: text-bottom;
-    }
+  pre,
+  code,
+  kbd {
+    font: var(--code);
   }
-}
 
-abbr {
-  cursor: help;
-  text-decoration-thickness: 0.2ex;
-  text-underline-offset: 0.3ex;
-}
+  pre {
+    overflow-x: auto;
+  }
 
-pre,
-code,
-kbd {
-  font: var(--code);
-}
+  code {
+    font-weight: inherit;
+    display: inline;
+  }
 
-pre {
-  overflow-x: auto;
-}
+  kbd {
+    background: var(--color-bg-surface);
+    border: var(--border-outset);
+    border-color: currentColor;
+    border-radius: 2px;
+    padding: 0.1ex 0.4ch;
+  }
 
-code {
-  font-weight: inherit;
-  font-size: inherit;
-  display: inline;
-}
+  ins,
+  del {
+    text-decoration: none;
+  }
 
-kbd {
-  background: var(--color-bg-surface);
-  border: var(--border-outset);
-  border-radius: 2px;
-  padding: 0.1ex 0.4ch;
-}
+  del {
+    background-color: lch(from var(--color-bg) l 150 34 / 0.4);
+  }
 
-ins,
-del {
-  text-decoration: none;
-}
-
-del {
-  background-color: lch(from var(--color-bg) l 150 34 / 0.4);
-}
-
-ins {
-  background-color: lch(from var(--color-bg) l 190 125 / 0.4);
+  ins {
+    background-color: lch(from var(--color-bg) l 190 125 / 0.4);
+  }
 }

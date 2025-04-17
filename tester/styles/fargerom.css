@@ -1,71 +1,73 @@
 @import url("/styles/main.css");
 
-figure {
-  --hsl-red: hsl(0deg 100% 50%);
-  --hsl-blue: hsl(240deg 100% 50%);
-  --hsl-green: hsl(120deg 100% 50%);
-  --oklch-red: oklch(65.88% 0.2872 29.23deg);
-  --oklch-blue: oklch(47.94% 0.313214 264.052deg);
-  --oklch-green: oklch(87.64% 0.2976 142.4953deg);
-  --color: transparent;
+@layer page {
+  figure {
+    --hsl-red: hsl(0deg 100% 50%);
+    --hsl-blue: hsl(240deg 100% 50%);
+    --hsl-green: hsl(120deg 100% 50%);
+    --oklch-red: oklch(65.88% 0.2872 29.23deg);
+    --oklch-blue: oklch(47.94% 0.313214 264.052deg);
+    --oklch-green: oklch(87.64% 0.2976 142.4953deg);
+    --color: transparent;
 
-  figcaption {
-    grid-column: 1 / -1;
-  }
+    figcaption {
+      grid-column: 1 / -1;
+    }
 
-  &.sammenligning {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-inline: var(--site-bleed);
-  }
-
-  div {
-    min-height: 40vh;
-    background: var(--color);
-  }
-
-  &.vertikalt {
-    grid-template-columns: 1fr;
+    &.sammenligning {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-inline: var(--site-bleed);
+    }
 
     div {
-      min-height: 20vh;
+      min-height: 40vh;
       background: var(--color);
     }
-  }
 
-  .red {
-    --color: var(--hsl-red);
+    &.vertikalt {
+      grid-template-columns: 1fr;
 
-    &.oklch {
-      --color: var(--oklch-red);
-    }
-  }
-
-  .blue {
-    --color: var(--hsl-blue);
-
-    &.oklch {
-      --color: var(--oklch-blue);
-    }
-  }
-
-  .green {
-    --color: var(--hsl-green);
-
-    &.oklch {
-      --color: var(--oklch-green);
-    }
-  }
-
-  .gradient {
-    --color: linear-gradient(in hsl to right, blue, red);
-
-    &.oklab {
-      --color: linear-gradient(in oklab to right, blue, red);
+      div {
+        min-height: 20vh;
+        background: var(--color);
+      }
     }
 
-    &.oklch {
-      --color: linear-gradient(in oklch to right, blue, red);
+    .red {
+      --color: var(--hsl-red);
+
+      &.oklch {
+        --color: var(--oklch-red);
+      }
+    }
+
+    .blue {
+      --color: var(--hsl-blue);
+
+      &.oklch {
+        --color: var(--oklch-blue);
+      }
+    }
+
+    .green {
+      --color: var(--hsl-green);
+
+      &.oklch {
+        --color: var(--oklch-green);
+      }
+    }
+
+    .gradient {
+      --color: linear-gradient(in hsl to right, blue, red);
+
+      &.oklab {
+        --color: linear-gradient(in oklab to right, blue, red);
+      }
+
+      &.oklch {
+        --color: linear-gradient(in oklch to right, blue, red);
+      }
     }
   }
 }

@@ -1,35 +1,28 @@
 @import url("/styles/main.css");
 
-ol {
-  list-style: none;
-  padding: 0;
+@layer page {
+  ol {
+    list-style: none;
+    padding: 0;
 
-  li {
-    color: var(--color-text-muted);
-  }
+    li::marker {
+      display: none;
+    }
 
-  time,
-  strong {
-    color: var(--color-text);
-    font-weight: var(--fw-bold);
-  }
-  li::marker {
-    display: none;
-  }
+    a[data-workplace="fremtind"]::after {
+      mask: url(../assets/fremtind-logo.svg) no-repeat 50% 50%;
+      mask-size: cover;
+    }
 
-  a[data-workplace="fremtind"]::after {
-    mask: url(../assets/fremtind-logo.svg) no-repeat 50% 50%;
-    mask-size: cover;
-  }
+    a[data-workplace="nav"]::after {
+      mask: url(../assets/nav-logo.svg) no-repeat 50% 50%;
+      mask-size: cover;
+      margin-inline-start: 0.7ch;
+    }
 
-  a[data-workplace="nav"]::after {
-    mask: url(../assets/nav-logo.svg) no-repeat 50% 50%;
-    mask-size: cover;
-    margin-inline-start: 0.7ch;
-  }
-
-  a[data-workplace="vipps"]::after {
-    mask: url(../assets/vipps-logo.svg) no-repeat 50% 50%;
-    mask-size: cover;
+    a[data-workplace="vipps"]::after {
+      mask: url(../assets/vipps-logo.svg) no-repeat 50% 50%;
+      mask-size: cover;
+    }
   }
 }

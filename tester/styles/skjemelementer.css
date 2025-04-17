@@ -1,80 +1,82 @@
 @import url("/styles/main.css");
 
-body {
-  --max-width: 120ch;
-}
-
-select#custom-select {
-  width: 100%;
-  border-radius: 4px;
-  background: var(--color-background);
-
-  &,
-  &::picker(select) {
-    appearance: base-select;
+@layer page {
+  body {
+    --max-width: 120ch;
   }
 
-  option {
-    display: grid;
-    align-items: center;
-    gap: 0 1ch;
-    grid-template-columns: 24px 1fr 40px;
-    grid-template-areas:
-      "check number image"
-      "check name image";
-    padding-block: 2ex;
-    position: relative;
-    background: color-mix(
-      in hsl,
-      attr(data-color type(<color>), currentColor) 5%,
-      transparent
-    );
+  select#custom-select {
+    width: 100%;
+    border-radius: 4px;
+    background: var(--color-background);
 
-    &:hover {
-      cursor: pointer;
+    &,
+    &::picker(select) {
+      appearance: base-select;
+    }
+
+    option {
+      display: grid;
+      align-items: center;
+      gap: 0 1ch;
+      grid-template-columns: 24px 1fr 40px;
+      grid-template-areas:
+        "check number image"
+        "check name image";
+      padding-block: 2ex;
+      position: relative;
       background: color-mix(
         in hsl,
-        attr(data-color type(<color>), currentColor) 10%,
+        attr(data-color type(<color>), currentColor) 5%,
         transparent
       );
-    }
 
-    &:not(:last-of-type)::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      border-block-end: 1px solid currentColor;
-    }
+      &:hover {
+        cursor: pointer;
+        background: color-mix(
+          in hsl,
+          attr(data-color type(<color>), currentColor) 10%,
+          transparent
+        );
+      }
 
-    &::checkmark {
-      background-color: currentColor;
-      content: " " / "";
-      mask: url(/assets/aksel-icons/Nature/StarFill.svg) no-repeat 50% 50%;
-      mask-size: cover;
-      width: 24px;
-      aspect-ratio: 1;
-      grid-area: check;
-    }
+      &:not(:last-of-type)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-block-end: 1px solid currentColor;
+      }
 
-    img {
-      grid-area: image;
-      margin: 0;
-    }
+      &::checkmark {
+        background-color: currentColor;
+        content: " " / "";
+        mask: url(/assets/aksel-icons/Nature/StarFill.svg) no-repeat 50% 50%;
+        mask-size: cover;
+        width: 24px;
+        aspect-ratio: 1;
+        grid-area: check;
+      }
 
-    .number,
-    .name {
-      line-height: 1;
-    }
+      img {
+        grid-area: image;
+        margin: 0;
+      }
 
-    .number {
-      grid-area: number;
-    }
+      .number,
+      .name {
+        line-height: 1;
+      }
 
-    .name {
-      grid-area: name;
-      font-weight: bold;
+      .number {
+        grid-area: number;
+      }
+
+      .name {
+        grid-area: name;
+        font-weight: bold;
+      }
     }
   }
 }
