@@ -44,7 +44,11 @@
     --outline: 1px solid var(--color-border);
     --outline-dashed: 1px dashed var(--color-border);
 
-    --filter-overlay: blur(30px);
+    --box-shadow-inset: inset 0Q 0Q 2Q 1Q var(--color-border);
+    --box-shadow-inset-relative: inset 0cqmin 0cqmin 9cqmin 1px
+      var(--color-bg-surface);
+
+    --filter-overlay: blur(10px);
 
     --text-length: 55ch;
     --padding-inline: 20ch;
@@ -151,6 +155,73 @@
 
     + dd {
       margin-block-start: -3ex;
+    }
+  }
+}
+
+button {
+  min-width: 44px;
+  min-height: 44px;
+  background-color: var(--color-bg-surface);
+  padding: 0.5ex 1.5ch;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-inset);
+  border: 0;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease-in-out;
+  font: var(--small);
+  font-weight: var(--fw-medium);
+
+  &:hover {
+    --box-shadow-inset: inset 0Q 0Q 20Q 2Q var(--color-border);
+  }
+}
+
+dialog {
+  --padding-inline: 2rem;
+  --outline: 2px solid var(--color-border);
+
+  height: 100dvh;
+  max-height: 800px;
+  max-width: 800px;
+  padding: 0;
+  background-color: var(--color-bg);
+  outline: var(--outline);
+  border: 0;
+
+  &::backdrop {
+    background-color: lch(from var(--color-bg) l c h / 0.7);
+    backdrop-filter: var(--filter-overlay);
+  }
+
+  > header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-inline: var(--padding-inline);
+    padding-block: 1rem;
+    background-color: var(--color-bg);
+    top: 0;
+    position: sticky;
+    outline: var(--outline);
+
+    h1 {
+      margin-block: 0;
+      font: var(--body);
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  > div {
+    padding-inline: var(--padding-inline);
+    padding-block: 2rem 4rem;
+
+    > *:first-child {
+      margin-block-start: 0;
+    }
+
+    > *:last-child {
+      margin-block-end: 0;
     }
   }
 }

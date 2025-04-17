@@ -14,8 +14,9 @@
 
     > article,
     > li {
-      background-color: var(--color-bg-surface);
+      background-color: var(--color-bg);
       padding: 2rem;
+      box-shadow: var(--box-shadow-inset-relative);
 
       > header {
         margin-block-end: 2rem;
