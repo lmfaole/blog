@@ -41,4 +41,47 @@
       list-style-type: none;
     }
   }
+
+  /* Global meny */
+  dialog#menu {
+    max-width: unset;
+    max-height: unset;
+    width: 100dvw;
+    height: 100dvh;
+    outline: 0;
+    padding-inline: var(--padding-inline);
+
+    &::backdrop {
+      background-color: var(--color-bg);
+    }
+
+    > header,
+    > div {
+      padding-inline: 0;
+      max-width: var(--max-width);
+      margin-inline: auto;
+    }
+
+    > header {
+      outline: 0;
+      border-block-end: var(--border);
+    }
+
+    > div {
+      @media (min-width: 400px) {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 2dvh 2rem;
+
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+
+    ul {
+      columns: 1;
+      margin: 0;
+    }
+  }
 }

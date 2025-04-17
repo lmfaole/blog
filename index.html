@@ -16,12 +16,71 @@
         >
       </p>
 
-      <nav>
-        <ul>
-          <li><a href="/notater">Notatblokk</a></li>
-          <li><a href="/tester">Tester</a></li>
-        </ul>
-      </nav>
+      <button role="menu" popovertarget="menu">Meny</button>
+      <dialog popover id="menu">
+        <header>
+          <h1>Hovednavigasjon</h1>
+          <button popovertarget="menu" popoveraction="hide">Lukk</button>
+        </header>
+
+        <div>
+          <h2>Tester</h2>
+          <ul aria-label="Tester">
+            <li>
+              <a href="/tester/fargerom.html" lang="en">CSS fargerom</a>
+            </li>
+            <li>
+              <a href="/tester/størrelser.html">CSS størrelser</a>
+            </li>
+            <li>
+              <a href="/tester/skjemaelementer.html"
+                >Skjemaelementer og attributter</a
+              >
+            </li>
+          </ul>
+
+          <h2>Diverse</h2>
+          <ul aria-label="Diverse">
+            <li>
+              <a href="/diverse/bokmerker.html">Bokmerker</a>
+            </li>
+            <li><a href="/diverse/cv.html">CV</a></li>
+          </ul>
+
+          <h2>Notater</h2>
+          <ul aria-label="Notater">
+            <li>
+              <a href="/notater/deque/definisjoner.html"
+                >Definisjoner relatert til tilgjengelighet</a
+              >
+            </li>
+            <li>
+              <a href="/notater/deque/sitater.html"
+                >Sitater jeg likte fra kursene</a
+              >
+            </li>
+            <li>
+              <a href="/notater/deque/principles-of-universal-design.html"
+                >7 prinsipper for universell design</a
+              >
+            </li>
+            <li>
+              <a href="/notater/deque/skjermlesere.html"
+                >Kort om skjermlesere</a
+              >
+            </li>
+          </ul>
+
+          <h2>Blogg?</h2>
+          <ul aria-label="Blogginnlegg">
+            <li>
+              <a href="/blogg/tanker-om-generativ-kunstig-intelligense.html"
+                >Tanker om KI</a
+              >
+            </li>
+          </ul>
+        </div>
+      </dialog>
     </header>
     <main>
       <hgroup>
@@ -35,11 +94,10 @@
       </hgroup>
 
       <p>
-        Denne nettsiden er en slags <a href="/notater/">notatblokk</a> og
-        <a href="/tester">testarena</a> for ting jeg syns virker interessant.
-        Som en forkjemper for mer CSS og mindre JavaScript er den lagd
-        forsøksvis uten teknologi utover HTML og CSS. Vi får se hvor lenge det
-        kan vare 🙂‍↕️.
+        Denne nettsiden er en slags notatblokk og testarena for ting jeg syns
+        virker interessant. Som en forkjemper for mer CSS og mindre JavaScript
+        er den lagd forsøksvis uten teknologi utover HTML og CSS. Vi får se hvor
+        lenge det kan vare 🙂‍↕️.
       </p>
       <p>
         Jeg poster ikke så mye på internett ellers, men jeg kan nås på følgende
@@ -58,10 +116,6 @@
           </li>
         </ul>
       </nav>
-      <p>
-        <a href="/diverse/">Diversemappa</a>, hvor jeg har diverse som kanskje
-        blir noe en dag, eller som aldri blir noe. Hvem vet 😙.
-      </p>
     </main>
   </body>
 </html>
