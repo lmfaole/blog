@@ -11,15 +11,10 @@
     &:not(:has(a)) {
       text-wrap: balance;
     }
-
-    + * {
-      margin-block-start: 0;
-    }
   }
 
   h1 {
     font: var(--heading-1);
-    margin-block: 1ex 1ex;
 
     &.visuelt-skjult {
       position: absolute;
@@ -40,17 +35,15 @@
   h4,
   h5 {
     max-width: 30ch;
-    margin-block-start: 7ex;
+    margin-block-start: 3lh;
   }
 
   h2 {
     font: var(--heading-2);
-    margin-block-end: 2ex;
   }
 
   h3 {
     font: var(--heading-3);
-    margin-block-end: 1ex;
   }
 
   p,
@@ -64,8 +57,12 @@
     color: var(--color-text-muted);
   }
 
-  p + p {
-    margin-block-start: 3ex;
+  p {
+    margin-block-end: 1.5lh;
+
+    + ul {
+      margin-block-start: -1lh;
+    }
   }
 
   li {
@@ -83,10 +80,8 @@
 
   ul,
   ol {
-    margin-block-end: 4ex;
-
     &:has(ul, ol) > li:not(:first-of-type) {
-      margin-block-start: 2ex;
+      margin-block-start: 0.5lh;
     }
   }
 

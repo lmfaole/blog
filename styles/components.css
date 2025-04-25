@@ -14,9 +14,8 @@
 
     > article,
     > li {
-      background-color: var(--color-bg);
+      background-color: var(--color-bg-surface);
       padding: 2rem;
-      box-shadow: var(--box-shadow-inset-relative);
 
       > header {
         margin-block-end: 2rem;
@@ -56,32 +55,15 @@
     }
 
     > header,
-    > div {
-      padding-inline: 0;
+    > nav {
       max-width: var(--max-width);
       margin-inline: auto;
     }
 
     > header {
+      padding-inline: 0;
       outline: 0;
       border-block-end: var(--border);
-    }
-
-    > div {
-      @media (min-width: 400px) {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        gap: 2dvh 2rem;
-
-        h2 {
-          margin: 0;
-        }
-      }
-    }
-
-    ul {
-      columns: 1;
-      margin: 0;
     }
   }
 }

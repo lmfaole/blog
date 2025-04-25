@@ -13,8 +13,8 @@
     --blue: oklch(0.5 0.8 250);
 
     --color-bg: light-dark(
-      lch(from var(--green) 98 2 h),
-      lch(from var(--green) 1 2 h)
+      lch(from var(--green) 96 2 h),
+      lch(from var(--green) 10 2 h)
     );
     --color-bg-surface: light-dark(
       lch(from var(--color-bg) 100 c h),
@@ -44,6 +44,7 @@
     --outline: 1px solid var(--color-border);
     --outline-dashed: 1px dashed var(--color-border);
 
+    --box-shadow: 0 0 10px 0 var(--color-border);
     --box-shadow-inset: inset 0Q 0Q 2Q 1Q var(--color-border);
     --box-shadow-inset-relative: inset 0cqmin 0cqmin 9cqmin 1px
       var(--color-bg-surface);
@@ -139,6 +140,10 @@
         margin-block-start: calc(var(--padding) * 2);
       }
     }
+
+    &[open] {
+      box-shadow: var(--box-shadow);
+    }
   }
 
   table {
@@ -175,21 +180,20 @@
   }
 
   button {
-    min-width: 44px;
-    min-height: 44px;
-    background-color: var(--color-bg-surface);
+    min-width: 48px;
+    min-height: 48px;
+    background-color: transparent;
     padding: 0.5ex 1.5ch;
     cursor: pointer;
-    box-shadow: var(--box-shadow-inset);
-    border: var(--border);
-    border-width: 2px;
+    color: var(--color-link);
+    border: 2px solid var(--color-link);
     border-radius: 4px;
-    transition: box-shadow 0.3s ease-in-out;
     font: var(--small);
     font-weight: var(--fw-medium);
 
     &:hover {
-      --box-shadow-inset: inset 0Q 0Q 20Q 2Q var(--color-border);
+      background-color: var(--color-link);
+      color: var(--color-bg);
     }
   }
 
