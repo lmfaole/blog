@@ -777,5 +777,67 @@
         </blockquote>
       </article>
     </main>
+
+    <script>
+      // Heading links
+      const headings = [
+        ...document.querySelectorAll(["h2", "h3", "h4"]),
+      ].filter(
+        (heading) => heading.parentElement.nodeName.toLowerCase() === "article"
+      );
+
+      headings.forEach((heading) => {
+        if (heading.parentElement.nodeName.toLowerCase() === "article") {
+          heading.setAttribute("id", heading.innerText.replaceAll(" ", "-"));
+          const link = document.createElement("a");
+          link.setAttribute("href", `#${heading.id}`);
+          link.innerText = heading.innerText;
+          heading.innerText = "";
+          heading.appendChild(link);
+        }
+      });
+
+      // TOC
+      const title = document.querySelector("h1");
+
+      const internalNavigation = document.createElement("nav");
+      internalNavigation.setAttribute("aria-label", "Innholdsfortegnelse");
+      const internalNavigationTitle = document.createElement("h2");
+      internalNavigationTitle.innerText = "Innholdsfortegnelse";
+
+      const tocList = document.createElement("ol");
+      internalNavigation.appendChild(tocList);
+
+      title.insertAdjacentElement("afterend", internalNavigation);
+      title.insertAdjacentElement("afterend", internalNavigationTitle);
+
+      headings.forEach((heading) => {
+        switch (heading.nodeName) {
+          case "H2":
+            const tocItem = document.createElement("li");
+            const tocItemLink = document.createElement("a");
+            tocItemLink.setAttribute("href", `#${heading.id}`);
+            tocItemLink.innerText = heading.innerText;
+            tocItem.appendChild(tocItemLink);
+            tocList.appendChild(tocItem);
+            break;
+
+          case "H3":
+            console.log("Heading 3");
+            break;
+
+          case "H4":
+            console.log("Heading 4");
+            break;
+
+          case "H5":
+            console.log("Heading 5");
+            break;
+
+          default:
+            break;
+        }
+      });
+    </script>
   </body>
 </html>
