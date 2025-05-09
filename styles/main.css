@@ -246,4 +246,15 @@
       }
     }
   }
+
+  blockquote {
+    margin: 0;
+    margin-block-end: 2lh;
+    padding-inline-start: calc(2ch - 3px);
+    border-inline-start: 3px dashed var(--color-border);
+
+    > *:first-child {
+      margin-block-start: 0;
+    }
+  }
 }
