@@ -3,7 +3,8 @@
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+    dt {
     max-width: 40ch;
 
     /* En bug i Safari gjør at tekst-wrap med en link med ::after ender opp 
@@ -47,7 +48,8 @@
   }
 
   p,
-  li {
+        li,
+        dd {
     max-width: var(--text-length);
     text-wrap: pretty;
   }

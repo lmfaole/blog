@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Notater fra Deque University | Ole Jørgen Bakken</title>
+  </head>
+  <body>
+    <header class="global-header">
+      <p>
+        <a href="/index.html" class="name">Hjem</a>
+      </p>
+    </header>
+
+    <main>
+      <article>
+        <h1>Notater fra Deque University</h1>
+
+        <h2>Definisjoner fra Deque University</h2>
+        <div lang="en" class="page-scroll">
+          <dl>
+            <dt>Inclusive design</dt>
+            <dd>
+              A design methodology that seeks to enable and to accommodate the
+              full range of human diversity, including a wide spectrum of
+              abilities and disabilities. The main goal is to create a unified
+              approach to design that enables multiple methods to access the
+              same functionality.
+            </dd>
+            <dt>Web accessibility</dt>
+            <dd>
+              The qualities that make a web experience available to the widest
+              possible group of users. Web accessibility refers to the end
+              result of an inclusive design process.
+            </dd>
+            <dd>
+              To add a bit more detail to the definition of web accessibility,
+              the
+              <a href="https://www.w3.org/TR/WCAG21/"
+                >Web Content Accessibility Guidelines (WCAG) 2.1</a
+              >
+              opens in a new window list four main principles of web
+              accessibility:
+              <ol>
+                <li>
+                  Perceivable - Information and user interface components must
+                  be presentable to users in ways they can perceive.
+                </li>
+                <li>
+                  Operable - User interface components and navigation must be
+                  operable.
+                </li>
+                <li>
+                  Understandable - Information and the operation of user
+                  interface must be understandable.
+                </li>
+                <li>
+                  Robust - Content must be robust enough that it can be
+                  interpreted reliably by a wide variety of user agents,
+                  including assistive technologies.
+                </li>
+              </ol>
+            </dd>
+            <dt>Usability</dt>
+            <dd>
+              The qualities that make a web experience intuitive and easy to
+              use. A usable web design aligns with the purpose for which the web
+              site was created.
+            </dd>
+          </dl>
+        </div>
+
+        <h2>Skjermlesere</h2>
+        <h3>JAWS</h3>
+        <p>
+          <abbr title="Job Access With Speech" lang="en">JAWS</abbr> (Job Access
+          With Speech) er, i følge
+          <a
+            href="https://webaim.org/projects/screenreadersurvey10/"
+            hreflang="en"
+            >WebAIM undersøkelsen
+            <span lang="en">Screen Reader User Survey</span></a
+          >, den mest brukte skjermleseren i 2025 (40.5% av folk som svarte).
+          Den lages av
+          <a
+            lang="en"
+            href="https://support.freedomscientific.com/JAWSHQ/JAWSHeadquarters01"
+            hreflang="en"
+            >Freedom Scientific</a
+          >
+          og finnes kun på Windows.
+        </p>
+
+        <table>
+          <caption>
+            Which of the following is your primary desktop/laptop screen reader?
+          </caption>
+          <tbody>
+            <tr>
+              <th scope="col">Response</th>
+              <th scope="col"># of respondents</th>
+              <th scope="col">% of respondents</th>
+            </tr>
+            <tr>
+              <th scope="row">JAWS</th>
+              <td>619</td>
+              <td>40.5%</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA</th>
+              <td>577</td>
+              <td>37.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver</th>
+              <td>148</td>
+              <td>9.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">Dolphin SuperNova</th>
+              <td>57</td>
+              <td>3.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">ZoomText/Fusion</th>
+              <td>41</td>
+              <td>2.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca</th>
+              <td>36</td>
+              <td>2.4%</td>
+            </tr>
+            <tr>
+              <th scope="row">Narrator</th>
+              <td>10</td>
+              <td>0.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">Other</th>
+              <td>41</td>
+              <td>2.7%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Hva leser en skjermleser opp?</h3>
+        <p>
+          En skjermleser vil typisk (med mindre en bruker har endret atferden
+          selv) lese opp <strong>navn</strong>, <strong>beskrivelse</strong>,
+          <strong>rolle</strong> og <strong>verdi</strong> til et element. Dette
+          er teknologien som brukes i
+          <a
+            href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
+            hreflang="en"
+            >WCAG suksesskriterie 4.1.2: Name, Role, Value</a
+          >. UUtilsynet har en
+          <a
+            href="https://www.uutilsynet.no/wcag-standarden/412-navn-rolle-verdi-niva/121"
+            >norsk oversettelse av suksesskriterie 4.1.2</a
+          >
+          .
+        </p>
+
+        <p>
+          I tillegg vil skjermleseren lese opp oppdateringer som skjer på siden
+          med såkalte <mark lang="en">"live-regions"</mark>.
+        </p>
+
+        <h3>Landemerker</h3>
+        <aside>
+          <p>
+            Mye av denne delen er generell for skjermlesere, men JAWS brukes som
+            eksempel.
+          </p>
+        </aside>
+        <p>
+          Noen skjermlesere leser automatisk opp en del landemerker ved
+          sideinnlasting. JAWS vil for eksempel uttale
+          <cite>"page has 4 regions, 12 headings, and 78 links"</cite>.
+        </p>
+        <p>
+          Dersom brukeren ønsker en liste med spesifikke elementer for å
+          navigere gjennom siden kan de bruke <kbd>Insert</kbd> + <kbd>F3</kbd>.
+          Da vil det komme opp en liste som ligner på denne fra Wikipedia i
+          2017:
+        </p>
+        <img
+          lang="no"
+          src="./assets/jaws-menu.png"
+          alt="Skjermbilde av JAWS med en liste med virituelle HTML-elementer hentet fra Wikipedia i 2017"
+        />
+        <p>Her er det følgende elementer:</p>
+        <ul lang="en">
+          <li>Anchors (links)</li>
+          <li>Block quotes</li>
+          <li>Buttons</li>
+          <li>Checkboxes</li>
+          <li>
+            Controls (selectable ARIA widget controls, e.g. tabs in a tablist)
+          </li>
+          <li>Divisions</li>
+          <li>Edit boxes (text inputs)</li>
+          <li>Form fields</li>
+          <li>Frames</li>
+          <li>Graphics</li>
+          <li>Headings</li>
+          <li>Links</li>
+          <li>List items</li>
+          <li>Lists</li>
+          <li>Objects</li>
+          <li>Paragraphs</li>
+          <li>Placemarkers</li>
+          <li>Radio buttons</li>
+          <li>Tables</li>
+        </ul>
+
+        <p>
+          En viktig ting som mangler fra denne lista er
+          <mark>landemerker</mark>, eller <mark lang="en">regions</mark>, som
+          JAWS kaller dem. En bruker kan navigere med landemerker på en side ved
+          å bruke <kbd>R</kbd>, eller hente en liste med landemerker ved på
+          bruke <kbd>Insert</kbd> + <kbd>CTRL</kbd> + <kbd>R</kbd>. Det er
+          vanlig, og forventet, av andre skjermleser-verktøy å kunne hente opp
+          landemerker.
+        </p>
+
+        <p>
+          Standardinnstillingene til skjermlesere er uansett å lese opp den
+          semantiske meningen ved innholdet brukeren "er på", så dette er
+          viktige semantiske byggeklosser for enhver nettside.
+        </p>
+
+        <p>
+          Som regel ønsker du kun en header, èn footer, og èn main. Selv om du
+          kan ha flere landemerker kan det fort bli mye å navigere seg gjennom
+          for brukerne. Dersom du allikevel ønsker flere navigasjonselementer
+          hjelper det å gi dem aria-label med gode navn.
+        </p>
+
+        <h3>Huskeliste for skjemaelementer, bilder, lenker og lister</h3>
+        <ul
+          aria-label="Huskeliste for skjemaelementer, bilder, lenker og lister"
+        >
+          <li>
+            <strong
+              >Skjemaelementer må ha gode <span lang="en">labels</span></strong
+            >.
+          </li>
+          <li>
+            <strong
+              >Bilder må ha alternativ tekst satt med alt-egenskapen, som
+              forklarer hensikten med bildet</strong
+            >. Dette bør ikke være en utlisting av egenskaper ved bildet, eller
+            alt som er på bildet. Det skal være meningen bildet skal gi til
+            brukeren.
+          </li>
+          <li>
+            <strong>Bruk så mange lenker du må</strong>. Det er aldri feil å
+            lenke ut til andre sider, selv om det vil ta lengre tid å navigere
+            gjennom lenkene på en side.
+
+            <ul aria-label="Huskeliste for lenker">
+              <li>
+                <strong>Lenker må ha gode navn</strong>. Navnet kan komme fra
+                teksten i lenken, satt med aria-label, eller fra alt-teksten til
+                bildet i lenken.
+              </li>
+              <li>
+                <strong
+                  >Lenker burde fortelle hensikten med å gå inn på siden du
+                  lenker til</strong
+                >.
+              </li>
+              <li>
+                <strong
+                  >Lenker som tar en bruker ut av konteksten den er i bør
+                  fortelle dette på en god måte</strong
+                >. Det er veldig enkelt å gjøre forskjell på lenker som
+                inkluderer <code>https://</code> for eksempel.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Lister bør være kodet semantisk som lister</strong>. Det bør
+            være riktig
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists"
+              >type liste</a
+            >, og på samme måte som med lenker bør det være så mange lister som
+            gir mening.
+          </li>
+        </ul>
+
+        <h3>Døvblinde</h3>
+
+        <p>
+          Det er teknologisk enkelt å gjøre innhold tilgjengelig for døvblinde
+          på internett, og ved å inkludere døvblinde som en brukergruppe du
+          designer for vil du kunne gjøre nettsiden enklere for alle. Mange av
+          metodene for å designe for døvblinde er også gode
+          <span lang="en">usability</span> teknikker, som brukes av mange flere:
+        </p>
+
+        <ul aria-label="Teknikker for å designe for døvblinde">
+          <li>
+            <strong>Tenk tekst først</strong>. Alt multimedie-innhold er
+            ubrukelig for døvblinde, så tenk at alt som fortelles gjennom video
+            og lyd må være tilgjengelig gjennom tekst også.
+          </li>
+          <li><strong>Minimalisme hjelper med navigering</strong>.</li>
+          <li><strong>Semantikk hjelper med navigering</strong>.</li>
+          <li>
+            <strong>Tidsavgrensninger ødelegger alt</strong>. Det vil ta lengre
+            tid å lese med en leselist, derfor hjelper det veldig å kunne
+            forlenge tidsavgrenset innhold eller stoppe dem totalt. Dette er
+            også nevnt i
+            <a
+              href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html"
+              hreflang="en"
+              lang="en"
+              >WCAG suksesskriterie 2.2.1: Timing adjustable</a
+            >.
+          </li>
+          <li>
+            <strong>Forenkle språk så mye du kan</strong>. Mange brukere vil
+            søke opp ord på siden, og det hjelper derfor å bruke ord alle kan,
+            og forstår.
+          </li>
+          <li>
+            <strong>Bruk alle teknikker som gjelder skjermlesere også</strong>.
+          </li>
+        </ul>
+
+        <h3>Leselist</h3>
+        <blockquote>
+          <p>
+            En leselist består av en rekke celler med seks til åtte punkter i.
+            En celle utgjør en bokstav eller et tegn, og leselister har fra 20
+            til 80 celler plassert inntil hverandre. Leselisten konverterer data
+            fra en skjermleser installert på en PC, Mac, smarttelefon, eller
+            lesebrett.
+          </p>
+          <cite
+            >Hentet fra
+            <a
+              href="https://www.blindeforbundet.no/hjelpemidler-og-produkter/leselister"
+              >Blindeforbundets side om leselister</a
+            ></cite
+          >
+        </blockquote>
+        <img
+          src="assets/braille-device.png"
+          alt="Leselist satt opp ved en PC"
+        />
+        <p>
+          For døvblinde er det viktig at alt innhold på en side eksisterer i
+          tekstformat. Her kommer det tydelig fram hvor viktig for eksempel
+          alt-tekster på bilder er, gode
+          <span lang="en">live-regions</span> og transkripsjoner til videoer.
+        </p>
+
+        <h3>Transkripsjoner</h3>
+        <p>
+          Transkripsjoner er den eneste måten døvblinde får innhold fra videoer
+          på. En enkel måte å vise transkripsjoner på er ved å skjule dem i en
+          dialog som brukeren kan hente opp ved å klikke på en knapp, du kan ha
+          det på en egen side, eller legge teksten sammen med videoen.
+        </p>
+        <p>
+          Det er ingen god måte å assosiere transkripsjoner med videoer på
+          tidsmessig.
+        </p>
+
+        <h3>Prinsipper for design for tilgjengelighet</h3>
+        <ol>
+          <li>Gjør det enkelt å gjøre ting riktig</li>
+          <li>
+            Forenkle UI-et, navigasjonen, prosesser, oppgaver og innhold der du
+            kan
+          </li>
+          <li>
+            Gi alternativer til innhold der du kan (videoer, lydinnhold,
+            transkripsjoner, osv.)
+          </li>
+          <li>Gjør det mulig å forlenge tidsavgrensninger</li>
+          <li>
+            Fokuser på brukerens toppoppgave(r)
+            <ol>
+              <li>
+                Reduser viktigheten ved alt som ikke er viktig for brukeren her
+                og nå (reklame, videoer, oppdateringer, osv.)
+              </li>
+              <li>Presenter kun én oppgave om gangen</li>
+              <li>
+                Gjør det gøy å utføre oppgaven brukeren kommer for å gjøre
+              </li>
+              <li>Bruk visuelle effekter for å guide brukeren</li>
+            </ol>
+          </li>
+
+          <li>Gi tilbakemeldinger fortløpende i prosessen</li>
+        </ol>
+
+        <h2>7 prinsipper for universell design</h2>
+        <p>
+          Prinsippene beskrevet i denne artikkelen ble først beskrevet i
+          <cite>
+            <a
+              href="https://design.ncsu.edu/wp-content/uploads/2022/11/principles-of-universal-design.pdf"
+              lang="en"
+              >The Principles of Universal Design</a
+            ></cite
+          >
+          av en gruppe arkitekter fra
+          <span lang="en">North Carolina State University</span> i 1997.
+        </p>
+
+        <h3>Hvordan prinsippene kom til</h3>
+        <p>
+          De nevnte arkitektene mente at designet av bygninger, produkter og
+          utesteder ikke dekket behovene publikum som skulle ta dem i bruk
+          hadde. De mente at disse stedene burde være <mark>universelle</mark>.
+        </p>
+        <p>
+          Da prinsippene ble lagd hadde de ingen tanke om å beskrive prinsipper
+          for <mark>universell utforming</mark> slik vi kjenner dem i dag, men
+          de blir allikevel referert til fordi de beskriver de samme prinsippene
+          som man ønsker å oppnå gjennom universell utforming av nettbaserte
+          tjenester.
+        </p>
+
+        <button popovertarget="principles">Se prinsippene</button>
+        <dialog popover id="principles" lang="en">
+          <header lang="no">
+            <h1>Prinsipper for universell design</h1>
+            <button
+              popovertarget="principles"
+              popovertargetaction="hide"
+              autofocus
+            >
+              Lukk
+            </button>
+          </header>
+          <div>
+            <h2 class="principle">Equitable Use</h2>
+            <p class="goal">
+              The design is useful and marketable to people with diverse
+              abilities.
+            </p>
+            <ol>
+              <li>
+                Provide the same means of use for all users: identical whenever
+                possible; equivalent when not.
+              </li>
+              <li>Avoid segregating or stigmatizing any users.</li>
+              <li>
+                Make provisions for privacy, security, and safety equally
+                available to all users.
+              </li>
+              <li>Make the design appealing to all users.</li>
+            </ol>
+
+            <h2 class="principle">Flexibility in Use</h2>
+            <p class="goal">
+              The design accommodates a wide range of individual preferences and
+              abilities.
+            </p>
+            <ol>
+              <li>Provide choice in methods of use.</li>
+              <li>Accommodate right- or left-handed access and use.</li>
+              <li>Facilitate the user's accuracy and precision.</li>
+              <li>Provide adaptability to the user's pace.</li>
+            </ol>
+
+            <h2 class="principle">Simple and Intuitive Use</h2>
+            <p class="goal">
+              Use of the design is easy to understand, regardless of the user's
+              experience, knowledge, language skills, or current concentration
+              level.
+            </p>
+            <ol>
+              <li>Eliminate unnecessary complexity.</li>
+              <li>Be consistent with user expectations and intuition.</li>
+              <li>Accommodate a wide range of literacy and language skills.</li>
+              <li>Arrange information consistent with its importance.</li>
+              <li>
+                Provide effective prompting and feedback during and after task
+                completion.
+              </li>
+            </ol>
+
+            <h2 class="principle">Perceptible Information</h2>
+            <p class="goal">
+              The design communicates necessary information effectively to the
+              user, regardless of ambient conditions or the user's sensory
+              abilities.
+            </p>
+            <ol>
+              <li>
+                Use different modes (pictorial, verbal, tactile) for redundant
+                presentation of essential information.
+              </li>
+              <li>Maximize "legibility" of essential information.</li>
+              <li>
+                Differentiate elements in ways that can be described (i.e. make
+                it easy to give instructions or directions).
+              </li>
+              <li>
+                Provide compatibility with a variety of techniques or devices
+                used by people with sensory limitations.
+              </li>
+            </ol>
+
+            <h2 class="principle">Tolerance for Error</h2>
+            <p class="goal">
+              The design minimizes hazards and the adverse consequences of
+              accidental or unintended actions.
+            </p>
+            <ol>
+              <li>
+                Arrange elements to minimize hazards and errors: most used
+                elements, most accessible; hazardous elements eliminated,
+                isolated, or shielded.
+              </li>
+              <li>Provide warnings of hazards and errors.</li>
+              <li>Provide fail safe features.</li>
+              <li>
+                Discourage unconscious action in tasks that require vigilance.
+              </li>
+            </ol>
+
+            <h2 class="principle">Low Physical Effort</h2>
+            <p class="goal">
+              The design can be used efficiently and comfortably and with a
+              minimum of fatigue.
+            </p>
+            <ol>
+              <li>Allow user to maintain a neutral body position.</li>
+              <li>Use reasonable operating forces.</li>
+              <li>Minimize repetitive actions.</li>
+              <li>Minimize sustained physical effort.</li>
+            </ol>
+
+            <h2 class="principle">Size and Space for Approach and Use</h2>
+            <p class="goal">
+              Appropriate size and space is provided for approach, reach,
+              manipulation, and use, regardless of user's body size, posture, or
+              mobility.
+            </p>
+            <ol>
+              <li>
+                Provide a clear line of sight to important elements for any
+                seated or standing user.
+              </li>
+              <li>
+                Make reach to all components comfortable for any seated or
+                standing user.
+              </li>
+              <li>Accommodate variations in hand and grip size.</li>
+              <li>
+                Provide adequate space for the use of assistive devices or
+                personal assistance.
+              </li>
+            </ol>
+          </div>
+        </dialog>
+
+        <h2>Utvikling for mobil og touch</h2>
+
+        <blockquote>
+          <h3>Funksjonalitet burde være tilgjengelig med standard berøring</h3>
+          <p>
+            Følgende teknikker er ikke tilstrekkelig alene for å lage en
+            tilgjengelig opplevelse for alle, og du må lage en ekvivalent med
+            kun klikk:
+          </p>
+          <ul aria-label="Funksjonalitet som ikke fungerer automatisk på mobil">
+            <li>
+              Du kan ikke bruke kun tastatur-handlinger på taster som
+              <kbd lang="en">Enter</kbd>, <kbd lang="en">Left</kbd> og
+              <kbd lang="en">Right</kbd>.
+            </li>
+            <li>
+              Du kan ikke bruke kun <span lang="en">drag and drop</span> hvis du
+              ønsker at alle skal kunne gjøre handlingen.
+            </li>
+            <li>
+              Du kan ikke bruke kun <span lang="en">gestures</span>. Noen
+              hjelpemidler trenger sveiping for å fungere.
+            </li>
+          </ul>
+        </blockquote>
+      </article>
+    </main>
+  </body>
+</html>

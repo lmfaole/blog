@@ -1,9 +1,6 @@
 @import url("/styles/main.css");
 
 @layer page {
-  body {
-    --max-width: 120ch;
-  }
 
   select#custom-select {
     width: 100%;

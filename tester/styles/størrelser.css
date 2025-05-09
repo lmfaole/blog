@@ -1,10 +1,6 @@
 @import url("/styles/main.css");
 
 @layer page {
-  body {
-    --max-width: 120ch;
-  }
-
   section.cards {
     display: flex;
     flex-flow: row wrap;
