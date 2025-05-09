@@ -248,6 +248,17 @@
             <strong
               >Skjemaelementer må ha gode <span lang="en">labels</span></strong
             >.
+            <ul lang="en">
+              <li>
+                Labels must be meaningful, i.e., they must clearly explain the
+                purpose of the field.
+              </li>
+              <li>
+                Labels must be programmatically associated with their control.
+              </li>
+              <li>Labels must be visible at all times.</li>
+              <li>Labels must be in close proximity to their control.</li>
+            </ul>
           </li>
           <li>
             <strong
@@ -403,6 +414,177 @@
 
           <li>Gi tilbakemeldinger fortløpende i prosessen</li>
         </ol>
+
+        <h2>Videre om skjemaelementer</h2>
+
+        <h3 lang="en">Labels</h3>
+
+        <h4 lang="en" id="label-hierarki">
+          Hierakriet i metoder for å sette labels på skjemaelementer
+        </h4>
+
+        <ol aria-labelledby="label-hierarki">
+          <li>aria-labelledby</li>
+          <li>aria-label</li>
+          <li>
+            Label-elementet (anbefalt metode).
+            <ol>
+              <li>
+                Eksplisitt label, med for attributt som refererer til id-en til
+                et skjemaelement.
+              </li>
+              <li>
+                Implisitt label, hvor skjemaelementet er inni label-elementet.
+              </li>
+            </ol>
+          </li>
+          <li>title-attributt på elementet</li>
+          <li>placeholder</li>
+        </ol>
+
+        <blockquote lang="en">
+          <p>
+            Placeholder text MUST NOT be used as the only method of providing a
+            label for a text input.
+          </p>
+          <p>
+            If the placeholder text is used to convey important formatting
+            information, such as whether to type a two- or four-digit year in a
+            date field, users will have to delete the information already in the
+            field to see the placeholder text again. Additionally, if a user
+            wants to review a form before submitting it, they may have
+            difficulty ensuring they have entered the correct information in the
+            correct fields if there are no visible labels once the placeholder
+            text is gone.
+          </p>
+        </blockquote>
+
+        <h4 lang="en">
+          When multiple labels are used for one element, each label MUST be
+          programmatically associated with the corresponding element.
+        </h4>
+
+        <p>
+          Du kan gjøre dette ved å inkludere flere elementer som labels med
+          aria-labelledby og ha mellomrom mellom id-ene på elementene du referer
+          til. Da vil skjemlesere lese opp de refererte tekstene etter
+          hverandre.
+        </p>
+
+        <h4 lang="en">
+          When one label is used for multiple elements, the label MUST be
+          programmatically associated with each of the corresponding elements.
+        </h4>
+
+        <blockquote>
+          <p id="multiple-inputs-one-label">
+            Metoder for å definere en label til flere felter på
+          </p>
+
+          <ol aria-labelledby="multiple-inputs-one-label" lang="en">
+            <li>
+              <strong>Combine the fields together</strong> to avoid having to
+              label each one separately.
+            </li>
+            <li>
+              <strong>Use off-screen text with CSS</strong> to provide hidden
+              labels. This technique uses the traditional
+              <code>&lt;label&gt;</code> tag and is very robust, but perhaps
+              less elegant than the <code>aria-label</code> technique.
+            </li>
+            <li>
+              <strong>Use <code>aria-label</code></strong> to provide hidden
+              labels. If you do this, you should probably also provide a
+              traditional <code>&lt;label&gt;</code> for the first field, to
+              allow users to click on the text to put the focus in the form
+              field.
+            </li>
+            <li>
+              <strong>Use a <code>&lt;fieldset&gt;</code></strong> for the
+              visible label and hidden text for the other labels.
+            </li>
+          </ol>
+        </blockquote>
+
+        <h3>Instruksjoner til skjemaelementer</h3>
+
+        <blockquote>
+          <p id="instruksjoner-gruppe">
+            Måter å gi brukere instruksjoner til hvordan de fyller ut grupper
+            med felter (fieldsets) riktig
+          </p>
+
+          <ul aria-labelledby="instruksjoner-gruppe" lang="en">
+            <li>
+              <strong>Option 1:</strong> Add the instructions to the
+              <code>&lt;legend&gt;</code>. If the instructions are short, adding
+              them to the <code>&lt;legend&gt;</code> is easy and unobtrusive.
+              Some screen readers read the full <code>&lt;legend&gt;</code> text
+              on every form field, though, so if the instructions are long, it
+              can be annoying to hear them repeated over and over. In some ways,
+              this is not semantically ideal, because the instructions are not
+              the name of the group, but this method works, so it can be an
+              acceptable workaround.
+            </li>
+            <li>
+              <strong>Option 2:</strong> Associate the instructions with one of
+              the fields (usually the first field is best) within the group,
+              using <code>aria-describedby</code>. This way, the group
+              instructions will be read only once, and they will not be skipped
+              over by screen reader users if they're tabbing to focusable
+              elements.
+            </li>
+            <li>
+              <strong>Option 3:</strong> Put the instructions before the start
+              of the whole form, as regular text not associated with anything,
+              and hope that screen reader users read them before jumping in to
+              form mode. This option sidesteps the whole problem and puts the
+              burden on the user, which is not ideal. Still, you could make a
+              case that the text is available to them this way, as long as they
+              read through the document sequentially, which many users are
+              likely to do anyway.
+              <strong
+                >Just don't put the text in the middle of the form unless you
+                associate it with one of the inputs.</strong
+              >
+              Screen reader users are much more likely to skip over
+              disassociated text.
+            </li>
+          </ul>
+        </blockquote>
+
+        <h3>Påkrevde felter</h3>
+
+        <blockquote>
+          <p id="påkrevd-felt">
+            Måter å gi brukere informasjon om at et felt er påkrevd på
+          </p>
+
+          <ul lang="en" aria-labelledby="påkrevd-felt">
+            <li>
+              aria-required="true": Setting aria-required="true" on an input is
+              an unambiguous way to designate the field as required. Screen
+              readers say "required" after reading the input's label. This
+              attribute is invisible, though, so you will need to supplement it
+              with some other method that sighted users can see.
+            </li>
+            <li>
+              HTML 5 required: The HTML 5 required attribute sounds the same to
+              screen reader users — they hear "required" after the input's label
+              — but the HTML 5 attribute adds a browser behavior (in browsers
+              that support it): it prevents users from submitting the form if
+              there are errors. That can be a good thing in theory, but not all
+              browsers support it, and this takes away some of your freedom to
+              design the error handling behavior, so use this one very
+              cautiously. Also: it's invisible; sighted users can't see it.
+            </li>
+          </ul>
+        </blockquote>
+
+        <p>
+          I tillegg burde det være en visuell indikator ved feltet, for eksempel
+          en "stjerne" (*) ved navnet på feltet.
+        </p>
 
         <h2>7 prinsipper for universell design</h2>
         <p>

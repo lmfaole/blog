@@ -4,7 +4,7 @@
   h3,
   h4,
   h5,
-    dt {
+  dt {
     max-width: 40ch;
 
     /* En bug i Safari gjør at tekst-wrap med en link med ::after ender opp 
@@ -16,6 +16,7 @@
 
   h1 {
     font: var(--heading-1);
+    margin-block-end: 2lh;
 
     &.visuelt-skjult {
       position: absolute;
@@ -29,14 +30,22 @@
       clip: rect(0, 0, 0, 0);
       clip-path: polygon(0 0, 0 0, 0 0);
     }
+
+    + h2 {
+      margin-block-start: 2lh;
+    }
   }
 
   h2,
   h3,
-  h4,
-  h5 {
-    max-width: 30ch;
-    margin-block-start: 3lh;
+  h4 {
+    margin-block-start: 5lh;
+
+    + h2,
+    + h3,
+    + h4 {
+      margin-block-start: 2lh;
+    }
   }
 
   h2 {
@@ -47,9 +56,13 @@
     font: var(--heading-3);
   }
 
+  h4 {
+    font: var(--heading-4);
+  }
+
   p,
-        li,
-        dd {
+  li,
+  dd {
     max-width: var(--text-length);
     text-wrap: pretty;
   }
@@ -62,7 +75,8 @@
   p {
     margin-block-end: 1.5lh;
 
-    + ul {
+    + ul,
+    + ol {
       margin-block-start: -1lh;
     }
   }

@@ -78,8 +78,9 @@
     --size-sm: 0.95rem;
 
     --heading-1: var(--fw-extrabold) var(--size-xxl) / var(--lh-sm) var(--sans);
-    --heading-2: var(--fw-semibold) var(--size-xl) / var(--lh-sm) var(--sans);
-    --heading-3: var(--fw-bold) var(--size-lg) / var(--lh-sm) var(--sans);
+    --heading-2: var(--fw-bold) var(--size-xl) / var(--lh-sm) var(--sans);
+    --heading-3: var(--fw-medium) var(--size-xl) / var(--lh-sm) var(--sans);
+    --heading-4: var(--fw-regular) var(--size-lg) / var(--lh-sm) var(--sans);
     --body: var(--fw-regular) var(--size-md) / var(--lh-md) var(--sans);
     --code: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--mono);
     --small: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--sans);
@@ -172,15 +173,11 @@
   }
 
   dt {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-medium);
   }
 
   dd {
-    margin-block-end: 3ex;
-
-    + dd {
-      margin-block-start: -3ex;
-    }
+    margin-block-end: 1lh;
   }
 
   button {
@@ -249,9 +246,9 @@
 
   blockquote {
     margin: 0;
-    margin-block-end: 2lh;
+    margin-block: 1.5lh 2lh;
     padding-inline-start: calc(2ch - 3px);
-    border-inline-start: 3px dashed var(--color-border);
+    border-inline-start: 2px dashed var(--color-link);
 
     > *:first-child {
       margin-block-start: 0;
