@@ -186,19 +186,14 @@
   button {
     min-width: 48px;
     min-height: 48px;
-    background-color: transparent;
+    background-color: var(--color-link);
     padding: 0.5ex 1.5ch;
     cursor: pointer;
-    color: var(--color-link);
+    color: var(--color-bg);
     border: 2px solid var(--color-link);
     border-radius: 4px;
     font: var(--small);
     font-weight: var(--fw-medium);
-
-    &:hover {
-      background-color: var(--color-link);
-      color: var(--color-bg);
-    }
   }
 
   dialog {
