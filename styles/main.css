@@ -17,12 +17,12 @@
       lch(from var(--green) 10 2 h)
     );
     --color-bg-surface: light-dark(
-      lch(from var(--color-bg) 100 c h),
-      lch(from var(--color-bg) 4 c h)
+      lch(from var(--color-bg) 99 c h),
+      lch(from var(--color-bg) 2 c h)
     );
     --color-border: light-dark(
       lch(from var(--color-bg) 90 c h),
-      lch(from var(--color-bg) 14 c h)
+      lch(from var(--color-bg) 30 c h)
     );
 
     --color-text: light-dark(
@@ -39,7 +39,7 @@
     );
 
     --border: 1px solid var(--color-border);
-    --border-outset: 1px outset var(--color-border);
+    --border-outset: 2px outset var(--color-border);
 
     --outline: 1px solid var(--color-border);
     --outline-dashed: 1px dashed var(--color-border);
@@ -72,15 +72,16 @@
     --lh-md: 1.9;
 
     --size-xxl: 2.4rem;
-    --size-xl: 1.8rem;
+    --size-xl: 2rem;
     --size-lg: 1.5rem;
     --size-md: 1.2rem;
     --size-sm: 0.95rem;
 
     --heading-1: var(--fw-extrabold) var(--size-xxl) / var(--lh-sm) var(--sans);
-    --heading-2: var(--fw-bold) var(--size-xl) / var(--lh-sm) var(--sans);
-    --heading-3: var(--fw-medium) var(--size-xl) / var(--lh-sm) var(--sans);
+    --heading-2: var(--fw-bold) var(--size-xxl) / var(--lh-sm) var(--sans);
+    --heading-3: var(--fw-regular) var(--size-xl) / var(--lh-sm) var(--sans);
     --heading-4: var(--fw-regular) var(--size-lg) / var(--lh-sm) var(--sans);
+    --heading-5: var(--fw-regular) var(--size-md) / var(--lh-sm) var(--sans);
     --body: var(--fw-regular) var(--size-md) / var(--lh-md) var(--sans);
     --code: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--mono);
     --small: var(--fw-regular) var(--size-sm) / var(--lh-md) var(--sans);
@@ -127,45 +128,96 @@
   }
 
   details {
+    --padding-block: 0.5rem;
+    --padding-inline: 1rem;
+    --padding: var(--padding-block) var(--padding-inline);
+
+    background-color: var(--color-bg-surface);
+    padding: var(--padding);
+    margin-block-end: 1.5lh;
+
+    &[open] {
+      summary {
+        border-block-end: 1px solid var(--color-border);
+      }
+    }
+
+    &:has(+ details) {
+      margin-block-end: 0;
+
+      + details {
+        border-block-start: 1px solid var(--color-border);
+      }
+    }
+
+    *:last-child {
+      margin-block-end: calc(var(--padding-block) + 1lh);
+    }
+
     summary {
       cursor: pointer;
       min-height: 44px;
+      position: sticky;
+      top: 0;
+      background-color: var(--color-bg-surface);
+      margin: calc(var(--padding-block) * -1) calc(var(--padding-inline) * -1);
+      padding: var(--padding);
 
       + * {
-        margin-block-start: 1ch;
+        margin-block-start: calc(var(--padding-block) + 1lh);
+      }
+
+      &:hover {
+        background-color: lch(from var(--color-bg-surface) calc(l - 10) c h);
       }
     }
   }
 
   table {
     border-collapse: collapse;
+    border: var(--border);
     table-layout: fixed;
     width: 100%;
-    background-color: var(--color-bg-surface);
-    caption-side: bottom;
-  }
+    background: lch(from var(--color-bg) calc(l + 2) c h);
 
-  td,
-  th {
-    border: var(--border);
-    padding: 0.5ex 1ch;
-  }
+    td,
+    th {
+      vertical-align: top;
+      text-align: start;
+      border: var(--border);
+      padding: 0.5ex 1ch;
 
-  td {
-    text-align: end;
-  }
+      &[data-align="end"] {
+        text-align: end;
+      }
+    }
 
-  th {
-    text-align: start;
+    &[data-align="end"] {
+      td,
+      th {
+        text-align: end;
+      }
+    }
 
-    &:not(:first-of-type) {
-      text-align: end;
+    th {
+      font-weight: var(--fw-medium);
+    }
+
+    &:has(tr:nth-child(8)) {
+      tbody tr {
+        &:nth-child(odd) {
+          background: light-dark(
+            lch(from var(--color-bg) calc(l + 10) c h),
+            lch(from var(--color-bg) calc(l - 1) calc(c + 8) h)
+          );
+        }
+      }
     }
   }
 
   caption {
     text-align: start;
-    margin-block-start: 0.25lh;
+    margin-block: 0.25lh;
   }
 
   section {

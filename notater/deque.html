@@ -73,25 +73,27 @@
         </div>
 
         <h2>Skjermlesere</h2>
-        <h3>JAWS</h3>
-        <p>
-          <abbr title="Job Access With Speech" lang="en">JAWS</abbr> (Job Access
-          With Speech) er, i følge
-          <a
-            href="https://webaim.org/projects/screenreadersurvey10/"
-            hreflang="en"
-            >WebAIM undersøkelsen
-            <span lang="en">Screen Reader User Survey</span></a
-          >, den mest brukte skjermleseren i 2025 (40.5% av folk som svarte).
-          Den lages av
-          <a
-            lang="en"
-            href="https://support.freedomscientific.com/JAWSHQ/JAWSHeadquarters01"
-            hreflang="en"
-            >Freedom Scientific</a
-          >
-          og finnes kun på Windows.
-        </p>
+        <details>
+          <summary>
+            Anbefalte kombinasjoner av skjermlesere og nettlesere
+          </summary>
+          <ul>
+            <li>
+              JAWS works well with Chrome, Edge, Firefox, and Internet Explorer.
+              <ul>
+                <li>
+                  Historically, JAWS has worked best with Internet Explorer, and
+                  that combination still works well, but Internet Explorer is
+                  old and will never be updated with new features, so it is best
+                  to migrate to newer browsers.
+                </li>
+              </ul>
+            </li>
+            <li>NVDA works well with Firefox, Chrome, and Edge.</li>
+            <li>Narrator works best with Microsoft Edge.</li>
+            <li>VoiceOver works best with Safari.</li>
+          </ul>
+        </details>
 
         <table>
           <caption>
@@ -415,7 +417,167 @@
           <li>Gi tilbakemeldinger fortløpende i prosessen</li>
         </ol>
 
-        <h2>Videre om skjemaelementer</h2>
+        <h2>Skjemaer</h2>
+
+        <table data-align="start" lang="en">
+          <caption>
+            Screen Reader Keyboard Commands for Forms
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Task</th>
+              <th scope="col">JAWS</th>
+              <th scope="col">NVDA</th>
+              <th scope="col">Narrator</th>
+              <th scope="col">VoiceOver</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-th=" Task">
+                Navigate through focusable items
+              </th>
+              <td data-th=" Command" colspan="4">
+                <span class="keycap">Tab</span> (or
+                <span class="keycap">Shift</span> +
+                <span class="keycap">Tab</span> to go backward)
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">Activate a button</th>
+              <td data-th=" Command" colspan="4">
+                <span class="keycap">Enter</span> or
+                <span class="keycap">Space Bar</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">Select a checkbox</th>
+              <td data-th=" Command" colspan="4">
+                <span class="keycap">Tab</span> to the checkbox, then press
+                <span class="keycap">Space Bar</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">Select a radio button</th>
+              <td data-th=" Command" colspan="4">
+                <span class="keycap">Tab</span> to the group of radio buttons,
+                use the <span class="keycap">Arrow Keys</span> to choose one of
+                them, then press
+                <span class="keycap">Space Bar</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">
+                Select an item in a <code>&lt;select&gt;</code> drop-down list
+              </th>
+              <td data-th=" Command" colspan="4">
+                <span class="keycap">Tab</span> to the
+                <code>&lt;select&gt;</code> field, press
+                <span class="keycap">Alt/Option</span> +
+                <span class="keycap">Down Arrow</span> to open the list, use
+                <span class="keycap">Down</span>/<span class="keycap"
+                  >Up Arrow</span
+                >
+                to select item, then press
+                <span class="keycap">Enter</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">Toggle modes</th>
+              <td data-th=" JAWS">
+                <em>Forms Mode:</em> (On) (Automatic when in form element),
+                (Off) <span class="keycap">Numpad Plus</span>
+              </td>
+              <td data-th=" NVDA">
+                To <em>Browse/Focus Mode</em> or <em>Forms Mode:</em>
+                <span class="keycap">Insert</span> +
+                <span class="keycap">Space Bar</span>
+              </td>
+              <td data-th=" Narrator">
+                <em>Scan Mode:</em>
+                <span class="keycap">Caps Lock</span> +
+                <span class="keycap">Space Bar</span>
+              </td>
+              <td data-th=" VoiceOver">Not Available</td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">Navigate to a form</th>
+              <td data-th=" JAWS">
+                In Document Mode, press
+                <span class="keycap">F</span>
+              </td>
+              <td data-th=" NVDA">
+                In Document Mode, press
+                <span class="keycap">F</span>
+              </td>
+              <td data-th=" Narrator">
+                In Scan Mode, press
+                <span class="keycap">F</span>
+              </td>
+              <td data-th=" VoiceOver">
+                <span class="keycap">VO</span> +
+                <span class="keycap">Command</span> +
+                <span class="keycap">J</span>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" data-th=" Task">Navigate to next form element</th>
+              <td data-th=" JAWS">
+                <span class="keycap">F</span> (or
+                <span class="keycap">Shift</span> +
+                <span class="keycap">F</span> to go backward)
+              </td>
+              <td data-th=" NVDA">
+                <span class="keycap">F</span> (or
+                <span class="keycap">Shift</span> +
+                <span class="keycap">F</span> to go backward)
+              </td>
+              <td data-th=" Narrator">
+                <span class="keycap">F</span> (or
+                <span class="keycap">Shift</span> +
+                <span class="keycap">F</span> to go backward)
+              </td>
+              <td data-th=" VoiceOver">
+                <span class="keycap">VO</span> +
+                <span class="keycap">Command</span> +
+                <span class="keycap">J</span> (or
+                <span class="keycap">Shift</span> +
+                <span class="keycap">VO</span> +
+                <span class="keycap">Command</span> +
+                <span class="keycap">J</span> to go backward)
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-th=" Task">List all form elements</th>
+              <td data-th=" JAWS">
+                <span class="keycap">Insert</span> +
+                <span class="keycap">F5</span>
+              </td>
+              <td data-th=" NVDA">
+                <span class="keycap">Insert</span> +
+                <span class="keycap">F7</span>, then
+                <span class="keycap">Alt</span> +
+                <span class="keycap">F</span>
+              </td>
+              <td data-th=" Narrator">
+                <span class="keycap">Caps Lock</span> + [<span class="keycap"
+                  >F5</span
+                >
+                or <span class="keycap">F6</span>], then
+                <span class="keycap">Tab</span> (twice) to the Scoping drop-down
+                list and select Form Fields
+              </td>
+              <td data-th=" VoiceOver">
+                <span class="keycap">VO</span> + <span class="keycap">U</span>,
+                then <span class="keycap">Left</span>/<span class="keycap"
+                  >Right Arrow</span
+                >
+                until reaching Form Controls list
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <h3 lang="en">Labels</h3>
 
@@ -585,6 +747,261 @@
           I tillegg burde det være en visuell indikator ved feltet, for eksempel
           en "stjerne" (*) ved navnet på feltet.
         </p>
+
+        <h3>Feilhåndtering</h3>
+
+        <p>Noen teknikker for å unngå feil i skjemaer:</p>
+        <ol aria-label="Teknikker for å unngå feil i skjemaer">
+          <li>
+            Gode spørsmålstekster med
+            <a
+              href="https://html.spec.whatwg.org/#the-label-element"
+              lang="en"
+              hreflang="en"
+              >labels</a
+            >
+          </li>
+          <li>
+            Gode instruksjoner med
+            <a
+              href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1"
+              lang="en"
+              hreflang="en"
+              >aria-describedby</a
+            >
+          </li>
+          <li>
+            Innebygde begrensninger i feltene (dette kan gjøres på mange måter,
+            eksempelvis ved å sette relevant type i skjemafeltet, bruke
+            autofill, autocomplete)
+          </li>
+          <li>Stegvis visning av skjemafelter</li>
+          <li>Bruk av etablerte mønster for skjemaoppbygging</li>
+          <li>Visuelt design som støtter brukerens fokus</li>
+          <li>Oppsummeringssteg før innsending</li>
+          <li>Bekreftelsessteg etter innsending</li>
+          <li>Mulighet til å endre skjemaet etter innsending</li>
+          <li>Bekreftelse på innsending på mail</li>
+        </ol>
+
+        <h4>Implementasjonsdetaljer for mønster for feilhåndtering</h4>
+        <details lang="en">
+          <summary lang="no">Oppsummering av feil ved innsending</summary>
+          <ul>
+            <li>
+              <strong
+                >Set invalid fields to <code>aria-invalid="true"</code></strong
+              >
+            </li>
+            <li><strong>Move focus to error/success message</strong></li>
+            <li>
+              <strong
+                >Ensure error/success message container is set to
+                <code>tabindex="-1"</code>.</strong
+              >
+              Otherwise, focus cannot be set successfully.
+            </li>
+            <li>
+              <strong>Provide a count of errors</strong> so that users get a
+              sense of the scope of the problem.
+            </li>
+            <li>
+              <strong
+                >Ensure error messages are associated with form fields</strong
+              >
+              using <code>aria-describedby</code> so that screen reader users
+              know how to fix the problem
+            </li>
+            <li>
+              <strong>Ensure error messages are visible</strong> so that sighted
+              users know how to fix the problems
+            </li>
+            <li>
+              <strong>Ensure error messages are adjacent to the inputs</strong>
+              so that screen magnification users can easily see which messages
+              belong to which fields.
+            </li>
+          </ul>
+          <h5>
+            If the form submission causes a new page to load (or the same page
+            to reload):
+          </h5>
+          <ul>
+            <li>
+              <strong
+                >Ensure the page <code>&lt;title&gt;</code> reflects the error
+                or success confirmation status.</strong
+              >
+              The title could say something like, "There were 3 errors in the
+              form" or "Success! Your account has been created." The page
+              <code>&lt;title&gt;</code> is the first thing screen reader users
+              hear when the page loads, so it is the fastest way to give them
+              feedback on the form submission status.
+            </li>
+            <li>
+              <strong>Provide a quick way to reach the status message.</strong>
+              Some options include:
+              <ul>
+                <li>
+                  <strong>Provide a "skip to main content" link</strong> that
+                  takes the users to the message.
+                </li>
+                <li>
+                  <strong>Move the focus to the confirmation message</strong>
+                  after the page loads. <br />
+                  <strong>IMPORTANT:</strong> You will need to let the page
+                  finish loading, then set a JavaScript timeout of 1 to 2
+                  seconds to allow the screen reader virtual buffer to process
+                  the page, then use JavaScript to send the focus to the
+                  confirmation message. If you send the focus to the message
+                  immediately upon page load, the focus may be set successfully,
+                  but screen readers will say nothing because they haven't had
+                  time to determine what is on the page.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+        <details lang="en">
+          <summary lang="no">Send fokus til første feil i skjemaet</summary>
+          <ul>
+            <li>
+              <strong
+                >Set invalid fields to <code>aria-invalid="true"</code>.</strong
+              >
+            </li>
+            <li>
+              <strong>Move focus to the first field with an error.</strong>
+            </li>
+            <li>
+              <strong
+                >Ensure error messages are associated with form fields</strong
+              >
+              using <code>aria-describedby</code> so that screen reader users
+              know how to fix the problem.
+            </li>
+            <li>
+              <strong>Ensure error messages are visible</strong> so that sighted
+              users know how to fix the problems. In this particular example, an
+              error icon is visible at all times, but the error explanation is
+              visible only when the user focuses on the field with an error or
+              hovers the mouse over it. A tooltip message pops up with the error
+              explanation. Advantage: Cleaner interface. Disadvantage: Users
+              will not know how to correct the error at one glance (but they
+              will know after focusing or hovering on the input).
+            </li>
+            <li>
+              <strong>Ensure error messages are adjacent to the inputs</strong>
+              so that screen magnification users can easily see which messages
+              belong to which fields. In this example, the icon is directly to
+              the left of the input. The tooltip appears directly to the right.
+              Positioning the tooltip below the input or near the icon would
+              probably be more effective for screen magnifier users, especially
+              on small screens, but this layout can still be acceptable on full
+              size screens. The styles in this example are set up so that the
+              tooltips appear below the input on screens with smaller
+              resolution, or when users zoom in the browser.
+            </li>
+          </ul>
+          <h5>
+            If the form submission causes a new page to load (or the same page
+            to reload):
+          </h5>
+          <ul>
+            <li>
+              <strong
+                >Ensure the page <code>&lt;title&gt;</code> reflects the error
+                or success confirmation status.</strong
+              >
+              The title could say something like, "There were 3 errors in the
+              form" or "Success! Your account has been created." The page
+              <code>&lt;title&gt;</code> is the first thing screen reader users
+              hear when the page loads, so it is the fastest way to give them
+              feedback on the form submission status.
+            </li>
+            <li>
+              <strong>Move the focus to the confirmation message</strong> after
+              the page loads. <br />
+              <strong>IMPORTANT:</strong> You will need to let the page finish
+              loading, then set a JavaScript timeout of 1 to 2 seconds to allow
+              the screen reader virtual buffer to process the page, then use
+              JavaScript to send the focus to the confirmation message. If you
+              send the focus to the message immediately upon page load, the
+              focus may be set successfully, but screen readers will say nothing
+              because they haven't had time to determine what is on the page.
+            </li>
+          </ul>
+        </details>
+        <details lang="en">
+          <summary lang="no">Sanntidsvalidering</summary>
+          <h5>Aria-live Announcements</h5>
+          <p>
+            When using <code>aria-live</code> for real-time announcements, it is
+            important that users aren't subjected to constant aria-live
+            announcements, especially after every keystroke. This can get in the
+            way of a screen reader's audio output to users. The model in the
+            example on this page sets a timer that waits until the user isn't
+            typing for 2 seconds, then makes the announcement.
+          </p>
+          <p>
+            Also, trying to use <code>aria-live</code> on blur (upon leaving a
+            field when there is an error) is almost always as bad because the
+            screen reader will start reading the next item that is in focus at
+            the same time — meaning there are two competing events. The
+            <code>aria-live</code> announcement will probably lose that contest,
+            so users won't hear the announcement.
+          </p>
+          <h5>Screen Reader Users</h5>
+          <p>
+            For users who are blind and other screen reader users, it is
+            acceptable to wait until the user submits the form to find out that
+            there are errors. It is true that sighted users will see the errors
+            sooner, but the usability problems with real-time validation are too
+            great for screen reader users in most instances to try to achieve
+            that for them.
+          </p>
+          <p>
+            Many screen reader users will explore a form first before filling it
+            out. When they explore a form, they may put the keyboard focus in a
+            form field, then leave the form, which can trigger a blur event. If
+            the form has a lot of validation triggers tied to blur events, a
+            screen reader user may trigger them all. As a result, the form is
+            full of validation errors before the user has filled out the form.
+            When they go back through the form, they may encounter all of those
+            errors. In most cases, it will just be annoying. However, if the
+            form causes a context change or has other dynamic responses to blur
+            events, the act of exploring the form can cause more significant
+            problems for the users.
+          </p>
+        </details>
+
+        <h4>Tilbakemeldinger ved feil</h4>
+
+        <ol lang="en">
+          <li>
+            Error feedback SHOULD be made available immediately after form
+            submission (or after an equivalent event if there is no form
+            submission event).
+          </li>
+          <li>
+            Error feedback SHOULD be programmatically associated with the
+            appropriate element.
+          </li>
+          <li>Error feedback MUST be programmatically determinable.</li>
+          <li>Error feedback MUST be meaningful.</li>
+          <li>Error feedback MUST be visible.</li>
+        </ol>
+
+        <h4>Tilbakemeldinger ved suksess</h4>
+
+        <ol lang="en">
+          <li>
+            Success confirmation feedback SHOULD be programmatically
+            determinable.
+          </li>
+          <li>Success confirmation feedback SHOULD be meaningful.</li>
+          <li>Success confirmation feedback MUST be visible.</li>
+        </ol>
 
         <h2>7 prinsipper for universell design</h2>
         <p>
@@ -778,7 +1195,7 @@
       </article>
     </main>
 
-    <script>
+    <!-- <script>
       // Heading links
       const headings = [
         ...document.querySelectorAll(["h2", "h3", "h4"]),
@@ -838,6 +1255,6 @@
             break;
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
