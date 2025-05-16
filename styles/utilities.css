@@ -1,0 +1,4 @@
+.bleed {
+  width: 100vw;
+  margin-inline-start: calc(50% - 50vw);
+}
