@@ -138,9 +138,9 @@
 
   details {
     background: var(--color-bg-surface);
-    padding: 1ch;
     border: var(--outline);
     margin-block-end: 2lh;
+    padding-inline: 2ch;
 
     &:has(+ details) {
       margin-block-end: 0;
@@ -148,6 +148,11 @@
 
     summary {
       cursor: pointer;
+      position: sticky;
+      inset-block-start: 0;
+      background: var(--color-bg-surface);
+      padding: 1ch;
+      margin-inline-start: -1ch;
 
       + * {
         margin-block-start: 1lh;
@@ -175,7 +180,7 @@
     thead:has(th[scope="col"]) {
       background: var(--background-color-alternate);
       position: sticky;
-      top: -1px;
+      inset-block-start: -1px;
     }
 
     td,
@@ -274,7 +279,7 @@
       padding-inline: var(--padding-inline);
       padding-block: 1rem;
       background-color: var(--color-bg);
-      top: 0;
+      inset-block-start: 0;
       position: sticky;
       outline: var(--outline);
       outline-width: 2px;
