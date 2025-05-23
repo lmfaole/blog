@@ -130,7 +130,7 @@
   p,
   li,
   dd {
-    max-width: var(--text-length);
+    max-width: var(--max-text-length);
     text-wrap: pretty;
   }
 
