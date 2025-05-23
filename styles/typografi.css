@@ -4,8 +4,10 @@
   h3,
   h4,
   h5,
-  dt {
+  dt,
+  [class*="heading"] {
     max-width: 45ch;
+    display: block;
 
     /* En bug i Safari gjør at tekst-wrap med en link med ::after ender opp 
     med at innholdet i ::after bryter på neste linje uansett linjelengde */
@@ -14,7 +16,8 @@
     }
   }
 
-  h1 {
+  h1,
+  .heading-1 {
     font: var(--heading-1);
     margin-block-end: 2lh;
 
@@ -32,26 +35,44 @@
     }
   }
 
-  h2 {
+  h2,
+  h3,
+  h4,
+  .heading-2,
+  .heading-3,
+  .heading-4 {
+    margin-block: 3lh 0.5lh;
+  }
+
+  h2,
+  .heading-2 {
     font: var(--heading-2);
   }
 
-  h3 {
+  h3,
+  .heading-3 {
     font: var(--heading-3);
   }
 
-  h4 {
+  h4,
+  .heading-4 {
     font: var(--heading-4);
   }
 
-  h5 {
+  h5,
+  .heading-5 {
     font: var(--heading-5);
+    margin-block: 5lh 1lh;
   }
 
   article {
-    h2 {
-      margin-block: 5lh 0.5lh;
+    h2,
+    h3,
+    h4 {
+      margin-block-start: 4lh;
+    }
 
+    h2 {
       + h3 {
         margin-block-start: 2lh;
       }
@@ -67,8 +88,6 @@
     }
 
     h3 {
-      margin-block: 5lh 0.5lh;
-
       + h4 {
         margin-block-start: 2lh;
       }
@@ -84,8 +103,6 @@
     }
 
     h4 {
-      margin-block: 5lh 0.5lh;
-
       + h5 {
         margin-block-start: 2lh;
       }
@@ -98,10 +115,6 @@
       &::before {
         content: counter(level-1) "." counter(level-2) "." counter(level-3) " ";
       }
-    }
-
-    h5 {
-      margin-block: 5lh 1lh;
     }
 
     > h5 {
@@ -160,56 +173,6 @@
 
     &:hover {
       text-decoration-thickness: 0.2ex;
-    }
-
-    /* Denne og neste vil ikke fungere så lenge den siste er der også (duh), 
-  men jeg liker tanken på å kunne fremheve norsk en eller annen gang */
-    &[hreflang="en"] {
-      &::after {
-        line-height: 1.4; /* Gjør at høyden på ikonet settes relativt til tekst-størrelsen bedre. */
-        display: inline-block;
-        background-color: currentColor;
-        content: " " / " (side på engelsk)";
-        mask: url(/assets/aksel-icons/Interface/Language.svg) no-repeat 50% 50%;
-        mask-size: cover;
-        height: 1lh;
-        margin-inline-start: 4px;
-        aspect-ratio: 1;
-        vertical-align: text-bottom;
-      }
-    }
-
-    &[hreflang="no"] {
-      &::after {
-        line-height: 1.4;
-        display: inline-block;
-        background-color: currentColor;
-        content: " " / " (side på norsk)";
-        mask: url(/assets/aksel-icons/Transportation/FlagCross.svg) no-repeat
-          50% 50%;
-        mask-size: cover;
-        height: 1lh;
-        margin-inline-start: 4px;
-        aspect-ratio: 1;
-        vertical-align: text-bottom;
-      }
-    }
-
-    &[href*="https://"]
-    {
-      &::after {
-        line-height: 1.4;
-        display: inline-block;
-        background-color: currentColor;
-        content: " " / " (ekstern side)";
-        mask: url(/assets/aksel-icons/Interface/ExternalLink.svg) no-repeat 50%
-          50%;
-        mask-size: cover;
-        height: 1lh;
-        margin-inline-start: 4px;
-        aspect-ratio: 1;
-        vertical-align: text-bottom;
-      }
     }
   }
 
