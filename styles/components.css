@@ -4,7 +4,7 @@
   ul.cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
-    gap: 0;
+    gap: 1px;
     padding: 0;
 
     > *:not(article, li) {

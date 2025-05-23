@@ -39,7 +39,6 @@
 
     --border: 1px solid var(--color-border);
     --outline: 1px solid var(--color-border);
-    --box-shadow: 0 0 10px 0 var(--color-border);
     --filter-blur: blur(10px);
 
     --max-text-length: 55ch;
