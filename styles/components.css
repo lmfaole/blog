@@ -90,4 +90,29 @@
     background: var(--color-bg-surface);
     border-block: var(--border);
   }
+
+  /* Timeline */
+  ol.timeline {
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-block-end: 1lh;
+    }
+
+    >li {
+      &::before {
+        display: block;
+        content: "Mangler dato: ";
+        font-weight: var(--fw-bold);
+        color: red;
+      }
+
+      &[data-time]::before {
+        content: attr(data-time);
+        font-weight: var(--fw-bold);
+        color: inherit;
+      }
+    }
+  }
 }
