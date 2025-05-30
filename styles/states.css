@@ -1,0 +1,40 @@
+@layer state {
+
+    /* Disabled */
+    *[disabled] {
+        --disabled-bg-color: color-mix(in oklch, var(--color-bg) 75%, var(--color-text));
+        --disabled-text-color: color-mix(in oklch, var(--color-text) 75%, var(--color-bg-surface));
+
+        background: var(--disabled-bg-color);
+        cursor: not-allowed;
+        color: var(--disabled-text-color);
+        border-color: var(--disabled-bg-color);
+    }
+
+    /* Loader */
+    *[aria-busy="true"] {
+        width: 100%;
+        min-height: 200px;
+        padding: var(--spacing-rem-md);
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: var(--color-bg-surface);
+
+        &::after {
+            content: "Laster innhold...";
+            place-self: center;
+        }
+    }
+
+    details.error-details {
+        background: unset;
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        summary {
+            padding: 0;
+            background: unset;
+        }
+    }
+}

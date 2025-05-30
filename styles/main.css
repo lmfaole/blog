@@ -1,7 +1,8 @@
 @import url("typografi.css");
 @import url("components.css");
+@import url("states.css");
 
-@layer default, component, page;
+@layer default, component, state;
 
 @layer default {
   :root {
@@ -12,30 +13,18 @@
     --yellow: oklch(0.93 0.24 110.29);
     --blue: oklch(0.5 0.8 250);
 
-    --color-bg: light-dark(
-      lch(from var(--green) 100 2 h),
-      lch(from var(--green) 0 2 h)
-    );
-    --color-bg-surface: light-dark(
-      lch(from var(--color-bg) 99 calc(c + 2) h),
-      lch(from var(--color-bg) 7 calc(c + 2) h)
-    );
-    --color-border: light-dark(
-      lch(from var(--color-bg) 90 calc(c + 5) h),
-      lch(from var(--color-bg) 20 calc(c + 3) h)
-    );
-    --color-text: light-dark(
-      lch(from var(--color-bg) 0 c h),
-      lch(from var(--color-bg) 100 c h)
-    );
-    --color-text-muted: light-dark(
-      lch(from var(--color-text) 0 c h / 0.75),
-      lch(from var(--color-text) 100 c h / 0.85)
-    );
-    --color-link: light-dark(
-      lch(from var(--color-bg) 55 50 h),
-      lch(from var(--color-bg) 75 70 h)
-    );
+    --color-bg: light-dark(lch(from var(--green) 100 2 h),
+        lch(from var(--green) 0 2 h));
+    --color-bg-surface: light-dark(lch(from var(--color-bg) 99 calc(c + 2) h),
+        lch(from var(--color-bg) 7 calc(c + 2) h));
+    --color-border: light-dark(lch(from var(--color-bg) 90 calc(c + 5) h),
+        lch(from var(--color-bg) 20 calc(c + 3) h));
+    --color-text: light-dark(lch(from var(--color-bg) 0 c h),
+        lch(from var(--color-bg) 100 c h));
+    --color-text-muted: light-dark(lch(from var(--color-text) 0 c h / 0.75),
+        lch(from var(--color-text) 100 c h / 0.85));
+    --color-link: light-dark(lch(from var(--color-bg) 55 50 h),
+        lch(from var(--color-bg) 75 70 h));
 
     --border: 1px solid var(--color-border);
     --outline: 1px solid var(--color-border);
@@ -82,13 +71,25 @@
     --spacing-ch-sm: var(--spacing-ch-1);
     --spacing-ch-md: var(--spacing-ch-2);
 
-    --spacing-lh-050: 0.5lh;
-    --spacing-lh-100: 1lh;
-    --spacing-lh-150: 1.5lh;
+    --spacing-lh-05: 0.5lh;
+    --spacing-lh-10: 1lh;
+    --spacing-lh-15: 1.5lh;
 
-    --spacing-lh-xs: var(--spacing-lh-050);
-    --spacing-lh-sm: var(--spacing-lh-100);
-    --spacing-lh-md: var(--spacing-lh-150);
+    --spacing-lh-xs: var(--spacing-lh-05);
+    --spacing-lh-sm: var(--spacing-lh-10);
+    --spacing-lh-md: var(--spacing-lh-15);
+
+    --spacing-rem-05: 0.5rem;
+    --spacing-rem-10: 1rem;
+    --spacing-rem-20: 2rem;
+    --spacing-rem-40: 4rem;
+    --spacing-rem-80: 8rem;
+
+    --spacing-rem-xs: var(--spacing-rem-05);
+    --spacing-rem-sm: var(--spacing-rem-10);
+    --spacing-rem-md: var(--spacing-lh-20);
+    --spacing-rem-lg: var(--spacing-lh-40);
+    --spacing-rem-xl: var(--spacing-lh-80);
   }
 
   body {
@@ -100,12 +101,12 @@
     padding-block: 0 6ex;
     padding-inline: var(--padding-inline);
 
-    > *:is(main, header, footer) {
+    >*:is(main, header, footer) {
       max-width: var(--max-width);
       margin-inline: auto;
     }
 
-    > header:first-of-type {
+    >header:first-of-type {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
@@ -154,7 +155,7 @@
       padding: 1ch;
       margin-inline-start: -1ch;
 
-      + * {
+      +* {
         margin-block-start: 1lh;
       }
     }
@@ -166,10 +167,8 @@
 
   table {
     --background-color: var(--color-bg);
-    --background-color-alternate: light-dark(
-      lch(from var(--color-bg) l calc(c + 20) h),
-      lch(from var(--color-bg) calc(l + 10) calc(c + 8) h)
-    );
+    --background-color-alternate: light-dark(lch(from var(--color-bg) l calc(c + 20) h),
+        lch(from var(--color-bg) calc(l + 10) calc(c + 8) h));
 
     border-collapse: collapse;
     table-layout: fixed;
@@ -195,6 +194,7 @@
     }
 
     &[data-align="end"] {
+
       td,
       th {
         text-align: end;
@@ -272,7 +272,7 @@
       backdrop-filter: var(--filter-overlay);
     }
 
-    > header {
+    >header {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
@@ -291,15 +291,15 @@
       }
     }
 
-    > div {
+    >div {
       padding-inline: var(--padding-inline);
       padding-block: 2rem 4rem;
 
-      > *:first-child {
+      >*:first-child {
         margin-block-start: 0;
       }
 
-      > *:last-child {
+      >*:last-child {
         margin-block-end: 0;
       }
     }
@@ -311,7 +311,7 @@
     padding-inline-start: calc(2ch - 3px);
     border-inline-start: 2px dashed var(--color-link);
 
-    > *:first-child {
+    >*:first-child {
       margin-block-start: 0;
     }
   }
