@@ -100,6 +100,7 @@
     margin: 0;
     padding-block: 0 6ex;
     padding-inline: var(--padding-inline);
+    box-sizing: border-box;
 
     >*:is(main, header, footer) {
       max-width: var(--max-width);
