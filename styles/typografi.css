@@ -174,7 +174,7 @@
     font-weight: var(--fw-medium);
 
     &:hover {
-      text-decoration-thickness: 0.2ex;
+      text-decoration-thickness: 0.3ex;
     }
   }
 
