@@ -1,0 +1,41 @@
+@layer page {
+    footer.site-footer {
+        --ocean-stop: light-dark(#9fcbf1, #002147);
+        --ocean-text: light-dark(#16446c, #c3defc);
+        --ocean-bg: linear-gradient(var(--color-bg) 0%,
+                var(--ocean-stop) 90%);
+
+        max-width: unset;
+        box-sizing: border-box;
+        background: var(--ocean-bg);
+        margin-block-start: var(--spacing-lh-lg);
+        color: var(--ocean-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: var(--spacing-lh-lg);
+
+        .fish {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: var(--spacing-rem-md);
+            overflow: auto;
+        }
+
+        pre {
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        a {
+            color: currentColor;
+        }
+
+        cite {
+            font: var(--small);
+        }
+    }
+}

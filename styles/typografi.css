@@ -1,4 +1,5 @@
 @layer default {
+
   h1,
   h2,
   h3,
@@ -66,6 +67,7 @@
   }
 
   article {
+
     h2,
     h3,
     h4 {
@@ -73,12 +75,12 @@
     }
 
     h2 {
-      + h3 {
+      +h3 {
         margin-block-start: 2lh;
       }
     }
 
-    > h2 {
+    >h2 {
       counter-increment: level-1;
       counter-reset: level-2 level-3 level-4;
 
@@ -88,12 +90,12 @@
     }
 
     h3 {
-      + h4 {
+      +h4 {
         margin-block-start: 2lh;
       }
     }
 
-    > h3 {
+    >h3 {
       counter-increment: level-2;
       counter-reset: level-3 level-4;
 
@@ -103,12 +105,12 @@
     }
 
     h4 {
-      + h5 {
+      +h5 {
         margin-block-start: 2lh;
       }
     }
 
-    > h4 {
+    >h4 {
       counter-increment: level-3;
       counter-reset: level-4;
 
@@ -117,7 +119,7 @@
       }
     }
 
-    > h5 {
+    >h5 {
       counter-increment: level-4;
 
       &::before {
@@ -142,8 +144,8 @@
   p {
     margin-block-end: 1.5lh;
 
-    + ul,
-    + ol {
+    +ul,
+    +ol {
       margin-block-start: -1lh;
     }
   }
@@ -154,7 +156,7 @@
 
   ul,
   ol {
-    &:has(ul, ol) > li:not(:first-of-type) {
+    &:has(ul, ol)>li:not(:first-of-type) {
       margin-block-start: 0.5lh;
     }
   }
@@ -186,10 +188,6 @@
   code,
   kbd {
     font: var(--code);
-  }
-
-  pre {
-    overflow-x: auto;
   }
 
   code {

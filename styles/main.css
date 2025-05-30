@@ -1,8 +1,9 @@
 @import url("typografi.css");
 @import url("components.css");
 @import url("states.css");
+@import url("page.css");
 
-@layer default, component, state;
+@layer default, component, state, page;
 
 @layer default {
   :root {
@@ -11,7 +12,7 @@
     --green: oklch(0.75 0.1597 147.47);
     --red: oklch(0.62 0.2097 27);
     --yellow: oklch(0.93 0.24 110.29);
-    --blue: oklch(0.5 0.8 250);
+    --blue: oklch(0.5 0.8 200);
 
     --color-bg: light-dark(lch(from var(--green) 100 2 h),
         lch(from var(--green) 0 2 h));
@@ -74,10 +75,12 @@
     --spacing-lh-05: 0.5lh;
     --spacing-lh-10: 1lh;
     --spacing-lh-15: 1.5lh;
+    --spacing-lh-20: 2lh;
 
     --spacing-lh-xs: var(--spacing-lh-05);
     --spacing-lh-sm: var(--spacing-lh-10);
     --spacing-lh-md: var(--spacing-lh-15);
+    --spacing-lh-lg: var(--spacing-lh-20);
 
     --spacing-rem-05: 0.5rem;
     --spacing-rem-10: 1rem;
@@ -87,9 +90,9 @@
 
     --spacing-rem-xs: var(--spacing-rem-05);
     --spacing-rem-sm: var(--spacing-rem-10);
-    --spacing-rem-md: var(--spacing-lh-20);
-    --spacing-rem-lg: var(--spacing-lh-40);
-    --spacing-rem-xl: var(--spacing-lh-80);
+    --spacing-rem-md: var(--spacing-rem-20);
+    --spacing-rem-lg: var(--spacing-rem-40);
+    --spacing-rem-xl: var(--spacing-rem-80);
   }
 
   body {
@@ -98,7 +101,6 @@
     font: var(--body);
     color: var(--color-text);
     margin: 0;
-    padding-block: 0 6ex;
     padding-inline: var(--padding-inline);
     box-sizing: border-box;
 
