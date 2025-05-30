@@ -1,5 +1,5 @@
 @layer page {
-    footer.site-footer {
+    .site-footer {
         --ocean-stop: light-dark(#9fcbf1, #002147);
         --ocean-text: light-dark(#16446c, #c3defc);
         --ocean-bg: linear-gradient(var(--color-bg) 0%,
