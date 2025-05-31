@@ -5,14 +5,10 @@
         width: auto;
         margin-inline-start: 0;
         background: unset;
-        border-block: unset;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
         position: relative;
-        box-sizing: border-box;
         padding-block: 2lh;
         min-height: 50dvh;
+        border-block: unset;
 
         &::after {
             position: absolute;
@@ -27,12 +23,26 @@
             border-block: var(--border);
         }
 
+        h1 {
+            margin-block-end: 0;
+        }
+
+        img {
+            margin-block-start: 0;
+        }
+
+        +* {
+            margin-block-start: 2lh;
+        }
+
         &:has(img.bleed) {
+
             img {
                 position: absolute;
                 z-index: -1;
                 width: 100dvw;
                 height: 100%;
+                margin: 0;
                 margin-inline-start: calc(50% - 50vw);
                 max-width: unset;
                 inset-inline-start: 0;
@@ -40,7 +50,7 @@
                 object-fit: cover;
             }
 
-            &:has(img.dark) {
+            &:has(img.bleed.dark) {
 
                 &,
                 a {
@@ -48,21 +58,13 @@
                 }
             }
 
-            &:has(img.light) {
+            &:has(img.bleed.light) {
 
                 &,
                 a {
                     color: var(--color-text-dark);
                 }
             }
-        }
-
-        h1 {
-            margin-block-end: 0;
-        }
-
-        +* {
-            margin-block-start: 2lh;
         }
     }
 

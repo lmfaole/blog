@@ -130,6 +130,10 @@
     max-width: 100%;
   }
 
+  img {
+    margin-block: 1lh;
+  }
+
   details {
     background: var(--color-bg-surface);
     border: var(--outline);
