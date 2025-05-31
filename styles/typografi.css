@@ -20,7 +20,7 @@
   h1,
   .heading-1 {
     font: var(--heading-1);
-    margin-block-end: 2lh;
+    margin-block: 1lh 0.5lh;
 
     &.visuelt-skjult {
       position: absolute;

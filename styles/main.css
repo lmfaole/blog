@@ -14,14 +14,18 @@
     --yellow: oklch(0.93 0.24 110.29);
     --blue: oklch(0.5 0.8 200);
 
+    --color-text-light: lch(from var(--color-bg) 0 c h);
+    --color-text-dark:
+      lch(from var(--color-bg) 100 c h);
+
     --color-bg: light-dark(lch(from var(--green) 100 2 h),
         lch(from var(--green) 0 2 h));
     --color-bg-surface: light-dark(lch(from var(--color-bg) 99 calc(c + 2) h),
         lch(from var(--color-bg) 7 calc(c + 2) h));
     --color-border: light-dark(lch(from var(--color-bg) 90 calc(c + 5) h),
         lch(from var(--color-bg) 20 calc(c + 3) h));
-    --color-text: light-dark(lch(from var(--color-bg) 0 c h),
-        lch(from var(--color-bg) 100 c h));
+    --color-text: light-dark(var(--color-text-light),
+        var(--color-text-dark));
     --color-text-muted: light-dark(lch(from var(--color-text) 0 c h / 0.75),
         lch(from var(--color-text) 100 c h / 0.85));
     --color-link: light-dark(lch(from var(--color-bg) 55 50 h),
@@ -107,20 +111,6 @@
     >*:is(main, header, footer) {
       max-width: var(--max-width);
       margin-inline: auto;
-    }
-
-    >header:first-of-type {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      padding: 0;
-      padding-block: 1rem;
-      margin-block-end: 2rem;
-      border-block-end: var(--border);
-
-      p {
-        margin: 0;
-      }
     }
   }
 

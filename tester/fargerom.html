@@ -1,149 +1,131 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/fargerom.css" type="text/css" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <title>Tester | Ole Jørgen Bakken</title>
-  </head>
 
-  <body>
-    <header class="global-header">
-      <p>
-        <a href="/index.html" class="name">Hjem</a>
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/fargerom.css" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <title>Tester | Ole Jørgen Bakken</title>
+</head>
 
-    <main>
-      <article>
-        <hgroup>
-          <h1>OKLCH vs HSL</h1>
-        </hgroup>
+<body>
+  <header class="site-header">
+    <a href="/index.html" class="name">Hjem</a>
+  </header>
 
-        <h2>Betegnelser</h2>
-        <dl>
-          <dt>OKLCH</dt>
-          <dd>
-            <q cite="https://bottosson.github.io/posts/oklab/" lang="en">
-              It is called the Oklab color space, because it is an OK Lab color
-              space.
-            </q>
-          </dd>
-          <dd>OKLCH står for OK, lightness, chroma, hue.</dd>
-          <dd>
-            Introdusert i
-            <cite
-              ><a href="https://www.w3.org/TR/css-color-4/"
-                >CSS Color Module Level 4</a
-              ></cite
-            >
-          </dd>
-          <dt>HSL</dt>
-          <dd>
-            Står for <span class="bold">hue</span>,
-            <span class="bold">saturation</span>
-            <span class="bold">lightness</span>
-          </dd>
-        </dl>
+  <main>
+    <article>
+      <h1>OKLCH vs HSL</h1>
 
-        <h2>Sammenligninger</h2>
-        <figure class="sammenligning">
-          <div class="red hsl"></div>
-          <div class="red oklch"></div>
-          <figcaption>
-            Sterkeste rødfargen som kan vises i HSL og OKLCH.
-          </figcaption>
-        </figure>
+      <h2>Betegnelser</h2>
+      <dl>
+        <dt>OKLCH</dt>
+        <dd>
+          <q cite="https://bottosson.github.io/posts/oklab/" lang="en">
+            It is called the Oklab color space, because it is an OK Lab color
+            space.
+          </q>
+        </dd>
+        <dd>OKLCH står for OK, lightness, chroma, hue.</dd>
+        <dd>
+          Introdusert i
+          <cite><a href="https://www.w3.org/TR/css-color-4/">CSS Color Module Level 4</a></cite>
+        </dd>
+        <dt>HSL</dt>
+        <dd>
+          Står for <span class="bold">hue</span>,
+          <span class="bold">saturation</span>
+          <span class="bold">lightness</span>
+        </dd>
+      </dl>
 
-        <figure class="sammenligning">
-          <div class="blue hsl"></div>
-          <div class="blue oklch"></div>
-          <figcaption>
-            Sterkeste blåfargen som kan vises i HSL og OKLCH.
-          </figcaption>
-        </figure>
+      <h2>Sammenligninger</h2>
+      <figure class="sammenligning">
+        <div class="red hsl"></div>
+        <div class="red oklch"></div>
+        <figcaption>
+          Sterkeste rødfargen som kan vises i HSL og OKLCH.
+        </figcaption>
+      </figure>
 
-        <figure class="sammenligning">
-          <div class="green hsl"></div>
-          <div class="green oklch"></div>
-          <figcaption>
-            Sterkeste grønnfargen som kan vises i HSL og OKLCH.
-          </figcaption>
-        </figure>
+      <figure class="sammenligning">
+        <div class="blue hsl"></div>
+        <div class="blue oklch"></div>
+        <figcaption>
+          Sterkeste blåfargen som kan vises i HSL og OKLCH.
+        </figcaption>
+      </figure>
 
-        <h2>Overganger</h2>
-        <p>Må utforske mer hvordan dette fungerer i fargeoverganger.</p>
+      <figure class="sammenligning">
+        <div class="green hsl"></div>
+        <div class="green oklch"></div>
+        <figcaption>
+          Sterkeste grønnfargen som kan vises i HSL og OKLCH.
+        </figcaption>
+      </figure>
 
-        <figure class="sammenligning vertikalt">
-          <div class="gradient hsl"></div>
-          <div class="gradient oklch"></div>
-          <div class="gradient oklab"></div>
-          <figcaption>
-            Overgang fra blå til rød i HSL, OKLAB og OKLCH. Hentet fra
-            MDN-artikkelen
-            <cite lang="en"
-              ><a
-                href="https://developer.mozilla.org/en-US/blog/css-color-module-level-4/"
-                >New functions, gradients, and hues in CSS colors (Level 4)
-              </a></cite
-            >
-          </figcaption>
-        </figure>
+      <h2>Overganger</h2>
+      <p>Må utforske mer hvordan dette fungerer i fargeoverganger.</p>
 
-        <footer>
-          <h2>Inspirasjon til denne artikkelen</h2>
-          <ul>
-            <li lang="en">
-              <cite>
-                <a
-                  href="https://css-tricks.com/the-expanding-gamut-of-color-on-the-web/"
-                >
-                  The Expanding Gamut of Color on the Web
-                </a>
-              </cite>
-            </li>
-            <li lang="en">
-              <cite>
-                <a
-                  href="https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl"
-                >
-                  OKLCH in CSS: why we moved from RGB and HSL
-                </a>
-              </cite>
-            </li>
-            <li>
-              <cite>
-                <a href="https://karuna.dev/colormaxxing/">Colormaxxing</a>
-              </cite>
-            </li>
-          </ul>
+      <figure class="sammenligning vertikalt">
+        <div class="gradient hsl"></div>
+        <div class="gradient oklch"></div>
+        <div class="gradient oklab"></div>
+        <figcaption>
+          Overgang fra blå til rød i HSL, OKLAB og OKLCH. Hentet fra
+          MDN-artikkelen
+          <cite lang="en"><a href="https://developer.mozilla.org/en-US/blog/css-color-module-level-4/">New functions,
+              gradients, and hues in CSS colors (Level 4)
+            </a></cite>
+        </figcaption>
+      </figure>
 
-          <h2>Ressurser</h2>
-          <ul>
-            <li>
-              Eksempler på bruk av oklch-funksjonen på
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch"
-              >
-                MDN
+      <footer>
+        <h2>Inspirasjon til denne artikkelen</h2>
+        <ul>
+          <li lang="en">
+            <cite>
+              <a href="https://css-tricks.com/the-expanding-gamut-of-color-on-the-web/">
+                The Expanding Gamut of Color on the Web
               </a>
-            </li>
-            <li>
-              <a href="https://oklch.com/">OKLCH Color Picker & Converter</a>
-            </li>
-            <li>
-              <a href="https://p3colorpicker.cool">P3 Color Picker</a>
-            </li>
-            <li>
-              <a
-                href="https://webkit.org/blog-files/color-gamut/comparison.html"
-                >Interactive Image Comparison</a
-              >
-            </li>
-          </ul>
-        </footer>
-      </article>
-    </main>
-  </body>
+            </cite>
+          </li>
+          <li lang="en">
+            <cite>
+              <a href="https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl">
+                OKLCH in CSS: why we moved from RGB and HSL
+              </a>
+            </cite>
+          </li>
+          <li>
+            <cite>
+              <a href="https://karuna.dev/colormaxxing/">Colormaxxing</a>
+            </cite>
+          </li>
+        </ul>
+
+        <h2>Ressurser</h2>
+        <ul>
+          <li>
+            Eksempler på bruk av oklch-funksjonen på
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch">
+              MDN
+            </a>
+          </li>
+          <li>
+            <a href="https://oklch.com/">OKLCH Color Picker & Converter</a>
+          </li>
+          <li>
+            <a href="https://p3colorpicker.cool">P3 Color Picker</a>
+          </li>
+          <li>
+            <a href="https://webkit.org/blog-files/color-gamut/comparison.html">Interactive Image Comparison</a>
+          </li>
+        </ul>
+      </footer>
+    </article>
+  </main>
+</body>
+
 </html>

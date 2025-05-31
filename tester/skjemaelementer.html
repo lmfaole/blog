@@ -1,1241 +1,1168 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="stylesheet" href="./styles/skjemelementer.css" />
-    <title>Skjemaelementer og attributter | Ole Jørgen Bakken</title>
-  </head>
-  <body>
-    <header class="global-header">
-      <p>
-        <a href="/index.html" class="name">Hjem</a>
-      </p>
-    </header>
 
-    <main>
-      <article>
-        <hgroup>
-          <h1>Skjemaelementer og attributter</h1>
-          <p>Noen eksempler på skjemaelementer, og deres attributter.</p>
-        </hgroup>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="./styles/skjemelementer.css" />
+  <title>Skjemaelementer og attributter | Ole Jørgen Bakken</title>
+</head>
 
-        <!--
+<body>
+  <header class="site-header">
+    <a href="/index.html" class="name">Hjem</a>
+  </header>
+
+  <main>
+    <article>
+      <h1>Skjemaelementer og attributter</h1>
+      <p>Noen eksempler på skjemaelementer, og deres attributter.</p>
+
+
+      <!--
         Hentet fra:
         https://docs.google.com/document/d/1GeZx-44jRQ8fiTF9EI1uxdUZi0eThn1KzvJF3GOliZs/edit?pli=1&tab=t.0 
         -->
-        <datalist id="digimon">
-          <option value="Koromon"></option>
-          <option value="Agumon"></option>
-          <option value="Betamon"></option>
-          <option value="Greymon"></option>
-          <option value="Tyrannomon"></option>
-          <option value="Devimon"></option>
-          <option value="Meramon"></option>
-          <option value="Airdramon"></option>
-          <option value="Seadramon"></option>
-          <option value="Numemon"></option>
-          <option value="Metal Greymon (Virus)"></option>
-          <option value="Mamemon"></option>
-          <option value="Monzaemon"></option>
-        </datalist>
+      <datalist id="digimon">
+        <option value="Koromon"></option>
+        <option value="Agumon"></option>
+        <option value="Betamon"></option>
+        <option value="Greymon"></option>
+        <option value="Tyrannomon"></option>
+        <option value="Devimon"></option>
+        <option value="Meramon"></option>
+        <option value="Airdramon"></option>
+        <option value="Seadramon"></option>
+        <option value="Numemon"></option>
+        <option value="Metal Greymon (Virus)"></option>
+        <option value="Mamemon"></option>
+        <option value="Monzaemon"></option>
+      </datalist>
 
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
-        <datalist id="points">
-          <option value="-50"></option>
-          <option value="0"></option>
-          <option value="50"></option>
-          <option value="90"></option>
-        </datalist>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist -->
+      <datalist id="points">
+        <option value="-50"></option>
+        <option value="0"></option>
+        <option value="50"></option>
+        <option value="90"></option>
+      </datalist>
 
-        <datalist id="times">
-          <option value="09:00"></option>
-          <option value="09:30"></option>
-          <option value="11:05"></option>
-        </datalist>
+      <datalist id="times">
+        <option value="09:00"></option>
+        <option value="09:30"></option>
+        <option value="11:05"></option>
+      </datalist>
 
-        <datalist id="colors">
-          <option value="#F0A003"></option>
-          <option value="#FF0000"></option>
-          <option value="#00FF2A"></option>
-          <option value="#DC3CFF"></option>
-        </datalist>
+      <datalist id="colors">
+        <option value="#F0A003"></option>
+        <option value="#FF0000"></option>
+        <option value="#00FF2A"></option>
+        <option value="#DC3CFF"></option>
+      </datalist>
 
-        <section class="cards">
-          <h2>Input-felter</h2>
-          <blockquote lang="en">
-            <p>
-              The <code>input</code> HTML element is used to create interactive
-              controls for web-based forms in order to accept data from the
-              user; a wide variety of types of input data and control widgets
-              are available, depending on the device and user agent. The
-              <code>input</code> element is one of the most powerful and complex
-              in all of HTML due to the sheer number of combinations of input
-              types and attributes.
+      <section class="cards">
+        <h2>Input-felter</h2>
+        <blockquote lang="en">
+          <p>
+            The <code>input</code> HTML element is used to create interactive
+            controls for web-based forms in order to accept data from the
+            user; a wide variety of types of input data and control widgets
+            are available, depending on the device and user agent. The
+            <code>input</code> element is one of the most powerful and complex
+            in all of HTML due to the sheer number of combinations of input
+            types and attributes.
+          </p>
+          <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">The HTML Input
+              element
+            </a></cite>
+        </blockquote>
+        <article>
+          <header>
+            <h3 class="card-heading">
+              Checkbox i et <span lang="en">fieldset</span>
+            </h3>
+          </header>
+
+          <fieldset id="kommunikasjonsmetoder">
+            <legend>Kommunikasjonsmetoder</legend>
+            <input type="checkbox" name="kommunikasjonsmetoder" value="instagram" id="instagram" />
+            <label for="instagram">Instagram</label><br />
+
+            <input type="checkbox" name="kommunikasjonsmetoder" value="Twitter" id="twitter" />
+            <label for="twitter">Twitter</label><br />
+
+            <input type="checkbox" name="kommunikasjonsmetoder" value="TikTok" id="tiktok" />
+            <label for="tiktok">TikTok</label>
+          </fieldset>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="card-heading">Checkbox som switch</h3>
+          </header>
+
+          <div>
+            <input type="checkbox" name="kommunikasjonsmetoder" value="instagram" id="instagram-switch" switch />
+            <label for="instagram-switch">Instagram</label>
+          </div>
+
+          <footer>
+            <p role="note" class="support switch">
+              Switch-attributten på checkbox støttes kun av Safari.
+              <a href="https://github.com/whatwg/html/issues/4180" hreflang="en" lang="en">Følg utviklingen i om
+                switch-attributten på GitHub</a>.
             </p>
-            <cite
-              ><a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input"
-                >The HTML Input element
-              </a></cite
-            >
-          </blockquote>
-          <article>
-            <header>
-              <h3 class="card-heading">
-                Checkbox i et <span lang="en">fieldset</span>
-              </h3>
-            </header>
+          </footer>
+        </article>
 
-            <fieldset id="kommunikasjonsmetoder">
-              <legend>Kommunikasjonsmetoder</legend>
-              <input
-                type="checkbox"
-                name="kommunikasjonsmetoder"
-                value="instagram"
-                id="instagram"
-              />
-              <label for="instagram">Instagram</label><br />
+        <article>
+          <header>
+            <h3 class="card-heading">Color</h3>
+          </header>
 
-              <input
-                type="checkbox"
-                name="kommunikasjonsmetoder"
-                value="Twitter"
-                id="twitter"
-              />
-              <label for="twitter">Twitter</label><br />
+          <div>
+            <label for="color">Velg farge</label>
+            <input type="color" id="color" list="colors" />
+          </div>
+        </article>
 
-              <input
-                type="checkbox"
-                name="kommunikasjonsmetoder"
-                value="TikTok"
-                id="tiktok"
-              />
-              <label for="tiktok">TikTok</label>
-            </fieldset>
-          </article>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Date</h3>
+          </header>
 
-          <article>
-            <header>
-              <h3 class="card-heading">Checkbox som switch</h3>
-            </header>
+          <div>
+            <label for="date">Velg dato</label>
+            <input type="date" id="date" min="1997-01-01" max="2025-12-31" />
+          </div>
+        </article>
 
-            <div>
-              <input
-                type="checkbox"
-                name="kommunikasjonsmetoder"
-                value="instagram"
-                id="instagram-switch"
-                switch
-              />
-              <label for="instagram-switch">Instagram</label>
-            </div>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Datetime local</h3>
+          </header>
 
-            <footer>
-              <p role="note" class="support switch">
-                Switch-attributten på checkbox støttes kun av Safari.
-                <a
-                  href="https://github.com/whatwg/html/issues/4180"
-                  hreflang="en"
-                  lang="en"
-                  >Følg utviklingen i om switch-attributten på GitHub</a
-                >.
-              </p>
-            </footer>
-          </article>
+          <div>
+            <label for="datetime-local">Datetime local</label>
+            <input type="datetime-local" id="datetime-local" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading">Color</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading">Email</h3>
+          </header>
 
-            <div>
-              <label for="color">Velg farge</label>
-              <input type="color" id="color" list="colors" />
-            </div>
-          </article>
+          <div>
+            <label for="email">Epost</label>
+            <input type="email" id="email" autocomplete="email" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Date</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">File</h3>
+          </header>
 
-            <div>
-              <label for="date">Velg dato</label>
-              <input type="date" id="date" min="1997-01-01" max="2025-12-31" />
-            </div>
-          </article>
+          <div>
+            <label for="profilbilde">Fil</label>
+            <input type="file" id="profilbilde" accept=".jpg, .docx" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Datetime local</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Month</h3>
+          </header>
 
-            <div>
-              <label for="datetime-local">Datetime local</label>
-              <input type="datetime-local" id="datetime-local" />
-            </div>
-          </article>
+          <div>
+            <label for="month">Month</label>
+            <input type="month" id="month" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading">Email</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Number</h3>
+          </header>
 
-            <div>
-              <label for="email">Epost</label>
-              <input type="email" id="email" autocomplete="email" />
-            </div>
-          </article>
+          <div>
+            <label for="number">Number</label>
+            <input type="number" id="number" step="10" min="0" max="1000" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">File</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading">
+              Radio i <span lang="en">fieldset</span>
+            </h3>
+          </header>
 
-            <div>
-              <label for="profilbilde">Fil</label>
-              <input type="file" id="profilbilde" accept=".jpg, .docx" />
-            </div>
-          </article>
+          <fieldset lang="en">
+            <legend>Choose your favorite monster</legend>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Month</h3>
-            </header>
+            <input type="radio" id="kraken" name="monster" value="K" />
+            <label for="kraken">Kraken</label><br />
 
-            <div>
-              <label for="month">Month</label>
-              <input type="month" id="month" />
-            </div>
-          </article>
+            <input type="radio" id="sasquatch" name="monster" value="S" />
+            <label for="sasquatch">Sasquatch</label><br />
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Number</h3>
-            </header>
+            <input type="radio" id="mothman" name="monster" value="M" />
+            <label for="mothman">Mothman</label>
+          </fieldset>
+        </article>
 
-            <div>
-              <label for="number">Number</label>
-              <input type="number" id="number" step="10" min="0" max="1000" />
-            </div>
-          </article>
+        <article>
+          <header>
+            <h3 class="card-heading">Range</h3>
+          </header>
 
-          <article>
-            <header>
-              <h3 class="card-heading">
-                Radio i <span lang="en">fieldset</span>
-              </h3>
-            </header>
+          <div>
+            <label for="range">Range</label>
+            <input type="range" id="range" step="10" min="-100" max="100" list="points" />
+          </div>
+        </article>
 
-            <fieldset lang="en">
-              <legend>Choose your favorite monster</legend>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Search</h3>
+          </header>
 
-              <input type="radio" id="kraken" name="monster" value="K" />
-              <label for="kraken">Kraken</label><br />
+          <div>
+            <label for="search">Søk etter digimon</label>
+            <input type="search" id="search" list="digimon" />
+          </div>
+        </article>
 
-              <input type="radio" id="sasquatch" name="monster" value="S" />
-              <label for="sasquatch">Sasquatch</label><br />
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Text</h3>
+          </header>
 
-              <input type="radio" id="mothman" name="monster" value="M" />
-              <label for="mothman">Mothman</label>
-            </fieldset>
-          </article>
+          <div>
+            <label for="text">Text</label>
+            <input type="text" id="text" list="digimon" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading">Range</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Tel</h3>
+          </header>
 
-            <div>
-              <label for="range">Range</label>
-              <input
-                type="range"
-                id="range"
-                step="10"
-                min="-100"
-                max="100"
-                list="points"
-              />
-            </div>
-          </article>
+          <div>
+            <label for="mobilnummer">Telefonnummer</label>
+            <input type="tel" id="mobilnummer" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Search</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Time</h3>
+          </header>
 
-            <div>
-              <label for="search">Søk etter digimon</label>
-              <input type="search" id="search" list="digimon" />
-            </div>
-          </article>
+          <div>
+            <label for="time">Time</label>
+            <input type="time" id="time" list="times" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Text</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">URL</h3>
+          </header>
 
-            <div>
-              <label for="text">Text</label>
-              <input type="text" id="text" list="digimon" />
-            </div>
-          </article>
+          <div>
+            <label for="url">URL</label>
+            <input type="url" id="url" />
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Tel</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Week</h3>
+          </header>
 
-            <div>
-              <label for="mobilnummer">Telefonnummer</label>
-              <input type="tel" id="mobilnummer" />
-            </div>
-          </article>
+          <div>
+            <label for="week">Week</label>
+            <input type="week" id="week" />
+          </div>
+        </article>
+      </section>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Time</h3>
-            </header>
+      <section class="cards">
+        <h2 lang="en">Textarea</h2>
+        <blockquote lang="en">
+          <p>
+            The <code>textarea</code> HTML element represents a multi-line
+            plain-text editing control, useful when you want to allow users to
+            enter a sizeable amount of free-form text, for example a comment
+            on a review or feedback form.
+          </p>
+          <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea">The Textarea
+              element
+            </a></cite>
+        </blockquote>
+        <article>
+          <header>
+            <h3 class="card-heading">Standard</h3>
+          </header>
 
-            <div>
-              <label for="time">Time</label>
-              <input type="time" id="time" list="times" />
-            </div>
-          </article>
+          <div>
+            <label for="text-area">Skriv inn tekst</label>
+            <textarea name="text-area" id="text-area" rows="5" cols="33"></textarea>
+          </div>
 
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">URL</h3>
-            </header>
-
-            <div>
-              <label for="url">URL</label>
-              <input type="url" id="url" />
-            </div>
-          </article>
-
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Week</h3>
-            </header>
-
-            <div>
-              <label for="week">Week</label>
-              <input type="week" id="week" />
-            </div>
-          </article>
-        </section>
-
-        <section class="cards">
-          <h2 lang="en">Textarea</h2>
-          <blockquote lang="en">
+          <footer>
             <p>
-              The <code>textarea</code> HTML element represents a multi-line
-              plain-text editing control, useful when you want to allow users to
-              enter a sizeable amount of free-form text, for example a comment
-              on a review or feedback form.
+              <small>
+                Her er det satt størrelse ved
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#cols"><code>cols</code> og
+                  <code>rows</code> attributter</a>
+                .
+              </small>
             </p>
-            <cite
-              ><a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea"
-                >The Textarea element
-              </a></cite
-            >
-          </blockquote>
-          <article>
-            <header>
-              <h3 class="card-heading">Standard</h3>
-            </header>
+          </footer>
+        </article>
+      </section>
 
+      <section class="cards">
+        <h2>Select</h2>
+        <article>
+          <header>
+            <h3 class="card-heading">Uten noen ekstra attributter</h3>
+          </header>
+
+          <div>
+            <label for="digimon-select">Velg digimon</label>
+            <select id="digimon-select">
+              <option disabled selected>Velg en digimon</option>
+              <option value="Koromon">Koromon</option>
+              <option value="Agumon">Agumon</option>
+              <option value="Betamon">Betamon</option>
+              <option value="Greymon">Greymon</option>
+              <option value="Tyrannomon">Tyrannomon</option>
+              <option value="Devimon">Devimon</option>
+              <option value="Meramon">Meramon</option>
+              <option value="Airdramon">Airdramon</option>
+              <option value="Seadramon">Seadramon</option>
+              <option value="Numemon">Numemon</option>
+              <option value="Metal Greymon (Virus)">
+                Metal Greymon (Virus)
+              </option>
+              <option value="Mamemon">Mamemon</option>
+              <option value="Monzaemon">Monzaemon</option>
+            </select>
+          </div>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="card-heading">Gruppert liste</h3>
+          </header>
+
+          <div>
+            <label for="pokemon-select">Velg pokemon</label>
+            <select id="pokemon-select">
+              <option disabled selected>Velg pokemon</option>
+              <optgroup label="Kanto (Gen 1)">
+                <option value="/pokedex-sv/bulbasaur/">001 Bulbasaur</option>
+                <option value="/pokedex-sv/ivysaur/">002 Ivysaur</option>
+                <option value="/pokedex-sv/venusaur/">003 Venusaur</option>
+                <option value="/pokedex-sv/charmander/">
+                  004 Charmander
+                </option>
+                <option value="/pokedex-sv/charmeleon/">
+                  005 Charmeleon
+                </option>
+                <option value="/pokedex-sv/charizard/">006 Charizard</option>
+                <option value="/pokedex-sv/squirtle/">007 Squirtle</option>
+                <option value="/pokedex-sv/wartortle/">008 Wartortle</option>
+                <option value="/pokedex-sv/blastoise/">009 Blastoise</option>
+                <option value="/pokedex-sv/ekans/">023 Ekans</option>
+                <option value="/pokedex-sv/arbok/">024 Arbok</option>
+                <option value="/pokedex-sv/pikachu/">025 Pikachu</option>
+                <option value="/pokedex-sv/raichu/">026 Raichu</option>
+                <option value="/pokedex-sv/sandshrew/">027 Sandshrew</option>
+                <option value="/pokedex-sv/sandslash/">028 Sandslash</option>
+                <option value="/pokedex-sv/clefairy/">035 Clefairy</option>
+                <option value="/pokedex-sv/clefable/">036 Clefable</option>
+                <option value="/pokedex-sv/vulpix/">037 Vulpix</option>
+                <option value="/pokedex-sv/ninetales/">038 Ninetales</option>
+                <option value="/pokedex-sv/jigglypuff/">
+                  039 Jigglypuff
+                </option>
+                <option value="/pokedex-sv/wigglytuff/">
+                  040 Wigglytuff
+                </option>
+                <option value="/pokedex-sv/oddish/">043 Oddish</option>
+                <option value="/pokedex-sv/gloom/">044 Gloom</option>
+                <option value="/pokedex-sv/vileplume/">045 Vileplume</option>
+                <option value="/pokedex-sv/venonat/">048 Venonat</option>
+                <option value="/pokedex-sv/venomoth/">049 Venomoth</option>
+                <option value="/pokedex-sv/diglett/">050 Diglett</option>
+                <option value="/pokedex-sv/dugtrio/">051 Dugtrio</option>
+                <option value="/pokedex-sv/meowth/">052 Meowth</option>
+                <option value="/pokedex-sv/persian/">053 Persian</option>
+                <option value="/pokedex-sv/psyduck/">054 Psyduck</option>
+                <option value="/pokedex-sv/golduck/">055 Golduck</option>
+                <option value="/pokedex-sv/mankey/">056 Mankey</option>
+                <option value="/pokedex-sv/primeape/">057 Primeape</option>
+                <option value="/pokedex-sv/growlithe/">058 Growlithe</option>
+                <option value="/pokedex-sv/arcanine/">059 Arcanine</option>
+                <option value="/pokedex-sv/poliwag/">060 Poliwag</option>
+                <option value="/pokedex-sv/poliwhirl/">061 Poliwhirl</option>
+                <option value="/pokedex-sv/poliwrath/">062 Poliwrath</option>
+                <option value="/pokedex-sv/bellsprout/">
+                  069 Bellsprout
+                </option>
+                <option value="/pokedex-sv/weepinbell/">
+                  070 Weepinbell
+                </option>
+                <option value="/pokedex-sv/victreebel/">
+                  071 Victreebel
+                </option>
+                <option value="/pokedex-sv/tentacool/">072 Tentacool</option>
+                <option value="/pokedex-sv/tentacruel/">
+                  073 Tentacruel
+                </option>
+                <option value="/pokedex-sv/geodude/">074 Geodude</option>
+                <option value="/pokedex-sv/graveler/">075 Graveler</option>
+                <option value="/pokedex-sv/golem/">076 Golem</option>
+                <option value="/pokedex-sv/slowpoke/">079 Slowpoke</option>
+                <option value="/pokedex-sv/slowbro/">080 Slowbro</option>
+                <option value="/pokedex-sv/magnemite/">081 Magnemite</option>
+                <option value="/pokedex-sv/magneton/">082 Magneton</option>
+                <option value="/pokedex-sv/doduo/">084 Doduo</option>
+                <option value="/pokedex-sv/dodrio/">085 Dodrio</option>
+                <option value="/pokedex-sv/seel/">086 Seel</option>
+                <option value="/pokedex-sv/dewgong/">087 Dewgong</option>
+                <option value="/pokedex-sv/grimer/">088 Grimer</option>
+                <option value="/pokedex-sv/muk/">089 Muk</option>
+                <option value="/pokedex-sv/shellder/">090 Shellder</option>
+                <option value="/pokedex-sv/cloyster/">091 Cloyster</option>
+                <option value="/pokedex-sv/gastly/">092 Gastly</option>
+                <option value="/pokedex-sv/haunter/">093 Haunter</option>
+                <option value="/pokedex-sv/gengar/">094 Gengar</option>
+                <option value="/pokedex-sv/drowzee/">096 Drowzee</option>
+                <option value="/pokedex-sv/hypno/">097 Hypno</option>
+                <option value="/pokedex-sv/voltorb/">100 Voltorb</option>
+                <option value="/pokedex-sv/electrode/">101 Electrode</option>
+                <option value="/pokedex-sv/exeggcute/">102 Exeggcute</option>
+                <option value="/pokedex-sv/exeggutor/">103 Exeggutor</option>
+                <option value="/pokedex-sv/hitmonlee/">106 Hitmonlee</option>
+                <option value="/pokedex-sv/hitmonchan/">
+                  107 Hitmonchan
+                </option>
+                <option value="/pokedex-sv/koffing/">109 Koffing</option>
+                <option value="/pokedex-sv/weezing/">110 Weezing</option>
+                <option value="/pokedex-sv/rhyhorn/">111 Rhyhorn</option>
+                <option value="/pokedex-sv/rhydon/">112 Rhydon</option>
+                <option value="/pokedex-sv/chansey/">113 Chansey</option>
+                <option value="/pokedex-sv/horsea/">116 Horsea</option>
+                <option value="/pokedex-sv/seadra/">117 Seadra</option>
+                <option value="/pokedex-sv/scyther/">123 Scyther</option>
+                <option value="/pokedex-sv/electabuzz/">
+                  125 Electabuzz
+                </option>
+                <option value="/pokedex-sv/magmar/">126 Magmar</option>
+                <option value="/pokedex-sv/tauros/">128 Tauros</option>
+                <option value="/pokedex-sv/magikarp/">129 Magikarp</option>
+                <option value="/pokedex-sv/gyarados/">130 Gyarados</option>
+                <option value="/pokedex-sv/lapras/">131 Lapras</option>
+                <option value="/pokedex-sv/ditto/">132 Ditto</option>
+                <option value="/pokedex-sv/eevee/">133 Eevee</option>
+                <option value="/pokedex-sv/vaporeon/">134 Vaporeon</option>
+                <option value="/pokedex-sv/jolteon/">135 Jolteon</option>
+                <option value="/pokedex-sv/flareon/">136 Flareon</option>
+                <option value="/pokedex-sv/porygon/">137 Porygon</option>
+                <option value="/pokedex-sv/snorlax/">143 Snorlax</option>
+                <option value="/pokedex-sv/articuno/">144 Articuno</option>
+                <option value="/pokedex-sv/zapdos/">145 Zapdos</option>
+                <option value="/pokedex-sv/moltres/">146 Moltres</option>
+                <option value="/pokedex-sv/dratini/">147 Dratini</option>
+                <option value="/pokedex-sv/dragonair/">148 Dragonair</option>
+                <option value="/pokedex-sv/dragonite/">149 Dragonite</option>
+                <option value="/pokedex-sv/mewtwo/">150 Mewtwo</option>
+                <option value="/pokedex-sv/mew/">151 Mew</option>
+              </optgroup>
+              <optgroup label="Johto (Gen 2)">
+                <option value="/pokedex-sv/chikorita/">152 Chikorita</option>
+                <option value="/pokedex-sv/bayleef/">153 Bayleef</option>
+                <option value="/pokedex-sv/meganium/">154 Meganium</option>
+                <option value="/pokedex-sv/cyndaquil/">155 Cyndaquil</option>
+                <option value="/pokedex-sv/quilava/">156 Quilava</option>
+                <option value="/pokedex-sv/typhlosion/">
+                  157 Typhlosion
+                </option>
+                <option value="/pokedex-sv/totodile/">158 Totodile</option>
+                <option value="/pokedex-sv/croconaw/">159 Croconaw</option>
+                <option value="/pokedex-sv/feraligatr/">
+                  160 Feraligatr
+                </option>
+                <option value="/pokedex-sv/sentret/">161 Sentret</option>
+                <option value="/pokedex-sv/furret/">162 Furret</option>
+                <option value="/pokedex-sv/hoothoot/">163 Hoothoot</option>
+                <option value="/pokedex-sv/noctowl/">164 Noctowl</option>
+                <option value="/pokedex-sv/spinarak/">167 Spinarak</option>
+                <option value="/pokedex-sv/ariados/">168 Ariados</option>
+                <option value="/pokedex-sv/chinchou/">170 Chinchou</option>
+                <option value="/pokedex-sv/lanturn/">171 Lanturn</option>
+                <option value="/pokedex-sv/pichu/">172 Pichu</option>
+                <option value="/pokedex-sv/cleffa/">173 Cleffa</option>
+                <option value="/pokedex-sv/igglybuff/">174 Igglybuff</option>
+                <option value="/pokedex-sv/mareep/">179 Mareep</option>
+                <option value="/pokedex-sv/flaaffy/">180 Flaaffy</option>
+                <option value="/pokedex-sv/ampharos/">181 Ampharos</option>
+                <option value="/pokedex-sv/bellossom/">182 Bellossom</option>
+                <option value="/pokedex-sv/marill/">183 Marill</option>
+                <option value="/pokedex-sv/azumarill/">184 Azumarill</option>
+                <option value="/pokedex-sv/sudowoodo/">185 Sudowoodo</option>
+                <option value="/pokedex-sv/politoed/">186 Politoed</option>
+                <option value="/pokedex-sv/hoppip/">187 Hoppip</option>
+                <option value="/pokedex-sv/skiploom/">188 Skiploom</option>
+                <option value="/pokedex-sv/jumpluff/">189 Jumpluff</option>
+                <option value="/pokedex-sv/aipom/">190 Aipom</option>
+                <option value="/pokedex-sv/sunkern/">191 Sunkern</option>
+                <option value="/pokedex-sv/sunflora/">192 Sunflora</option>
+                <option value="/pokedex-sv/yanma/">193 Yanma</option>
+                <option value="/pokedex-sv/wooper/">194 Wooper</option>
+                <option value="/pokedex-sv/quagsire/">195 Quagsire</option>
+                <option value="/pokedex-sv/espeon/">196 Espeon</option>
+                <option value="/pokedex-sv/umbreon/">197 Umbreon</option>
+                <option value="/pokedex-sv/murkrow/">198 Murkrow</option>
+                <option value="/pokedex-sv/slowking/">199 Slowking</option>
+                <option value="/pokedex-sv/misdreavus/">
+                  200 Misdreavus
+                </option>
+                <option value="/pokedex-sv/girafarig/">203 Girafarig</option>
+                <option value="/pokedex-sv/pineco/">204 Pineco</option>
+                <option value="/pokedex-sv/forretress/">
+                  205 Forretress
+                </option>
+                <option value="/pokedex-sv/dunsparce/">206 Dunsparce</option>
+                <option value="/pokedex-sv/gligar/">207 Gligar</option>
+                <option value="/pokedex-sv/snubbull/">209 Snubbull</option>
+                <option value="/pokedex-sv/granbull/">210 Granbull</option>
+                <option value="/pokedex-sv/qwilfish/">211 Qwilfish</option>
+                <option value="/pokedex-sv/scizor/">212 Scizor</option>
+                <option value="/pokedex-sv/heracross/">214 Heracross</option>
+                <option value="/pokedex-sv/sneasel/">215 Sneasel</option>
+                <option value="/pokedex-sv/teddiursa/">216 Teddiursa</option>
+                <option value="/pokedex-sv/ursaring/">217 Ursaring</option>
+                <option value="/pokedex-sv/slugma/">218 Slugma</option>
+                <option value="/pokedex-sv/magcargo/">219 Magcargo</option>
+                <option value="/pokedex-sv/swinub/">220 Swinub</option>
+                <option value="/pokedex-sv/piloswine/">221 Piloswine</option>
+                <option value="/pokedex-sv/delibird/">225 Delibird</option>
+                <option value="/pokedex-sv/skarmory/">227 Skarmory</option>
+                <option value="/pokedex-sv/houndour/">228 Houndour</option>
+                <option value="/pokedex-sv/houndoom/">229 Houndoom</option>
+                <option value="/pokedex-sv/kingdra/">230 Kingdra</option>
+                <option value="/pokedex-sv/phanpy/">231 Phanpy</option>
+                <option value="/pokedex-sv/donphan/">232 Donphan</option>
+                <option value="/pokedex-sv/porygon2/">233 Porygon2</option>
+                <option value="/pokedex-sv/stantler/">234 Stantler</option>
+                <option value="/pokedex-sv/smeargle/">235 Smeargle</option>
+                <option value="/pokedex-sv/tyrogue/">236 Tyrogue</option>
+                <option value="/pokedex-sv/hitmontop/">237 Hitmontop</option>
+                <option value="/pokedex-sv/elekid/">239 Elekid</option>
+                <option value="/pokedex-sv/magby/">240 Magby</option>
+                <option value="/pokedex-sv/blissey/">242 Blissey</option>
+                <option value="/pokedex-sv/raikou/">243 Raikou</option>
+                <option value="/pokedex-sv/entei/">244 Entei</option>
+                <option value="/pokedex-sv/suicune/">245 Suicune</option>
+                <option value="/pokedex-sv/larvitar/">246 Larvitar</option>
+                <option value="/pokedex-sv/pupitar/">247 Pupitar</option>
+                <option value="/pokedex-sv/tyranitar/">248 Tyranitar</option>
+                <option value="/pokedex-sv/lugia/">249 Lugia</option>
+                <option value="/pokedex-sv/ho-oh/">250 Ho-Oh</option>
+              </optgroup>
+              <optgroup label="Hoenn (Gen 3)" disabled>
+                <option value="/pokedex-sv/treecko/">252 Treecko</option>
+                <option value="/pokedex-sv/grovyle/">253 Grovyle</option>
+                <option value="/pokedex-sv/sceptile/">254 Sceptile</option>
+                <option value="/pokedex-sv/torchic/">255 Torchic</option>
+                <option value="/pokedex-sv/combusken/">256 Combusken</option>
+                <option value="/pokedex-sv/blaziken/">257 Blaziken</option>
+                <option value="/pokedex-sv/mudkip/">258 Mudkip</option>
+                <option value="/pokedex-sv/marshtomp/">259 Marshtomp</option>
+                <option value="/pokedex-sv/swampert/">260 Swampert</option>
+                <option value="/pokedex-sv/poochyena/">261 Poochyena</option>
+                <option value="/pokedex-sv/mightyena/">262 Mightyena</option>
+                <option value="/pokedex-sv/lotad/">270 Lotad</option>
+                <option value="/pokedex-sv/lombre/">271 Lombre</option>
+                <option value="/pokedex-sv/ludicolo/">272 Ludicolo</option>
+                <option value="/pokedex-sv/seedot/">273 Seedot</option>
+                <option value="/pokedex-sv/nuzleaf/">274 Nuzleaf</option>
+                <option value="/pokedex-sv/shiftry/">275 Shiftry</option>
+                <option value="/pokedex-sv/wingull/">278 Wingull</option>
+                <option value="/pokedex-sv/pelipper/">279 Pelipper</option>
+                <option value="/pokedex-sv/ralts/">280 Ralts</option>
+                <option value="/pokedex-sv/kirlia/">281 Kirlia</option>
+                <option value="/pokedex-sv/gardevoir/">282 Gardevoir</option>
+                <option value="/pokedex-sv/surskit/">283 Surskit</option>
+                <option value="/pokedex-sv/masquerain/">
+                  284 Masquerain
+                </option>
+                <option value="/pokedex-sv/shroomish/">285 Shroomish</option>
+                <option value="/pokedex-sv/breloom/">286 Breloom</option>
+                <option value="/pokedex-sv/slakoth/">287 Slakoth</option>
+                <option value="/pokedex-sv/vigoroth/">288 Vigoroth</option>
+                <option value="/pokedex-sv/slaking/">289 Slaking</option>
+                <option value="/pokedex-sv/makuhita/">296 Makuhita</option>
+                <option value="/pokedex-sv/hariyama/">297 Hariyama</option>
+                <option value="/pokedex-sv/azurill/">298 Azurill</option>
+                <option value="/pokedex-sv/nosepass/">299 Nosepass</option>
+                <option value="/pokedex-sv/sableye/">302 Sableye</option>
+                <option value="/pokedex-sv/meditite/">307 Meditite</option>
+                <option value="/pokedex-sv/medicham/">308 Medicham</option>
+                <option value="/pokedex-sv/plusle/">311 Plusle</option>
+                <option value="/pokedex-sv/minun/">312 Minun</option>
+                <option value="/pokedex-sv/volbeat/">313 Volbeat</option>
+                <option value="/pokedex-sv/illumise/">314 Illumise</option>
+                <option value="/pokedex-sv/gulpin/">316 Gulpin</option>
+                <option value="/pokedex-sv/swalot/">317 Swalot</option>
+                <option value="/pokedex-sv/numel/">322 Numel</option>
+                <option value="/pokedex-sv/camerupt/">323 Camerupt</option>
+                <option value="/pokedex-sv/torkoal/">324 Torkoal</option>
+                <option value="/pokedex-sv/spoink/">325 Spoink</option>
+                <option value="/pokedex-sv/grumpig/">326 Grumpig</option>
+                <option value="/pokedex-sv/trapinch/">328 Trapinch</option>
+                <option value="/pokedex-sv/vibrava/">329 Vibrava</option>
+                <option value="/pokedex-sv/flygon/">330 Flygon</option>
+                <option value="/pokedex-sv/cacnea/">331 Cacnea</option>
+                <option value="/pokedex-sv/cacturne/">332 Cacturne</option>
+                <option value="/pokedex-sv/swablu/">333 Swablu</option>
+                <option value="/pokedex-sv/altaria/">334 Altaria</option>
+                <option value="/pokedex-sv/zangoose/">335 Zangoose</option>
+                <option value="/pokedex-sv/seviper/">336 Seviper</option>
+                <option value="/pokedex-sv/barboach/">339 Barboach</option>
+                <option value="/pokedex-sv/whiscash/">340 Whiscash</option>
+                <option value="/pokedex-sv/corphish/">341 Corphish</option>
+                <option value="/pokedex-sv/crawdaunt/">342 Crawdaunt</option>
+                <option value="/pokedex-sv/feebas/">349 Feebas</option>
+                <option value="/pokedex-sv/milotic/">350 Milotic</option>
+                <option value="/pokedex-sv/shuppet/">353 Shuppet</option>
+                <option value="/pokedex-sv/banette/">354 Banette</option>
+                <option value="/pokedex-sv/duskull/">355 Duskull</option>
+                <option value="/pokedex-sv/dusclops/">356 Dusclops</option>
+                <option value="/pokedex-sv/tropius/">357 Tropius</option>
+                <option value="/pokedex-sv/chimecho/">358 Chimecho</option>
+                <option value="/pokedex-sv/snorunt/">361 Snorunt</option>
+                <option value="/pokedex-sv/glalie/">362 Glalie</option>
+                <option value="/pokedex-sv/luvdisc/">370 Luvdisc</option>
+                <option value="/pokedex-sv/bagon/">371 Bagon</option>
+                <option value="/pokedex-sv/shelgon/">372 Shelgon</option>
+                <option value="/pokedex-sv/salamence/">373 Salamence</option>
+                <option value="/pokedex-sv/beldum/">374 Beldum</option>
+                <option value="/pokedex-sv/metang/">375 Metang</option>
+                <option value="/pokedex-sv/metagross/">376 Metagross</option>
+                <option value="/pokedex-sv/regirock/">377 Regirock</option>
+                <option value="/pokedex-sv/regice/">378 Regice</option>
+                <option value="/pokedex-sv/registeel/">379 Registeel</option>
+                <option value="/pokedex-sv/latias/">380 Latias</option>
+                <option value="/pokedex-sv/latios/">381 Latios</option>
+                <option value="/pokedex-sv/kyogre/">382 Kyogre</option>
+                <option value="/pokedex-sv/groudon/">383 Groudon</option>
+                <option value="/pokedex-sv/rayquaza/">384 Rayquaza</option>
+                <option value="/pokedex-sv/jirachi/">385 Jirachi</option>
+                <option value="/pokedex-sv/deoxys/">386 Deoxys</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <footer>
+            <p>
+              <small>
+                Hentet fra
+                <cite><a href="https://serebii.net/pokedex-sv/">Serebii.net</a></cite>
+              </small>
+            </p>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="card-heading" lang="en">Multiple select</h3>
+          </header>
+
+          <div>
+            <label for="multiple-select">Velg dine favorittpokemon</label>
+            <select id="multiple-select" multiple size="25">
+              <optgroup label="Kanto (Gen 1)">
+                <option value="/pokedex-sv/bulbasaur/">001 Bulbasaur</option>
+                <option value="/pokedex-sv/ivysaur/">002 Ivysaur</option>
+                <option value="/pokedex-sv/venusaur/">003 Venusaur</option>
+                <option value="/pokedex-sv/charmander/">
+                  004 Charmander
+                </option>
+                <option value="/pokedex-sv/charmeleon/">
+                  005 Charmeleon
+                </option>
+                <option value="/pokedex-sv/charizard/">006 Charizard</option>
+                <option value="/pokedex-sv/squirtle/">007 Squirtle</option>
+                <option value="/pokedex-sv/wartortle/">008 Wartortle</option>
+                <option value="/pokedex-sv/blastoise/">009 Blastoise</option>
+                <option value="/pokedex-sv/ekans/">023 Ekans</option>
+                <option value="/pokedex-sv/arbok/">024 Arbok</option>
+                <option value="/pokedex-sv/pikachu/">025 Pikachu</option>
+                <option value="/pokedex-sv/raichu/">026 Raichu</option>
+                <option value="/pokedex-sv/sandshrew/">027 Sandshrew</option>
+                <option value="/pokedex-sv/sandslash/">028 Sandslash</option>
+                <option value="/pokedex-sv/clefairy/">035 Clefairy</option>
+                <option value="/pokedex-sv/clefable/">036 Clefable</option>
+                <option value="/pokedex-sv/vulpix/">037 Vulpix</option>
+                <option value="/pokedex-sv/ninetales/">038 Ninetales</option>
+                <option value="/pokedex-sv/jigglypuff/">
+                  039 Jigglypuff
+                </option>
+                <option value="/pokedex-sv/wigglytuff/">
+                  040 Wigglytuff
+                </option>
+                <option value="/pokedex-sv/oddish/">043 Oddish</option>
+                <option value="/pokedex-sv/gloom/">044 Gloom</option>
+                <option value="/pokedex-sv/vileplume/">045 Vileplume</option>
+                <option value="/pokedex-sv/venonat/">048 Venonat</option>
+                <option value="/pokedex-sv/venomoth/">049 Venomoth</option>
+                <option value="/pokedex-sv/diglett/">050 Diglett</option>
+                <option value="/pokedex-sv/dugtrio/">051 Dugtrio</option>
+                <option value="/pokedex-sv/meowth/">052 Meowth</option>
+                <option value="/pokedex-sv/persian/">053 Persian</option>
+                <option value="/pokedex-sv/psyduck/">054 Psyduck</option>
+                <option value="/pokedex-sv/golduck/">055 Golduck</option>
+                <option value="/pokedex-sv/mankey/">056 Mankey</option>
+                <option value="/pokedex-sv/primeape/">057 Primeape</option>
+                <option value="/pokedex-sv/growlithe/">058 Growlithe</option>
+                <option value="/pokedex-sv/arcanine/">059 Arcanine</option>
+                <option value="/pokedex-sv/poliwag/">060 Poliwag</option>
+                <option value="/pokedex-sv/poliwhirl/">061 Poliwhirl</option>
+                <option value="/pokedex-sv/poliwrath/">062 Poliwrath</option>
+                <option value="/pokedex-sv/bellsprout/">
+                  069 Bellsprout
+                </option>
+                <option value="/pokedex-sv/weepinbell/">
+                  070 Weepinbell
+                </option>
+                <option value="/pokedex-sv/victreebel/">
+                  071 Victreebel
+                </option>
+                <option value="/pokedex-sv/tentacool/">072 Tentacool</option>
+                <option value="/pokedex-sv/tentacruel/">
+                  073 Tentacruel
+                </option>
+                <option value="/pokedex-sv/geodude/">074 Geodude</option>
+                <option value="/pokedex-sv/graveler/">075 Graveler</option>
+                <option value="/pokedex-sv/golem/">076 Golem</option>
+                <option value="/pokedex-sv/slowpoke/">079 Slowpoke</option>
+                <option value="/pokedex-sv/slowbro/">080 Slowbro</option>
+                <option value="/pokedex-sv/magnemite/">081 Magnemite</option>
+                <option value="/pokedex-sv/magneton/">082 Magneton</option>
+                <option value="/pokedex-sv/doduo/">084 Doduo</option>
+                <option value="/pokedex-sv/dodrio/">085 Dodrio</option>
+                <option value="/pokedex-sv/seel/">086 Seel</option>
+                <option value="/pokedex-sv/dewgong/">087 Dewgong</option>
+                <option value="/pokedex-sv/grimer/">088 Grimer</option>
+                <option value="/pokedex-sv/muk/">089 Muk</option>
+                <option value="/pokedex-sv/shellder/">090 Shellder</option>
+                <option value="/pokedex-sv/cloyster/">091 Cloyster</option>
+                <option value="/pokedex-sv/gastly/">092 Gastly</option>
+                <option value="/pokedex-sv/haunter/">093 Haunter</option>
+                <option value="/pokedex-sv/gengar/">094 Gengar</option>
+                <option value="/pokedex-sv/drowzee/">096 Drowzee</option>
+                <option value="/pokedex-sv/hypno/">097 Hypno</option>
+                <option value="/pokedex-sv/voltorb/">100 Voltorb</option>
+                <option value="/pokedex-sv/electrode/">101 Electrode</option>
+                <option value="/pokedex-sv/exeggcute/">102 Exeggcute</option>
+                <option value="/pokedex-sv/exeggutor/">103 Exeggutor</option>
+                <option value="/pokedex-sv/hitmonlee/">106 Hitmonlee</option>
+                <option value="/pokedex-sv/hitmonchan/">
+                  107 Hitmonchan
+                </option>
+                <option value="/pokedex-sv/koffing/">109 Koffing</option>
+                <option value="/pokedex-sv/weezing/">110 Weezing</option>
+                <option value="/pokedex-sv/rhyhorn/">111 Rhyhorn</option>
+                <option value="/pokedex-sv/rhydon/">112 Rhydon</option>
+                <option value="/pokedex-sv/chansey/">113 Chansey</option>
+                <option value="/pokedex-sv/horsea/">116 Horsea</option>
+                <option value="/pokedex-sv/seadra/">117 Seadra</option>
+                <option value="/pokedex-sv/scyther/">123 Scyther</option>
+                <option value="/pokedex-sv/electabuzz/">
+                  125 Electabuzz
+                </option>
+                <option value="/pokedex-sv/magmar/">126 Magmar</option>
+                <option value="/pokedex-sv/tauros/">128 Tauros</option>
+                <option value="/pokedex-sv/magikarp/">129 Magikarp</option>
+                <option value="/pokedex-sv/gyarados/">130 Gyarados</option>
+                <option value="/pokedex-sv/lapras/">131 Lapras</option>
+                <option value="/pokedex-sv/ditto/">132 Ditto</option>
+                <option value="/pokedex-sv/eevee/">133 Eevee</option>
+                <option value="/pokedex-sv/vaporeon/">134 Vaporeon</option>
+                <option value="/pokedex-sv/jolteon/">135 Jolteon</option>
+                <option value="/pokedex-sv/flareon/">136 Flareon</option>
+                <option value="/pokedex-sv/porygon/">137 Porygon</option>
+                <option value="/pokedex-sv/snorlax/">143 Snorlax</option>
+                <option value="/pokedex-sv/articuno/">144 Articuno</option>
+                <option value="/pokedex-sv/zapdos/">145 Zapdos</option>
+                <option value="/pokedex-sv/moltres/">146 Moltres</option>
+                <option value="/pokedex-sv/dratini/">147 Dratini</option>
+                <option value="/pokedex-sv/dragonair/">148 Dragonair</option>
+                <option value="/pokedex-sv/dragonite/">149 Dragonite</option>
+                <option value="/pokedex-sv/mewtwo/">150 Mewtwo</option>
+                <option value="/pokedex-sv/mew/">151 Mew</option>
+              </optgroup>
+              <optgroup label="Johto (Gen 2)">
+                <option value="/pokedex-sv/chikorita/">152 Chikorita</option>
+                <option value="/pokedex-sv/bayleef/">153 Bayleef</option>
+                <option value="/pokedex-sv/meganium/">154 Meganium</option>
+                <option value="/pokedex-sv/cyndaquil/">155 Cyndaquil</option>
+                <option value="/pokedex-sv/quilava/">156 Quilava</option>
+                <option value="/pokedex-sv/typhlosion/">
+                  157 Typhlosion
+                </option>
+                <option value="/pokedex-sv/totodile/">158 Totodile</option>
+                <option value="/pokedex-sv/croconaw/">159 Croconaw</option>
+                <option value="/pokedex-sv/feraligatr/">
+                  160 Feraligatr
+                </option>
+                <option value="/pokedex-sv/sentret/">161 Sentret</option>
+                <option value="/pokedex-sv/furret/">162 Furret</option>
+                <option value="/pokedex-sv/hoothoot/">163 Hoothoot</option>
+                <option value="/pokedex-sv/noctowl/">164 Noctowl</option>
+                <option value="/pokedex-sv/spinarak/">167 Spinarak</option>
+                <option value="/pokedex-sv/ariados/">168 Ariados</option>
+                <option value="/pokedex-sv/chinchou/">170 Chinchou</option>
+                <option value="/pokedex-sv/lanturn/">171 Lanturn</option>
+                <option value="/pokedex-sv/pichu/">172 Pichu</option>
+                <option value="/pokedex-sv/cleffa/">173 Cleffa</option>
+                <option value="/pokedex-sv/igglybuff/">174 Igglybuff</option>
+                <option value="/pokedex-sv/mareep/">179 Mareep</option>
+                <option value="/pokedex-sv/flaaffy/">180 Flaaffy</option>
+                <option value="/pokedex-sv/ampharos/">181 Ampharos</option>
+                <option value="/pokedex-sv/bellossom/">182 Bellossom</option>
+                <option value="/pokedex-sv/marill/">183 Marill</option>
+                <option value="/pokedex-sv/azumarill/">184 Azumarill</option>
+                <option value="/pokedex-sv/sudowoodo/">185 Sudowoodo</option>
+                <option value="/pokedex-sv/politoed/">186 Politoed</option>
+                <option value="/pokedex-sv/hoppip/">187 Hoppip</option>
+                <option value="/pokedex-sv/skiploom/">188 Skiploom</option>
+                <option value="/pokedex-sv/jumpluff/">189 Jumpluff</option>
+                <option value="/pokedex-sv/aipom/">190 Aipom</option>
+                <option value="/pokedex-sv/sunkern/">191 Sunkern</option>
+                <option value="/pokedex-sv/sunflora/">192 Sunflora</option>
+                <option value="/pokedex-sv/yanma/">193 Yanma</option>
+                <option value="/pokedex-sv/wooper/">194 Wooper</option>
+                <option value="/pokedex-sv/quagsire/">195 Quagsire</option>
+                <option value="/pokedex-sv/espeon/">196 Espeon</option>
+                <option value="/pokedex-sv/umbreon/">197 Umbreon</option>
+                <option value="/pokedex-sv/murkrow/">198 Murkrow</option>
+                <option value="/pokedex-sv/slowking/">199 Slowking</option>
+                <option value="/pokedex-sv/misdreavus/">
+                  200 Misdreavus
+                </option>
+                <option value="/pokedex-sv/girafarig/">203 Girafarig</option>
+                <option value="/pokedex-sv/pineco/">204 Pineco</option>
+                <option value="/pokedex-sv/forretress/">
+                  205 Forretress
+                </option>
+                <option value="/pokedex-sv/dunsparce/">206 Dunsparce</option>
+                <option value="/pokedex-sv/gligar/">207 Gligar</option>
+                <option value="/pokedex-sv/snubbull/">209 Snubbull</option>
+                <option value="/pokedex-sv/granbull/">210 Granbull</option>
+                <option value="/pokedex-sv/qwilfish/">211 Qwilfish</option>
+                <option value="/pokedex-sv/scizor/">212 Scizor</option>
+                <option value="/pokedex-sv/heracross/">214 Heracross</option>
+                <option value="/pokedex-sv/sneasel/">215 Sneasel</option>
+                <option value="/pokedex-sv/teddiursa/">216 Teddiursa</option>
+                <option value="/pokedex-sv/ursaring/">217 Ursaring</option>
+                <option value="/pokedex-sv/slugma/">218 Slugma</option>
+                <option value="/pokedex-sv/magcargo/">219 Magcargo</option>
+                <option value="/pokedex-sv/swinub/">220 Swinub</option>
+                <option value="/pokedex-sv/piloswine/">221 Piloswine</option>
+                <option value="/pokedex-sv/delibird/">225 Delibird</option>
+                <option value="/pokedex-sv/skarmory/">227 Skarmory</option>
+                <option value="/pokedex-sv/houndour/">228 Houndour</option>
+                <option value="/pokedex-sv/houndoom/">229 Houndoom</option>
+                <option value="/pokedex-sv/kingdra/">230 Kingdra</option>
+                <option value="/pokedex-sv/phanpy/">231 Phanpy</option>
+                <option value="/pokedex-sv/donphan/">232 Donphan</option>
+                <option value="/pokedex-sv/porygon2/">233 Porygon2</option>
+                <option value="/pokedex-sv/stantler/">234 Stantler</option>
+                <option value="/pokedex-sv/smeargle/">235 Smeargle</option>
+                <option value="/pokedex-sv/tyrogue/">236 Tyrogue</option>
+                <option value="/pokedex-sv/hitmontop/">237 Hitmontop</option>
+                <option value="/pokedex-sv/elekid/">239 Elekid</option>
+                <option value="/pokedex-sv/magby/">240 Magby</option>
+                <option value="/pokedex-sv/blissey/">242 Blissey</option>
+                <option value="/pokedex-sv/raikou/">243 Raikou</option>
+                <option value="/pokedex-sv/entei/">244 Entei</option>
+                <option value="/pokedex-sv/suicune/">245 Suicune</option>
+                <option value="/pokedex-sv/larvitar/">246 Larvitar</option>
+                <option value="/pokedex-sv/pupitar/">247 Pupitar</option>
+                <option value="/pokedex-sv/tyranitar/">248 Tyranitar</option>
+                <option value="/pokedex-sv/lugia/">249 Lugia</option>
+                <option value="/pokedex-sv/ho-oh/">250 Ho-Oh</option>
+              </optgroup>
+              <optgroup label="Hoenn (Gen 3)" disabled>
+                <option value="/pokedex-sv/treecko/">252 Treecko</option>
+                <option value="/pokedex-sv/grovyle/">253 Grovyle</option>
+                <option value="/pokedex-sv/sceptile/">254 Sceptile</option>
+                <option value="/pokedex-sv/torchic/">255 Torchic</option>
+                <option value="/pokedex-sv/combusken/">256 Combusken</option>
+                <option value="/pokedex-sv/blaziken/">257 Blaziken</option>
+                <option value="/pokedex-sv/mudkip/">258 Mudkip</option>
+                <option value="/pokedex-sv/marshtomp/">259 Marshtomp</option>
+                <option value="/pokedex-sv/swampert/">260 Swampert</option>
+                <option value="/pokedex-sv/poochyena/">261 Poochyena</option>
+                <option value="/pokedex-sv/mightyena/">262 Mightyena</option>
+                <option value="/pokedex-sv/lotad/">270 Lotad</option>
+                <option value="/pokedex-sv/lombre/">271 Lombre</option>
+                <option value="/pokedex-sv/ludicolo/">272 Ludicolo</option>
+                <option value="/pokedex-sv/seedot/">273 Seedot</option>
+                <option value="/pokedex-sv/nuzleaf/">274 Nuzleaf</option>
+                <option value="/pokedex-sv/shiftry/">275 Shiftry</option>
+                <option value="/pokedex-sv/wingull/">278 Wingull</option>
+                <option value="/pokedex-sv/pelipper/">279 Pelipper</option>
+                <option value="/pokedex-sv/ralts/">280 Ralts</option>
+                <option value="/pokedex-sv/kirlia/">281 Kirlia</option>
+                <option value="/pokedex-sv/gardevoir/">282 Gardevoir</option>
+                <option value="/pokedex-sv/surskit/">283 Surskit</option>
+                <option value="/pokedex-sv/masquerain/">
+                  284 Masquerain
+                </option>
+                <option value="/pokedex-sv/shroomish/">285 Shroomish</option>
+                <option value="/pokedex-sv/breloom/">286 Breloom</option>
+                <option value="/pokedex-sv/slakoth/">287 Slakoth</option>
+                <option value="/pokedex-sv/vigoroth/">288 Vigoroth</option>
+                <option value="/pokedex-sv/slaking/">289 Slaking</option>
+                <option value="/pokedex-sv/makuhita/">296 Makuhita</option>
+                <option value="/pokedex-sv/hariyama/">297 Hariyama</option>
+                <option value="/pokedex-sv/azurill/">298 Azurill</option>
+                <option value="/pokedex-sv/nosepass/">299 Nosepass</option>
+                <option value="/pokedex-sv/sableye/">302 Sableye</option>
+                <option value="/pokedex-sv/meditite/">307 Meditite</option>
+                <option value="/pokedex-sv/medicham/">308 Medicham</option>
+                <option value="/pokedex-sv/plusle/">311 Plusle</option>
+                <option value="/pokedex-sv/minun/">312 Minun</option>
+                <option value="/pokedex-sv/volbeat/">313 Volbeat</option>
+                <option value="/pokedex-sv/illumise/">314 Illumise</option>
+                <option value="/pokedex-sv/gulpin/">316 Gulpin</option>
+                <option value="/pokedex-sv/swalot/">317 Swalot</option>
+                <option value="/pokedex-sv/numel/">322 Numel</option>
+                <option value="/pokedex-sv/camerupt/">323 Camerupt</option>
+                <option value="/pokedex-sv/torkoal/">324 Torkoal</option>
+                <option value="/pokedex-sv/spoink/">325 Spoink</option>
+                <option value="/pokedex-sv/grumpig/">326 Grumpig</option>
+                <option value="/pokedex-sv/trapinch/">328 Trapinch</option>
+                <option value="/pokedex-sv/vibrava/">329 Vibrava</option>
+                <option value="/pokedex-sv/flygon/">330 Flygon</option>
+                <option value="/pokedex-sv/cacnea/">331 Cacnea</option>
+                <option value="/pokedex-sv/cacturne/">332 Cacturne</option>
+                <option value="/pokedex-sv/swablu/">333 Swablu</option>
+                <option value="/pokedex-sv/altaria/">334 Altaria</option>
+                <option value="/pokedex-sv/zangoose/">335 Zangoose</option>
+                <option value="/pokedex-sv/seviper/">336 Seviper</option>
+                <option value="/pokedex-sv/barboach/">339 Barboach</option>
+                <option value="/pokedex-sv/whiscash/">340 Whiscash</option>
+                <option value="/pokedex-sv/corphish/">341 Corphish</option>
+                <option value="/pokedex-sv/crawdaunt/">342 Crawdaunt</option>
+                <option value="/pokedex-sv/feebas/">349 Feebas</option>
+                <option value="/pokedex-sv/milotic/">350 Milotic</option>
+                <option value="/pokedex-sv/shuppet/">353 Shuppet</option>
+                <option value="/pokedex-sv/banette/">354 Banette</option>
+                <option value="/pokedex-sv/duskull/">355 Duskull</option>
+                <option value="/pokedex-sv/dusclops/">356 Dusclops</option>
+                <option value="/pokedex-sv/tropius/">357 Tropius</option>
+                <option value="/pokedex-sv/chimecho/">358 Chimecho</option>
+                <option value="/pokedex-sv/snorunt/">361 Snorunt</option>
+                <option value="/pokedex-sv/glalie/">362 Glalie</option>
+                <option value="/pokedex-sv/luvdisc/">370 Luvdisc</option>
+                <option value="/pokedex-sv/bagon/">371 Bagon</option>
+                <option value="/pokedex-sv/shelgon/">372 Shelgon</option>
+                <option value="/pokedex-sv/salamence/">373 Salamence</option>
+                <option value="/pokedex-sv/beldum/">374 Beldum</option>
+                <option value="/pokedex-sv/metang/">375 Metang</option>
+                <option value="/pokedex-sv/metagross/">376 Metagross</option>
+                <option value="/pokedex-sv/regirock/">377 Regirock</option>
+                <option value="/pokedex-sv/regice/">378 Regice</option>
+                <option value="/pokedex-sv/registeel/">379 Registeel</option>
+                <option value="/pokedex-sv/latias/">380 Latias</option>
+                <option value="/pokedex-sv/latios/">381 Latios</option>
+                <option value="/pokedex-sv/kyogre/">382 Kyogre</option>
+                <option value="/pokedex-sv/groudon/">383 Groudon</option>
+                <option value="/pokedex-sv/rayquaza/">384 Rayquaza</option>
+                <option value="/pokedex-sv/jirachi/">385 Jirachi</option>
+                <option value="/pokedex-sv/deoxys/">386 Deoxys</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <footer>
+            <p>
+              <small>
+                Her er det også lagt til <code lang="en">size="25"</code> for
+                å gjøre den høyere enn default.
+              </small>
+            </p>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="card-heading">Select med egen stil</h3>
+          </header>
+
+          <div>
+            <label for="custom-select">Velg én pokemon</label>
+            <select id="custom-select">
+              <option value="/pokedex-sv/bulbasaur/" data-color="green">
+                <img src="assets/bulbasaur.png" alt="" />
+                <span class="number">001</span>
+                <span class="name">Bulbasaur</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="green">
+                <img src="assets/ivysaur.png" alt="" />
+                <span class="number">002</span>
+                <span class="name">Ivysaur</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="green">
+                <img src="assets/venusaur.png" alt="" />
+                <span class="number">003</span>
+                <span class="name">Venusaur</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="blue">
+                <img src="assets/squirtle.png" alt="" />
+                <span class="number">004</span>
+                <span class="name">Squirtle</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="blue">
+                <img src="assets/wartortle.png" alt="" />
+                <span class="number">005</span>
+                <span class="name">Wartortle</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="blue">
+                <img src="assets/blastoise.png" alt="" />
+                <span class="number">006</span>
+                <span class="name">Blastoise</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="red">
+                <img src="assets/charmander.png" alt="" />
+                <span class="number">007</span>
+                <span class="name">Charmander</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="red">
+                <img src="assets/charmeleon.png" alt="" />
+                <span class="number">008</span>
+                <span class="name">Charmeleon</span>
+              </option>
+              <option value="/pokedex-sv/ivysaur/" data-color="red">
+                <img src="assets/charizard.png" alt="" />
+                <span class="number">009</span>
+                <span class="name">Charizard</span>
+              </option>
+            </select>
+          </div>
+        </article>
+      </section>
+
+      <section class="cards">
+        <h2>Mengde</h2>
+        <article>
+          <header>
+            <h3 class="card-heading">Meter uten optimal verdi</h3>
+          </header>
+
+          <div>
+            <label for="fuel-default">Drivstoff</label>
+            <meter id="fuel-default" min="0" max="100" value="50">
+              på 50/100
+            </meter>
+          </div>
+
+          <footer>
+            <p>
+              <small>
+                I dette eksempelet er det ikke satt noe optimal mengde, og
+                elementet fylles derfor med en grønnfarge uansett hvor lav
+                eller høy verdien den viser er.
+              </small>
+            </p>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="card-heading">Meter med optimal verdi</h3>
+          </header>
+
+          <div>
             <div>
-              <label for="text-area">Skriv inn tekst</label>
-              <textarea
-                name="text-area"
-                id="text-area"
-                rows="5"
-                cols="33"
-              ></textarea>
-            </div>
-
-            <footer>
-              <p>
-                <small>
-                  Her er det satt størrelse ved
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#cols"
-                    ><code>cols</code> og <code>rows</code> attributter</a
-                  >
-                  .
-                </small>
-              </p>
-            </footer>
-          </article>
-        </section>
-
-        <section class="cards">
-          <h2>Select</h2>
-          <article>
-            <header>
-              <h3 class="card-heading">Uten noen ekstra attributter</h3>
-            </header>
-
-            <div>
-              <label for="digimon-select">Velg digimon</label>
-              <select id="digimon-select">
-                <option disabled selected>Velg en digimon</option>
-                <option value="Koromon">Koromon</option>
-                <option value="Agumon">Agumon</option>
-                <option value="Betamon">Betamon</option>
-                <option value="Greymon">Greymon</option>
-                <option value="Tyrannomon">Tyrannomon</option>
-                <option value="Devimon">Devimon</option>
-                <option value="Meramon">Meramon</option>
-                <option value="Airdramon">Airdramon</option>
-                <option value="Seadramon">Seadramon</option>
-                <option value="Numemon">Numemon</option>
-                <option value="Metal Greymon (Virus)">
-                  Metal Greymon (Virus)
-                </option>
-                <option value="Mamemon">Mamemon</option>
-                <option value="Monzaemon">Monzaemon</option>
-              </select>
-            </div>
-          </article>
-
-          <article>
-            <header>
-              <h3 class="card-heading">Gruppert liste</h3>
-            </header>
-
-            <div>
-              <label for="pokemon-select">Velg pokemon</label>
-              <select id="pokemon-select">
-                <option disabled selected>Velg pokemon</option>
-                <optgroup label="Kanto (Gen 1)">
-                  <option value="/pokedex-sv/bulbasaur/">001 Bulbasaur</option>
-                  <option value="/pokedex-sv/ivysaur/">002 Ivysaur</option>
-                  <option value="/pokedex-sv/venusaur/">003 Venusaur</option>
-                  <option value="/pokedex-sv/charmander/">
-                    004 Charmander
-                  </option>
-                  <option value="/pokedex-sv/charmeleon/">
-                    005 Charmeleon
-                  </option>
-                  <option value="/pokedex-sv/charizard/">006 Charizard</option>
-                  <option value="/pokedex-sv/squirtle/">007 Squirtle</option>
-                  <option value="/pokedex-sv/wartortle/">008 Wartortle</option>
-                  <option value="/pokedex-sv/blastoise/">009 Blastoise</option>
-                  <option value="/pokedex-sv/ekans/">023 Ekans</option>
-                  <option value="/pokedex-sv/arbok/">024 Arbok</option>
-                  <option value="/pokedex-sv/pikachu/">025 Pikachu</option>
-                  <option value="/pokedex-sv/raichu/">026 Raichu</option>
-                  <option value="/pokedex-sv/sandshrew/">027 Sandshrew</option>
-                  <option value="/pokedex-sv/sandslash/">028 Sandslash</option>
-                  <option value="/pokedex-sv/clefairy/">035 Clefairy</option>
-                  <option value="/pokedex-sv/clefable/">036 Clefable</option>
-                  <option value="/pokedex-sv/vulpix/">037 Vulpix</option>
-                  <option value="/pokedex-sv/ninetales/">038 Ninetales</option>
-                  <option value="/pokedex-sv/jigglypuff/">
-                    039 Jigglypuff
-                  </option>
-                  <option value="/pokedex-sv/wigglytuff/">
-                    040 Wigglytuff
-                  </option>
-                  <option value="/pokedex-sv/oddish/">043 Oddish</option>
-                  <option value="/pokedex-sv/gloom/">044 Gloom</option>
-                  <option value="/pokedex-sv/vileplume/">045 Vileplume</option>
-                  <option value="/pokedex-sv/venonat/">048 Venonat</option>
-                  <option value="/pokedex-sv/venomoth/">049 Venomoth</option>
-                  <option value="/pokedex-sv/diglett/">050 Diglett</option>
-                  <option value="/pokedex-sv/dugtrio/">051 Dugtrio</option>
-                  <option value="/pokedex-sv/meowth/">052 Meowth</option>
-                  <option value="/pokedex-sv/persian/">053 Persian</option>
-                  <option value="/pokedex-sv/psyduck/">054 Psyduck</option>
-                  <option value="/pokedex-sv/golduck/">055 Golduck</option>
-                  <option value="/pokedex-sv/mankey/">056 Mankey</option>
-                  <option value="/pokedex-sv/primeape/">057 Primeape</option>
-                  <option value="/pokedex-sv/growlithe/">058 Growlithe</option>
-                  <option value="/pokedex-sv/arcanine/">059 Arcanine</option>
-                  <option value="/pokedex-sv/poliwag/">060 Poliwag</option>
-                  <option value="/pokedex-sv/poliwhirl/">061 Poliwhirl</option>
-                  <option value="/pokedex-sv/poliwrath/">062 Poliwrath</option>
-                  <option value="/pokedex-sv/bellsprout/">
-                    069 Bellsprout
-                  </option>
-                  <option value="/pokedex-sv/weepinbell/">
-                    070 Weepinbell
-                  </option>
-                  <option value="/pokedex-sv/victreebel/">
-                    071 Victreebel
-                  </option>
-                  <option value="/pokedex-sv/tentacool/">072 Tentacool</option>
-                  <option value="/pokedex-sv/tentacruel/">
-                    073 Tentacruel
-                  </option>
-                  <option value="/pokedex-sv/geodude/">074 Geodude</option>
-                  <option value="/pokedex-sv/graveler/">075 Graveler</option>
-                  <option value="/pokedex-sv/golem/">076 Golem</option>
-                  <option value="/pokedex-sv/slowpoke/">079 Slowpoke</option>
-                  <option value="/pokedex-sv/slowbro/">080 Slowbro</option>
-                  <option value="/pokedex-sv/magnemite/">081 Magnemite</option>
-                  <option value="/pokedex-sv/magneton/">082 Magneton</option>
-                  <option value="/pokedex-sv/doduo/">084 Doduo</option>
-                  <option value="/pokedex-sv/dodrio/">085 Dodrio</option>
-                  <option value="/pokedex-sv/seel/">086 Seel</option>
-                  <option value="/pokedex-sv/dewgong/">087 Dewgong</option>
-                  <option value="/pokedex-sv/grimer/">088 Grimer</option>
-                  <option value="/pokedex-sv/muk/">089 Muk</option>
-                  <option value="/pokedex-sv/shellder/">090 Shellder</option>
-                  <option value="/pokedex-sv/cloyster/">091 Cloyster</option>
-                  <option value="/pokedex-sv/gastly/">092 Gastly</option>
-                  <option value="/pokedex-sv/haunter/">093 Haunter</option>
-                  <option value="/pokedex-sv/gengar/">094 Gengar</option>
-                  <option value="/pokedex-sv/drowzee/">096 Drowzee</option>
-                  <option value="/pokedex-sv/hypno/">097 Hypno</option>
-                  <option value="/pokedex-sv/voltorb/">100 Voltorb</option>
-                  <option value="/pokedex-sv/electrode/">101 Electrode</option>
-                  <option value="/pokedex-sv/exeggcute/">102 Exeggcute</option>
-                  <option value="/pokedex-sv/exeggutor/">103 Exeggutor</option>
-                  <option value="/pokedex-sv/hitmonlee/">106 Hitmonlee</option>
-                  <option value="/pokedex-sv/hitmonchan/">
-                    107 Hitmonchan
-                  </option>
-                  <option value="/pokedex-sv/koffing/">109 Koffing</option>
-                  <option value="/pokedex-sv/weezing/">110 Weezing</option>
-                  <option value="/pokedex-sv/rhyhorn/">111 Rhyhorn</option>
-                  <option value="/pokedex-sv/rhydon/">112 Rhydon</option>
-                  <option value="/pokedex-sv/chansey/">113 Chansey</option>
-                  <option value="/pokedex-sv/horsea/">116 Horsea</option>
-                  <option value="/pokedex-sv/seadra/">117 Seadra</option>
-                  <option value="/pokedex-sv/scyther/">123 Scyther</option>
-                  <option value="/pokedex-sv/electabuzz/">
-                    125 Electabuzz
-                  </option>
-                  <option value="/pokedex-sv/magmar/">126 Magmar</option>
-                  <option value="/pokedex-sv/tauros/">128 Tauros</option>
-                  <option value="/pokedex-sv/magikarp/">129 Magikarp</option>
-                  <option value="/pokedex-sv/gyarados/">130 Gyarados</option>
-                  <option value="/pokedex-sv/lapras/">131 Lapras</option>
-                  <option value="/pokedex-sv/ditto/">132 Ditto</option>
-                  <option value="/pokedex-sv/eevee/">133 Eevee</option>
-                  <option value="/pokedex-sv/vaporeon/">134 Vaporeon</option>
-                  <option value="/pokedex-sv/jolteon/">135 Jolteon</option>
-                  <option value="/pokedex-sv/flareon/">136 Flareon</option>
-                  <option value="/pokedex-sv/porygon/">137 Porygon</option>
-                  <option value="/pokedex-sv/snorlax/">143 Snorlax</option>
-                  <option value="/pokedex-sv/articuno/">144 Articuno</option>
-                  <option value="/pokedex-sv/zapdos/">145 Zapdos</option>
-                  <option value="/pokedex-sv/moltres/">146 Moltres</option>
-                  <option value="/pokedex-sv/dratini/">147 Dratini</option>
-                  <option value="/pokedex-sv/dragonair/">148 Dragonair</option>
-                  <option value="/pokedex-sv/dragonite/">149 Dragonite</option>
-                  <option value="/pokedex-sv/mewtwo/">150 Mewtwo</option>
-                  <option value="/pokedex-sv/mew/">151 Mew</option>
-                </optgroup>
-                <optgroup label="Johto (Gen 2)">
-                  <option value="/pokedex-sv/chikorita/">152 Chikorita</option>
-                  <option value="/pokedex-sv/bayleef/">153 Bayleef</option>
-                  <option value="/pokedex-sv/meganium/">154 Meganium</option>
-                  <option value="/pokedex-sv/cyndaquil/">155 Cyndaquil</option>
-                  <option value="/pokedex-sv/quilava/">156 Quilava</option>
-                  <option value="/pokedex-sv/typhlosion/">
-                    157 Typhlosion
-                  </option>
-                  <option value="/pokedex-sv/totodile/">158 Totodile</option>
-                  <option value="/pokedex-sv/croconaw/">159 Croconaw</option>
-                  <option value="/pokedex-sv/feraligatr/">
-                    160 Feraligatr
-                  </option>
-                  <option value="/pokedex-sv/sentret/">161 Sentret</option>
-                  <option value="/pokedex-sv/furret/">162 Furret</option>
-                  <option value="/pokedex-sv/hoothoot/">163 Hoothoot</option>
-                  <option value="/pokedex-sv/noctowl/">164 Noctowl</option>
-                  <option value="/pokedex-sv/spinarak/">167 Spinarak</option>
-                  <option value="/pokedex-sv/ariados/">168 Ariados</option>
-                  <option value="/pokedex-sv/chinchou/">170 Chinchou</option>
-                  <option value="/pokedex-sv/lanturn/">171 Lanturn</option>
-                  <option value="/pokedex-sv/pichu/">172 Pichu</option>
-                  <option value="/pokedex-sv/cleffa/">173 Cleffa</option>
-                  <option value="/pokedex-sv/igglybuff/">174 Igglybuff</option>
-                  <option value="/pokedex-sv/mareep/">179 Mareep</option>
-                  <option value="/pokedex-sv/flaaffy/">180 Flaaffy</option>
-                  <option value="/pokedex-sv/ampharos/">181 Ampharos</option>
-                  <option value="/pokedex-sv/bellossom/">182 Bellossom</option>
-                  <option value="/pokedex-sv/marill/">183 Marill</option>
-                  <option value="/pokedex-sv/azumarill/">184 Azumarill</option>
-                  <option value="/pokedex-sv/sudowoodo/">185 Sudowoodo</option>
-                  <option value="/pokedex-sv/politoed/">186 Politoed</option>
-                  <option value="/pokedex-sv/hoppip/">187 Hoppip</option>
-                  <option value="/pokedex-sv/skiploom/">188 Skiploom</option>
-                  <option value="/pokedex-sv/jumpluff/">189 Jumpluff</option>
-                  <option value="/pokedex-sv/aipom/">190 Aipom</option>
-                  <option value="/pokedex-sv/sunkern/">191 Sunkern</option>
-                  <option value="/pokedex-sv/sunflora/">192 Sunflora</option>
-                  <option value="/pokedex-sv/yanma/">193 Yanma</option>
-                  <option value="/pokedex-sv/wooper/">194 Wooper</option>
-                  <option value="/pokedex-sv/quagsire/">195 Quagsire</option>
-                  <option value="/pokedex-sv/espeon/">196 Espeon</option>
-                  <option value="/pokedex-sv/umbreon/">197 Umbreon</option>
-                  <option value="/pokedex-sv/murkrow/">198 Murkrow</option>
-                  <option value="/pokedex-sv/slowking/">199 Slowking</option>
-                  <option value="/pokedex-sv/misdreavus/">
-                    200 Misdreavus
-                  </option>
-                  <option value="/pokedex-sv/girafarig/">203 Girafarig</option>
-                  <option value="/pokedex-sv/pineco/">204 Pineco</option>
-                  <option value="/pokedex-sv/forretress/">
-                    205 Forretress
-                  </option>
-                  <option value="/pokedex-sv/dunsparce/">206 Dunsparce</option>
-                  <option value="/pokedex-sv/gligar/">207 Gligar</option>
-                  <option value="/pokedex-sv/snubbull/">209 Snubbull</option>
-                  <option value="/pokedex-sv/granbull/">210 Granbull</option>
-                  <option value="/pokedex-sv/qwilfish/">211 Qwilfish</option>
-                  <option value="/pokedex-sv/scizor/">212 Scizor</option>
-                  <option value="/pokedex-sv/heracross/">214 Heracross</option>
-                  <option value="/pokedex-sv/sneasel/">215 Sneasel</option>
-                  <option value="/pokedex-sv/teddiursa/">216 Teddiursa</option>
-                  <option value="/pokedex-sv/ursaring/">217 Ursaring</option>
-                  <option value="/pokedex-sv/slugma/">218 Slugma</option>
-                  <option value="/pokedex-sv/magcargo/">219 Magcargo</option>
-                  <option value="/pokedex-sv/swinub/">220 Swinub</option>
-                  <option value="/pokedex-sv/piloswine/">221 Piloswine</option>
-                  <option value="/pokedex-sv/delibird/">225 Delibird</option>
-                  <option value="/pokedex-sv/skarmory/">227 Skarmory</option>
-                  <option value="/pokedex-sv/houndour/">228 Houndour</option>
-                  <option value="/pokedex-sv/houndoom/">229 Houndoom</option>
-                  <option value="/pokedex-sv/kingdra/">230 Kingdra</option>
-                  <option value="/pokedex-sv/phanpy/">231 Phanpy</option>
-                  <option value="/pokedex-sv/donphan/">232 Donphan</option>
-                  <option value="/pokedex-sv/porygon2/">233 Porygon2</option>
-                  <option value="/pokedex-sv/stantler/">234 Stantler</option>
-                  <option value="/pokedex-sv/smeargle/">235 Smeargle</option>
-                  <option value="/pokedex-sv/tyrogue/">236 Tyrogue</option>
-                  <option value="/pokedex-sv/hitmontop/">237 Hitmontop</option>
-                  <option value="/pokedex-sv/elekid/">239 Elekid</option>
-                  <option value="/pokedex-sv/magby/">240 Magby</option>
-                  <option value="/pokedex-sv/blissey/">242 Blissey</option>
-                  <option value="/pokedex-sv/raikou/">243 Raikou</option>
-                  <option value="/pokedex-sv/entei/">244 Entei</option>
-                  <option value="/pokedex-sv/suicune/">245 Suicune</option>
-                  <option value="/pokedex-sv/larvitar/">246 Larvitar</option>
-                  <option value="/pokedex-sv/pupitar/">247 Pupitar</option>
-                  <option value="/pokedex-sv/tyranitar/">248 Tyranitar</option>
-                  <option value="/pokedex-sv/lugia/">249 Lugia</option>
-                  <option value="/pokedex-sv/ho-oh/">250 Ho-Oh</option>
-                </optgroup>
-                <optgroup label="Hoenn (Gen 3)" disabled>
-                  <option value="/pokedex-sv/treecko/">252 Treecko</option>
-                  <option value="/pokedex-sv/grovyle/">253 Grovyle</option>
-                  <option value="/pokedex-sv/sceptile/">254 Sceptile</option>
-                  <option value="/pokedex-sv/torchic/">255 Torchic</option>
-                  <option value="/pokedex-sv/combusken/">256 Combusken</option>
-                  <option value="/pokedex-sv/blaziken/">257 Blaziken</option>
-                  <option value="/pokedex-sv/mudkip/">258 Mudkip</option>
-                  <option value="/pokedex-sv/marshtomp/">259 Marshtomp</option>
-                  <option value="/pokedex-sv/swampert/">260 Swampert</option>
-                  <option value="/pokedex-sv/poochyena/">261 Poochyena</option>
-                  <option value="/pokedex-sv/mightyena/">262 Mightyena</option>
-                  <option value="/pokedex-sv/lotad/">270 Lotad</option>
-                  <option value="/pokedex-sv/lombre/">271 Lombre</option>
-                  <option value="/pokedex-sv/ludicolo/">272 Ludicolo</option>
-                  <option value="/pokedex-sv/seedot/">273 Seedot</option>
-                  <option value="/pokedex-sv/nuzleaf/">274 Nuzleaf</option>
-                  <option value="/pokedex-sv/shiftry/">275 Shiftry</option>
-                  <option value="/pokedex-sv/wingull/">278 Wingull</option>
-                  <option value="/pokedex-sv/pelipper/">279 Pelipper</option>
-                  <option value="/pokedex-sv/ralts/">280 Ralts</option>
-                  <option value="/pokedex-sv/kirlia/">281 Kirlia</option>
-                  <option value="/pokedex-sv/gardevoir/">282 Gardevoir</option>
-                  <option value="/pokedex-sv/surskit/">283 Surskit</option>
-                  <option value="/pokedex-sv/masquerain/">
-                    284 Masquerain
-                  </option>
-                  <option value="/pokedex-sv/shroomish/">285 Shroomish</option>
-                  <option value="/pokedex-sv/breloom/">286 Breloom</option>
-                  <option value="/pokedex-sv/slakoth/">287 Slakoth</option>
-                  <option value="/pokedex-sv/vigoroth/">288 Vigoroth</option>
-                  <option value="/pokedex-sv/slaking/">289 Slaking</option>
-                  <option value="/pokedex-sv/makuhita/">296 Makuhita</option>
-                  <option value="/pokedex-sv/hariyama/">297 Hariyama</option>
-                  <option value="/pokedex-sv/azurill/">298 Azurill</option>
-                  <option value="/pokedex-sv/nosepass/">299 Nosepass</option>
-                  <option value="/pokedex-sv/sableye/">302 Sableye</option>
-                  <option value="/pokedex-sv/meditite/">307 Meditite</option>
-                  <option value="/pokedex-sv/medicham/">308 Medicham</option>
-                  <option value="/pokedex-sv/plusle/">311 Plusle</option>
-                  <option value="/pokedex-sv/minun/">312 Minun</option>
-                  <option value="/pokedex-sv/volbeat/">313 Volbeat</option>
-                  <option value="/pokedex-sv/illumise/">314 Illumise</option>
-                  <option value="/pokedex-sv/gulpin/">316 Gulpin</option>
-                  <option value="/pokedex-sv/swalot/">317 Swalot</option>
-                  <option value="/pokedex-sv/numel/">322 Numel</option>
-                  <option value="/pokedex-sv/camerupt/">323 Camerupt</option>
-                  <option value="/pokedex-sv/torkoal/">324 Torkoal</option>
-                  <option value="/pokedex-sv/spoink/">325 Spoink</option>
-                  <option value="/pokedex-sv/grumpig/">326 Grumpig</option>
-                  <option value="/pokedex-sv/trapinch/">328 Trapinch</option>
-                  <option value="/pokedex-sv/vibrava/">329 Vibrava</option>
-                  <option value="/pokedex-sv/flygon/">330 Flygon</option>
-                  <option value="/pokedex-sv/cacnea/">331 Cacnea</option>
-                  <option value="/pokedex-sv/cacturne/">332 Cacturne</option>
-                  <option value="/pokedex-sv/swablu/">333 Swablu</option>
-                  <option value="/pokedex-sv/altaria/">334 Altaria</option>
-                  <option value="/pokedex-sv/zangoose/">335 Zangoose</option>
-                  <option value="/pokedex-sv/seviper/">336 Seviper</option>
-                  <option value="/pokedex-sv/barboach/">339 Barboach</option>
-                  <option value="/pokedex-sv/whiscash/">340 Whiscash</option>
-                  <option value="/pokedex-sv/corphish/">341 Corphish</option>
-                  <option value="/pokedex-sv/crawdaunt/">342 Crawdaunt</option>
-                  <option value="/pokedex-sv/feebas/">349 Feebas</option>
-                  <option value="/pokedex-sv/milotic/">350 Milotic</option>
-                  <option value="/pokedex-sv/shuppet/">353 Shuppet</option>
-                  <option value="/pokedex-sv/banette/">354 Banette</option>
-                  <option value="/pokedex-sv/duskull/">355 Duskull</option>
-                  <option value="/pokedex-sv/dusclops/">356 Dusclops</option>
-                  <option value="/pokedex-sv/tropius/">357 Tropius</option>
-                  <option value="/pokedex-sv/chimecho/">358 Chimecho</option>
-                  <option value="/pokedex-sv/snorunt/">361 Snorunt</option>
-                  <option value="/pokedex-sv/glalie/">362 Glalie</option>
-                  <option value="/pokedex-sv/luvdisc/">370 Luvdisc</option>
-                  <option value="/pokedex-sv/bagon/">371 Bagon</option>
-                  <option value="/pokedex-sv/shelgon/">372 Shelgon</option>
-                  <option value="/pokedex-sv/salamence/">373 Salamence</option>
-                  <option value="/pokedex-sv/beldum/">374 Beldum</option>
-                  <option value="/pokedex-sv/metang/">375 Metang</option>
-                  <option value="/pokedex-sv/metagross/">376 Metagross</option>
-                  <option value="/pokedex-sv/regirock/">377 Regirock</option>
-                  <option value="/pokedex-sv/regice/">378 Regice</option>
-                  <option value="/pokedex-sv/registeel/">379 Registeel</option>
-                  <option value="/pokedex-sv/latias/">380 Latias</option>
-                  <option value="/pokedex-sv/latios/">381 Latios</option>
-                  <option value="/pokedex-sv/kyogre/">382 Kyogre</option>
-                  <option value="/pokedex-sv/groudon/">383 Groudon</option>
-                  <option value="/pokedex-sv/rayquaza/">384 Rayquaza</option>
-                  <option value="/pokedex-sv/jirachi/">385 Jirachi</option>
-                  <option value="/pokedex-sv/deoxys/">386 Deoxys</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <footer>
-              <p>
-                <small>
-                  Hentet fra
-                  <cite
-                    ><a href="https://serebii.net/pokedex-sv/"
-                      >Serebii.net</a
-                    ></cite
-                  >
-                </small>
-              </p>
-            </footer>
-          </article>
-
-          <article>
-            <header>
-              <h3 class="card-heading" lang="en">Multiple select</h3>
-            </header>
-
-            <div>
-              <label for="multiple-select">Velg dine favorittpokemon</label>
-              <select id="multiple-select" multiple size="25">
-                <optgroup label="Kanto (Gen 1)">
-                  <option value="/pokedex-sv/bulbasaur/">001 Bulbasaur</option>
-                  <option value="/pokedex-sv/ivysaur/">002 Ivysaur</option>
-                  <option value="/pokedex-sv/venusaur/">003 Venusaur</option>
-                  <option value="/pokedex-sv/charmander/">
-                    004 Charmander
-                  </option>
-                  <option value="/pokedex-sv/charmeleon/">
-                    005 Charmeleon
-                  </option>
-                  <option value="/pokedex-sv/charizard/">006 Charizard</option>
-                  <option value="/pokedex-sv/squirtle/">007 Squirtle</option>
-                  <option value="/pokedex-sv/wartortle/">008 Wartortle</option>
-                  <option value="/pokedex-sv/blastoise/">009 Blastoise</option>
-                  <option value="/pokedex-sv/ekans/">023 Ekans</option>
-                  <option value="/pokedex-sv/arbok/">024 Arbok</option>
-                  <option value="/pokedex-sv/pikachu/">025 Pikachu</option>
-                  <option value="/pokedex-sv/raichu/">026 Raichu</option>
-                  <option value="/pokedex-sv/sandshrew/">027 Sandshrew</option>
-                  <option value="/pokedex-sv/sandslash/">028 Sandslash</option>
-                  <option value="/pokedex-sv/clefairy/">035 Clefairy</option>
-                  <option value="/pokedex-sv/clefable/">036 Clefable</option>
-                  <option value="/pokedex-sv/vulpix/">037 Vulpix</option>
-                  <option value="/pokedex-sv/ninetales/">038 Ninetales</option>
-                  <option value="/pokedex-sv/jigglypuff/">
-                    039 Jigglypuff
-                  </option>
-                  <option value="/pokedex-sv/wigglytuff/">
-                    040 Wigglytuff
-                  </option>
-                  <option value="/pokedex-sv/oddish/">043 Oddish</option>
-                  <option value="/pokedex-sv/gloom/">044 Gloom</option>
-                  <option value="/pokedex-sv/vileplume/">045 Vileplume</option>
-                  <option value="/pokedex-sv/venonat/">048 Venonat</option>
-                  <option value="/pokedex-sv/venomoth/">049 Venomoth</option>
-                  <option value="/pokedex-sv/diglett/">050 Diglett</option>
-                  <option value="/pokedex-sv/dugtrio/">051 Dugtrio</option>
-                  <option value="/pokedex-sv/meowth/">052 Meowth</option>
-                  <option value="/pokedex-sv/persian/">053 Persian</option>
-                  <option value="/pokedex-sv/psyduck/">054 Psyduck</option>
-                  <option value="/pokedex-sv/golduck/">055 Golduck</option>
-                  <option value="/pokedex-sv/mankey/">056 Mankey</option>
-                  <option value="/pokedex-sv/primeape/">057 Primeape</option>
-                  <option value="/pokedex-sv/growlithe/">058 Growlithe</option>
-                  <option value="/pokedex-sv/arcanine/">059 Arcanine</option>
-                  <option value="/pokedex-sv/poliwag/">060 Poliwag</option>
-                  <option value="/pokedex-sv/poliwhirl/">061 Poliwhirl</option>
-                  <option value="/pokedex-sv/poliwrath/">062 Poliwrath</option>
-                  <option value="/pokedex-sv/bellsprout/">
-                    069 Bellsprout
-                  </option>
-                  <option value="/pokedex-sv/weepinbell/">
-                    070 Weepinbell
-                  </option>
-                  <option value="/pokedex-sv/victreebel/">
-                    071 Victreebel
-                  </option>
-                  <option value="/pokedex-sv/tentacool/">072 Tentacool</option>
-                  <option value="/pokedex-sv/tentacruel/">
-                    073 Tentacruel
-                  </option>
-                  <option value="/pokedex-sv/geodude/">074 Geodude</option>
-                  <option value="/pokedex-sv/graveler/">075 Graveler</option>
-                  <option value="/pokedex-sv/golem/">076 Golem</option>
-                  <option value="/pokedex-sv/slowpoke/">079 Slowpoke</option>
-                  <option value="/pokedex-sv/slowbro/">080 Slowbro</option>
-                  <option value="/pokedex-sv/magnemite/">081 Magnemite</option>
-                  <option value="/pokedex-sv/magneton/">082 Magneton</option>
-                  <option value="/pokedex-sv/doduo/">084 Doduo</option>
-                  <option value="/pokedex-sv/dodrio/">085 Dodrio</option>
-                  <option value="/pokedex-sv/seel/">086 Seel</option>
-                  <option value="/pokedex-sv/dewgong/">087 Dewgong</option>
-                  <option value="/pokedex-sv/grimer/">088 Grimer</option>
-                  <option value="/pokedex-sv/muk/">089 Muk</option>
-                  <option value="/pokedex-sv/shellder/">090 Shellder</option>
-                  <option value="/pokedex-sv/cloyster/">091 Cloyster</option>
-                  <option value="/pokedex-sv/gastly/">092 Gastly</option>
-                  <option value="/pokedex-sv/haunter/">093 Haunter</option>
-                  <option value="/pokedex-sv/gengar/">094 Gengar</option>
-                  <option value="/pokedex-sv/drowzee/">096 Drowzee</option>
-                  <option value="/pokedex-sv/hypno/">097 Hypno</option>
-                  <option value="/pokedex-sv/voltorb/">100 Voltorb</option>
-                  <option value="/pokedex-sv/electrode/">101 Electrode</option>
-                  <option value="/pokedex-sv/exeggcute/">102 Exeggcute</option>
-                  <option value="/pokedex-sv/exeggutor/">103 Exeggutor</option>
-                  <option value="/pokedex-sv/hitmonlee/">106 Hitmonlee</option>
-                  <option value="/pokedex-sv/hitmonchan/">
-                    107 Hitmonchan
-                  </option>
-                  <option value="/pokedex-sv/koffing/">109 Koffing</option>
-                  <option value="/pokedex-sv/weezing/">110 Weezing</option>
-                  <option value="/pokedex-sv/rhyhorn/">111 Rhyhorn</option>
-                  <option value="/pokedex-sv/rhydon/">112 Rhydon</option>
-                  <option value="/pokedex-sv/chansey/">113 Chansey</option>
-                  <option value="/pokedex-sv/horsea/">116 Horsea</option>
-                  <option value="/pokedex-sv/seadra/">117 Seadra</option>
-                  <option value="/pokedex-sv/scyther/">123 Scyther</option>
-                  <option value="/pokedex-sv/electabuzz/">
-                    125 Electabuzz
-                  </option>
-                  <option value="/pokedex-sv/magmar/">126 Magmar</option>
-                  <option value="/pokedex-sv/tauros/">128 Tauros</option>
-                  <option value="/pokedex-sv/magikarp/">129 Magikarp</option>
-                  <option value="/pokedex-sv/gyarados/">130 Gyarados</option>
-                  <option value="/pokedex-sv/lapras/">131 Lapras</option>
-                  <option value="/pokedex-sv/ditto/">132 Ditto</option>
-                  <option value="/pokedex-sv/eevee/">133 Eevee</option>
-                  <option value="/pokedex-sv/vaporeon/">134 Vaporeon</option>
-                  <option value="/pokedex-sv/jolteon/">135 Jolteon</option>
-                  <option value="/pokedex-sv/flareon/">136 Flareon</option>
-                  <option value="/pokedex-sv/porygon/">137 Porygon</option>
-                  <option value="/pokedex-sv/snorlax/">143 Snorlax</option>
-                  <option value="/pokedex-sv/articuno/">144 Articuno</option>
-                  <option value="/pokedex-sv/zapdos/">145 Zapdos</option>
-                  <option value="/pokedex-sv/moltres/">146 Moltres</option>
-                  <option value="/pokedex-sv/dratini/">147 Dratini</option>
-                  <option value="/pokedex-sv/dragonair/">148 Dragonair</option>
-                  <option value="/pokedex-sv/dragonite/">149 Dragonite</option>
-                  <option value="/pokedex-sv/mewtwo/">150 Mewtwo</option>
-                  <option value="/pokedex-sv/mew/">151 Mew</option>
-                </optgroup>
-                <optgroup label="Johto (Gen 2)">
-                  <option value="/pokedex-sv/chikorita/">152 Chikorita</option>
-                  <option value="/pokedex-sv/bayleef/">153 Bayleef</option>
-                  <option value="/pokedex-sv/meganium/">154 Meganium</option>
-                  <option value="/pokedex-sv/cyndaquil/">155 Cyndaquil</option>
-                  <option value="/pokedex-sv/quilava/">156 Quilava</option>
-                  <option value="/pokedex-sv/typhlosion/">
-                    157 Typhlosion
-                  </option>
-                  <option value="/pokedex-sv/totodile/">158 Totodile</option>
-                  <option value="/pokedex-sv/croconaw/">159 Croconaw</option>
-                  <option value="/pokedex-sv/feraligatr/">
-                    160 Feraligatr
-                  </option>
-                  <option value="/pokedex-sv/sentret/">161 Sentret</option>
-                  <option value="/pokedex-sv/furret/">162 Furret</option>
-                  <option value="/pokedex-sv/hoothoot/">163 Hoothoot</option>
-                  <option value="/pokedex-sv/noctowl/">164 Noctowl</option>
-                  <option value="/pokedex-sv/spinarak/">167 Spinarak</option>
-                  <option value="/pokedex-sv/ariados/">168 Ariados</option>
-                  <option value="/pokedex-sv/chinchou/">170 Chinchou</option>
-                  <option value="/pokedex-sv/lanturn/">171 Lanturn</option>
-                  <option value="/pokedex-sv/pichu/">172 Pichu</option>
-                  <option value="/pokedex-sv/cleffa/">173 Cleffa</option>
-                  <option value="/pokedex-sv/igglybuff/">174 Igglybuff</option>
-                  <option value="/pokedex-sv/mareep/">179 Mareep</option>
-                  <option value="/pokedex-sv/flaaffy/">180 Flaaffy</option>
-                  <option value="/pokedex-sv/ampharos/">181 Ampharos</option>
-                  <option value="/pokedex-sv/bellossom/">182 Bellossom</option>
-                  <option value="/pokedex-sv/marill/">183 Marill</option>
-                  <option value="/pokedex-sv/azumarill/">184 Azumarill</option>
-                  <option value="/pokedex-sv/sudowoodo/">185 Sudowoodo</option>
-                  <option value="/pokedex-sv/politoed/">186 Politoed</option>
-                  <option value="/pokedex-sv/hoppip/">187 Hoppip</option>
-                  <option value="/pokedex-sv/skiploom/">188 Skiploom</option>
-                  <option value="/pokedex-sv/jumpluff/">189 Jumpluff</option>
-                  <option value="/pokedex-sv/aipom/">190 Aipom</option>
-                  <option value="/pokedex-sv/sunkern/">191 Sunkern</option>
-                  <option value="/pokedex-sv/sunflora/">192 Sunflora</option>
-                  <option value="/pokedex-sv/yanma/">193 Yanma</option>
-                  <option value="/pokedex-sv/wooper/">194 Wooper</option>
-                  <option value="/pokedex-sv/quagsire/">195 Quagsire</option>
-                  <option value="/pokedex-sv/espeon/">196 Espeon</option>
-                  <option value="/pokedex-sv/umbreon/">197 Umbreon</option>
-                  <option value="/pokedex-sv/murkrow/">198 Murkrow</option>
-                  <option value="/pokedex-sv/slowking/">199 Slowking</option>
-                  <option value="/pokedex-sv/misdreavus/">
-                    200 Misdreavus
-                  </option>
-                  <option value="/pokedex-sv/girafarig/">203 Girafarig</option>
-                  <option value="/pokedex-sv/pineco/">204 Pineco</option>
-                  <option value="/pokedex-sv/forretress/">
-                    205 Forretress
-                  </option>
-                  <option value="/pokedex-sv/dunsparce/">206 Dunsparce</option>
-                  <option value="/pokedex-sv/gligar/">207 Gligar</option>
-                  <option value="/pokedex-sv/snubbull/">209 Snubbull</option>
-                  <option value="/pokedex-sv/granbull/">210 Granbull</option>
-                  <option value="/pokedex-sv/qwilfish/">211 Qwilfish</option>
-                  <option value="/pokedex-sv/scizor/">212 Scizor</option>
-                  <option value="/pokedex-sv/heracross/">214 Heracross</option>
-                  <option value="/pokedex-sv/sneasel/">215 Sneasel</option>
-                  <option value="/pokedex-sv/teddiursa/">216 Teddiursa</option>
-                  <option value="/pokedex-sv/ursaring/">217 Ursaring</option>
-                  <option value="/pokedex-sv/slugma/">218 Slugma</option>
-                  <option value="/pokedex-sv/magcargo/">219 Magcargo</option>
-                  <option value="/pokedex-sv/swinub/">220 Swinub</option>
-                  <option value="/pokedex-sv/piloswine/">221 Piloswine</option>
-                  <option value="/pokedex-sv/delibird/">225 Delibird</option>
-                  <option value="/pokedex-sv/skarmory/">227 Skarmory</option>
-                  <option value="/pokedex-sv/houndour/">228 Houndour</option>
-                  <option value="/pokedex-sv/houndoom/">229 Houndoom</option>
-                  <option value="/pokedex-sv/kingdra/">230 Kingdra</option>
-                  <option value="/pokedex-sv/phanpy/">231 Phanpy</option>
-                  <option value="/pokedex-sv/donphan/">232 Donphan</option>
-                  <option value="/pokedex-sv/porygon2/">233 Porygon2</option>
-                  <option value="/pokedex-sv/stantler/">234 Stantler</option>
-                  <option value="/pokedex-sv/smeargle/">235 Smeargle</option>
-                  <option value="/pokedex-sv/tyrogue/">236 Tyrogue</option>
-                  <option value="/pokedex-sv/hitmontop/">237 Hitmontop</option>
-                  <option value="/pokedex-sv/elekid/">239 Elekid</option>
-                  <option value="/pokedex-sv/magby/">240 Magby</option>
-                  <option value="/pokedex-sv/blissey/">242 Blissey</option>
-                  <option value="/pokedex-sv/raikou/">243 Raikou</option>
-                  <option value="/pokedex-sv/entei/">244 Entei</option>
-                  <option value="/pokedex-sv/suicune/">245 Suicune</option>
-                  <option value="/pokedex-sv/larvitar/">246 Larvitar</option>
-                  <option value="/pokedex-sv/pupitar/">247 Pupitar</option>
-                  <option value="/pokedex-sv/tyranitar/">248 Tyranitar</option>
-                  <option value="/pokedex-sv/lugia/">249 Lugia</option>
-                  <option value="/pokedex-sv/ho-oh/">250 Ho-Oh</option>
-                </optgroup>
-                <optgroup label="Hoenn (Gen 3)" disabled>
-                  <option value="/pokedex-sv/treecko/">252 Treecko</option>
-                  <option value="/pokedex-sv/grovyle/">253 Grovyle</option>
-                  <option value="/pokedex-sv/sceptile/">254 Sceptile</option>
-                  <option value="/pokedex-sv/torchic/">255 Torchic</option>
-                  <option value="/pokedex-sv/combusken/">256 Combusken</option>
-                  <option value="/pokedex-sv/blaziken/">257 Blaziken</option>
-                  <option value="/pokedex-sv/mudkip/">258 Mudkip</option>
-                  <option value="/pokedex-sv/marshtomp/">259 Marshtomp</option>
-                  <option value="/pokedex-sv/swampert/">260 Swampert</option>
-                  <option value="/pokedex-sv/poochyena/">261 Poochyena</option>
-                  <option value="/pokedex-sv/mightyena/">262 Mightyena</option>
-                  <option value="/pokedex-sv/lotad/">270 Lotad</option>
-                  <option value="/pokedex-sv/lombre/">271 Lombre</option>
-                  <option value="/pokedex-sv/ludicolo/">272 Ludicolo</option>
-                  <option value="/pokedex-sv/seedot/">273 Seedot</option>
-                  <option value="/pokedex-sv/nuzleaf/">274 Nuzleaf</option>
-                  <option value="/pokedex-sv/shiftry/">275 Shiftry</option>
-                  <option value="/pokedex-sv/wingull/">278 Wingull</option>
-                  <option value="/pokedex-sv/pelipper/">279 Pelipper</option>
-                  <option value="/pokedex-sv/ralts/">280 Ralts</option>
-                  <option value="/pokedex-sv/kirlia/">281 Kirlia</option>
-                  <option value="/pokedex-sv/gardevoir/">282 Gardevoir</option>
-                  <option value="/pokedex-sv/surskit/">283 Surskit</option>
-                  <option value="/pokedex-sv/masquerain/">
-                    284 Masquerain
-                  </option>
-                  <option value="/pokedex-sv/shroomish/">285 Shroomish</option>
-                  <option value="/pokedex-sv/breloom/">286 Breloom</option>
-                  <option value="/pokedex-sv/slakoth/">287 Slakoth</option>
-                  <option value="/pokedex-sv/vigoroth/">288 Vigoroth</option>
-                  <option value="/pokedex-sv/slaking/">289 Slaking</option>
-                  <option value="/pokedex-sv/makuhita/">296 Makuhita</option>
-                  <option value="/pokedex-sv/hariyama/">297 Hariyama</option>
-                  <option value="/pokedex-sv/azurill/">298 Azurill</option>
-                  <option value="/pokedex-sv/nosepass/">299 Nosepass</option>
-                  <option value="/pokedex-sv/sableye/">302 Sableye</option>
-                  <option value="/pokedex-sv/meditite/">307 Meditite</option>
-                  <option value="/pokedex-sv/medicham/">308 Medicham</option>
-                  <option value="/pokedex-sv/plusle/">311 Plusle</option>
-                  <option value="/pokedex-sv/minun/">312 Minun</option>
-                  <option value="/pokedex-sv/volbeat/">313 Volbeat</option>
-                  <option value="/pokedex-sv/illumise/">314 Illumise</option>
-                  <option value="/pokedex-sv/gulpin/">316 Gulpin</option>
-                  <option value="/pokedex-sv/swalot/">317 Swalot</option>
-                  <option value="/pokedex-sv/numel/">322 Numel</option>
-                  <option value="/pokedex-sv/camerupt/">323 Camerupt</option>
-                  <option value="/pokedex-sv/torkoal/">324 Torkoal</option>
-                  <option value="/pokedex-sv/spoink/">325 Spoink</option>
-                  <option value="/pokedex-sv/grumpig/">326 Grumpig</option>
-                  <option value="/pokedex-sv/trapinch/">328 Trapinch</option>
-                  <option value="/pokedex-sv/vibrava/">329 Vibrava</option>
-                  <option value="/pokedex-sv/flygon/">330 Flygon</option>
-                  <option value="/pokedex-sv/cacnea/">331 Cacnea</option>
-                  <option value="/pokedex-sv/cacturne/">332 Cacturne</option>
-                  <option value="/pokedex-sv/swablu/">333 Swablu</option>
-                  <option value="/pokedex-sv/altaria/">334 Altaria</option>
-                  <option value="/pokedex-sv/zangoose/">335 Zangoose</option>
-                  <option value="/pokedex-sv/seviper/">336 Seviper</option>
-                  <option value="/pokedex-sv/barboach/">339 Barboach</option>
-                  <option value="/pokedex-sv/whiscash/">340 Whiscash</option>
-                  <option value="/pokedex-sv/corphish/">341 Corphish</option>
-                  <option value="/pokedex-sv/crawdaunt/">342 Crawdaunt</option>
-                  <option value="/pokedex-sv/feebas/">349 Feebas</option>
-                  <option value="/pokedex-sv/milotic/">350 Milotic</option>
-                  <option value="/pokedex-sv/shuppet/">353 Shuppet</option>
-                  <option value="/pokedex-sv/banette/">354 Banette</option>
-                  <option value="/pokedex-sv/duskull/">355 Duskull</option>
-                  <option value="/pokedex-sv/dusclops/">356 Dusclops</option>
-                  <option value="/pokedex-sv/tropius/">357 Tropius</option>
-                  <option value="/pokedex-sv/chimecho/">358 Chimecho</option>
-                  <option value="/pokedex-sv/snorunt/">361 Snorunt</option>
-                  <option value="/pokedex-sv/glalie/">362 Glalie</option>
-                  <option value="/pokedex-sv/luvdisc/">370 Luvdisc</option>
-                  <option value="/pokedex-sv/bagon/">371 Bagon</option>
-                  <option value="/pokedex-sv/shelgon/">372 Shelgon</option>
-                  <option value="/pokedex-sv/salamence/">373 Salamence</option>
-                  <option value="/pokedex-sv/beldum/">374 Beldum</option>
-                  <option value="/pokedex-sv/metang/">375 Metang</option>
-                  <option value="/pokedex-sv/metagross/">376 Metagross</option>
-                  <option value="/pokedex-sv/regirock/">377 Regirock</option>
-                  <option value="/pokedex-sv/regice/">378 Regice</option>
-                  <option value="/pokedex-sv/registeel/">379 Registeel</option>
-                  <option value="/pokedex-sv/latias/">380 Latias</option>
-                  <option value="/pokedex-sv/latios/">381 Latios</option>
-                  <option value="/pokedex-sv/kyogre/">382 Kyogre</option>
-                  <option value="/pokedex-sv/groudon/">383 Groudon</option>
-                  <option value="/pokedex-sv/rayquaza/">384 Rayquaza</option>
-                  <option value="/pokedex-sv/jirachi/">385 Jirachi</option>
-                  <option value="/pokedex-sv/deoxys/">386 Deoxys</option>
-                </optgroup>
-              </select>
-            </div>
-
-            <footer>
-              <p>
-                <small>
-                  Her er det også lagt til <code lang="en">size="25"</code> for
-                  å gjøre den høyere enn default.
-                </small>
-              </p>
-            </footer>
-          </article>
-
-          <article>
-            <header>
-              <h3 class="card-heading">Select med egen stil</h3>
-            </header>
-
-            <div>
-              <label for="custom-select">Velg én pokemon</label>
-              <select id="custom-select">
-                <option value="/pokedex-sv/bulbasaur/" data-color="green">
-                  <img src="assets/bulbasaur.png" alt="" />
-                  <span class="number">001</span>
-                  <span class="name">Bulbasaur</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="green">
-                  <img src="assets/ivysaur.png" alt="" />
-                  <span class="number">002</span>
-                  <span class="name">Ivysaur</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="green">
-                  <img src="assets/venusaur.png" alt="" />
-                  <span class="number">003</span>
-                  <span class="name">Venusaur</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="blue">
-                  <img src="assets/squirtle.png" alt="" />
-                  <span class="number">004</span>
-                  <span class="name">Squirtle</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="blue">
-                  <img src="assets/wartortle.png" alt="" />
-                  <span class="number">005</span>
-                  <span class="name">Wartortle</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="blue">
-                  <img src="assets/blastoise.png" alt="" />
-                  <span class="number">006</span>
-                  <span class="name">Blastoise</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="red">
-                  <img src="assets/charmander.png" alt="" />
-                  <span class="number">007</span>
-                  <span class="name">Charmander</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="red">
-                  <img src="assets/charmeleon.png" alt="" />
-                  <span class="number">008</span>
-                  <span class="name">Charmeleon</span>
-                </option>
-                <option value="/pokedex-sv/ivysaur/" data-color="red">
-                  <img src="assets/charizard.png" alt="" />
-                  <span class="number">009</span>
-                  <span class="name">Charizard</span>
-                </option>
-              </select>
-            </div>
-          </article>
-        </section>
-
-        <section class="cards">
-          <h2>Mengde</h2>
-          <article>
-            <header>
-              <h3 class="card-heading">Meter uten optimal verdi</h3>
-            </header>
-
-            <div>
-              <label for="fuel-default">Drivstoff</label>
-              <meter id="fuel-default" min="0" max="100" value="50">
+              <label for="fuel-medium">Drivestoff (medium verdi)</label>
+              <meter id="fuel-medium" min="0" max="100" low="33" high="66" optimum="80" value="50">
                 på 50/100
               </meter>
             </div>
 
-            <footer>
-              <p>
-                <small>
-                  I dette eksempelet er det ikke satt noe optimal mengde, og
-                  elementet fylles derfor med en grønnfarge uansett hvor lav
-                  eller høy verdien den viser er.
-                </small>
-              </p>
-            </footer>
-          </article>
-
-          <article>
-            <header>
-              <h3 class="card-heading">Meter med optimal verdi</h3>
-            </header>
+            <div>
+              <label for="fuel-high">Drivstoff (høy verdi)</label>
+              <meter id="fuel-high" min="0" max="100" low="33" high="66" optimum="80" value="95">
+                på 95/100
+              </meter>
+            </div>
 
             <div>
-              <div>
-                <label for="fuel-medium">Drivestoff (medium verdi)</label>
-                <meter
-                  id="fuel-medium"
-                  min="0"
-                  max="100"
-                  low="33"
-                  high="66"
-                  optimum="80"
-                  value="50"
-                >
-                  på 50/100
-                </meter>
-              </div>
-
-              <div>
-                <label for="fuel-high">Drivstoff (høy verdi)</label>
-                <meter
-                  id="fuel-high"
-                  min="0"
-                  max="100"
-                  low="33"
-                  high="66"
-                  optimum="80"
-                  value="95"
-                >
-                  på 95/100
-                </meter>
-              </div>
-
-              <div>
-                <label for="fuel-low">Drivstoff (lav verdi)</label>
-                <meter
-                  id="fuel-low"
-                  min="0"
-                  max="100"
-                  low="33"
-                  high="66"
-                  optimum="80"
-                  value="10"
-                >
-                  på 10/100
-                </meter>
-              </div>
+              <label for="fuel-low">Drivstoff (lav verdi)</label>
+              <meter id="fuel-low" min="0" max="100" low="33" high="66" optimum="80" value="10">
+                på 10/100
+              </meter>
             </div>
-          </article>
-        </section>
+          </div>
+        </article>
+      </section>
 
-        <section class="cards">
-          <h2>Fremdrift</h2>
-          <article>
-            <header>
-              <h3 class="card-heading">Fremdrift med en sluttverdi</h3>
-            </header>
+      <section class="cards">
+        <h2>Fremdrift</h2>
+        <article>
+          <header>
+            <h3 class="card-heading">Fremdrift med en sluttverdi</h3>
+          </header>
 
-            <div>
-              <label for="progress-bar-uploading">Laster opp dokument</label>
-              <progress id="progress-bar-uploading" value="70" max="100">
-                70 %
-              </progress>
-            </div>
-          </article>
+          <div>
+            <label for="progress-bar-uploading">Laster opp dokument</label>
+            <progress id="progress-bar-uploading" value="70" max="100">
+              70 %
+            </progress>
+          </div>
+        </article>
 
-          <article>
-            <header>
-              <h3 class="card-heading">Fremdrift uten en sluttverdi</h3>
-            </header>
+        <article>
+          <header>
+            <h3 class="card-heading">Fremdrift uten en sluttverdi</h3>
+          </header>
 
-            <div>
-              <label for="progress-bar-loading">Laster inn side</label>
-              <progress id="progress-bar-loading">Laster inn side</progress>
-            </div>
-          </article>
-        </section>
+          <div>
+            <label for="progress-bar-loading">Laster inn side</label>
+            <progress id="progress-bar-loading">Laster inn side</progress>
+          </div>
+        </article>
+      </section>
 
-        <section class="cards">
-          <h2>Knapper</h2>
-          <article>
-            <header>
-              <h3 class="card-heading">Standard</h3>
-            </header>
+      <section class="cards">
+        <h2>Knapper</h2>
+        <article>
+          <header>
+            <h3 class="card-heading">Standard</h3>
+          </header>
 
-            <div>
-              <button>Knapp</button>
-            </div>
-          </article>
-        </section>
-      </article>
-    </main>
-  </body>
+          <div>
+            <button>Knapp</button>
+          </div>
+        </article>
+      </section>
+    </article>
+  </main>
+</body>
+
 </html>

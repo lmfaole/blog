@@ -1,4 +1,75 @@
 @layer page {
+
+    /* Article headers */
+    body>main>article>header.bleed:first-of-type {
+        width: auto;
+        margin-inline-start: 0;
+        background: unset;
+        border-block: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+        box-sizing: border-box;
+        padding-block: 2lh;
+        min-height: 50dvh;
+
+        &::after {
+            position: absolute;
+            z-index: -2;
+            content: "";
+            width: 100dvw;
+            height: 100%;
+            margin-inline-start: calc(50% - 50vw);
+            background: var(--color-bg-surface);
+            inset-inline-start: 0;
+            inset-block-start: 0;
+            border-block: var(--border);
+        }
+
+        &:has(img.bleed) {
+            img {
+                position: absolute;
+                z-index: -1;
+                width: 100dvw;
+                height: 100%;
+                margin-inline-start: calc(50% - 50vw);
+                max-width: unset;
+                inset-inline-start: 0;
+                inset-block-start: 0;
+                object-fit: cover;
+            }
+
+            &:has(img.dark) {
+
+                &,
+                a {
+                    color: var(--color-text-light);
+                }
+            }
+
+            &:has(img.light) {
+
+                &,
+                a {
+                    color: var(--color-text-dark);
+                }
+            }
+        }
+
+        h1 {
+            margin-block-end: 0;
+        }
+
+        +* {
+            margin-block-start: 2lh;
+        }
+    }
+
+    .site-header {
+        padding-block: 0.5lh;
+    }
+
     .site-footer {
         --ocean-stop: light-dark(#9fcbf1, #002147);
         --ocean-text: light-dark(#16446c, #c3defc);

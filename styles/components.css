@@ -85,7 +85,7 @@
 
   /* Bleed */
   .bleed {
-    width: 100vw;
+    width: 100dvw;
     margin-inline-start: calc(50% - 50vw);
     background: var(--color-bg-surface);
     border-block: var(--border);
