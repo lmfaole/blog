@@ -7,7 +7,7 @@
         background: unset;
         position: relative;
         padding-block: 2lh;
-        min-height: 50dvh;
+        min-height: 50svh;
         border-block: unset;
 
         &::after {
