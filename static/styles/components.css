@@ -1,0 +1,118 @@
+@layer component {
+
+    /* Cards */
+    section.cards,
+    ul.cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+        gap: 1px;
+        padding: 0;
+
+        > *:not(article, li) {
+            grid-column: 1 / -1;
+            flex-basis: 100%;
+        }
+
+        > article,
+        > li {
+            background: var(--color-bg-surface);
+            padding: 4cqh 5cqw;
+            display: grid;
+            grid-template-columns: 1fr;
+            outline: var(--border);
+
+            .card-heading {
+                margin-block-start: 0;
+                font: var(--heading-4);
+                place-self: start start;
+            }
+
+            .card-footer {
+                margin-block-start: var(--spacing-lh-xs);
+                color: var(--color-text-muted);
+                font: var(--small);
+                place-self: end start;
+            }
+        }
+
+        > li {
+            list-style-type: none;
+        }
+    }
+
+    /* Global meny */
+    dialog#menu {
+        max-width: unset;
+        max-height: unset;
+        width: 100dvw;
+        height: 100dvh;
+        outline: 0;
+        padding-inline: var(--padding-inline);
+
+        &::backdrop {
+            background-color: var(--color-bg);
+        }
+
+        > header,
+        > nav {
+            max-width: var(--max-width);
+            margin-inline: auto;
+        }
+
+        > header {
+            padding-inline: 0;
+            outline: 0;
+            border-block-end: var(--border);
+        }
+    }
+
+    /* Lister */
+    dl[data-layout="horizontal"] {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 0 var(--spacing-ch-md);
+
+        dt {
+            grid-column: 1;
+            font-weight: var(--fw-bold);
+        }
+
+        dd {
+            grid-column: 2;
+            margin: 0;
+        }
+    }
+
+    /* Bleed */
+    .bleed {
+        width: 100dvw;
+        margin-inline-start: calc(50% - 50vw);
+        background: var(--color-bg-surface);
+        border-block: var(--border);
+    }
+
+    /* Timeline */
+    ol.timeline {
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-block-end: 1lh;
+        }
+
+        > li {
+            &::before {
+                display: block;
+                content: "Mangler dato: ";
+                font-weight: var(--fw-bold);
+                color: red;
+            }
+
+            &[data-time]::before {
+                content: attr(data-time);
+                font-weight: var(--fw-bold);
+                color: inherit;
+            }
+        }
+    }
+}
