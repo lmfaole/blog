@@ -2,7 +2,7 @@
     <a class="name" href="/index.html">Hjem</a>
 </header>
 <main>
-    <h1>Velkommen</h1>
+    <h1>Velkommen til en versjon 2</h1>
 
     <p>
         <mark>Denne siden skrives om til Svelte i skrivende stund.</mark>
