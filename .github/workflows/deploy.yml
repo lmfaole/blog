@@ -38,7 +38,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "olejrgen-blog-10"
-          entrypoint: "main.ts"
+          entrypoint: "src/main.js"
           root: "build"
           
           
